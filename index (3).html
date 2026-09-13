@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hindi Font Generator | हिंदी स्टाइलिश फॉन्ट जनरेटर - Copy Paste 100+ Fonts</title>
+<meta name="description" content="Free Hindi Font Generator - Create 100+ stylish Hindi fonts online. Copy paste Devanagari fonts for Instagram, Facebook, WhatsApp bio. Download as PNG or font file.">
+<meta name="keywords" content="hindi font generator, stylish hindi font, hindi font style copy paste, devanagari font generator, hindi text generator, fancy hindi fonts">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://hindifontgen.in/">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Hindi Font Generator | हिंदी स्टाइलिश फॉन्ट जनरेटर">
+<meta property="og:description" content="Free online tool to generate 100+ stylish Hindi (Devanagari) fonts. Copy, paste, and download instantly.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://hindifontgen.in/">
+
+<!-- Preconnect for performance -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<!-- Google Fonts - Devanagari supporting families -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;600;700&family=Mukta:wght@400;500;600;700&family=Hind:wght@400;500;600;700&family=Baloo+2:wght@400;600;700&family=Poppins:wght@400;600&display=swap">
+
+<style>
+  :root{
+    --primary:#ff6f3c;
+    --primary-dark:#e85a2a;
+    --bg:#fff8f3;
+    --card:#ffffff;
+    --text:#2b2b2b;
+    --muted:#6b6b6b;
+    --border:#eee0d8;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    font-family:'Poppins',Arial,sans-serif;
+    background:var(--bg);
+    color:var(--text);
+    line-height:1.6;
+  }
+  a{color:var(--primary-dark);text-decoration:none;}
+  header{
+    background:#fff;
+    border-bottom:1px solid var(--border);
+    position:sticky;top:0;z-index:100;
+  }
+  .nav-wrap{
+    max-width:1100px;margin:0 auto;padding:14px 20px;
+    display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;
+  }
+  .logo{font-family:'Baloo 2',sans-serif;font-size:22px;font-weight:700;color:var(--primary-dark);}
+  nav a{margin-left:18px;font-size:14px;font-weight:500;color:var(--text);}
+  nav a:hover{color:var(--primary-dark);}
+  .container{max-width:1100px;margin:0 auto;padding:0 20px;}
+  .hero{text-align:center;padding:40px 20px 20px;}
+  .hero h1{font-family:'Baloo 2',sans-serif;font-size:clamp(24px,4vw,38px);color:var(--primary-dark);margin-bottom:10px;}
+  .hero p{color:var(--muted);max-width:650px;margin:0 auto;font-size:15px;}
+
+  .tool-card{
+    background:var(--card);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:24px;
+    margin:30px auto;
+    max-width:900px;
+    box-shadow:0 4px 20px rgba(0,0,0,0.04);
+  }
+  textarea#hindiInput{
+    width:100%;min-height:80px;font-size:20px;padding:14px;
+    border:2px solid var(--border);border-radius:10px;
+    font-family:'Noto Sans Devanagari',sans-serif;
+    resize:vertical;
+  }
+  textarea#hindiInput:focus{outline:none;border-color:var(--primary);}
+
+  .controls{
+    display:flex;flex-wrap:wrap;gap:18px;margin-top:16px;align-items:center;
+  }
+  .control-group{display:flex;flex-direction:column;gap:4px;font-size:13px;color:var(--muted);}
+  .control-group input[type="range"]{width:150px;}
+  .control-group input[type="color"]{width:44px;height:32px;border:none;border-radius:6px;cursor:pointer;padding:0;}
+  #sizeLabel{font-weight:600;color:var(--text);}
+
+  #fontResults{
+    margin-top:26px;display:flex;flex-direction:column;gap:12px;
+    max-height:600px;overflow-y:auto;padding-right:4px;
+  }
+  .font-item{
+    display:flex;justify-content:space-between;align-items:center;gap:12px;
+    padding:16px;border:1px solid var(--border);border-radius:10px;
+    background:#fffdfb;
+  }
+  .font-preview{
+    font-size:var(--dyn-size,24px);
+    word-break:break-word;
+    flex:1;
+  }
+  .font-name{display:block;font-size:11px;color:var(--muted);font-family:'Poppins';margin-bottom:4px;}
+  .copy-btn{
+    background:var(--primary);color:#fff;border:none;
+    padding:8px 16px;border-radius:8px;cursor:pointer;font-size:13px;font-weight:600;
+    white-space:nowrap;flex-shrink:0;
+    transition:background .15s;
+  }
+  .copy-btn:hover{background:var(--primary-dark);}
+  .copy-btn.copied{background:#3fa34d;}
+
+  .loading{text-align:center;color:var(--muted);padding:30px;font-size:14px;}
+
+  .features{
+    display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:18px;margin:40px auto;max-width:1000px;
+  }
+  .feature-card{
+    background:#fff;border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center;
+  }
+  .feature-card .emoji{font-size:28px;margin-bottom:8px;}
+  .feature-card h3{font-size:15px;margin-bottom:6px;}
+  .feature-card p{font-size:13px;color:var(--muted);}
+
+  .content-block{max-width:850px;margin:40px auto;padding:0 20px;}
+  .content-block h2{font-family:'Baloo 2',sans-serif;color:var(--primary-dark);margin:28px 0 10px;font-size:22px;}
+  .content-block h3{margin:18px 0 8px;font-size:17px;}
+  .content-block p, .content-block li{color:#444;font-size:14.5px;margin-bottom:8px;}
+  .content-block ul, .content-block ol{padding-left:22px;margin-bottom:14px;}
+
+  .faq-item{border-bottom:1px solid var(--border);padding:14px 0;}
+  .faq-item h3{color:var(--primary-dark);font-size:15px;}
+
+  footer{
+    background:#2b2320;color:#e8dfd8;padding:30px 20px;margin-top:50px;text-align:center;font-size:13px;
+  }
+  footer a{color:#f5c9a8;margin:0 8px;}
+
+  @media(max-width:600px){
+    .font-item{flex-direction:column;align-items:stretch;}
+    .copy-btn{width:100%;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav-wrap">
+    <div class="logo">हिंदी Font Generator</div>
+    <nav>
+      <a href="/">Home</a>
+      <a href="/about.html">About</a>
+      <a href="/privacy-policy.html">Privacy</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <h1>Hindi Font Generator — हिंदी स्टाइलिश फॉन्ट जनरेटर</h1>
+  <p>अपना हिंदी टेक्स्ट टाइप करें और 100+ स्टाइलिश फॉन्ट में तुरंत देखें। कॉपी करें, कस्टमाइज़ करें और PNG डाउनलोड करें — बिल्कुल फ्री।</p>
+</section>
+
+<div class="container">
+  <div class="tool-card">
+    <textarea id="hindiInput" placeholder="यहाँ हिंदी टेक्स्ट लिखें..." maxlength="200">नमस्ते दुनिया</textarea>
+
+    <div class="controls">
+      <div class="control-group">
+        <label for="sizeRange">फॉन्ट साइज़: <span id="sizeLabel">24px</span></label>
+        <input type="range" id="sizeRange" min="14" max="60" value="24">
+      </div>
+      <div class="control-group">
+        <label for="fontColor">फॉन्ट रंग</label>
+        <input type="color" id="fontColor" value="#2b2b2b">
+      </div>
+      <div class="control-group">
+        <label for="bgColor">बैकग्राउंड रंग</label>
+        <input type="color" id="bgColor" value="#fffdfb">
+      </div>
+    </div>
+
+    <div id="fontResults">
+      <div class="loading">फॉन्ट लोड हो रहे हैं...</div>
+    </div>
+  </div>
+
+  <div class="features">
+    <div class="feature-card">
+      <div class="emoji">🔤</div>
+      <h3>100+ फॉन्ट स्टाइल</h3>
+      <p>विभिन्न स्टाइलिश हिंदी फॉन्ट में से चुनें</p>
+    </div>
+    <div class="feature-card">
+      <div class="emoji">📋</div>
+      <h3>वन-क्लिक कॉपी</h3>
+      <p>तुरंत टेक्स्ट कॉपी करें और कहीं भी पेस्ट करें</p>
+    </div>
+    <div class="feature-card">
+      <div class="emoji">🎨</div>
+      <h3>कलर कस्टमाइजेशन</h3>
+      <p>फॉन्ट और बैकग्राउंड रंग अपनी पसंद से बदलें</p>
+    </div>
+    <div class="feature-card">
+      <div class="emoji">📱</div>
+      <h3>सोशल मीडिया के लिए</h3>
+      <p>Instagram, Facebook, WhatsApp bio के लिए परफेक्ट</p>
+    </div>
+  </div>
+
+  <div class="content-block">
+    <h2>Hindi Font Generator क्या है?</h2>
+    <p>Hindi Font Generator एक फ्री ऑनलाइन टूल है जो आपके साधारण हिंदी टेक्स्ट को कई स्टाइलिश और यूनिक फॉन्ट में बदल देता है। यह टूल Instagram bio, Facebook post, WhatsApp status, blog title या किसी भी सोशल मीडिया कंटेंट के लिए बेहतरीन है। बस टाइप करें और तुरंत 100+ फॉन्ट स्टाइल देखें।</p>
+
+    <h2>इस टूल का उपयोग कैसे करें?</h2>
+    <ol>
+      <li><strong>टेक्स्ट लिखें:</strong> ऊपर दिए गए बॉक्स में अपना हिंदी टेक्स्ट टाइप करें।</li>
+      <li><strong>फॉन्ट देखें:</strong> नीचे सभी 100+ फॉन्ट स्टाइल में आपका टेक्स्ट दिखेगा।</li>
+      <li><strong>कस्टमाइज़ करें:</strong> फॉन्ट साइज़, रंग और बैकग्राउंड बदलें।</li>
+      <li><strong>कॉपी करें:</strong> पसंदीदा स्टाइल के आगे "Copy" बटन दबाएं और कहीं भी पेस्ट करें।</li>
+    </ol>
+
+    <h2>मुख्य विशेषताएं</h2>
+    <ul>
+      <li><strong>100+ फॉन्ट स्टाइल:</strong> बोल्ड, कर्सिव, डेकोरेटिव और मॉडर्न फॉन्ट में से चुनें।</li>
+      <li><strong>तुरंत कॉपी-पेस्ट:</strong> बिना किसी सॉफ्टवेयर के तुरंत टेक्स्ट कॉपी करें।</li>
+      <li><strong>पूरी तरह फ्री:</strong> कोई साइनअप नहीं, कोई भुगतान नहीं।</li>
+      <li><strong>मोबाइल फ्रेंडली:</strong> फोन, टैबलेट या कंप्यूटर — कहीं भी उपयोग करें।</li>
+    </ul>
+
+    <h2>अक्सर पूछे जाने वाले सवाल (FAQs)</h2>
+    <div class="faq-item">
+      <h3>क्या यह टूल फ्री है?</h3>
+      <p>हाँ, यह पूरी तरह फ्री है। आप जितनी बार चाहें फॉन्ट जनरेट कर सकते हैं।</p>
+    </div>
+    <div class="faq-item">
+      <h3>क्या मैं इन फॉन्ट को Instagram पर इस्तेमाल कर सकता हूँ?</h3>
+      <p>बिल्कुल! जनरेट किए गए स्टाइलिश टेक्स्ट को कॉपी करके Instagram, Facebook, Twitter या किसी भी जगह पेस्ट कर सकते हैं।</p>
+    </div>
+    <div class="faq-item">
+      <h3>कॉपी करने पर फॉन्ट स्टाइल बना रहेगा?</h3>
+      <p>हिंदी यूनिकोड क्लिपबोर्ड फॉन्ट स्टाइलिंग सपोर्ट नहीं करता, इसलिए टेक्स्ट प्लेन कॉपी होगा। स्टाइल बनाए रखने के लिए PNG डाउनलोड विकल्प इस्तेमाल करें।</p>
+    </div>
+    <div class="faq-item">
+      <h3>कितने फॉन्ट स्टाइल उपलब्ध हैं?</h3>
+      <p>इस टूल में 100+ अलग-अलग फॉन्ट स्टाइल उपलब्ध हैं, जिनमें बोल्ड, आर्टिस्टिक और क्लासिक शामिल हैं।</p>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div>© 2026 Hindi Font Generator. All rights reserved.</div>
+  <div style="margin-top:10px;">
+    <a href="/about.html">About Us</a> |
+    <a href="/privacy-policy.html">Privacy Policy</a> |
+    <a href="/terms-and-conditions.html">Terms & Conditions</a> |
+    <a href="/contact.html">Contact Us</a>
+  </div>
+</footer>
+
+<script src="fonts-data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
