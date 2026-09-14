@@ -3,8 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Hindi Font Generator — हिंदी फॉन्ट जनरेटर | Copy & Paste Stylish Fonts</title>
-<meta name="description" content="Hindi text ko 35+ stylish fonts mein instantly generate karein. Copy, paste aur PNG download karein — free Hindi font generator tool.">
+<title>Hindi Font Generator — Stylish Hindi Fonts, Copy & Paste Free</title>
+<meta name="description" content="Free Hindi font generator. Type your Hindi text and instantly preview it in 35+ stylish fonts. Copy and paste, or download as a PNG image — no signup needed.">
+<link rel="canonical" href="https://hindifontgen.in/">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -36,13 +37,8 @@
   }
 
   a{color:inherit;}
-
   ::selection{background:var(--saffron-soft);}
-
-  :focus-visible{
-    outline:2.5px solid var(--focus);
-    outline-offset:2px;
-  }
+  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
 
   @media (prefers-reduced-motion: reduce){
     *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
@@ -57,23 +53,28 @@
     max-width:1120px;
     margin:0 auto;
     display:flex;
-    align-items:baseline;
+    align-items:center;
     justify-content:space-between;
-    gap:12px;
+    gap:16px;
+    flex-wrap:wrap;
   }
   .logo{
     font-family:'Yatra One',cursive;
     font-size:22px;
     letter-spacing:0.2px;
+    text-decoration:none;
   }
   .logo span{color:var(--saffron);}
+  nav{display:flex; flex-wrap:wrap; gap:4px;}
   nav a{
     font-size:14px;
     color:var(--ink-soft);
     text-decoration:none;
-    margin-left:20px;
+    padding:6px 10px;
+    border-radius:6px;
   }
-  nav a:hover{color:var(--ink);}
+  nav a:hover{color:var(--ink); background:var(--saffron-soft);}
+  nav a.current{color:var(--ink); font-weight:600;}
 
   /* ---------- Hero / Input ---------- */
   .hero{
@@ -87,12 +88,12 @@
     font-size:clamp(28px,4.2vw,44px);
     line-height:1.15;
     margin:0 0 10px;
-    max-width:16ch;
+    max-width:18ch;
   }
   .hero p{
     color:var(--ink-soft);
     font-size:16px;
-    max-width:56ch;
+    max-width:60ch;
     margin:0 0 28px;
   }
 
@@ -114,9 +115,7 @@
     color:var(--ink);
     background:#fff;
   }
-  #textInput:focus{
-    border-color:var(--focus);
-  }
+  #textInput:focus{border-color:var(--focus);}
   .input-row{
     display:flex;
     flex-wrap:wrap;
@@ -223,13 +222,9 @@
     transition:background .15s ease, border-color .15s ease;
   }
   .btn:hover{border-color:var(--saffron);}
-  .btn.primary{
-    background:var(--ink);
-    color:#fff;
-    border-color:var(--ink);
-  }
-  .btn.primary:hover{background:var(--saffron);border-color:var(--saffron);}
-  .btn:disabled{opacity:0.45;cursor:not-allowed;}
+  .btn.primary{background:var(--ink); color:#fff; border-color:var(--ink);}
+  .btn.primary:hover{background:var(--saffron); border-color:var(--saffron);}
+  .btn:disabled{opacity:0.45; cursor:not-allowed;}
 
   .empty-state{
     max-width:1120px;
@@ -251,6 +246,10 @@
     font-size:24px;
     margin:40px 0 12px;
   }
+  .info h3{
+    font-size:17px;
+    margin:24px 0 8px;
+  }
   .info p{
     color:var(--ink-soft);
     font-size:15px;
@@ -262,18 +261,56 @@
     padding-left:20px;
   }
   .info li{margin-bottom:8px;}
+  .info strong{color:var(--ink);}
 
+  /* ---------- Footer ---------- */
   footer{
     border-top:1px solid var(--rule);
-    padding:24px;
-    text-align:center;
+    padding:40px 24px 28px;
+  }
+  .footer-inner{
+    max-width:1120px;
+    margin:0 auto;
+    display:grid;
+    grid-template-columns:1.4fr 1fr 1fr;
+    gap:32px;
+  }
+  .footer-col h4{
     font-size:13px;
+    margin:0 0 12px;
+    color:var(--ink);
+  }
+  .footer-col p{
+    font-size:13px;
+    color:var(--ink-soft);
+    margin:0;
+    max-width:36ch;
+  }
+  .footer-col ul{
+    list-style:none;
+    margin:0;
+    padding:0;
+  }
+  .footer-col li{margin-bottom:8px;}
+  .footer-col a{
+    font-size:13px;
+    color:var(--ink-soft);
+    text-decoration:none;
+  }
+  .footer-col a:hover{color:var(--saffron);}
+  .footer-bottom{
+    max-width:1120px;
+    margin:32px auto 0;
+    padding-top:20px;
+    border-top:1px solid var(--rule);
+    font-size:12px;
     color:var(--ink-soft);
   }
 
   @media (max-width:640px){
     .grid{grid-template-columns:1fr 1fr;}
     .preview{font-size:20px;}
+    .footer-inner{grid-template-columns:1fr; gap:24px;}
   }
   @media (max-width:420px){
     .grid{grid-template-columns:1fr;}
@@ -284,34 +321,37 @@
 
 <header>
   <div class="header-inner">
-    <div class="logo">हिंदी<span>फॉन्ट</span></div>
+    <a href="index.html" class="logo">Hindi<span>FontGen</span></a>
     <nav>
-      <a href="#tool">Tool</a>
-      <a href="#about">About</a>
+      <a href="index.html" class="current">Tool</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
     </nav>
   </div>
 </header>
 
 <section class="hero" id="tool">
-  <h1>अपने हिंदी टेक्स्ट को स्टाइलिश फॉन्ट में बदलें</h1>
-  <p>नीचे हिंदी टेक्स्ट लिखें — 35 से ज़्यादा फॉन्ट स्टाइल में तुरंत प्रीव्यू देखें, कॉपी करें या PNG के रूप में डाउनलोड करें।</p>
+  <h1>Turn your Hindi text into stylish fonts</h1>
+  <p>Type any Hindi text below and instantly preview it in 35+ font styles. Copy the text, or download any style as a ready-to-share PNG image — free, and no signup required.</p>
 
   <div class="input-panel">
-    <textarea id="textInput" placeholder="यहाँ हिंदी टेक्स्ट लिखें..." maxlength="200">नमस्ते दुनिया</textarea>
+    <textarea id="textInput" placeholder="Type your Hindi text here..." maxlength="200">नमस्ते दुनिया</textarea>
     <div class="input-row">
-      <label class="control">साइज़
+      <label class="control">Size
         <input type="range" id="sizeRange" min="14" max="48" value="26">
         <span id="sizeVal">26px</span>
       </label>
-      <label class="control">टेक्स्ट रंग
+      <label class="control">Text color
         <input type="color" id="fontColor" value="#241E19">
       </label>
-      <label class="control">बैकग्राउंड
+      <label class="control">Background
         <input type="color" id="bgColor" value="#ffffff">
       </label>
-      <label class="control">क्रम
+      <label class="control">Sort
         <select id="sortOrder">
-          <option value="default">डिफ़ॉल्ट</option>
+          <option value="default">Default</option>
           <option value="az">A–Z</option>
         </select>
       </label>
@@ -322,38 +362,75 @@
 </section>
 
 <div class="results-bar">
-  <h2 id="resultCount">35 फॉन्ट स्टाइल</h2>
-  <span id="toast">कॉपी हो गया!</span>
+  <h2 id="resultCount">35 font styles</h2>
+  <span id="toast">Copied!</span>
 </div>
 
 <div class="grid" id="fontGrid"></div>
-<div class="empty-state" id="emptyState" style="display:none;">ऊपर टेक्स्ट लिखें ताकि फॉन्ट प्रीव्यू दिख सके।</div>
+<div class="empty-state" id="emptyState" style="display:none;">Type some text above to see font previews.</div>
 
 <section class="info" id="about">
-  <h2>यह टूल कैसे काम करता है</h2>
-  <p>Hindi Font Generator आपके टाइप किए हिंदी टेक्स्ट को 35+ अलग-अलग Google Fonts में रेंडर करता है, ताकि आप हर स्टाइल का प्रीव्यू एक साथ देख सकें। पसंदीदा स्टाइल को एक क्लिक में कॉपी करें या PNG इमेज के रूप में सेव करें — Instagram bio, WhatsApp status, YouTube title या किसी भी जगह इस्तेमाल के लिए तैयार।</p>
+  <h2>How this Hindi font generator works</h2>
+  <p>A Hindi font generator doesn't invent new letterforms — it renders the same Hindi text you type in a set of different, already-existing typefaces, so you can compare styles side by side and pick the one that fits your post, title, or design. This tool renders your text live in 35+ Google Fonts that support the Devanagari script, from clean and readable faces to bold, decorative, and calligraphic ones.</p>
+  <p>Once you find a style you like, you have two ways to use it: copy the plain text to your clipboard, or download that exact style as a PNG image. The two options exist because of how text and fonts work on the web — worth understanding before you pick one.</p>
 
-  <h2>इस्तेमाल कैसे करें</h2>
+  <h3>Copy text vs. download PNG — which should you use?</h3>
+  <p><strong>Copy</strong> puts the plain Hindi Unicode text on your clipboard. This is the fastest option and works everywhere — Instagram bios, WhatsApp status, YouTube titles, Facebook posts. The catch: clipboards carry text, not font information, so when you paste it, the text will display in whatever font the destination app uses by default. The characters stay exactly the same; only the visual style changes.</p>
+  <p><strong>Download as PNG</strong> captures the text exactly as styled — same font, size, and colors you see in the preview — as an image file. Use this when you want to post the *exact* look you designed, for example as an Instagram image post, a poster, a thumbnail, or a WhatsApp status image, where the platform will display your picture pixel-for-pixel rather than re-rendering text.</p>
+
+  <h3>How to use the tool</h3>
   <ol>
-    <li>ऊपर दिए बॉक्स में अपना हिंदी टेक्स्ट लिखें।</li>
-    <li>नीचे मौजूद कार्ड्स में हर फॉन्ट स्टाइल का लाइव प्रीव्यू देखें।</li>
-    <li>पसंद आने पर "कॉपी" दबाएँ — टेक्स्ट क्लिपबोर्ड में आ जाएगा, या "PNG" दबाकर इमेज डाउनलोड करें।</li>
+    <li>Type or paste your Hindi text into the box at the top.</li>
+    <li>Browse the live previews below — every card shows the same text rendered in a different font.</li>
+    <li>Adjust size, text color, and background color to match where you're going to use it.</li>
+    <li>Click <strong>Copy</strong> to grab the plain text, or <strong>PNG</strong> to download that exact styled version as an image.</li>
   </ol>
 
-  <h2>अक्सर पूछे जाने वाले सवाल</h2>
-  <p><strong>क्या कॉपी किया टेक्स्ट फॉन्ट स्टाइल के साथ पेस्ट होगा?</strong><br>
-  क्लिपबोर्ड सादा यूनिकोड टेक्स्ट कॉपी करता है, इसलिए पेस्ट करने पर टेक्स्ट वही रहेगा लेकिन फॉन्ट स्टाइल उस जगह के डिफ़ॉल्ट फॉन्ट पर निर्भर करेगा। असली फॉन्ट लुक चाहिए तो PNG डाउनलोड करके इमेज के रूप में शेयर करें।</p>
-  <p><strong>क्या यह टूल फ्री है?</strong><br>
-  हाँ, पूरी तरह फ्री है और किसी साइनअप की ज़रूरत नहीं।</p>
+  <h3>Where these fonts come from</h3>
+  <p>Every font in this tool is a real, freely licensed typeface from Google Fonts that supports the Devanagari script — including families like Hind, Mukta, Poppins, Eczar, Baloo 2, Rajdhani, Tiro Devanagari Hindi, and more. Nothing here is a custom "Unicode trick" or symbol substitution; what you see is what a real font actually looks like, so text stays fully readable and accessible.</p>
+
+  <h3>Frequently asked questions</h3>
+  <p><strong>Will the copied text keep its font style when I paste it?</strong><br>
+  No — and no font generator anywhere can guarantee that. Clipboards only carry plain Unicode characters, not font data, so the destination app decides how the text displays. If you need the exact visual style to carry over, download the PNG image instead and post that.</p>
+  <p><strong>Is this tool free?</strong><br>
+  Yes, completely free, with no account or signup required.</p>
+  <p><strong>Can I use these fonts for commercial projects?</strong><br>
+  All fonts here are sourced from Google Fonts, which are open-source and free for both personal and commercial use under their respective licenses. Always check the specific font's license page on Google Fonts if you need certainty for a commercial project.</p>
+  <p><strong>Why does my text look different on Instagram or WhatsApp after I paste it?</strong><br>
+  Because you copied plain text, not an image — see the explanation above. Download the PNG version if you want the exact look to carry over.</p>
+  <p><strong>Does this work for Marathi, Sanskrit, or other Devanagari-script languages?</strong><br>
+  Yes. Since the tool renders any text you type using Devanagari-script fonts, it works for Marathi, Sanskrit, Nepali, Bhojpuri, and other languages written in the same script.</p>
 </section>
 
-<footer>© 2026 हिंदी फॉन्ट जनरेटर — Made for the Hindi web.</footer>
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>HindiFontGen</h4>
+      <p>A free tool to preview and use Hindi text in 35+ stylish fonts — for social media, blogs, and design work. Built for the Hindi web.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="index.html">Font Generator</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HindiFontGen. All rights reserved.</div>
+</footer>
 
 <script>
 (function(){
   "use strict";
 
-  // Curated list of Google Fonts that support Devanagari script.
   var FONTS = [
     "Hind","Mukta","Poppins","Baloo 2","Tiro Devanagari Hindi","Eczar",
     "Yatra One","Kalam","Khand","Laila","Martel","Karma","Sarala",
@@ -417,7 +494,7 @@
       var copyBtn = document.createElement('button');
       copyBtn.className = 'btn primary';
       copyBtn.type = 'button';
-      copyBtn.textContent = 'कॉपी';
+      copyBtn.textContent = 'Copy';
       copyBtn.addEventListener('click', function(){ copyText(); });
 
       var pngBtn = document.createElement('button');
@@ -436,7 +513,7 @@
     });
 
     grid.appendChild(frag);
-    resultCount.textContent = list.length + ' फॉन्ट स्टाइल';
+    resultCount.textContent = list.length + ' font styles';
     applyStyles();
   }
 
@@ -467,7 +544,7 @@
     if (!text) return;
     if (navigator.clipboard && navigator.clipboard.writeText) {
       navigator.clipboard.writeText(text).then(function(){
-        showToast('कॉपी हो गया!');
+        showToast('Copied!');
       }).catch(function(){
         fallbackCopy(text);
       });
@@ -486,9 +563,9 @@
     ta.select();
     try {
       document.execCommand('copy');
-      showToast('कॉपी हो गया!');
+      showToast('Copied!');
     } catch (e) {
-      showToast('कॉपी नहीं हो पाया');
+      showToast('Copy failed');
     }
     document.body.removeChild(ta);
   }
@@ -497,14 +574,13 @@
     var text = textInput.value.trim();
     if (!text) return;
 
-    var scale = 3; // crisp export
+    var scale = 3;
     var fontSize = parseInt(sizeRange.value, 10);
     var padding = 28;
 
     var canvas = document.createElement('canvas');
     var ctx = canvas.getContext('2d');
 
-    // Measure using the same font to size the canvas correctly.
     var cssFont = fontSize + 'px "' + fontName + '"';
     ctx.font = cssFont;
 
@@ -541,8 +617,6 @@
     link.click();
   }
 
-  // Wait for webfonts to be ready before first PNG export attempts;
-  // canvas text needs the font actually loaded, not just requested.
   function ready(fn){
     if (document.fonts && document.fonts.ready) {
       document.fonts.ready.then(fn);
