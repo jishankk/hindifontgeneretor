@@ -42,7 +42,7 @@ button,input,textarea,select{font:inherit}
 button{cursor:pointer}
 a{color:inherit}
 ::selection{background:#cce6d9}
-.container{width:min(1120px,calc(100% - 44px));margin:auto}
+.container{width:min(1120px,calc(100% - 88px));margin:auto}
 
 /* Header */
 .site-header{
@@ -75,51 +75,45 @@ a{color:inherit}
 
 /* Generator */
 .generator{
-  margin:28px auto 0;background:var(--surface);border:1px solid var(--line);
+  margin:28px 0 0;background:var(--surface);border:1px solid var(--line);
   border-radius:20px;box-shadow:var(--shadow);overflow:hidden;text-align:left;
 }
-.generator-top{padding:26px 26px 21px}
+.generator-top{padding:28px}
 .textarea-wrap{position:relative}
 #textInput{
-  width:100%;min-height:145px;resize:vertical;
-  border:1px solid #d9e0d7;border-radius:13px;background:#fbfcfa;
-  padding:18px 18px 34px;color:var(--ink);
-  font-family:"Noto Sans Devanagari",sans-serif;font-size:25px;line-height:1.65;
+  width:100%;min-height:190px;resize:vertical;
+  border:1px solid #d9e0d7;border-radius:14px;background:#fbfcfa;
+  padding:22px;color:var(--ink);
+  font-family:"Noto Sans Devanagari",sans-serif;font-size:30px;line-height:1.65;
   outline:none;transition:.18s;
 }
 #textInput:focus{border-color:#9bc8b3;box-shadow:0 0 0 4px rgba(25,118,83,.08)}
-.char-count{position:absolute;right:13px;bottom:9px;color:#8a928a;font-size:11px}
 .controls{
-  display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:13px
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:14px;margin-top:16px;
 }
 .control{
-  display:flex;align-items:center;gap:8px;
-  border:1px solid var(--line);background:#fafbf9;border-radius:10px;
-  padding:7px 10px;color:var(--muted);font-size:12px;
+  min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:14px;
+  border:1px solid var(--line);background:#fafbf9;border-radius:13px;
+  padding:15px 17px;color:var(--muted);font-size:14px;
 }
-.control strong{color:var(--ink);font-weight:650}
-.control input[type=color]{width:25px;height:25px;border:0;padding:0;background:none;border-radius:6px}
-.control input[type=range]{width:105px;accent-color:var(--accent)}
-.control select{border:0;background:transparent;color:var(--ink);outline:none;font-size:12px}
-.reset{
-  margin-left:auto;border:0;background:var(--ink);color:#fff;
-  border-radius:10px;padding:9px 13px;font-size:12px;font-weight:700
-}
-.reset:hover{background:var(--accent)}
-.generator-note{
-  border-top:1px solid var(--line);background:#fafbf9;padding:11px 20px;
-  color:var(--muted);font-size:12px
-}
-.generator-note b{color:var(--accent-dark)}
+.control strong{color:var(--ink);font-size:15px;font-weight:700}
+.control input[type=color]{width:46px;height:46px;border:1px solid #d9e0d7;padding:3px;background:#fff;border-radius:9px}
+.control input[type=range]{width:180px;accent-color:var(--accent)}
+.control .size-value{font-weight:700;color:var(--ink);white-space:nowrap}
+.control:nth-child(1){grid-column:1}
+.control:nth-child(2){grid-column:2}
+.control:nth-child(3){grid-column:3}
+.generator-note{display:none}
 
 /* Results */
 .results-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:48px 0 20px;padding:0 4px}
 .results-head h2{margin:0;font-family:"Roboto",Arial,sans-serif;font-size:28px;line-height:1.2;font-weight:700}
 .results-head p{margin:0;color:var(--muted);font-size:13px}
-.font-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.font-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
 .font-card{
   background:var(--surface);border:1px solid var(--line);border-radius:15px;
-  padding:20px;min-width:0;display:flex;flex-direction:column;gap:14px;
+  padding:24px;min-width:0;display:flex;flex-direction:column;gap:17px;
   transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease;
 }
 .font-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(30,45,35,.08);border-color:#cbd7cc}
@@ -127,15 +121,15 @@ a{color:inherit}
 .font-name{font-size:12px;font-weight:750;color:var(--ink)}
 .font-type{font-size:10px;color:var(--muted);background:var(--surface-2);padding:3px 7px;border-radius:999px}
 .preview{
-  min-height:132px;border:1px solid #e7ebe5;border-radius:11px;
+  min-height:155px;border:1px solid #e7ebe5;border-radius:12px;
   display:flex;align-items:center;padding:12px 13px;
   overflow:hidden;overflow-wrap:anywhere;word-break:break-word;
-  font-family:inherit;font-size:31px;line-height:1.45;
+  font-family:inherit;font-size:34px;line-height:1.45;
 }
 .actions{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .action{
   border:1px solid var(--line);background:#fff;color:var(--ink);
-  border-radius:8px;padding:10px 5px;font-size:11px;font-weight:700;
+  border-radius:9px;padding:12px 6px;font-size:12px;font-weight:700;
   transition:.15s
 }
 .action:hover{border-color:#a9c7b5;background:var(--accent-soft);color:var(--accent-dark)}
@@ -185,7 +179,7 @@ a{color:inherit}
 .tip b{display:block;color:var(--ink);margin-bottom:2px}
 
 /* Features */
-.features{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}
+.features{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
 .feature{
   background:#fff;border:1px solid var(--line);border-radius:15px;padding:21px
 }
@@ -232,38 +226,37 @@ footer{background:#20251f;color:#dce3dd;margin-top:0}
   .features{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:680px){
-  .container{width:min(100% - 28px,1120px)}
+  .container{width:min(100% - 32px,1120px)}
   .site-header{position:relative}
   .header-inner{height:62px}
   .nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:7px 12px 12px;flex-direction:column;align-items:stretch}
   .nav.open{display:flex}
   .nav a{padding:11px 10px}
   .menu{display:block}
-  .hero{padding:34px 0 15px}
+  .hero{padding:30px 0 16px}
   .hero h1{font-size:30px;letter-spacing:-.4px}
   .hero p{font-size:14px}
   .generator{border-radius:15px;margin-top:22px}
-  .generator-top{padding:13px}
-  #textInput{min-height:125px;font-size:21px;padding:14px 14px 31px}
-  .controls{gap:7px}
-  .control{flex:1 1 calc(50% - 7px);justify-content:space-between}
-  .control input[type=range]{width:82px}
-  .reset{margin-left:0;flex:1 1 100%}
-  .generator-note{padding:10px 13px}
+  .generator-top{padding:15px}
+  #textInput{min-height:170px;font-size:23px;padding:17px}
+  .controls{grid-template-columns:1fr;gap:10px;margin-top:12px}
+  .control{min-height:72px;padding:13px 14px}
+  .control input[type=range]{width:170px}
   .results-head{margin-top:32px;display:block}
   .results-head h2{font-size:26px}
   .results-head p{margin-top:5px}
-  .font-grid{grid-template-columns:1fr;gap:12px}
-  .font-card{padding:17px}
-  .preview{font-size:26px;min-height:112px}
+  .font-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+  .font-card{padding:13px;gap:11px}
+  .preview{font-size:25px;min-height:118px;padding:10px}
   .section{padding:52px 0}
   .section h2{font-size:28px}
-  .features{grid-template-columns:1fr}
+  .features{grid-template-columns:repeat(2,1fr)}
   .footer-main{grid-template-columns:1fr;gap:25px;padding:40px 0 28px}
 }
 @media(max-width:390px){
-  .control{flex-basis:100%}
-  .hero h1{font-size:31px}
+  .hero h1{font-size:28px}
+  .font-grid{grid-template-columns:1fr}
+  .features{grid-template-columns:1fr}
   .actions{gap:4px}
   .action{font-size:10px}
 }
@@ -298,22 +291,14 @@ footer{background:#20251f;color:#dce3dd;margin-top:0}
       <div class="generator-top">
         <div class="textarea-wrap">
           <textarea id="textInput" maxlength="300" aria-label="Hindi text input" placeholder="अपना हिंदी टेक्स्ट यहाँ लिखें...">नमस्ते दुनिया</textarea>
-          <span class="char-count"><span id="charCount">13</span>/300</span>
+          
         </div>
         <div class="controls">
-          <label class="control"><strong>Size</strong><input id="sizeRange" type="range" min="16" max="54" value="28"><span id="sizeVal">28px</span></label>
-          <label class="control"><strong>Text</strong><input id="fontColor" type="color" value="#20251f"></label>
-          <label class="control"><strong>Background</strong><input id="bgColor" type="color" value="#ffffff"></label>
-          <label class="control"><strong>Sort</strong>
-            <select id="sortOrder">
-              <option value="default">Featured</option>
-              <option value="az">A–Z</option>
-            </select>
-          </label>
-          <button class="reset" id="resetBtn" type="button">Reset</button>
+          <label class="control"><strong>Size</strong><input id="sizeRange" type="range" min="16" max="72" value="32"><span id="sizeVal" class="size-value">32px</span></label>
+          <label class="control"><strong>Text Color</strong><input id="fontColor" type="color" value="#20251f" aria-label="Text color"></label>
+          <label class="control"><strong>Background Color</strong><input id="bgColor" type="color" value="#ffffff" aria-label="Background color"></label>
         </div>
       </div>
-      <div class="generator-note"><b>Tip:</b> Try a short Hindi phrase first. It makes comparing letter shapes much easier.</div>
     </div>
   </div>
 </section>
@@ -465,14 +450,12 @@ footer{background:#20251f;color:#dce3dd;margin-top:0}
 "use strict";
 
 const FONTS = [
-  "Hind","Mukta","Noto Sans Devanagari","Noto Serif Devanagari",
-  "Tiro Devanagari Hindi","Anek Devanagari","Baloo 2","Eczar",
-  "Yatra One","Kalam","Khand","Laila","Martel","Karma","Sarala",
-  "Palanquin","Rozha One","Arya","Halant","Vesper Libre","Kurale",
-  "Glegoo","Teko","Biryani","Jaldi","Sahitya","Amita","Modak",
-  "Sarpanch","Gotu","Dekko","Sumana","Utsaah","Cambay","Akshar",
-  "Ranga","Asar","Khula","Kadwa","Yantramanav","Rhodium Libre",
-  "Maitree","Farsan","Peddana","Noto Sans","Noto Serif","Khand"
+  "Modak","Yatra One","Amita","Rozha One","Kalam","Tiro Devanagari Hindi",
+  "Eczar","Vesper Libre","Laila","Anek Devanagari","Baloo 2","Khand",
+  "Maitree","Rhodium Libre","Sarpanch","Teko","Karma","Martel","Palanquin",
+  "Halant","Kadwa","Asar","Dekko","Gotu","Glegoo","Arya","Cambay","Biryani",
+  "Jaldi","Sahitya","Sarala","Utsaah","Khula","Mukta","Hind",
+  "Noto Serif Devanagari","Noto Sans Devanagari","Sumana","Kurale"
 ];
 
 const PAGE_SIZE = 12;
@@ -484,7 +467,6 @@ const sizeRange = $("sizeRange");
 const sizeVal = $("sizeVal");
 const fontColor = $("fontColor");
 const bgColor = $("bgColor");
-const sortOrder = $("sortOrder");
 const grid = $("fontGrid");
 const pagination = $("pagination");
 const resultCount = $("resultCount");
@@ -505,11 +487,7 @@ function escapeHtml(value){
 }
 
 function currentFonts(){
-  const list=[...new Set(FONTS)];
-  if(sortOrder.value==="az"){
-    list.sort((a,b)=>a.localeCompare(b));
-  }
-  return list;
+  return [...new Set(FONTS)];
 }
 
 function buildCards(){
@@ -578,7 +556,6 @@ function buildCards(){
 
 function applyStyles(){
   const text=textInput.value;
-  $("charCount").textContent=text.length;
   sizeVal.textContent=sizeRange.value+"px";
 
   document.querySelectorAll(".preview").forEach(preview=>{
@@ -714,17 +691,7 @@ sizeRange.addEventListener("input",applyStyles);
 fontColor.addEventListener("input",applyStyles);
 bgColor.addEventListener("input",applyStyles);
 textInput.addEventListener("input",applyStyles);
-sortOrder.addEventListener("change",()=>{page=1;buildCards()});
 
-$("resetBtn").addEventListener("click",()=>{
-  textInput.value="नमस्ते दुनिया";
-  sizeRange.value=28;
-  fontColor.value="#20251f";
-  bgColor.value="#ffffff";
-  sortOrder.value="default";
-  page=1;
-  buildCards();
-});
 
 $("menuBtn").addEventListener("click",()=>{
   const nav=$("nav");
