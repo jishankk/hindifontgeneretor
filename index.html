@@ -11,7 +11,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anek+Devanagari:wght@400;500;600;700&family=Amita:wght@400;700&family=Arya:wght@400;700&family=Asar&family=Baloo+2:wght@400;500;600;700&family=Biryani:wght@400;600;700;800&family=Cambay:wght@400;700&family=Dekko&family=Eczar:wght@400;500;600;700&family=Glegoo:wght@400;700&family=Gotu&family=Halant:wght@400;500;600;700&family=Hind:wght@300;400;500;600;700&family=Jaldi:wght@400;700&family=Kadwa:wght@400;700&family=Kalam:wght@300;400;700&family=Karma:wght@300;400;500;600;700&family=Khand:wght@300;400;500;600;700&family=Khula:wght@300;400;600;700;800&family=Kurale&family=Laila:wght@300;400;500;600;700&family=Maitree:wght@200;300;400;500;600;700&family=Martel:wght@300;400;600;700;800;900&family=Modak&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Palanquin:wght@300;400;500;600;700&family=Rhodium+Libre&family=Rozha+One&family=Sahitya:wght@400;700&family=Sarala:wght@400;700&family=Sarpanch:wght@400;500;600;700;800&family=Sumana&family=Teko:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&family=Utsaah:wght@400;700&family=Vesper+Libre:wght@400;500;600;700;900&family=Yatra+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Anek+Devanagari:wght@400;500;600;700&family=Amita:wght@400;700&family=Arya:wght@400;700&family=Asar&family=Baloo+2:wght@400;500;600;700&family=Biryani:wght@400;600;700;800&family=Cambay:wght@400;700&family=Dekko&family=Eczar:wght@400;500;600;700&family=Glegoo:wght@400;700&family=Gotu&family=Halant:wght@400;500;600;700&family=Hind:wght@300;400;500;600;700&family=Jaldi:wght@400;700&family=Kadwa:wght@400;700&family=Kalam:wght@300;400;700&family=Karma:wght@300;400;500;600;700&family=Khand:wght@300;400;500;600;700&family=Khula:wght@300;400;600;700;800&family=Kurale&family=Laila:wght@300;400;500;600;700&family=Maitree:wght@200;300;400;500;600;700&family=Martel:wght@300;400;600;700;800;900&family=Modak&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Palanquin:wght@300;400;500;600;700&family=Rhodium+Libre&family=Rozha+One&family=Sahitya:wght@400;700&family=Sarala:wght@400;700&family=Sarpanch:wght@400;500;600;700;800&family=Sumana&family=Teko:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&family=Utsaah:wght@400;700&family=Vesper+Libre:wght@400;500;600;700;900&family=Yatra+One&display=swap" rel="stylesheet">
 
 <style>
 :root{
@@ -34,7 +34,7 @@ body{
   margin:0;
   background:var(--bg);
   color:var(--ink);
-  font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  font-family:"Roboto",Arial,sans-serif;
   line-height:1.55;
   -webkit-font-smoothing:antialiased;
 }
@@ -42,7 +42,7 @@ button,input,textarea,select{font:inherit}
 button{cursor:pointer}
 a{color:inherit}
 ::selection{background:#cce6d9}
-.container{width:min(1120px,calc(100% - 32px));margin:auto}
+.container{width:min(1120px,calc(100% - 44px));margin:auto}
 
 /* Header */
 .site-header{
@@ -65,33 +65,26 @@ a{color:inherit}
 .menu{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px}
 
 /* Hero */
-.hero{padding:58px 0 22px;text-align:center}
-.kicker{
-  display:inline-flex;align-items:center;gap:7px;
-  padding:6px 11px;border:1px solid #d6e7dc;background:var(--accent-soft);
-  color:var(--accent-dark);border-radius:999px;font-size:12px;font-weight:700;
-}
-.kicker-dot{width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.hero{padding:42px 0 22px;text-align:center}
 .hero h1{
-  margin:17px auto 10px;max-width:820px;
-  font-family:"Eczar",Georgia,serif;font-size:clamp(35px,5vw,56px);
-  line-height:1.08;letter-spacing:-1.3px;
+  margin:0 auto 8px;max-width:850px;
+  font-family:"Roboto",Arial,sans-serif;font-size:clamp(28px,4vw,39px);
+  line-height:1.18;letter-spacing:-.5px;font-weight:700;
 }
-.hero h1 em{font-style:normal;color:var(--accent)}
-.hero p{max-width:690px;margin:0 auto;color:var(--muted);font-size:16px}
+.hero p{max-width:760px;margin:0 auto;color:#555d56;font-size:14px}
 
 /* Generator */
 .generator{
   margin:28px auto 0;background:var(--surface);border:1px solid var(--line);
   border-radius:20px;box-shadow:var(--shadow);overflow:hidden;text-align:left;
 }
-.generator-top{padding:20px 20px 16px}
+.generator-top{padding:26px 26px 21px}
 .textarea-wrap{position:relative}
 #textInput{
-  width:100%;min-height:112px;resize:vertical;
+  width:100%;min-height:145px;resize:vertical;
   border:1px solid #d9e0d7;border-radius:13px;background:#fbfcfa;
   padding:18px 18px 34px;color:var(--ink);
-  font-family:"Noto Sans Devanagari",sans-serif;font-size:23px;line-height:1.65;
+  font-family:"Noto Sans Devanagari",sans-serif;font-size:25px;line-height:1.65;
   outline:none;transition:.18s;
 }
 #textInput:focus{border-color:#9bc8b3;box-shadow:0 0 0 4px rgba(25,118,83,.08)}
@@ -120,13 +113,13 @@ a{color:inherit}
 .generator-note b{color:var(--accent-dark)}
 
 /* Results */
-.results-head{display:flex;justify-content:space-between;align-items:end;gap:12px;margin:42px 0 16px}
-.results-head h2{margin:0;font-family:"Eczar",Georgia,serif;font-size:29px;line-height:1.2}
+.results-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:48px 0 20px;padding:0 4px}
+.results-head h2{margin:0;font-family:"Roboto",Arial,sans-serif;font-size:28px;line-height:1.2;font-weight:700}
 .results-head p{margin:0;color:var(--muted);font-size:13px}
-.font-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.font-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
 .font-card{
   background:var(--surface);border:1px solid var(--line);border-radius:15px;
-  padding:15px;min-width:0;display:flex;flex-direction:column;gap:11px;
+  padding:20px;min-width:0;display:flex;flex-direction:column;gap:14px;
   transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease;
 }
 .font-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(30,45,35,.08);border-color:#cbd7cc}
@@ -134,15 +127,15 @@ a{color:inherit}
 .font-name{font-size:12px;font-weight:750;color:var(--ink)}
 .font-type{font-size:10px;color:var(--muted);background:var(--surface-2);padding:3px 7px;border-radius:999px}
 .preview{
-  min-height:92px;border:1px solid #e7ebe5;border-radius:11px;
+  min-height:132px;border:1px solid #e7ebe5;border-radius:11px;
   display:flex;align-items:center;padding:12px 13px;
   overflow:hidden;overflow-wrap:anywhere;word-break:break-word;
-  font-family:inherit;font-size:27px;line-height:1.42;
+  font-family:inherit;font-size:31px;line-height:1.45;
 }
 .actions{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
 .action{
   border:1px solid var(--line);background:#fff;color:var(--ink);
-  border-radius:8px;padding:8px 4px;font-size:11px;font-weight:700;
+  border-radius:8px;padding:10px 5px;font-size:11px;font-weight:700;
   transition:.15s
 }
 .action:hover{border-color:#a9c7b5;background:var(--accent-soft);color:var(--accent-dark)}
@@ -170,7 +163,7 @@ a{color:inherit}
   color:var(--accent);font-size:11px;font-weight:800;text-transform:uppercase;
   letter-spacing:1.2px
 }
-.section h2{font-family:"Eczar",Georgia,serif;font-size:32px;line-height:1.2;margin:8px 0 10px}
+.section h2{font-family:"Roboto",Arial,sans-serif;font-size:30px;line-height:1.2;margin:8px 0 10px}
 .section-intro p{color:var(--muted);margin:0;font-size:15px}
 .story{
   display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch
@@ -239,19 +232,19 @@ footer{background:#20251f;color:#dce3dd;margin-top:0}
   .features{grid-template-columns:repeat(2,1fr)}
 }
 @media(max-width:680px){
-  .container{width:min(100% - 24px,1120px)}
+  .container{width:min(100% - 28px,1120px)}
   .site-header{position:relative}
   .header-inner{height:62px}
   .nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:7px 12px 12px;flex-direction:column;align-items:stretch}
   .nav.open{display:flex}
   .nav a{padding:11px 10px}
   .menu{display:block}
-  .hero{padding:42px 0 15px}
-  .hero h1{font-size:34px;letter-spacing:-.8px}
+  .hero{padding:34px 0 15px}
+  .hero h1{font-size:30px;letter-spacing:-.4px}
   .hero p{font-size:14px}
   .generator{border-radius:15px;margin-top:22px}
   .generator-top{padding:13px}
-  #textInput{min-height:100px;font-size:20px;padding:14px 14px 31px}
+  #textInput{min-height:125px;font-size:21px;padding:14px 14px 31px}
   .controls{gap:7px}
   .control{flex:1 1 calc(50% - 7px);justify-content:space-between}
   .control input[type=range]{width:82px}
@@ -261,8 +254,8 @@ footer{background:#20251f;color:#dce3dd;margin-top:0}
   .results-head h2{font-size:26px}
   .results-head p{margin-top:5px}
   .font-grid{grid-template-columns:1fr;gap:12px}
-  .font-card{padding:13px}
-  .preview{font-size:24px;min-height:85px}
+  .font-card{padding:17px}
+  .preview{font-size:26px;min-height:112px}
   .section{padding:52px 0}
   .section h2{font-size:28px}
   .features{grid-template-columns:1fr}
@@ -298,9 +291,8 @@ footer{background:#20251f;color:#dce3dd;margin-top:0}
 <main id="top">
 <section class="hero">
   <div class="container">
-    <span class="kicker"><span class="kicker-dot"></span> Free Hindi typography tool</span>
-    <h1>Give your Hindi words a <em>style of their own.</em></h1>
-    <p>Type a line, try different Devanagari typefaces, and save the version that looks right. Everything happens in your browser.</p>
+    <h1>Hindi Font Generator</h1>
+    <p>Type your text below and explore different Hindi font styles. Preview, copy or save the style you like.</p>
 
     <div class="generator" id="generator">
       <div class="generator-top">
