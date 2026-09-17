@@ -9,7 +9,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Mukta:wght@400;600;700&family=Poppins:wght@400;600;700&family=Baloo+2:wght@500;700&family=Tiro+Devanagari+Hindi&family=Eczar:wght@500;700&family=Yatra+One&family=Kalam:wght@400;700&family=Khand:wght@500;700&family=Laila:wght@500;700&family=Martel:wght@600;800&family=Karma:wght@500;700&family=Sarala:wght@700&family=Palanquin:wght@500;700&family=Rozha+One&family=Arya:wght@700&family=Halant:wght@600&family=Vesper+Libre:wght@500;700;900&family=Kurale&family=Glegoo:wght@700&family=Teko:wght@600&family=Rajdhani:wght@600;700&family=Biryani:wght@600;800&family=Jaldi:wght@700&family=Sahitya:wght@700&family=Amita:wght@700&family=Modak&family=Sarpanch:wght@600;800&family=Gotu&family=Dekko&family=Sumana&family=Utsaah&family=Cambay:wght@700&family=Farsan&family=Peddana&family=Akshar:wght@600;700&family=Anek+Devanagari:wght@600;700&family=Ranga:wght@700&family=Asar&family=Inknut+Antiqua:wght@600;700&family=Khula:wght@700;800&family=Kadwa:wght@700&family=Yantramanav:wght@700&family=Rhodium+Libre&family=Aparajita&family=Nirmala+UI&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&family=Mukta:wght@400;600;700&family=Baloo+2:wght@500;700&family=Tiro+Devanagari+Hindi&family=Eczar:wght@500;700&family=Yatra+One&family=Kalam:wght@400;700&family=Khand:wght@500;700&family=Laila:wght@500;700&family=Martel:wght@600;800&family=Karma:wght@500;700&family=Sarala:wght@700&family=Palanquin:wght@500;700&family=Rozha+One&family=Arya:wght@700&family=Halant:wght@600&family=Vesper+Libre:wght@500;700;900&family=Kurale&family=Glegoo:wght@700&family=Teko:wght@600&family=Rajdhani:wght@600;700&family=Biryani:wght@600;800&family=Jaldi:wght@700&family=Sahitya:wght@700&family=Amita:wght@700&family=Modak&family=Sarpanch:wght@600;800&family=Gotu&family=Dekko&family=Sumana&family=Utsaah&family=Cambay:wght@700&family=Farsan&family=Peddana&family=Akshar:wght@600;700&family=Anek+Devanagari:wght@600;700&family=Ranga:wght@700&family=Asar&family=Inknut+Antiqua:wght@600;700&family=Khula:wght@700;800&family=Kadwa:wght@700&family=Yantramanav:wght@700&family=Rhodium+Libre&family=Aparajita&family=Nirmala+UI&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -31,7 +31,7 @@
     margin:0;
     background:var(--paper);
     color:var(--ink);
-    font-family:'Inter',system-ui,sans-serif;
+    font-family:'Poppins',system-ui,sans-serif;
     -webkit-font-smoothing:antialiased;
     line-height:1.5;
   }
@@ -55,8 +55,9 @@
     display:flex; align-items:center; justify-content:space-between; gap:16px;
   }
   .logo{
-    font-family:'Rozha One',serif;
-    font-size:21px;
+    font-family:'Poppins',sans-serif;
+    font-weight:700;
+    font-size:19px;
     text-decoration:none;
     flex-shrink:0;
     color:var(--ink);
@@ -85,52 +86,78 @@
   }
 
   /* ---------- Hero ---------- */
-  .hero{max-width:1180px; margin:0 auto; padding:44px 24px 8px;}
+  .hero{max-width:900px; margin:0 auto; padding:52px 24px 8px; text-align:center;}
   h1{
-    font-family:'Rozha One',serif;
-    font-weight:400;
-    font-size:clamp(26px,3.6vw,38px);
-    line-height:1.2;
-    margin:0 0 10px;
-    max-width:22ch;
+    font-family:'Poppins',sans-serif;
+    font-weight:800;
+    font-size:clamp(24px,3.6vw,36px);
+    line-height:1.25;
+    margin:0 0 14px;
   }
-  .hero p{color:var(--ink-soft); font-size:15.5px; max-width:62ch; margin:0 0 26px;}
+  .hero p{color:var(--ink-soft); font-size:15.5px; max-width:62ch; margin:0 auto 30px;}
 
   .input-panel{
     background:var(--panel);
     border:1px solid var(--rule);
     border-radius:var(--radius);
-    padding:20px;
+    padding:22px;
+    text-align:left;
+    max-width:1000px;
+    margin:0 auto;
   }
   #textInput{
-    width:100%; min-height:60px; resize:vertical;
+    width:100%; min-height:58px; resize:vertical;
     border:1px solid var(--rule); border-radius:8px; padding:14px 16px;
     font-family:'Hind',sans-serif; font-size:19px; color:var(--ink); background:#fff;
   }
   #textInput:focus{border-color:var(--focus);}
-  .input-row{display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin-top:14px;}
-  .control{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-soft);}
-  .control input[type="range"]{width:120px; accent-color:var(--accent);}
-  .control input[type="color"]{
-    width:30px; height:30px; border:1px solid var(--rule); border-radius:6px; padding:0; background:none; cursor:pointer;
+
+  .control-row{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:14px;
+    margin-top:16px;
   }
-  .control select{
-    font-family:'Inter',sans-serif; font-size:13px; padding:6px 8px;
-    border:1px solid var(--rule); border-radius:6px; background:#fff; color:var(--ink);
+  .control-card{
+    border:1px solid var(--rule);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    text-align:center;
   }
-  .spacer{flex:1;}
-  .char-count{font-size:13px; color:var(--ink-soft);}
+  .control-card .c-label{
+    display:flex; align-items:center; justify-content:center; gap:7px;
+    font-size:13.5px; font-weight:600; color:var(--ink); margin-bottom:12px;
+  }
+  .control-card .c-label svg{width:16px; height:16px; stroke:var(--accent); flex-shrink:0;}
+  .control-card input[type="range"]{width:100%; accent-color:var(--accent);}
+  .control-card .size-readout{font-size:12.5px; color:var(--ink-soft); margin-top:6px;}
+  .control-card input[type="color"]{
+    width:44px; height:32px; border:1px solid var(--rule); border-radius:6px; padding:0; background:none; cursor:pointer;
+  }
+  .control-card select{
+    font-family:'Poppins',sans-serif; font-size:13px; padding:7px 10px;
+    border:1px solid var(--rule); border-radius:6px; background:#fff; color:var(--ink); width:100%;
+  }
+  @media (max-width:700px){
+    .control-row{grid-template-columns:1fr;}
+  }
+
+  .toolbar-row{
+    display:flex; justify-content:flex-end; align-items:center; gap:10px;
+    margin-top:14px; font-size:13px; color:var(--ink-soft);
+  }
+  .toolbar-row .char-count{margin-right:auto;}
 
   /* ---------- Results bar ---------- */
   .results-bar{
-    max-width:1180px; margin:30px auto 0; padding:0 24px;
+    max-width:1180px; margin:34px auto 0; padding:0 24px;
     display:flex; align-items:center; justify-content:space-between; gap:12px;
   }
   .results-bar h2{font-size:13.5px; font-weight:600; color:var(--ink-soft); margin:0; text-transform:uppercase; letter-spacing:.03em;}
   #toast{font-size:13px; color:var(--accent); font-weight:600; opacity:0; transition:opacity .25s ease;}
   #toast.show{opacity:1;}
 
-  /* ---------- Font grid (calligraphy cards) ---------- */
+  /* ---------- Font grid ---------- */
   .grid{
     max-width:1180px; margin:14px auto 8px; padding:0 24px;
     display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px;
@@ -143,7 +170,7 @@
   .preview{font-size:28px; line-height:1.35; word-break:break-word; min-height:36px;}
   .card-actions{display:flex; gap:8px; margin-top:auto; flex-wrap:wrap;}
   .btn{
-    font-family:'Inter',sans-serif; font-size:12.5px; font-weight:600;
+    font-family:'Poppins',sans-serif; font-size:12.5px; font-weight:600;
     border:1px solid var(--rule); background:#fff; color:var(--ink);
     padding:7px 11px; border-radius:7px; cursor:pointer;
     transition:background .15s ease, border-color .15s ease;
@@ -158,68 +185,70 @@
     text-align:center; color:var(--ink-soft); font-size:15px;
   }
 
-  /* ---------- Pagination (visual only, all fonts already shown) ---------- */
   .page-note{
     max-width:1180px; margin:8px auto 60px; padding:0 24px;
     display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap;
   }
-  .page-note span{
-    font-size:12.5px; color:var(--ink-soft);
-  }
+  .page-note span{font-size:12.5px; color:var(--ink-soft);}
 
   /* ---------- Section shell ---------- */
   section.block{max-width:1180px; margin:0 auto; padding:60px 24px;}
   section.block.tight{padding-top:0;}
   section.block.banner{
-    background:var(--panel);
-    border-top:1px solid var(--rule);
-    border-bottom:1px solid var(--rule);
-    max-width:none;
-    padding:56px 24px;
+    background:var(--panel); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
+    max-width:none; padding:56px 24px;
   }
   .banner-inner{max-width:1180px; margin:0 auto;}
-  .section-head{max-width:680px; margin:0 0 34px;}
+  .section-head{max-width:680px; margin:0 auto 34px; text-align:center;}
   .kicker{
     display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em;
     text-transform:uppercase; color:var(--accent); margin-bottom:10px;
   }
-  .section-head h2{font-family:'Rozha One',serif; font-weight:400; font-size:clamp(22px,2.6vw,28px); margin:0 0 10px;}
+  .section-head h2{font-family:'Poppins',sans-serif; font-weight:700; font-size:clamp(22px,2.6vw,28px); margin:0 0 10px;}
   .section-head p{color:var(--ink-soft); font-size:15px; margin:0;}
 
   .banner-inner p{color:var(--ink-soft); font-size:15px; max-width:80ch; margin:0 0 14px;}
   .banner-inner strong{color:var(--ink);}
 
-  /* ---------- Feature grid ---------- */
-  .feature-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden;}
-  .feature-card{background:var(--panel); padding:26px 24px;}
-  .feature-card .num{
-    font-family:'Rozha One',serif; font-size:22px; color:var(--accent); display:block; margin-bottom:10px;
+  /* ---------- Feature grid (neutral outline, line icons) ---------- */
+  .feature-grid{
+    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px;
   }
-  .feature-card h3{font-size:15.5px; margin:0 0 8px;}
+  .feature-card{
+    background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius);
+    padding:24px; text-align:center; transition:border-color .15s ease;
+  }
+  .feature-card:hover{border-color:#D9CEBD;}
+  .feature-card .ico{
+    width:40px; height:40px; margin:0 auto 14px;
+    display:flex; align-items:center; justify-content:center;
+  }
+  .feature-card .ico svg{width:26px; height:26px; stroke:var(--accent); fill:none; stroke-width:1.6;}
+  .feature-card h3{font-size:15px; font-weight:600; margin:0 0 8px;}
   .feature-card p{font-size:13.5px; color:var(--ink-soft); margin:0;}
 
   /* ---------- Steps ---------- */
-  .steps{display:flex; flex-direction:column; gap:0; max-width:760px; border-top:1px solid var(--rule);}
+  .steps{display:flex; flex-direction:column; gap:0; max-width:760px; margin:0 auto; border-top:1px solid var(--rule);}
   .step{display:flex; gap:20px; padding:22px 0; border-bottom:1px solid var(--rule);}
   .step .step-num{
-    font-family:'Rozha One',serif; font-size:26px; color:var(--accent); flex-shrink:0; width:36px;
+    font-family:'Poppins',sans-serif; font-weight:700; font-size:20px; color:var(--accent); flex-shrink:0; width:36px;
   }
   .step h3{font-size:15.5px; margin:0 0 6px;}
   .step p{font-size:14.5px; color:var(--ink-soft); margin:0;}
 
-  /* ---------- Info copy / bullet block ---------- */
-  .info-copy{max-width:760px;}
+  /* ---------- Info copy ---------- */
+  .info-copy{max-width:760px; margin:0 auto;}
   .info-copy p{color:var(--ink-soft); font-size:15px; margin:0 0 14px;}
   .info-copy ul{color:var(--ink-soft); font-size:15px; padding-left:20px; margin:0;}
   .info-copy li{margin-bottom:9px;}
   .info-copy strong{color:var(--ink);}
 
   /* ---------- FAQ accordion ---------- */
-  .faq-list{max-width:760px; display:flex; flex-direction:column; gap:10px;}
+  .faq-list{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:10px;}
   .faq-item{background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden;}
   .faq-q{
     width:100%; text-align:left; background:none; border:none; padding:16px 20px;
-    font-family:'Inter',sans-serif; font-size:15px; font-weight:600; color:var(--ink);
+    font-family:'Poppins',sans-serif; font-size:14.5px; font-weight:600; color:var(--ink);
     cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:12px;
   }
   .faq-q .plus{font-size:18px; color:var(--accent); flex-shrink:0; transition:transform .2s ease; font-weight:400;}
@@ -271,30 +300,46 @@
 </header>
 
 <section class="hero" id="tool">
-  <h1>Stylish &amp; calligraphy Hindi fonts, generated as you type</h1>
-  <p>Type your Hindi text below and see it rendered live across 50+ font styles — from clean everyday Hindi type to bold calligraphy. Adjust the size and colours, then copy the text or download a styled PNG.</p>
+  <h1>Fonts in Hindi — Stylish &amp; Calligraphy Hindi Fonts, Free to Use</h1>
+  <p>Looking for a Hindi font generator? Type your text below and preview it instantly across 50+ stylish and calligraphy Hindi fonts. Free, fast, and ready to copy or download.</p>
 
   <div class="input-panel">
-    <textarea id="textInput" placeholder="Type your Hindi text here..." maxlength="200">अपना टाइम आएगा</textarea>
-    <div class="input-row">
-      <label class="control">Font size
+    <textarea id="textInput" placeholder="Type your text in Hindi or English &amp; see it transform..." maxlength="200">अपना टाइम आएगा</textarea>
+
+    <div class="control-row">
+      <div class="control-card">
+        <div class="c-label">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7V5h9v2M9 5v14M6 19h6M17 10l3 3-3 3M20 13H14"/></svg>
+          Font Size — <span id="sizeVal">30px</span>
+        </div>
         <input type="range" id="sizeRange" min="16" max="56" value="30">
-        <span id="sizeVal">30px</span>
-      </label>
-      <label class="control">Text colour
+      </div>
+
+      <div class="control-card">
+        <div class="c-label">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="2.5"/></svg>
+          Text Colour
+        </div>
         <input type="color" id="fontColor" value="#211B16">
-      </label>
-      <label class="control">Background
+      </div>
+
+      <div class="control-card">
+        <div class="c-label">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 15l5-5 4 4 3-3 6 6"/></svg>
+          Background Colour
+        </div>
         <input type="color" id="bgColor" value="#ffffff">
-      </label>
-      <label class="control">Sort
+      </div>
+    </div>
+
+    <div class="toolbar-row">
+      <span class="char-count"><span id="charCount">0</span>/200</span>
+      <label>Sort
         <select id="sortOrder">
           <option value="default">Default</option>
           <option value="az">A–Z</option>
         </select>
       </label>
-      <div class="spacer"></div>
-      <span class="char-count"><span id="charCount">0</span>/200</span>
     </div>
   </div>
 </section>
@@ -308,7 +353,7 @@
 <div class="empty-state" id="emptyState" style="display:none;">Type some text above to see font previews.</div>
 <div class="page-note"><span>All 50+ styles are shown on this page — scroll to browse.</span></div>
 
-<!-- ===== Banner intro (matches reference's mid-page intro block) ===== -->
+<!-- ===== Banner intro ===== -->
 <section class="block banner">
   <div class="banner-inner">
     <p><strong>HindiFontGen</strong> is a free, fast tool built for anyone who wants to turn plain Hindi text into something more expressive. Whether you're designing an Instagram caption, a wedding invitation, a YouTube thumbnail, or a WhatsApp status, this tool renders your text instantly across dozens of genuine Devanagari typefaces so you can find a style that fits.</p>
@@ -324,36 +369,61 @@
     <p>A lot of "font generator" sites lean on gimmicks. Here's what we do differently.</p>
   </div>
   <div class="feature-grid">
+
     <div class="feature-card">
-      <span class="num">01</span>
-      <h3>50+ genuine Hindi fonts</h3>
-      <p>Every style is a real, licensed Devanagari typeface — not a Unicode symbol swap. Your text stays fully readable everywhere.</p>
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20L12 4l6 16M8.5 14h7"/></svg></div>
+      <h3>50+ Hindi font styles</h3>
+      <p>Choose the right Hindi font for your needs, from clean everyday type to bold calligraphy.</p>
     </div>
+
     <div class="feature-card">
-      <span class="num">02</span>
-      <h3>Live preview, no waiting</h3>
-      <p>Type once and every font updates immediately. Compare 50 styles side by side without reloading the page.</p>
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4v16M4 6h6M4 18h6M14 7l3-3 3 3M17 4v16"/></svg></div>
+      <h3>Control font size</h3>
+      <p>Want it bigger or smaller? Just move the slider and set the size you need.</p>
     </div>
+
     <div class="feature-card">
-      <span class="num">03</span>
-      <h3>Size and colour control</h3>
-      <p>Set your own text size, text colour, and background colour — applied consistently across every style at once.</p>
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="13" r="8"/><circle cx="9" cy="11" r="1" fill="var(--accent)" stroke="none"/><circle cx="15" cy="11" r="1" fill="var(--accent)" stroke="none"/><circle cx="12" cy="16" r="1" fill="var(--accent)" stroke="none"/></svg></div>
+      <h3>Colour customisation</h3>
+      <p>Set both the text colour and the background colour however you like.</p>
     </div>
+
     <div class="feature-card">
-      <span class="num">04</span>
-      <h3>PNG export built in</h3>
-      <p>Copying text drops the font style, so we let you export the exact styled look as an image for platforms that need one.</p>
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="3 3"/></svg></div>
+      <h3>Transparent-ready export</h3>
+      <p>Export your styled text as an image, ready to drop onto any background.</p>
     </div>
+
     <div class="feature-card">
-      <span class="num">05</span>
-      <h3>Nothing saved, no signup</h3>
-      <p>Your text stays in your browser. No account, no login, and nothing you type is stored on our end.</p>
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="10" r="1.6"/><path d="M4 17l5-4 3 2 4-5 4 6"/></svg></div>
+      <h3>PNG download</h3>
+      <p>Save your styled text as a photo. Download it as a PNG in full quality.</p>
     </div>
+
     <div class="feature-card">
-      <span class="num">06</span>
-      <h3>Works on any device</h3>
-      <p>A fully responsive layout means the tool works the same on a phone as it does on a desktop browser.</p>
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v13M8 12l4 4 4-4"/><path d="M5 19h14"/></svg></div>
+      <h3>Copy or download</h3>
+      <p>Copy the plain text for anywhere, or download the exact styled look as an image.</p>
     </div>
+
+    <div class="feature-card">
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7z"/><circle cx="12" cy="12" r="3"/></svg></div>
+      <h3>Live text preview</h3>
+      <p>As soon as you type, every style updates immediately — see it in real time.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/><line x1="4" y1="4" x2="20" y2="20"/><circle cx="12" cy="9" r="4"/></svg></div>
+      <h3>No signup needed</h3>
+      <p>No sign-up, no login — just open and use. Everything is completely free.</p>
+    </div>
+
+    <div class="feature-card">
+      <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><rect x="7" y="2" width="10" height="20" rx="2"/><line x1="11" y1="19" x2="13" y2="19"/></svg></div>
+      <h3>Mobile friendly</h3>
+      <p>Open it on any device — it works just as well on a phone as on a computer.</p>
+    </div>
+
   </div>
 </section>
 
@@ -368,14 +438,14 @@
       <span class="step-num">1</span>
       <div>
         <h3>Type your text</h3>
-        <p>Enter your Hindi text in the box at the top of the page.</p>
+        <p>Enter your Hindi or English text in the box above.</p>
       </div>
     </div>
     <div class="step">
       <span class="step-num">2</span>
       <div>
         <h3>Adjust size and colour</h3>
-        <p>Use the sliders and colour pickers to match the size, text colour, and background you need.</p>
+        <p>Use the slider and colour pickers to set the font size, text colour, and background colour.</p>
       </div>
     </div>
     <div class="step">
@@ -398,7 +468,7 @@
 <!-- ===== Info / bullet block ===== -->
 <section class="block tight">
   <div class="section-head">
-    <span class="kicker">Stylish Hindi Fonts</span>
+    <span class="kicker">Calligraphy Hindi Fonts</span>
     <h2>What you can do with this tool</h2>
   </div>
   <div class="info-copy">
