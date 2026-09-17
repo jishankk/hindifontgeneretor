@@ -3,722 +3,737 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="theme-color" content="#f7f8f5">
-<link rel="icon" type="image/png" sizes="48x48" href="/hindifontgen favicon.png">
+<title>Hindi Font Generator — Stylish &amp; Calligraphy Hindi Fonts, Free Download</title>
+<meta name="description" content="Type your Hindi text and preview it instantly in 50+ stylish and calligraphy Hindi fonts. Adjust size and colour, then download as PNG or transparent image — free, no signup.">
 <link rel="canonical" href="https://hindifontgen.in/">
-<title>Hindi Font Generator — Stylish Hindi Fonts Online</title>
-<meta name="description" content="Create stylish Hindi text with beautiful Devanagari fonts. Preview, copy, download PNG or transparent images, and explore Hindi fonts online for free.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&family=Anek+Devanagari:wght@400;500;600;700&family=Amita:wght@400;700&family=Arya:wght@400;700&family=Asar&family=Baloo+2:wght@400;500;600;700&family=Biryani:wght@400;600;700;800&family=Cambay:wght@400;700&family=Dekko&family=Eczar:wght@400;500;600;700&family=Glegoo:wght@400;700&family=Gotu&family=Halant:wght@400;500;600;700&family=Hind:wght@300;400;500;600;700&family=Jaldi:wght@400;700&family=Kadwa:wght@400;700&family=Kalam:wght@300;400;700&family=Karma:wght@300;400;500;600;700&family=Khand:wght@300;400;500;600;700&family=Khula:wght@300;400;600;700;800&family=Kurale&family=Laila:wght@300;400;500;600;700&family=Maitree:wght@200;300;400;500;600;700&family=Martel:wght@300;400;600;700;800;900&family=Modak&family=Mukta:wght@200;300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Serif+Devanagari:wght@400;500;600;700&family=Palanquin:wght@300;400;500;600;700&family=Rhodium+Libre&family=Rozha+One&family=Sahitya:wght@400;700&family=Sarala:wght@400;700&family=Sarpanch:wght@400;500;600;700;800&family=Sumana&family=Teko:wght@300;400;500;600;700&family=Tiro+Devanagari+Hindi:ital@0;1&family=Utsaah:wght@400;700&family=Vesper+Libre:wght@400;500;600;700;900&family=Yatra+One&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600;700&family=Mukta:wght@400;600;700&family=Poppins:wght@400;600;700&family=Baloo+2:wght@500;700&family=Tiro+Devanagari+Hindi&family=Eczar:wght@500;700&family=Yatra+One&family=Kalam:wght@400;700&family=Khand:wght@500;700&family=Laila:wght@500;700&family=Martel:wght@600;800&family=Karma:wght@500;700&family=Sarala:wght@700&family=Palanquin:wght@500;700&family=Rozha+One&family=Arya:wght@700&family=Halant:wght@600&family=Vesper+Libre:wght@500;700;900&family=Kurale&family=Glegoo:wght@700&family=Teko:wght@600&family=Rajdhani:wght@600;700&family=Biryani:wght@600;800&family=Jaldi:wght@700&family=Sahitya:wght@700&family=Amita:wght@700&family=Modak&family=Sarpanch:wght@600;800&family=Gotu&family=Dekko&family=Sumana&family=Utsaah&family=Cambay:wght@700&family=Farsan&family=Peddana&family=Akshar:wght@600;700&family=Anek+Devanagari:wght@600;700&family=Ranga:wght@700&family=Asar&family=Inknut+Antiqua:wght@600;700&family=Khula:wght@700;800&family=Kadwa:wght@700&family=Yantramanav:wght@700&family=Rhodium+Libre&family=Aparajita&family=Nirmala+UI&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 
 <style>
-:root{
-  --bg:#f7f8f5;
-  --surface:#ffffff;
-  --surface-2:#f0f3ed;
-  --ink:#20251f;
-  --muted:#697167;
-  --line:#dfe5dc;
-  --accent:#197653;
-  --accent-dark:#11583e;
-  --accent-soft:#e5f1eb;
-  --warm:#f5efe5;
-  --shadow:0 10px 35px rgba(30,45,35,.07);
-  --radius:16px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:var(--bg);
-  color:var(--ink);
-  font-family:"Roboto",Arial,sans-serif;
-  line-height:1.55;
-  -webkit-font-smoothing:antialiased;
-}
-button,input,textarea,select{font:inherit}
-button{cursor:pointer}
-a{color:inherit}
-::selection{background:#cce6d9}
-.container{width:min(1120px,calc(100% - 88px));margin:auto}
+  :root{
+    --paper:#FBF7F0;
+    --panel:#FFFFFF;
+    --ink:#211B16;
+    --ink-soft:#6E645A;
+    --rule:#E7DFD2;
+    --accent:#8C2F1F;
+    --accent-soft:#F4E3DC;
+    --accent-dark:#6E2417;
+    --focus:#1A56DB;
+    --radius:10px;
+  }
 
-/* Header */
-.site-header{
-  position:sticky;top:0;z-index:100;
-  background:rgba(247,248,245,.94);
-  backdrop-filter:blur(12px);
-  border-bottom:1px solid rgba(223,229,220,.9);
-}
-.header-inner{height:68px;display:flex;align-items:center;justify-content:space-between}
-.brand{text-decoration:none;display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:-.3px}
-.brand-mark{
-  width:34px;height:34px;border-radius:10px;background:var(--accent);
-  color:#fff;display:grid;place-items:center;font-family:"Yatra One",serif;font-size:19px;
-}
-.brand-name{font-size:17px}
-.brand-name span{color:var(--accent)}
-.nav{display:flex;align-items:center;gap:4px}
-.nav a{text-decoration:none;font-size:14px;color:var(--muted);padding:9px 12px;border-radius:9px}
-.nav a:hover{background:var(--surface);color:var(--ink)}
-.menu{display:none;border:1px solid var(--line);background:#fff;border-radius:10px;padding:8px 10px}
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Inter',system-ui,sans-serif;
+    -webkit-font-smoothing:antialiased;
+    line-height:1.5;
+  }
+  a{color:inherit;}
+  ::selection{background:var(--accent-soft);}
+  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){
+    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
+  }
 
-/* Hero */
-.hero{padding:42px 0 22px;text-align:center}
-.hero h1{
-  margin:0 auto 8px;max-width:850px;
-  font-family:"Roboto",Arial,sans-serif;font-size:clamp(28px,4vw,39px);
-  line-height:1.18;letter-spacing:-.5px;font-weight:700;
-}
-.hero p{max-width:760px;margin:0 auto;color:#555d56;font-size:14px}
+  /* ---------- Header ---------- */
+  header{
+    position:sticky; top:0; z-index:50;
+    background:rgba(251,247,240,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:1px solid var(--rule);
+    padding:16px 24px;
+  }
+  .header-inner{
+    max-width:1180px; margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between; gap:16px;
+  }
+  .logo{
+    font-family:'Rozha One',serif;
+    font-size:21px;
+    text-decoration:none;
+    flex-shrink:0;
+    color:var(--ink);
+  }
+  .logo em{font-style:normal; color:var(--accent);}
+  nav.main-nav{display:flex; align-items:center; gap:2px;}
+  nav.main-nav a{
+    font-size:14px; color:var(--ink-soft); text-decoration:none;
+    padding:8px 12px; border-radius:7px; white-space:nowrap;
+  }
+  nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
+  nav.main-nav a.current{color:var(--ink); font-weight:600;}
+  .nav-toggle{
+    display:none; border:1px solid var(--rule); background:#fff;
+    border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;
+  }
+  @media (max-width:900px){
+    nav.main-nav{
+      position:absolute; top:100%; left:0; right:0; background:var(--paper);
+      border-bottom:1px solid var(--rule); flex-direction:column; align-items:stretch;
+      padding:8px 16px 16px; display:none;
+    }
+    nav.main-nav.open{display:flex;}
+    nav.main-nav a{padding:10px 8px; border-radius:6px;}
+    .nav-toggle{display:block;}
+  }
 
-/* Generator */
-.generator{
-  margin:28px 0 0;background:var(--surface);border:1px solid var(--line);
-  border-radius:20px;box-shadow:var(--shadow);overflow:hidden;text-align:left;
-}
-.generator-top{padding:28px}
-.textarea-wrap{position:relative}
-#textInput{
-  width:100%;min-height:190px;resize:vertical;
-  border:1px solid #d9e0d7;border-radius:14px;background:#fbfcfa;
-  padding:22px;color:var(--ink);
-  font-family:"Noto Sans Devanagari",sans-serif;font-size:30px;line-height:1.65;
-  outline:none;transition:.18s;
-}
-#textInput:focus{border-color:#9bc8b3;box-shadow:0 0 0 4px rgba(25,118,83,.08)}
-.controls{
-  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:14px;margin-top:16px;
-}
-.control{
-  min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:14px;
-  border:1px solid var(--line);background:#fafbf9;border-radius:13px;
-  padding:15px 17px;color:var(--muted);font-size:14px;
-}
-.control strong{color:var(--ink);font-size:15px;font-weight:700}
-.control input[type=color]{width:46px;height:46px;border:1px solid #d9e0d7;padding:3px;background:#fff;border-radius:9px}
-.control input[type=range]{width:180px;accent-color:var(--accent)}
-.control .size-value{font-weight:700;color:var(--ink);white-space:nowrap}
-.control:nth-child(1){grid-column:1}
-.control:nth-child(2){grid-column:2}
-.control:nth-child(3){grid-column:3}
-.generator-note{display:none}
+  /* ---------- Hero ---------- */
+  .hero{max-width:1180px; margin:0 auto; padding:44px 24px 8px;}
+  h1{
+    font-family:'Rozha One',serif;
+    font-weight:400;
+    font-size:clamp(26px,3.6vw,38px);
+    line-height:1.2;
+    margin:0 0 10px;
+    max-width:22ch;
+  }
+  .hero p{color:var(--ink-soft); font-size:15.5px; max-width:62ch; margin:0 0 26px;}
 
-/* Results */
-.results-head{display:flex;justify-content:space-between;align-items:end;gap:18px;margin:48px 0 20px;padding:0 4px}
-.results-head h2{margin:0;font-family:"Roboto",Arial,sans-serif;font-size:28px;line-height:1.2;font-weight:700}
-.results-head p{margin:0;color:var(--muted);font-size:13px}
-.font-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
-.font-card{
-  background:var(--surface);border:1px solid var(--line);border-radius:15px;
-  padding:24px;min-width:0;display:flex;flex-direction:column;gap:17px;
-  transition:transform .16s ease,box-shadow .16s ease,border-color .16s ease;
-}
-.font-card:hover{transform:translateY(-2px);box-shadow:0 12px 28px rgba(30,45,35,.08);border-color:#cbd7cc}
-.font-meta{display:flex;justify-content:space-between;align-items:center;gap:8px}
-.font-name{font-size:12px;font-weight:750;color:var(--ink)}
-.font-type{font-size:10px;color:var(--muted);background:var(--surface-2);padding:3px 7px;border-radius:999px}
-.preview{
-  min-height:155px;border:1px solid #e7ebe5;border-radius:12px;
-  display:flex;align-items:center;padding:12px 13px;
-  overflow:hidden;overflow-wrap:anywhere;word-break:break-word;
-  font-family:inherit;font-size:34px;line-height:1.45;
-}
-.actions{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
-.action{
-  border:1px solid var(--line);background:#fff;color:var(--ink);
-  border-radius:9px;padding:12px 6px;font-size:12px;font-weight:700;
-  transition:.15s
-}
-.action:hover{border-color:#a9c7b5;background:var(--accent-soft);color:var(--accent-dark)}
-.action.copy:hover{background:var(--ink);border-color:var(--ink);color:#fff}
-.action:disabled{opacity:.5;cursor:not-allowed}
-.no-results{
-  text-align:center;padding:45px 15px;border:1px dashed var(--line);
-  border-radius:15px;color:var(--muted);display:none
-}
+  .input-panel{
+    background:var(--panel);
+    border:1px solid var(--rule);
+    border-radius:var(--radius);
+    padding:20px;
+  }
+  #textInput{
+    width:100%; min-height:60px; resize:vertical;
+    border:1px solid var(--rule); border-radius:8px; padding:14px 16px;
+    font-family:'Hind',sans-serif; font-size:19px; color:var(--ink); background:#fff;
+  }
+  #textInput:focus{border-color:var(--focus);}
+  .input-row{display:flex; flex-wrap:wrap; gap:16px; align-items:center; margin-top:14px;}
+  .control{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--ink-soft);}
+  .control input[type="range"]{width:120px; accent-color:var(--accent);}
+  .control input[type="color"]{
+    width:30px; height:30px; border:1px solid var(--rule); border-radius:6px; padding:0; background:none; cursor:pointer;
+  }
+  .control select{
+    font-family:'Inter',sans-serif; font-size:13px; padding:6px 8px;
+    border:1px solid var(--rule); border-radius:6px; background:#fff; color:var(--ink);
+  }
+  .spacer{flex:1;}
+  .char-count{font-size:13px; color:var(--ink-soft);}
 
-/* Pagination */
-.pagination{display:flex;justify-content:center;align-items:center;gap:6px;margin:26px 0 66px;flex-wrap:wrap}
-.page-btn{
-  min-width:36px;height:36px;border:1px solid var(--line);background:#fff;
-  color:var(--muted);border-radius:9px;font-size:12px;font-weight:700
-}
-.page-btn:hover{border-color:#9fc6af;color:var(--accent)}
-.page-btn.active{background:var(--accent);border-color:var(--accent);color:#fff}
-.page-btn.arrow{font-size:15px}
+  /* ---------- Results bar ---------- */
+  .results-bar{
+    max-width:1180px; margin:30px auto 0; padding:0 24px;
+    display:flex; align-items:center; justify-content:space-between; gap:12px;
+  }
+  .results-bar h2{font-size:13.5px; font-weight:600; color:var(--ink-soft); margin:0; text-transform:uppercase; letter-spacing:.03em;}
+  #toast{font-size:13px; color:var(--accent); font-weight:600; opacity:0; transition:opacity .25s ease;}
+  #toast.show{opacity:1;}
 
-/* Content */
-.section{padding:66px 0;border-top:1px solid var(--line)}
-.section-intro{max-width:710px;margin-bottom:30px}
-.section-label{
-  color:var(--accent);font-size:11px;font-weight:800;text-transform:uppercase;
-  letter-spacing:1.2px
-}
-.section h2{font-family:"Roboto",Arial,sans-serif;font-size:30px;line-height:1.2;margin:8px 0 10px}
-.section-intro p{color:var(--muted);margin:0;font-size:15px}
-.story{
-  display:grid;grid-template-columns:1.05fr .95fr;gap:22px;align-items:stretch
-}
-.story-copy,.tip-panel{
-  background:#fff;border:1px solid var(--line);border-radius:17px;padding:25px
-}
-.story-copy p{font-size:15px;color:#596159;margin:0 0 15px}
-.story-copy p:last-child{margin-bottom:0}
-.tip-panel{background:var(--warm);border-color:#e9e0d0}
-.tip-panel h3{margin:0 0 15px;font-size:17px}
-.tip{display:flex;gap:11px;margin:0 0 15px}
-.tip:last-child{margin-bottom:0}
-.tip-num{
-  flex:0 0 27px;height:27px;border-radius:50%;background:#fff;
-  display:grid;place-items:center;font-size:11px;font-weight:800;color:var(--accent)
-}
-.tip div{font-size:13px;color:#615c54}
-.tip b{display:block;color:var(--ink);margin-bottom:2px}
+  /* ---------- Font grid (calligraphy cards) ---------- */
+  .grid{
+    max-width:1180px; margin:14px auto 8px; padding:0 24px;
+    display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px;
+  }
+  .font-card{
+    background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius);
+    padding:16px; display:flex; flex-direction:column; gap:10px; min-width:0;
+  }
+  .font-card .fname{font-size:12px; color:var(--ink-soft); display:flex; justify-content:space-between; align-items:center;}
+  .preview{font-size:28px; line-height:1.35; word-break:break-word; min-height:36px;}
+  .card-actions{display:flex; gap:8px; margin-top:auto; flex-wrap:wrap;}
+  .btn{
+    font-family:'Inter',sans-serif; font-size:12.5px; font-weight:600;
+    border:1px solid var(--rule); background:#fff; color:var(--ink);
+    padding:7px 11px; border-radius:7px; cursor:pointer;
+    transition:background .15s ease, border-color .15s ease;
+  }
+  .btn:hover{border-color:var(--accent);}
+  .btn.primary{background:var(--accent); color:#fff; border-color:var(--accent);}
+  .btn.primary:hover{background:var(--accent-dark); border-color:var(--accent-dark);}
+  .btn:disabled{opacity:0.45; cursor:not-allowed;}
 
-/* Features */
-.features{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
-.feature{
-  background:#fff;border:1px solid var(--line);border-radius:15px;padding:21px
-}
-.feature-icon{
-  width:37px;height:37px;border-radius:10px;background:var(--accent-soft);
-  color:var(--accent);display:grid;place-items:center;margin-bottom:14px
-}
-.feature-icon svg{width:18px;height:18px}
-.feature h3{font-size:15px;margin:0 0 7px}
-.feature p{font-size:13px;color:var(--muted);margin:0}
+  .empty-state{
+    max-width:1180px; margin:24px auto 40px; padding:48px 24px;
+    text-align:center; color:var(--ink-soft); font-size:15px;
+  }
 
-/* FAQ */
-.faq{max-width:820px}
-.faq-item{border-bottom:1px solid var(--line)}
-.faq-q{
-  width:100%;padding:18px 0;border:0;background:transparent;
-  display:flex;justify-content:space-between;align-items:center;text-align:left;
-  font-weight:700;font-size:14px;color:var(--ink);gap:15px
-}
-.faq-q span{
-  flex:0 0 25px;width:25px;height:25px;border:1px solid var(--line);
-  border-radius:50%;display:grid;place-items:center;color:var(--accent);
-  font-size:17px;font-weight:400;transition:.2s
-}
-.faq-item.open .faq-q span{transform:rotate(45deg);background:var(--accent);border-color:var(--accent);color:#fff}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .25s ease}
-.faq-a p{margin:0 0 17px;color:var(--muted);font-size:14px;max-width:760px}
+  /* ---------- Pagination (visual only, all fonts already shown) ---------- */
+  .page-note{
+    max-width:1180px; margin:8px auto 60px; padding:0 24px;
+    display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap;
+  }
+  .page-note span{
+    font-size:12.5px; color:var(--ink-soft);
+  }
 
-/* Footer */
-footer{background:#20251f;color:#dce3dd;margin-top:0}
-.footer-main{padding:48px 0 35px;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:35px}
-.footer-brand{font-weight:800;font-size:17px}
-.footer-brand span{color:#70c89e}
-.footer-main p{color:#aeb9b0;font-size:13px;max-width:380px}
-.footer-col h4{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:#fff;margin:0 0 13px}
-.footer-col a{display:block;text-decoration:none;color:#aeb9b0;font-size:13px;margin:7px 0}
-.footer-col a:hover{color:#fff}
-.footer-bottom{border-top:1px solid #343b35;padding:17px 0;color:#89948b;font-size:11px}
+  /* ---------- Section shell ---------- */
+  section.block{max-width:1180px; margin:0 auto; padding:60px 24px;}
+  section.block.tight{padding-top:0;}
+  section.block.banner{
+    background:var(--panel);
+    border-top:1px solid var(--rule);
+    border-bottom:1px solid var(--rule);
+    max-width:none;
+    padding:56px 24px;
+  }
+  .banner-inner{max-width:1180px; margin:0 auto;}
+  .section-head{max-width:680px; margin:0 0 34px;}
+  .kicker{
+    display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em;
+    text-transform:uppercase; color:var(--accent); margin-bottom:10px;
+  }
+  .section-head h2{font-family:'Rozha One',serif; font-weight:400; font-size:clamp(22px,2.6vw,28px); margin:0 0 10px;}
+  .section-head p{color:var(--ink-soft); font-size:15px; margin:0;}
 
-/* Responsive */
-@media(max-width:900px){
-  .font-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-  .story{grid-template-columns:1fr}
-  .features{grid-template-columns:repeat(2,1fr)}
-}
-@media(max-width:680px){
-  .container{width:min(100% - 32px,1120px)}
-  .site-header{position:relative}
-  .header-inner{height:62px}
-  .nav{display:none;position:absolute;top:62px;left:0;right:0;background:var(--bg);border-bottom:1px solid var(--line);padding:7px 12px 12px;flex-direction:column;align-items:stretch}
-  .nav.open{display:flex}
-  .nav a{padding:11px 10px}
-  .menu{display:block}
-  .hero{padding:30px 0 16px}
-  .hero h1{font-size:30px;letter-spacing:-.4px}
-  .hero p{font-size:14px}
-  .generator{border-radius:15px;margin-top:22px}
-  .generator-top{padding:15px}
-  #textInput{min-height:170px;font-size:23px;padding:17px}
-  .controls{grid-template-columns:1fr;gap:10px;margin-top:12px}
-  .control{min-height:72px;padding:13px 14px}
-  .control input[type=range]{width:170px}
-  .results-head{margin-top:32px;display:block}
-  .results-head h2{font-size:26px}
-  .results-head p{margin-top:5px}
-  .font-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
-  .font-card{padding:13px;gap:11px}
-  .preview{font-size:25px;min-height:118px;padding:10px}
-  .section{padding:52px 0}
-  .section h2{font-size:28px}
-  .features{grid-template-columns:repeat(2,1fr)}
-  .footer-main{grid-template-columns:1fr;gap:25px;padding:40px 0 28px}
-}
-@media(max-width:390px){
-  .hero h1{font-size:28px}
-  .font-grid{grid-template-columns:1fr}
-  .features{grid-template-columns:1fr}
-  .actions{gap:4px}
-  .action{font-size:10px}
-}
+  .banner-inner p{color:var(--ink-soft); font-size:15px; max-width:80ch; margin:0 0 14px;}
+  .banner-inner strong{color:var(--ink);}
+
+  /* ---------- Feature grid ---------- */
+  .feature-grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:1px; background:var(--rule); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden;}
+  .feature-card{background:var(--panel); padding:26px 24px;}
+  .feature-card .num{
+    font-family:'Rozha One',serif; font-size:22px; color:var(--accent); display:block; margin-bottom:10px;
+  }
+  .feature-card h3{font-size:15.5px; margin:0 0 8px;}
+  .feature-card p{font-size:13.5px; color:var(--ink-soft); margin:0;}
+
+  /* ---------- Steps ---------- */
+  .steps{display:flex; flex-direction:column; gap:0; max-width:760px; border-top:1px solid var(--rule);}
+  .step{display:flex; gap:20px; padding:22px 0; border-bottom:1px solid var(--rule);}
+  .step .step-num{
+    font-family:'Rozha One',serif; font-size:26px; color:var(--accent); flex-shrink:0; width:36px;
+  }
+  .step h3{font-size:15.5px; margin:0 0 6px;}
+  .step p{font-size:14.5px; color:var(--ink-soft); margin:0;}
+
+  /* ---------- Info copy / bullet block ---------- */
+  .info-copy{max-width:760px;}
+  .info-copy p{color:var(--ink-soft); font-size:15px; margin:0 0 14px;}
+  .info-copy ul{color:var(--ink-soft); font-size:15px; padding-left:20px; margin:0;}
+  .info-copy li{margin-bottom:9px;}
+  .info-copy strong{color:var(--ink);}
+
+  /* ---------- FAQ accordion ---------- */
+  .faq-list{max-width:760px; display:flex; flex-direction:column; gap:10px;}
+  .faq-item{background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden;}
+  .faq-q{
+    width:100%; text-align:left; background:none; border:none; padding:16px 20px;
+    font-family:'Inter',sans-serif; font-size:15px; font-weight:600; color:var(--ink);
+    cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:12px;
+  }
+  .faq-q .plus{font-size:18px; color:var(--accent); flex-shrink:0; transition:transform .2s ease; font-weight:400;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+  .faq-a-inner{padding:0 20px 18px; font-size:14.5px; color:var(--ink-soft);}
+
+  /* ---------- Footer ---------- */
+  footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
+  .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
+  .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
+  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
+  .footer-col ul{list-style:none; margin:0; padding:0;}
+  .footer-col li{margin-bottom:8px;}
+  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
+  .footer-col a:hover{color:var(--accent);}
+  .footer-bottom{
+    max-width:1180px; margin:32px auto 0; padding-top:20px;
+    border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);
+  }
+
+  @media (max-width:640px){
+    .grid{grid-template-columns:1fr 1fr;}
+    .preview{font-size:21px;}
+    .footer-inner{grid-template-columns:1fr; gap:24px;}
+  }
+  @media (max-width:420px){
+    .grid{grid-template-columns:1fr;}
+  }
 </style>
 </head>
-
 <body>
-<header class="site-header">
-  <div class="container header-inner">
-    <a class="brand" href="#top" aria-label="HindiFontGen home">
-      <span class="brand-mark">हि</span>
-      <span class="brand-name">Hindi<span>FontGen</span></span>
-    </a>
-    <button class="menu" id="menuBtn" type="button" aria-expanded="false">☰ Menu</button>
-    <nav class="nav" id="nav">
-      <a href="#generator">Generator</a>
-      <a href="#fonts">Fonts</a>
-      <a href="#guide">Guide</a>
+
+<header>
+  <div class="header-inner">
+    <a href="index.html" class="logo">Hindi<em>FontGen</em></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="index.html" class="current">Tool</a>
+      <a href="#why">Why Choose Us</a>
+      <a href="#how">How It Works</a>
       <a href="#faq">FAQ</a>
       <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+      <a href="terms.html">Terms</a>
     </nav>
   </div>
 </header>
 
-<main id="top">
-<section class="hero">
-  <div class="container">
-    <h1>Hindi Font Generator</h1>
-    <p>Type your text below and explore different Hindi font styles. Preview, copy or save the style you like.</p>
+<section class="hero" id="tool">
+  <h1>Stylish &amp; calligraphy Hindi fonts, generated as you type</h1>
+  <p>Type your Hindi text below and see it rendered live across 50+ font styles — from clean everyday Hindi type to bold calligraphy. Adjust the size and colours, then copy the text or download a styled PNG.</p>
 
-    <div class="generator" id="generator">
-      <div class="generator-top">
-        <div class="textarea-wrap">
-          <textarea id="textInput" maxlength="300" aria-label="Hindi text input" placeholder="अपना हिंदी टेक्स्ट यहाँ लिखें...">नमस्ते दुनिया</textarea>
-          
-        </div>
-        <div class="controls">
-          <label class="control"><strong>Size</strong><input id="sizeRange" type="range" min="16" max="72" value="32"><span id="sizeVal" class="size-value">32px</span></label>
-          <label class="control"><strong>Text Color</strong><input id="fontColor" type="color" value="#20251f" aria-label="Text color"></label>
-          <label class="control"><strong>Background Color</strong><input id="bgColor" type="color" value="#ffffff" aria-label="Background color"></label>
-        </div>
+  <div class="input-panel">
+    <textarea id="textInput" placeholder="Type your Hindi text here..." maxlength="200">अपना टाइम आएगा</textarea>
+    <div class="input-row">
+      <label class="control">Font size
+        <input type="range" id="sizeRange" min="16" max="56" value="30">
+        <span id="sizeVal">30px</span>
+      </label>
+      <label class="control">Text colour
+        <input type="color" id="fontColor" value="#211B16">
+      </label>
+      <label class="control">Background
+        <input type="color" id="bgColor" value="#ffffff">
+      </label>
+      <label class="control">Sort
+        <select id="sortOrder">
+          <option value="default">Default</option>
+          <option value="az">A–Z</option>
+        </select>
+      </label>
+      <div class="spacer"></div>
+      <span class="char-count"><span id="charCount">0</span>/200</span>
+    </div>
+  </div>
+</section>
+
+<div class="results-bar">
+  <h2 id="resultCount">50 font styles</h2>
+  <span id="toast">Copied!</span>
+</div>
+
+<div class="grid" id="fontGrid"></div>
+<div class="empty-state" id="emptyState" style="display:none;">Type some text above to see font previews.</div>
+<div class="page-note"><span>All 50+ styles are shown on this page — scroll to browse.</span></div>
+
+<!-- ===== Banner intro (matches reference's mid-page intro block) ===== -->
+<section class="block banner">
+  <div class="banner-inner">
+    <p><strong>HindiFontGen</strong> is a free, fast tool built for anyone who wants to turn plain Hindi text into something more expressive. Whether you're designing an Instagram caption, a wedding invitation, a YouTube thumbnail, or a WhatsApp status, this tool renders your text instantly across dozens of genuine Devanagari typefaces so you can find a style that fits.</p>
+    <p>Every preview updates as you type — no waiting, no "generate" button. Pick a style, adjust the colours, and either copy the plain text or download it as a styled PNG image ready to post anywhere.</p>
+  </div>
+</section>
+
+<!-- ===== Why Choose Us ===== -->
+<section class="block" id="why">
+  <div class="section-head">
+    <span class="kicker">Why Choose Us</span>
+    <h2>Built around real fonts, not tricks</h2>
+    <p>A lot of "font generator" sites lean on gimmicks. Here's what we do differently.</p>
+  </div>
+  <div class="feature-grid">
+    <div class="feature-card">
+      <span class="num">01</span>
+      <h3>50+ genuine Hindi fonts</h3>
+      <p>Every style is a real, licensed Devanagari typeface — not a Unicode symbol swap. Your text stays fully readable everywhere.</p>
+    </div>
+    <div class="feature-card">
+      <span class="num">02</span>
+      <h3>Live preview, no waiting</h3>
+      <p>Type once and every font updates immediately. Compare 50 styles side by side without reloading the page.</p>
+    </div>
+    <div class="feature-card">
+      <span class="num">03</span>
+      <h3>Size and colour control</h3>
+      <p>Set your own text size, text colour, and background colour — applied consistently across every style at once.</p>
+    </div>
+    <div class="feature-card">
+      <span class="num">04</span>
+      <h3>PNG export built in</h3>
+      <p>Copying text drops the font style, so we let you export the exact styled look as an image for platforms that need one.</p>
+    </div>
+    <div class="feature-card">
+      <span class="num">05</span>
+      <h3>Nothing saved, no signup</h3>
+      <p>Your text stays in your browser. No account, no login, and nothing you type is stored on our end.</p>
+    </div>
+    <div class="feature-card">
+      <span class="num">06</span>
+      <h3>Works on any device</h3>
+      <p>A fully responsive layout means the tool works the same on a phone as it does on a desktop browser.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ===== How it works ===== -->
+<section class="block tight" id="how">
+  <div class="section-head">
+    <span class="kicker">How It Works</span>
+    <h2>Four steps, no learning curve</h2>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      <div>
+        <h3>Type your text</h3>
+        <p>Enter your Hindi text in the box at the top of the page.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <div>
+        <h3>Adjust size and colour</h3>
+        <p>Use the sliders and colour pickers to match the size, text colour, and background you need.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <div>
+        <h3>Browse the styles</h3>
+        <p>Scroll through the grid below — every card shows your exact text rendered in a different font.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">4</span>
+      <div>
+        <h3>Copy or download</h3>
+        <p>Click Copy for the plain text, or PNG to save that exact styled version as an image.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="container" id="fonts">
-  <div class="results-head">
-    <div>
-      <h2>Explore Hindi fonts</h2>
-      <p><span id="resultCount">48</span> styles · 12 shown at a time</p>
-    </div>
-    <p id="toast" aria-live="polite"></p>
+<!-- ===== Info / bullet block ===== -->
+<section class="block tight">
+  <div class="section-head">
+    <span class="kicker">Stylish Hindi Fonts</span>
+    <h2>What you can do with this tool</h2>
   </div>
-  <div class="font-grid" id="fontGrid"></div>
-  <div class="no-results" id="noResults">No fonts matched your search.</div>
-  <div class="pagination" id="pagination" aria-label="Font pages"></div>
-</section>
-
-<section class="section" id="guide">
-  <div class="container">
-    <div class="section-intro">
-      <span class="section-label">A simple way to choose</span>
-      <h2>Hindi fonts are about the feel of the letters.</h2>
-      <p>The words do not change. The personality of the typeface does.</p>
-    </div>
-    <div class="story">
-      <div class="story-copy">
-        <p>When you are making a thumbnail, poster, invitation, social post or a simple heading, choosing a Hindi font can take longer than writing the text itself. Some Devanagari faces feel neat and modern, while others have a softer, handwritten or more traditional character.</p>
-        <p>HindiFontGen keeps that decision in one place. Enter your own words and compare them across a collection of Devanagari fonts without opening a separate design app for every option.</p>
-        <p>You can copy the original Hindi text when you only need the words, or save a PNG when the exact visual appearance matters.</p>
-      </div>
-      <div class="tip-panel">
-        <h3>Four ways to use a result</h3>
-        <div class="tip"><span class="tip-num">1</span><div><b>Copy</b>Copies the original Unicode Hindi text to your clipboard.</div></div>
-        <div class="tip"><span class="tip-num">2</span><div><b>PNG</b>Saves the preview with its current font, size, text and background color.</div></div>
-        <div class="tip"><span class="tip-num">3</span><div><b>Transparent</b>Creates a PNG without a background, useful for designs and overlays.</div></div>
-        <div class="tip"><span class="tip-num">4</span><div><b>TTF</b>Opens the font's official Google Fonts page, where the font file can be obtained from its source.</div></div>
-      </div>
-    </div>
+  <div class="info-copy">
+    <ul>
+      <li><strong>50+ Hindi font styles</strong> render live as you type, from simple sans-serif faces to bold calligraphic ones.</li>
+      <li><strong>Real Unicode text</strong> throughout — nothing here is a symbol substitution, so your text stays searchable and accessible.</li>
+      <li>Experiment freely with different text colours, background colours, and font sizes before you commit to one.</li>
+      <li>Works well for Instagram captions and bios, YouTube titles, WhatsApp status images, wedding cards, posters, and banners.</li>
+      <li>No registration, no watermarks, and nothing installed on your device — it runs entirely in your browser.</li>
+      <li>Use it from your phone or your computer — the layout adjusts to whatever screen you're on.</li>
+    </ul>
   </div>
 </section>
 
-<section class="section">
-  <div class="container">
-    <div class="section-intro">
-      <span class="section-label">Made for everyday use</span>
-      <h2>Less fiddling. More trying.</h2>
-      <p>A few useful details keep the generator comfortable to use on both a phone and a laptop.</p>
-    </div>
-    <div class="features">
-      <article class="feature">
-        <div class="feature-icon">Aa</div>
-        <h3>Live previews</h3>
-        <p>Your text updates across the font collection as you type. There is no separate generate step.</p>
-      </article>
-      <article class="feature">
-        <div class="feature-icon">↗</div>
-        <h3>Clean PNG export</h3>
-        <p>Save a styled image with the same text size and colors you selected in the generator.</p>
-      </article>
-      <article class="feature">
-        <div class="feature-icon">◌</div>
-        <h3>Transparent PNG</h3>
-        <p>Remove the background when you want to place the Hindi text over another design.</p>
-      </article>
-      <article class="feature">
-        <div class="feature-icon">⌕</div>
-        <h3>Quick font browsing</h3>
-        <p>Browse the collection page by page instead of loading a huge wall of cards at once.</p>
-      </article>
-      <article class="feature">
-        <div class="feature-icon">▣</div>
-        <h3>Works on mobile</h3>
-        <p>The controls, previews and buttons are sized for touch screens as well as desktop browsers.</p>
-      </article>
-      <article class="feature">
-        <div class="feature-icon">✓</div>
-        <h3>No account required</h3>
-        <p>The generator is designed for quick use. Your typed text stays in the browser during your session.</p>
-      </article>
-    </div>
+<!-- ===== FAQ ===== -->
+<section class="block tight" id="faq">
+  <div class="section-head">
+    <span class="kicker">FAQ</span>
+    <h2>Frequently asked questions</h2>
   </div>
-</section>
+  <div class="faq-list" id="faqList">
 
-<section class="section" id="faq">
-  <div class="container">
-    <div class="section-intro">
-      <span class="section-label">Questions</span>
-      <h2>Hindi font generator FAQ</h2>
-      <p>A few things worth knowing before you download or copy a result.</p>
+    <div class="faq-item">
+      <button class="faq-q">Which is the best Hindi font?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">It depends on what you're using it for. For formal documents and official work, a clean Unicode font like Mangal is usually the right choice. For social media graphics, captions, or posters, a bolder or more decorative style — like the calligraphic options in this tool — tends to stand out more.</div></div>
     </div>
-    <div class="faq">
-      <div class="faq-item">
-        <button class="faq-q" type="button">Will Copy keep the font style when I paste it?<span>+</span></button>
-        <div class="faq-a"><p>No. Copy transfers the Hindi Unicode characters, not the visual font file. The app or website where you paste the text decides how those characters are displayed. Use PNG when the exact appearance needs to stay the same.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Can I make a transparent Hindi PNG?<span>+</span></button>
-        <div class="faq-a"><p>Yes. The Transparent button creates a PNG with an alpha background, while keeping the selected text color, font and size.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Are these real Hindi fonts?<span>+</span></button>
-        <div class="faq-a"><p>The collection uses real typefaces loaded from Google Fonts. The text itself remains normal Unicode Hindi; the font changes how those characters are drawn.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Can I use a Hindi font for a poster or thumbnail?<span>+</span></button>
-        <div class="faq-a"><p>Yes, but check the individual font's license when your project requires specific licensing terms. Google Fonts provides licensing information for its font families.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Does the tool work with Marathi or Sanskrit?<span>+</span></button>
-        <div class="faq-a"><p>Many Devanagari typefaces also render other languages that use the Devanagari script. Results can vary by font, so preview your actual text before choosing a style.</p></div>
-      </div>
-      <div class="faq-item">
-        <button class="faq-q" type="button">Can I download the actual TTF font file?<span>+</span></button>
-        <div class="faq-a"><p>The TTF button takes you to the font's official Google Fonts specimen/source page. The browser does not safely turn a webfont back into a TTF file. If you later bundle the licensed TTF files with the site, this button can be changed to a direct download.</p></div>
-      </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Will the copied text keep its font style when I paste it?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">No — clipboards only carry plain Unicode text, not font information, so the app you paste into will display it in its own default font. If you need the exact visual style to carry over, download the PNG image instead and post that.</div></div>
     </div>
+
+    <div class="faq-item">
+      <button class="faq-q">What is a Hindi font, exactly?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">A Hindi font is a typeface designed to render the Devanagari script on screens and in print. Most modern fonts, including everything in this tool, are Unicode fonts, meaning the text stays standard and works correctly across browsers, apps, and devices — unlike older "legacy" fonts that relied on custom character mappings.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can I use these fonts for commercial work?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Yes. Every font in this tool is sourced from Google Fonts and openly licensed for personal and commercial use. If you need absolute certainty for a specific project, you can check that font's individual licence page on Google Fonts.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Do I need to install anything to use this?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">No. All fonts load directly in your browser — there's nothing to download or install just to preview and use them here.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Does this work for Marathi, Sanskrit, or Nepali text?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Yes. Since the tool simply renders whatever text you type using Devanagari-script fonts, it works equally well for Marathi, Sanskrit, Nepali, Bhojpuri, and other languages that share the script.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Is my text stored anywhere?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">No. Everything happens locally in your browser — nothing you type is sent to a server or saved.</div></div>
+    </div>
+
   </div>
 </section>
-</main>
 
 <footer>
-  <div class="container footer-main">
-    <div>
-      <div class="footer-brand">Hindi<span>FontGen</span></div>
-      <p>A simple place to preview Hindi text in different Devanagari typefaces and save the style you like.</p>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>HindiFontGen</h4>
+      <p>A free tool to preview and use Hindi text in 50+ stylish and calligraphy fonts — for social media, design, and everyday use.</p>
     </div>
     <div class="footer-col">
-      <h4>Explore</h4>
-      <a href="#generator">Generator</a>
-      <a href="#fonts">Hindi Fonts</a>
-      <a href="#guide">How it works</a>
-      <a href="#faq">FAQ</a>
+      <h4>Site</h4>
+      <ul>
+        <li><a href="index.html">Font Generator</a></li>
+        <li><a href="#why">Why Choose Us</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
     </div>
     <div class="footer-col">
-      <h4>Information</h4>
-      <a href="about.html">About</a>
-      <a href="contact.html">Contact</a>
-      <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="terms.html">Terms &amp; Conditions</a>
+      <h4>Legal</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="terms.html">Terms &amp; Conditions</a></li>
+      </ul>
     </div>
   </div>
-  <div class="footer-bottom">
-    <div class="container">© 2026 HindiFontGen. All rights reserved.</div>
-  </div>
+  <div class="footer-bottom">© 2026 HindiFontGen. All rights reserved.</div>
 </footer>
 
 <script>
 (function(){
-"use strict";
+  "use strict";
 
-const FONTS = [
-  "Modak","Yatra One","Amita","Rozha One","Kalam","Tiro Devanagari Hindi",
-  "Eczar","Vesper Libre","Laila","Anek Devanagari","Baloo 2","Khand",
-  "Maitree","Rhodium Libre","Sarpanch","Teko","Karma","Martel","Palanquin",
-  "Halant","Kadwa","Asar","Dekko","Gotu","Glegoo","Arya","Cambay","Biryani",
-  "Jaldi","Sahitya","Sarala","Utsaah","Khula","Mukta","Hind",
-  "Noto Serif Devanagari","Noto Sans Devanagari","Sumana","Kurale"
-];
+  var FONTS = [
+    "Hind","Mukta","Poppins","Baloo 2","Tiro Devanagari Hindi","Eczar",
+    "Yatra One","Kalam","Khand","Laila","Martel","Karma","Sarala",
+    "Palanquin","Rozha One","Arya","Halant","Vesper Libre","Kurale",
+    "Glegoo","Teko","Rajdhani","Biryani","Jaldi","Sahitya","Amita",
+    "Modak","Sarpanch","Gotu","Dekko","Sumana","Utsaah","Cambay",
+    "Farsan","Peddana","Akshar","Anek Devanagari","Ranga","Asar",
+    "Inknut Antiqua","Khula","Kadwa","Yantramanav","Rhodium Libre",
+    "Aparajita","Nirmala UI"
+  ];
 
-const PAGE_SIZE = 12;
-let page = 1;
+  var textInput   = document.getElementById('textInput');
+  var sizeRange   = document.getElementById('sizeRange');
+  var sizeVal     = document.getElementById('sizeVal');
+  var fontColor   = document.getElementById('fontColor');
+  var bgColor     = document.getElementById('bgColor');
+  var sortOrder   = document.getElementById('sortOrder');
+  var grid        = document.getElementById('fontGrid');
+  var emptyState  = document.getElementById('emptyState');
+  var resultCount = document.getElementById('resultCount');
+  var charCount   = document.getElementById('charCount');
+  var toast       = document.getElementById('toast');
+  var navToggle   = document.getElementById('navToggle');
+  var mainNav     = document.getElementById('mainNav');
 
-const $ = id => document.getElementById(id);
-const textInput = $("textInput");
-const sizeRange = $("sizeRange");
-const sizeVal = $("sizeVal");
-const fontColor = $("fontColor");
-const bgColor = $("bgColor");
-const grid = $("fontGrid");
-const pagination = $("pagination");
-const resultCount = $("resultCount");
-const toast = $("toast");
-const noResults = $("noResults");
+  var toastTimer = null;
 
-function showToast(message){
-  toast.textContent = message;
-  clearTimeout(showToast.timer);
-  toast.classList.add("show");
-  showToast.timer = setTimeout(()=>toast.classList.remove("show"),1900);
-}
-
-function escapeHtml(value){
-  const div=document.createElement("div");
-  div.textContent=value;
-  return div.innerHTML;
-}
-
-function currentFonts(){
-  return [...new Set(FONTS)];
-}
-
-function buildCards(){
-  const list=currentFonts();
-  const totalPages=Math.max(1,Math.ceil(list.length/PAGE_SIZE));
-  if(page>totalPages) page=totalPages;
-
-  const start=(page-1)*PAGE_SIZE;
-  const visible=list.slice(start,start+PAGE_SIZE);
-
-  grid.innerHTML="";
-  const fragment=document.createDocumentFragment();
-
-  visible.forEach((fontName,index)=>{
-    const card=document.createElement("article");
-    card.className="font-card";
-
-    const meta=document.createElement("div");
-    meta.className="font-meta";
-    meta.innerHTML='<span class="font-name">'+escapeHtml(fontName)+'</span><span class="font-type">Devanagari</span>';
-
-    const preview=document.createElement("div");
-    preview.className="preview";
-    preview.style.fontFamily='"'+fontName+'", sans-serif';
-    preview.dataset.font=fontName;
-
-    const actions=document.createElement("div");
-    actions.className="actions";
-
-    const copy=document.createElement("button");
-    copy.className="action copy";
-    copy.type="button";
-    copy.textContent="Copy";
-    copy.addEventListener("click",()=>copyText());
-
-    const png=document.createElement("button");
-    png.className="action";
-    png.type="button";
-    png.textContent="PNG";
-    png.addEventListener("click",()=>exportPng(fontName,false));
-
-    const transparent=document.createElement("button");
-    transparent.className="action";
-    transparent.type="button";
-    transparent.textContent="Transparent";
-    transparent.addEventListener("click",()=>exportPng(fontName,true));
-
-    const ttf=document.createElement("button");
-    ttf.className="action";
-    ttf.type="button";
-    ttf.textContent="TTF";
-    ttf.addEventListener("click",()=>openFontPage(fontName));
-
-    actions.append(copy,png,transparent,ttf);
-    card.append(meta,preview,actions);
-    fragment.appendChild(card);
-  });
-
-  grid.appendChild(fragment);
-  resultCount.textContent=list.length;
-  noResults.style.display=visible.length?"none":"block";
-  grid.style.display=visible.length?"grid":"none";
-  renderPagination(totalPages);
-  applyStyles();
-}
-
-function applyStyles(){
-  const text=textInput.value;
-  sizeVal.textContent=sizeRange.value+"px";
-
-  document.querySelectorAll(".preview").forEach(preview=>{
-    preview.textContent=text || " ";
-    preview.style.fontSize=sizeRange.value+"px";
-    preview.style.color=fontColor.value;
-    preview.style.backgroundColor=bgColor.value;
-  });
-}
-
-function renderPagination(totalPages){
-  pagination.innerHTML="";
-  if(totalPages<=1) return;
-
-  const make=(label,target,active=false,disabled=false)=>{
-    const btn=document.createElement("button");
-    btn.className="page-btn"+(active?" active":"")+(label==="‹"||label==="›"?" arrow":"");
-    btn.type="button";
-    btn.textContent=label;
-    btn.disabled=disabled;
-    if(!disabled) btn.addEventListener("click",()=>{page=target;buildCards();document.getElementById("fonts").scrollIntoView({behavior:"smooth",block:"start"});});
-    pagination.appendChild(btn);
-  };
-
-  make("‹",page-1,false,page===1);
-
-  const pages=[];
-  if(totalPages<=7){
-    for(let i=1;i<=totalPages;i++) pages.push(i);
-  }else{
-    pages.push(1);
-    if(page>4) pages.push("...");
-    for(let i=Math.max(2,page-2);i<=Math.min(totalPages-1,page+2);i++) pages.push(i);
-    if(page<totalPages-3) pages.push("...");
-    pages.push(totalPages);
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 1800);
   }
 
-  pages.forEach(item=>{
-    if(item==="..."){
-      const span=document.createElement("span");
-      span.textContent="…";
-      span.style.padding="0 3px";
-      span.style.color="var(--muted)";
-      pagination.appendChild(span);
-    }else make(String(item),item,item===page);
-  });
-
-  make("›",page+1,false,page===totalPages);
-}
-
-async function copyText(){
-  const text=textInput.value.trim();
-  if(!text){showToast("Type something first");return}
-  try{
-    await navigator.clipboard.writeText(text);
-    showToast("Hindi text copied");
-  }catch(e){
-    const ta=document.createElement("textarea");
-    ta.value=text;ta.style.position="fixed";ta.style.opacity="0";
-    document.body.appendChild(ta);ta.select();
-    try{document.execCommand("copy");showToast("Hindi text copied")}
-    catch(err){showToast("Copy failed")}
-    ta.remove();
-  }
-}
-
-async function waitForFont(fontName,size){
-  if(document.fonts && document.fonts.load){
-    try{await document.fonts.load(size+'px "'+fontName+'"',textInput.value||"नमस्ते")}catch(e){}
-  }
-}
-
-async function exportPng(fontName,transparent){
-  const text=textInput.value.trim();
-  if(!text){showToast("Type something first");return}
-
-  showToast(transparent?"Preparing transparent PNG…":"Preparing PNG…");
-  await waitForFont(fontName,sizeRange.value);
-
-  const size=parseInt(sizeRange.value,10);
-  const scale=3;
-  const padding=32;
-  const lineHeight=Math.round(size*1.45);
-  const lines=text.split(/\n/);
-
-  const measure=document.createElement("canvas");
-  const mctx=measure.getContext("2d");
-  mctx.font=size+'px "'+fontName+'"';
-  let maxWidth=20;
-  lines.forEach(line=>{
-    maxWidth=Math.max(maxWidth,mctx.measureText(line||" ").width);
-  });
-
-  const width=Math.ceil(maxWidth+padding*2);
-  const height=Math.ceil(lines.length*lineHeight+padding*2);
-
-  const canvas=document.createElement("canvas");
-  canvas.width=width*scale;
-  canvas.height=height*scale;
-  const ctx=canvas.getContext("2d");
-  ctx.scale(scale,scale);
-
-  if(!transparent){
-    ctx.fillStyle=bgColor.value;
-    ctx.fillRect(0,0,width,height);
+  function escapeHtml(str){
+    var div = document.createElement('div');
+    div.textContent = str;
+    return div.innerHTML;
   }
 
-  ctx.font=size+'px "'+fontName+'"';
-  ctx.fillStyle=fontColor.value;
-  ctx.textBaseline="top";
-  ctx.textAlign="left";
+  function buildCards(){
+    var list = FONTS.slice();
+    if (sortOrder.value === 'az') list.sort(function(a,b){ return a.localeCompare(b); });
 
-  lines.forEach((line,i)=>{
-    ctx.fillText(line||" ",padding,padding+i*lineHeight);
-  });
+    grid.innerHTML = '';
+    var frag = document.createDocumentFragment();
 
-  const a=document.createElement("a");
-  const slug=fontName.toLowerCase().replace(/[^a-z0-9]+/g,"-").replace(/^-|-$/g,"");
-  a.download="hindi-"+slug+(transparent?"-transparent":"")+".png";
-  a.href=canvas.toDataURL("image/png");
-  a.click();
+    list.forEach(function(fontName, idx){
+      var card = document.createElement('div');
+      card.className = 'font-card';
+      card.dataset.font = fontName;
 
-  showToast(transparent?"Transparent PNG saved":"PNG saved");
-}
+      var nameRow = document.createElement('div');
+      nameRow.className = 'fname';
+      nameRow.innerHTML = '<span>' + escapeHtml(fontName) + '</span>';
 
-function openFontPage(fontName){
-  const url="https://fonts.google.com/specimen/"+encodeURIComponent(fontName).replace(/%20/g,"+");
-  window.open(url,"_blank","noopener,noreferrer");
-  showToast("Opening official font page");
-}
+      var preview = document.createElement('div');
+      preview.className = 'preview';
+      preview.style.fontFamily = "'" + fontName + "'";
+      preview.id = 'preview-' + idx;
 
-sizeRange.addEventListener("input",applyStyles);
-fontColor.addEventListener("input",applyStyles);
-bgColor.addEventListener("input",applyStyles);
-textInput.addEventListener("input",applyStyles);
+      var actions = document.createElement('div');
+      actions.className = 'card-actions';
 
+      var copyBtn = document.createElement('button');
+      copyBtn.className = 'btn primary';
+      copyBtn.type = 'button';
+      copyBtn.textContent = 'Copy';
+      copyBtn.addEventListener('click', function(){ copyText(); });
 
-$("menuBtn").addEventListener("click",()=>{
-  const nav=$("nav");
-  const open=nav.classList.toggle("open");
-  $("menuBtn").setAttribute("aria-expanded",open?"true":"false");
-});
+      var pngBtn = document.createElement('button');
+      pngBtn.className = 'btn';
+      pngBtn.type = 'button';
+      pngBtn.textContent = 'PNG';
+      pngBtn.addEventListener('click', function(){ downloadPng(fontName); });
 
-document.querySelectorAll(".nav a").forEach(a=>a.addEventListener("click",()=>$("nav").classList.remove("open")));
+      actions.appendChild(copyBtn);
+      actions.appendChild(pngBtn);
 
-document.querySelectorAll(".faq-item").forEach(item=>{
-  const q=item.querySelector(".faq-q");
-  const a=item.querySelector(".faq-a");
-  q.addEventListener("click",()=>{
-    const open=item.classList.contains("open");
-    document.querySelectorAll(".faq-item.open").forEach(other=>{
-      other.classList.remove("open");
-      other.querySelector(".faq-a").style.maxHeight=null;
+      card.appendChild(nameRow);
+      card.appendChild(preview);
+      card.appendChild(actions);
+      frag.appendChild(card);
     });
-    if(!open){
-      item.classList.add("open");
-      a.style.maxHeight=a.scrollHeight+"px";
-    }
-  });
-});
 
-buildCards();
+    grid.appendChild(frag);
+    resultCount.textContent = list.length + ' font styles';
+    applyStyles();
+  }
+
+  function applyStyles(){
+    var text = textInput.value.trim();
+    var size = sizeRange.value + 'px';
+    var fc = fontColor.value;
+    var bc = bgColor.value;
+
+    var previews = grid.querySelectorAll('.preview');
+    var hasText = text.length > 0;
+
+    emptyState.style.display = hasText ? 'none' : 'block';
+    grid.style.display = hasText ? 'grid' : 'none';
+
+    previews.forEach(function(p){
+      p.textContent = text || '';
+      p.style.fontSize = size;
+      p.style.color = fc;
+      p.style.background = bc;
+      p.style.padding = '10px 12px';
+      p.style.borderRadius = '6px';
+    });
+  }
+
+  function copyText(){
+    var text = textInput.value.trim();
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){
+        showToast('Copied!');
+      }).catch(function(){
+        fallbackCopy(text);
+      });
+    } else {
+      fallbackCopy(text);
+    }
+  }
+
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try {
+      document.execCommand('copy');
+      showToast('Copied!');
+    } catch (e) {
+      showToast('Copy failed');
+    }
+    document.body.removeChild(ta);
+  }
+
+  function downloadPng(fontName){
+    var text = textInput.value.trim();
+    if (!text) return;
+
+    var scale = 3;
+    var fontSize = parseInt(sizeRange.value, 10);
+    var padding = 28;
+
+    var canvas = document.createElement('canvas');
+    var ctx = canvas.getContext('2d');
+
+    var cssFont = fontSize + 'px "' + fontName + '"';
+    ctx.font = cssFont;
+
+    var lines = text.split('\n');
+    var lineHeight = Math.round(fontSize * 1.35);
+    var maxWidth = 0;
+    lines.forEach(function(line){
+      var w = ctx.measureText(line).width;
+      if (w > maxWidth) maxWidth = w;
+    });
+    if (maxWidth < 10) maxWidth = 10;
+
+    var width = Math.ceil(maxWidth + padding * 2);
+    var height = Math.ceil(lineHeight * lines.length + padding * 2);
+
+    canvas.width = width * scale;
+    canvas.height = height * scale;
+    ctx.scale(scale, scale);
+
+    ctx.fillStyle = bgColor.value;
+    ctx.fillRect(0, 0, width, height);
+
+    ctx.font = cssFont;
+    ctx.fillStyle = fontColor.value;
+    ctx.textBaseline = 'top';
+
+    lines.forEach(function(line, i){
+      ctx.fillText(line, padding, padding + i * lineHeight);
+    });
+
+    var link = document.createElement('a');
+    link.download = 'hindi-font-' + fontName.toLowerCase().replace(/\s+/g, '-') + '.png';
+    link.href = canvas.toDataURL('image/png');
+    link.click();
+  }
+
+  function ready(fn){
+    if (document.fonts && document.fonts.ready) {
+      document.fonts.ready.then(fn);
+    } else {
+      fn();
+    }
+  }
+
+  textInput.addEventListener('input', function(){
+    charCount.textContent = textInput.value.length;
+    applyStyles();
+  });
+  sizeRange.addEventListener('input', function(){
+    sizeVal.textContent = sizeRange.value + 'px';
+    applyStyles();
+  });
+  fontColor.addEventListener('input', applyStyles);
+  bgColor.addEventListener('input', applyStyles);
+  sortOrder.addEventListener('change', buildCards);
+
+  navToggle.addEventListener('click', function(){
+    var isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mainNav.classList.remove('open'); });
+  });
+
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    var answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+        if (openItem !== item) {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      if (isOpen) {
+        item.classList.remove('open');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  charCount.textContent = textInput.value.length;
+  buildCards();
+  ready(applyStyles);
 })();
 </script>
+
 </body>
 </html>
