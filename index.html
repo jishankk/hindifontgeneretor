@@ -149,30 +149,34 @@
   .toolbar-row .char-count{margin-right:auto;}
 
   /* ---------- Results bar ---------- */
-  .results-bar{
-    max-width:1180px; margin:34px auto 0; padding:0 24px;
-    display:flex; align-items:center; justify-content:space-between; gap:12px;
+  .toast-wrap{
+    max-width:1180px; margin:26px auto 0; padding:0 24px;
+    display:flex; justify-content:flex-end;
   }
-  .results-bar h2{font-size:13.5px; font-weight:600; color:var(--ink-soft); margin:0; text-transform:uppercase; letter-spacing:.03em;}
   #toast{font-size:13px; color:var(--accent); font-weight:600; opacity:0; transition:opacity .25s ease;}
   #toast.show{opacity:1;}
 
-  /* ---------- Font grid ---------- */
+  /* ---------- Font grid (2 large cards per row) ---------- */
   .grid{
     max-width:1180px; margin:14px auto 8px; padding:0 24px;
-    display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:14px;
+    display:grid; grid-template-columns:repeat(2,1fr); gap:20px;
   }
   .font-card{
-    background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius);
-    padding:16px; display:flex; flex-direction:column; gap:10px; min-width:0;
+    background:#FFFFFF; border:1px solid var(--rule); border-radius:var(--radius);
+    padding:22px 26px; display:flex; flex-direction:column; gap:18px; min-width:0;
   }
-  .font-card .fname{font-size:12px; color:var(--ink-soft); display:flex; justify-content:space-between; align-items:center;}
-  .preview{font-size:28px; line-height:1.35; word-break:break-word; min-height:36px;}
-  .card-actions{display:flex; gap:8px; margin-top:auto; flex-wrap:wrap;}
+  .font-card .fname{font-size:14px; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:7px;}
+  .font-card .fname .a-mark{color:var(--ink-soft); font-weight:400; font-size:15px;}
+  .preview{
+    font-size:34px; line-height:1.4; word-break:break-word; min-height:80px;
+    display:flex; align-items:center; justify-content:center; text-align:center;
+    padding:10px 8px;
+  }
+  .card-actions{display:flex; gap:10px; margin-top:auto; flex-wrap:wrap; justify-content:center;}
   .btn{
     font-family:'Poppins',sans-serif; font-size:12.5px; font-weight:600;
     border:1px solid var(--rule); background:#fff; color:var(--ink);
-    padding:7px 11px; border-radius:7px; cursor:pointer;
+    padding:8px 14px; border-radius:20px; cursor:pointer;
     transition:background .15s ease, border-color .15s ease;
   }
   .btn:hover{border-color:var(--accent);}
@@ -185,12 +189,6 @@
     text-align:center; color:var(--ink-soft); font-size:15px;
   }
 
-  .page-note{
-    max-width:1180px; margin:8px auto 60px; padding:0 24px;
-    display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap;
-  }
-  .page-note span{font-size:12.5px; color:var(--ink-soft);}
-
   /* ---------- Section shell ---------- */
   section.block{max-width:1180px; margin:0 auto; padding:60px 24px;}
   section.block.tight{padding-top:0;}
@@ -198,7 +196,7 @@
     background:var(--panel); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
     max-width:none; padding:56px 24px;
   }
-  .banner-inner{max-width:1180px; margin:0 auto;}
+  .banner-inner{max-width:900px; margin:0 auto;}
   .section-head{max-width:680px; margin:0 auto 34px; text-align:center;}
   .kicker{
     display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em;
@@ -210,22 +208,28 @@
   .banner-inner p{color:var(--ink-soft); font-size:15px; max-width:80ch; margin:0 0 14px;}
   .banner-inner strong{color:var(--ink);}
 
-  /* ---------- Feature grid (neutral outline, line icons) ---------- */
+  /* ---------- Feature grid (plain white cards, left-aligned) ---------- */
   .feature-grid{
-    display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:16px;
+    display:grid; grid-template-columns:repeat(3,1fr); gap:18px;
   }
   .feature-card{
-    background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius);
-    padding:24px; text-align:center; transition:border-color .15s ease;
+    background:#FFFFFF; border:1px solid var(--rule); border-radius:8px;
+    padding:22px 22px 24px; text-align:left;
   }
-  .feature-card:hover{border-color:#D9CEBD;}
   .feature-card .ico{
-    width:40px; height:40px; margin:0 auto 14px;
-    display:flex; align-items:center; justify-content:center;
+    width:30px; height:30px; margin:0 0 14px;
+    display:flex; align-items:center; justify-content:flex-start;
   }
-  .feature-card .ico svg{width:26px; height:26px; stroke:var(--accent); fill:none; stroke-width:1.6;}
+  .feature-card .ico svg{width:24px; height:24px; stroke:var(--ink); fill:none; stroke-width:1.5;}
   .feature-card h3{font-size:15px; font-weight:600; margin:0 0 8px;}
-  .feature-card p{font-size:13.5px; color:var(--ink-soft); margin:0;}
+  .feature-card p{font-size:13.5px; color:var(--ink-soft); margin:0; line-height:1.55;}
+
+  @media (max-width:860px){
+    .feature-grid{grid-template-columns:repeat(2,1fr);}
+  }
+  @media (max-width:560px){
+    .feature-grid{grid-template-columns:1fr;}
+  }
 
   /* ---------- Steps ---------- */
   .steps{display:flex; flex-direction:column; gap:0; max-width:760px; margin:0 auto; border-top:1px solid var(--rule);}
@@ -270,13 +274,10 @@
     border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);
   }
 
-  @media (max-width:640px){
-    .grid{grid-template-columns:1fr 1fr;}
-    .preview{font-size:21px;}
-    .footer-inner{grid-template-columns:1fr; gap:24px;}
-  }
-  @media (max-width:420px){
+  @media (max-width:760px){
     .grid{grid-template-columns:1fr;}
+    .preview{font-size:26px; min-height:64px;}
+    .footer-inner{grid-template-columns:1fr; gap:24px;}
   }
 </style>
 </head>
@@ -344,14 +345,10 @@
   </div>
 </section>
 
-<div class="results-bar">
-  <h2 id="resultCount">50 font styles</h2>
-  <span id="toast">Copied!</span>
-</div>
+<div class="toast-wrap"><span id="toast">Copied!</span></div>
 
 <div class="grid" id="fontGrid"></div>
 <div class="empty-state" id="emptyState" style="display:none;">Type some text above to see font previews.</div>
-<div class="page-note"><span>All 50+ styles are shown on this page — scroll to browse.</span></div>
 
 <!-- ===== Banner intro ===== -->
 <section class="block banner">
@@ -579,7 +576,6 @@
   var sortOrder   = document.getElementById('sortOrder');
   var grid        = document.getElementById('fontGrid');
   var emptyState  = document.getElementById('emptyState');
-  var resultCount = document.getElementById('resultCount');
   var charCount   = document.getElementById('charCount');
   var toast       = document.getElementById('toast');
   var navToggle   = document.getElementById('navToggle');
@@ -614,7 +610,7 @@
 
       var nameRow = document.createElement('div');
       nameRow.className = 'fname';
-      nameRow.innerHTML = '<span>' + escapeHtml(fontName) + '</span>';
+      nameRow.innerHTML = '<span class="a-mark">A</span><span>' + escapeHtml(fontName) + '</span>';
 
       var preview = document.createElement('div');
       preview.className = 'preview';
@@ -646,7 +642,6 @@
     });
 
     grid.appendChild(frag);
-    resultCount.textContent = list.length + ' font styles';
     applyStyles();
   }
 
