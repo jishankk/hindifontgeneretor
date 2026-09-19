@@ -56,7 +56,7 @@
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&family=Mukta:wght@400;600;700&family=Baloo+2:wght@500;700&family=Tiro+Devanagari+Hindi&family=Eczar:wght@500;700&family=Yatra+One&family=Kalam:wght@400;700&family=Khand:wght@500;700&family=Laila:wght@500;700&family=Martel:wght@600;800&family=Karma:wght@500;700&family=Sarala:wght@700&family=Palanquin:wght@500;700&family=Rozha+One&family=Arya:wght@700&family=Halant:wght@600&family=Vesper+Libre:wght@500;700;900&family=Kurale&family=Glegoo:wght@700&family=Teko:wght@600&family=Rajdhani:wght@600;700&family=Biryani:wght@600;800&family=Jaldi:wght@700&family=Sahitya:wght@700&family=Amita:wght@700&family=Modak&family=Sarpanch:wght@600;800&family=Gotu&family=Dekko&family=Sumana&family=Utsaah&family=Cambay:wght@700&family=Farsan&family=Peddana&family=Akshar:wght@600;700&family=Anek+Devanagari:wght@600;700&family=Ranga:wght@700&family=Asar&family=Inknut+Antiqua:wght@600;700&family=Khula:wght@700;800&family=Kadwa:wght@700&family=Yantramanav:wght@700&family=Rhodium+Libre&family=Aparajita&family=Nirmala+UI&display=swap" rel="stylesheet">
+<link id="pageFontsLink" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
   :root{
@@ -236,6 +236,23 @@
     text-align:center; color:var(--ink-soft); font-size:15px;
   }
 
+  /* ---------- Pagination ---------- */
+  .pagination{
+    max-width:1180px; margin:8px auto 40px; padding:0 24px;
+    display:flex; align-items:center; justify-content:center; gap:6px; flex-wrap:wrap;
+  }
+  .page-btn{
+    font-family:'Poppins',sans-serif; font-size:13px; font-weight:600;
+    border:1px solid var(--rule); background:#fff; color:var(--ink);
+    min-width:38px; height:38px; padding:0 10px; border-radius:8px; cursor:pointer;
+    display:inline-flex; align-items:center; justify-content:center;
+    transition:background .15s ease, border-color .15s ease, color .15s ease;
+  }
+  .page-btn:hover:not(:disabled){border-color:var(--accent); color:var(--accent);}
+  .page-btn.active{background:var(--accent); color:#fff; border-color:var(--accent);}
+  .page-btn:disabled{opacity:0.4; cursor:not-allowed;}
+  .page-ellipsis{color:var(--ink-soft); font-size:13px; padding:0 4px;}
+
   /* ---------- Section shell ---------- */
   section.block{max-width:1180px; margin:0 auto; padding:60px 24px;}
   section.block.tight{padding-top:0;}
@@ -393,6 +410,7 @@
 
 <div class="grid" id="fontGrid"></div>
 <div class="empty-state" id="emptyState" style="display:none;">Type some text above to see font previews.</div>
+<div class="pagination" id="pagination"></div>
 
 <!-- ===== Banner intro ===== -->
 <section class="block banner">
@@ -412,7 +430,7 @@
 
     <div class="feature-card">
       <div class="ico"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-linecap="round" stroke-linejoin="round"><path d="M6 20L12 4l6 16M8.5 14h7"/></svg></div>
-      <h3>50+ Hindi font styles</h3>
+      <h3>90+ Hindi font styles</h3>
       <p>Choose the right Hindi font for your needs, from clean everyday type to bold calligraphy.</p>
     </div>
 
@@ -491,7 +509,7 @@
       <span class="step-num">3</span>
       <div>
         <h3>Browse the styles</h3>
-        <p>Scroll through the grid below — every card shows your exact text rendered in a different font.</p>
+        <p>Scroll through the grid below — every card shows your exact text rendered in a different font. Use the pagination to move through more styles.</p>
       </div>
     </div>
     <div class="step">
@@ -511,7 +529,7 @@
   </div>
   <div class="info-copy">
     <ul>
-      <li><strong>50+ Hindi font styles</strong> render live as you type, from simple sans-serif faces to bold calligraphic ones.</li>
+      <li><strong>90+ Hindi font styles</strong> render live as you type, from simple sans-serif faces to bold calligraphic ones.</li>
       <li><strong>Real Unicode text</strong> throughout — nothing here is a symbol substitution, so your text stays searchable and accessible.</li>
       <li>Experiment freely with different text colours, background colours, and font sizes before you commit to one.</li>
       <li>Works well for Instagram captions and bios, YouTube titles, WhatsApp status images, wedding cards, posters, and banners.</li>
@@ -570,7 +588,7 @@
   <div class="footer-inner">
     <div class="footer-col">
       <h4>HindiFontGen</h4>
-      <p>A free tool to preview and use Hindi text in 50+ stylish and calligraphy fonts — for social media, design, and everyday use.</p>
+      <p>A free tool to preview and use Hindi text in 90+ stylish and calligraphy fonts — for social media, design, and everyday use.</p>
     </div>
     <div class="footer-col">
       <h4>Tools</h4>
@@ -598,16 +616,110 @@
 (function(){
   "use strict";
 
+  // Each entry: [displayName, googleFontsFamilyParam]
   var FONTS = [
-    "Hind","Mukta","Poppins","Baloo 2","Tiro Devanagari Hindi","Eczar",
-    "Yatra One","Kalam","Khand","Laila","Martel","Karma","Sarala",
-    "Palanquin","Rozha One","Arya","Halant","Vesper Libre","Kurale",
-    "Glegoo","Teko","Rajdhani","Biryani","Jaldi","Sahitya","Amita",
-    "Modak","Sarpanch","Gotu","Dekko","Sumana","Utsaah","Cambay",
-    "Farsan","Peddana","Akshar","Anek Devanagari","Ranga","Asar",
-    "Inknut Antiqua","Khula","Kadwa","Yantramanav","Rhodium Libre",
-    "Aparajita","Nirmala UI"
+    ["Hind","Hind:wght@400;600;700"],
+    ["Mukta","Mukta:wght@400;600;700"],
+    ["Poppins","Poppins:wght@600;700"],
+    ["Baloo 2","Baloo+2:wght@500;700"],
+    ["Tiro Devanagari Hindi","Tiro+Devanagari+Hindi"],
+    ["Eczar","Eczar:wght@500;700"],
+    ["Yatra One","Yatra+One"],
+    ["Kalam","Kalam:wght@400;700"],
+    ["Khand","Khand:wght@500;700"],
+    ["Laila","Laila:wght@500;700"],
+    ["Martel","Martel:wght@600;800"],
+    ["Karma","Karma:wght@500;700"],
+    ["Sarala","Sarala:wght@700"],
+    ["Palanquin","Palanquin:wght@500;700"],
+    ["Rozha One","Rozha+One"],
+    ["Arya","Arya:wght@700"],
+    ["Halant","Halant:wght@600"],
+    ["Vesper Libre","Vesper+Libre:wght@500;700;900"],
+    ["Kurale","Kurale"],
+    ["Glegoo","Glegoo:wght@700"],
+    ["Teko","Teko:wght@600"],
+    ["Rajdhani","Rajdhani:wght@600;700"],
+    ["Biryani","Biryani:wght@600;800"],
+    ["Jaldi","Jaldi:wght@700"],
+    ["Sahitya","Sahitya:wght@700"],
+    ["Amita","Amita:wght@700"],
+    ["Modak","Modak"],
+    ["Sarpanch","Sarpanch:wght@600;800"],
+    ["Gotu","Gotu"],
+    ["Dekko","Dekko"],
+    ["Sumana","Sumana"],
+    ["Utsaah","Utsaah"],
+    ["Cambay","Cambay:wght@700"],
+    ["Farsan","Farsan"],
+    ["Peddana","Peddana"],
+    ["Akshar","Akshar:wght@600;700"],
+    ["Anek Devanagari","Anek+Devanagari:wght@600;700"],
+    ["Ranga","Ranga:wght@700"],
+    ["Asar","Asar"],
+    ["Inknut Antiqua","Inknut+Antiqua:wght@600;700"],
+    ["Khula","Khula:wght@700;800"],
+    ["Kadwa","Kadwa:wght@700"],
+    ["Yantramanav","Yantramanav:wght@700"],
+    ["Rhodium Libre","Rhodium+Libre"],
+    ["Aparajita","Aparajita"],
+    ["Nirmala UI","Nirmala+UI"],
+    ["Tillana","Tillana:wght@600;700"],
+    ["Mukta Vaani","Mukta+Vaani:wght@600;700"],
+    ["Mukta Mahee","Mukta+Mahee:wght@600;700"],
+    ["Baloo Bhaina 2","Baloo+Bhaina+2:wght@600;700"],
+    ["Baloo Paaji 2","Baloo+Paaji+2:wght@600;700"],
+    ["Baloo Tamma 2","Baloo+Tamma+2:wght@600;700"],
+    ["Hind Guntur","Hind+Guntur:wght@600;700"],
+    ["Hind Madurai","Hind+Madurai:wght@600;700"],
+    ["Hind Siliguri","Hind+Siliguri:wght@600;700"],
+    ["Hind Vadodara","Hind+Vadodara:wght@600;700"],
+    ["Yaldevi","Yaldevi:wght@600;700"],
+    ["Yeon Sung","Yeon+Sung"],
+    ["Baloo Da 2","Baloo+Da+2:wght@600;700"],
+    ["Baloo Bhaijaan 2","Baloo+Bhaijaan+2:wght@600;700"],
+    ["Palanquin Dark","Palanquin+Dark:wght@600;700"],
+    ["Martel Sans","Martel+Sans:wght@600;800"],
+    ["Marcellus","Marcellus"],
+    ["Kumar One","Kumar+One"],
+    ["Kumar One Outline","Kumar+One+Outline"],
+    ["Ranchers","Ranchers"],
+    ["Sarabun","Sarabun:wght@700"],
+    ["Chonburi","Chonburi"],
+    ["Shantell Sans","Shantell+Sans:wght@700"],
+    ["Sansita","Sansita:wght@700"],
+    ["Bevan","Bevan"],
+    ["Mate","Mate"],
+    ["Neuton","Neuton:wght@700"],
+    ["Aclonica","Aclonica"],
+    ["Alegreya","Alegreya:wght@700"],
+    ["Cinzel","Cinzel:wght@700"],
+    ["Spectral","Spectral:wght@700"],
+    ["Cormorant","Cormorant:wght@700"],
+    ["Cardo","Cardo"],
+    ["Vollkorn","Vollkorn:wght@700"],
+    ["Kreon","Kreon:wght@700"],
+    ["Domine","Domine:wght@700"],
+    ["Suranna","Suranna"],
+    ["Sanskrit Text","Sanskrit+Text"],
+    ["Khyay","Khyay"],
+    ["Adhiraj","Adhiraj"],
+    ["Aksharayogini","Aksharayogini"],
+    ["Yashomudra","Yashomudra"],
+    ["Yashovenu","Yashovenu"],
+    ["Shobhika","Shobhika:wght@600;700"],
+    ["Gajraj One","Gajraj+One"],
+    ["Bhavuka","Bhavuka"],
+    ["Jaini","Jaini"],
+    ["Uttara","Uttara"],
+    ["Sura","Sura"],
+    ["Pragati Narrow","Pragati+Narrow:wght@700"],
+    ["Amiko","Amiko:wght@600;700"]
   ];
+
+  var PAGE_SIZE = 20;
+  var currentPage = 1;
+  var loadedFamilies = {};
 
   var textInput   = document.getElementById('textInput');
   var sizeRange   = document.getElementById('sizeRange');
@@ -621,6 +733,7 @@
   var toast       = document.getElementById('toast');
   var navToggle   = document.getElementById('navToggle');
   var mainNav     = document.getElementById('mainNav');
+  var pagination  = document.getElementById('pagination');
 
   var toastTimer = null;
 
@@ -637,14 +750,107 @@
     return div.innerHTML;
   }
 
-  function buildCards(){
+  // Load only the Google Font families needed for the fonts currently on screen.
+  function loadFontsFor(entries){
+    var toLoad = entries.filter(function(e){ return !loadedFamilies[e[0]]; });
+    if (!toLoad.length) return;
+
+    var params = toLoad.map(function(e){ return 'family=' + e[1]; }).join('&');
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = 'https://fonts.googleapis.com/css2?' + params + '&display=swap';
+    document.head.appendChild(link);
+
+    toLoad.forEach(function(e){ loadedFamilies[e[0]] = true; });
+  }
+
+  function getSortedFonts(){
     var list = FONTS.slice();
-    if (sortOrder.value === 'az') list.sort(function(a,b){ return a.localeCompare(b); });
+    if (sortOrder.value === 'az') list.sort(function(a,b){ return a[0].localeCompare(b[0]); });
+    return list;
+  }
+
+  function totalPages(){
+    return Math.max(1, Math.ceil(FONTS.length / PAGE_SIZE));
+  }
+
+  function buildPagination(){
+    pagination.innerHTML = '';
+    var pages = totalPages();
+    if (pages <= 1) return;
+
+    var frag = document.createDocumentFragment();
+
+    var prevBtn = document.createElement('button');
+    prevBtn.className = 'page-btn';
+    prevBtn.type = 'button';
+    prevBtn.textContent = '‹';
+    prevBtn.disabled = currentPage === 1;
+    prevBtn.addEventListener('click', function(){ goToPage(currentPage - 1); });
+    frag.appendChild(prevBtn);
+
+    var addPageBtn = function(p){
+      var btn = document.createElement('button');
+      btn.className = 'page-btn' + (p === currentPage ? ' active' : '');
+      btn.type = 'button';
+      btn.textContent = p;
+      btn.addEventListener('click', function(){ goToPage(p); });
+      frag.appendChild(btn);
+    };
+
+    var addEllipsis = function(){
+      var span = document.createElement('span');
+      span.className = 'page-ellipsis';
+      span.textContent = '…';
+      frag.appendChild(span);
+    };
+
+    var windowSize = 1;
+    var shown = {};
+    addPageBtn(1); shown[1] = true;
+    for (var p = currentPage - windowSize; p <= currentPage + windowSize; p++){
+      if (p > 1 && p < pages && !shown[p]){
+        if (p > 2 && !shown[p-1] && p - 1 !== 1) addEllipsis();
+        addPageBtn(p); shown[p] = true;
+      }
+    }
+    if (pages > 1 && !shown[pages]){
+      if (pages - 1 > 1 && !shown[pages-1]) addEllipsis();
+      addPageBtn(pages); shown[pages] = true;
+    }
+
+    var nextBtn = document.createElement('button');
+    nextBtn.className = 'page-btn';
+    nextBtn.type = 'button';
+    nextBtn.textContent = '›';
+    nextBtn.disabled = currentPage === pages;
+    nextBtn.addEventListener('click', function(){ goToPage(currentPage + 1); });
+    frag.appendChild(nextBtn);
+
+    pagination.appendChild(frag);
+  }
+
+  function goToPage(p){
+    var pages = totalPages();
+    if (p < 1 || p > pages || p === currentPage) return;
+    currentPage = p;
+    buildCards();
+    var toolSection = document.getElementById('tool');
+    if (toolSection) toolSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+
+  function buildCards(){
+    var list = getSortedFonts();
+    var start = (currentPage - 1) * PAGE_SIZE;
+    var pageFonts = list.slice(start, start + PAGE_SIZE);
+
+    loadFontsFor(pageFonts);
 
     grid.innerHTML = '';
     var frag = document.createDocumentFragment();
 
-    list.forEach(function(fontName, idx){
+    pageFonts.forEach(function(entry, idx){
+      var fontName = entry[0];
       var card = document.createElement('div');
       card.className = 'font-card';
       card.dataset.font = fontName;
@@ -697,6 +903,7 @@
     });
 
     grid.appendChild(frag);
+    buildPagination();
     applyStyles();
   }
 
@@ -711,6 +918,7 @@
 
     emptyState.style.display = hasText ? 'none' : 'block';
     grid.style.display = hasText ? 'grid' : 'none';
+    pagination.style.display = hasText ? 'flex' : 'none';
 
     previews.forEach(function(p){
       p.textContent = text || '';
@@ -826,7 +1034,10 @@
   });
   fontColor.addEventListener('input', applyStyles);
   bgColor.addEventListener('input', applyStyles);
-  sortOrder.addEventListener('change', buildCards);
+  sortOrder.addEventListener('change', function(){
+    currentPage = 1;
+    buildCards();
+  });
 
   navToggle.addEventListener('click', function(){
     var isOpen = mainNav.classList.toggle('open');
