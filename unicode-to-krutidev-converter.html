@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<link rel="icon" type="image/png" href="/favicon.png">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unicode to KrutiDev Converter Online</title>
+<meta name="description" content="Free unicode to krutidev converter online. Convert Unicode Hindi (Mangal) text to Kruti Dev 010 / 055 font instantly — accurate, fast, no signup, works for bulk text too.">
+<link rel="canonical" href="https://hindifontgen.in/unicode-to-kruti-dev-converter">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --paper:#FFFFFF;
+    --panel:#FFFFFF;
+    --ink:#1D2624;
+    --ink-soft:#6B7573;
+    --rule:#E1E7E5;
+    --accent:#0E8F76;
+    --accent-soft:#E3F5EF;
+    --accent-dark:#0A6E5A;
+    --focus:#1A56DB;
+    --radius:10px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{margin:0; background:var(--paper); color:var(--ink); font-family:'Poppins',system-ui,sans-serif; -webkit-font-smoothing:antialiased; line-height:1.5;}
+  a{color:inherit;}
+  ::selection{background:var(--accent-soft);}
+  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
+
+  header{position:sticky; top:0; z-index:50; background:rgba(251,247,240,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--rule); padding:16px 24px;}
+  .header-inner{max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px;}
+  .logo{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; text-decoration:none; flex-shrink:0; color:var(--ink);}
+  .logo em{font-style:normal; color:var(--accent);}
+  nav.main-nav{display:flex; align-items:center; gap:2px;}
+  nav.main-nav a{font-size:14px; color:var(--ink-soft); text-decoration:none; padding:8px 12px; border-radius:7px; white-space:nowrap;}
+  nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
+  nav.main-nav a.current{color:var(--ink); font-weight:600;}
+  .nav-toggle{display:none; border:1px solid var(--rule); background:#fff; border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;}
+  @media (max-width:900px){
+    nav.main-nav{position:absolute; top:100%; left:0; right:0; background:var(--paper); border-bottom:1px solid var(--rule); flex-direction:column; align-items:stretch; padding:8px 16px 16px; display:none;}
+    nav.main-nav.open{display:flex;}
+    nav.main-nav a{padding:10px 8px; border-radius:6px;}
+    .nav-toggle{display:block;}
+  }
+
+  .hero{max-width:900px; margin:0 auto; padding:52px 24px 8px; text-align:center;}
+  h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(22px,3.4vw,34px); line-height:1.28; margin:0 0 12px;}
+  .hero p{color:var(--ink-soft); font-size:15.5px; max-width:64ch; margin:0 auto 30px;}
+
+  .tool-panel{max-width:1180px; margin:0 auto; padding:0 24px 8px;}
+  .tool-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media (max-width:860px){.tool-grid{grid-template-columns:1fr;}}
+
+  .tbox{background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius); padding:18px; display:flex; flex-direction:column;}
+  .tbox-head{display:flex; align-items:center; justify-content:space-between; margin-bottom:10px;}
+  .tbox-title{font-size:13.5px; font-weight:600; color:var(--ink); display:flex; align-items:center; gap:7px;}
+  .tbox-title svg{width:16px; height:16px; stroke:var(--accent);}
+  .tbox textarea{
+    width:100%; min-height:230px; resize:vertical; border:1px solid var(--rule); border-radius:8px;
+    padding:14px 16px; font-size:17px; color:var(--ink); background:#fff; line-height:1.6;
+  }
+  .tbox textarea:focus{border-color:var(--focus);}
+  #inputText{font-family:'Hind',sans-serif;}
+  #outputText{font-family:'Kruti Dev 010','Noto Sans',sans-serif; font-size:19px;}
+  .tbox-foot{display:flex; align-items:center; justify-content:space-between; margin-top:10px; font-size:12.5px; color:var(--ink-soft); gap:8px; flex-wrap:wrap;}
+  .tbox-actions{display:flex; gap:8px; flex-wrap:wrap;}
+  .btn{
+    font-family:'Poppins',sans-serif; font-size:12px; font-weight:600; border:1px solid var(--rule);
+    background:#fff; color:var(--ink); padding:7px 12px; border-radius:20px; cursor:pointer;
+    transition:background .15s ease, border-color .15s ease;
+  }
+  .btn:hover{border-color:var(--accent);}
+  .btn.primary{background:var(--accent); color:#fff; border-color:var(--accent);}
+  .btn.primary:hover{background:var(--accent-dark); border-color:var(--accent-dark);}
+
+  .swap-row{display:flex; align-items:center; justify-content:center; margin:14px 0;}
+  .swap-btn{
+    display:flex; align-items:center; gap:6px; border:1px solid var(--rule); background:#fff;
+    color:var(--ink); font-family:'Poppins',sans-serif; font-size:13px; font-weight:600;
+    padding:8px 16px; border-radius:20px; cursor:pointer;
+  }
+  .swap-btn:hover{border-color:var(--accent); color:var(--accent);}
+  .swap-btn svg{width:15px; height:15px; stroke:currentColor;}
+
+  .toast-wrap{max-width:1180px; margin:6px auto 0; padding:0 24px; display:flex; justify-content:flex-end;}
+  #toast{font-size:13px; color:var(--accent); font-weight:600; opacity:0; transition:opacity .25s ease;}
+  #toast.show{opacity:1;}
+
+  section.block{max-width:1180px; margin:0 auto; padding:56px 24px;}
+  section.block.tight{padding-top:0;}
+  .section-head{max-width:680px; margin:0 auto 30px; text-align:center;}
+  .kicker{display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:10px;}
+  .section-head h2{font-family:'Poppins',sans-serif; font-weight:700; font-size:clamp(21px,2.4vw,27px); margin:0 0 10px;}
+  .section-head p{color:var(--ink-soft); font-size:15px; margin:0;}
+
+  .info-copy{max-width:760px; margin:0 auto;}
+  .info-copy p{color:var(--ink-soft); font-size:15px; margin:0 0 14px;}
+  .info-copy ul{color:var(--ink-soft); font-size:15px; padding-left:20px; margin:0 0 14px;}
+  .info-copy li{margin-bottom:8px;}
+  .info-copy strong{color:var(--ink);}
+
+  .steps{display:flex; flex-direction:column; gap:0; max-width:760px; margin:0 auto; border-top:1px solid var(--rule);}
+  .step{display:flex; gap:20px; padding:20px 0; border-bottom:1px solid var(--rule);}
+  .step .step-num{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; color:var(--accent); flex-shrink:0; width:34px;}
+  .step h3{font-size:15px; margin:0 0 5px;}
+  .step p{font-size:14px; color:var(--ink-soft); margin:0;}
+
+  table.cmp{width:100%; max-width:820px; margin:0 auto; border-collapse:collapse; font-size:14px;}
+  table.cmp th, table.cmp td{border:1px solid var(--rule); padding:11px 14px; text-align:left; vertical-align:top;}
+  table.cmp th{background:var(--accent-soft); color:var(--ink); font-weight:600;}
+  table.cmp td{color:var(--ink-soft);}
+  .table-wrap{overflow-x:auto;}
+
+  .faq-list{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:10px;}
+  .faq-item{background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden;}
+  .faq-q{width:100%; text-align:left; background:none; border:none; padding:16px 20px; font-family:'Poppins',sans-serif; font-size:14.5px; font-weight:600; color:var(--ink); cursor:pointer; display:flex; align-items:center; justify-content:space-between; gap:12px;}
+  .faq-q .plus{font-size:18px; color:var(--accent); flex-shrink:0; transition:transform .2s ease; font-weight:400;}
+  .faq-item.open .plus{transform:rotate(45deg);}
+  .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
+  .faq-a-inner{padding:0 20px 18px; font-size:14.5px; color:var(--ink-soft);}
+
+  footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
+  .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
+  .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
+  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
+  .footer-col ul{list-style:none; margin:0; padding:0;}
+  .footer-col li{margin-bottom:8px;}
+  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
+  .footer-col a:hover{color:var(--accent);}
+  .footer-bottom{max-width:1180px; margin:32px auto 0; padding-top:20px; border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);}
+
+  @media (max-width:760px){
+    .footer-inner{grid-template-columns:1fr; gap:24px;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="header-inner">
+    <a href="https://hindifontgen.in/" class="logo">Hindi<em>FontGen</em></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="https://hindifontgen.in/">Home</a>
+      <a href="https://hindifontgen.in/unicode-to-kruti-dev-converter.html" class="current">Unicode ⇄ KrutiDev</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="privacy-policy.html">Privacy Policy</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero" id="tool">
+  <h1>Unicode to KrutiDev Converter Online</h1>
+  <p>A free <strong>unicode to krutidev converter online</strong> for Kruti Dev 010 font. Paste Unicode Hindi text, get instant Kruti Dev output — or use the swap button as a <strong>krutidev to unicode converter online</strong> to go the other way.</p>
+</section>
+
+<div class="tool-panel">
+  <div class="tool-grid">
+    <div class="tbox">
+      <div class="tbox-head">
+        <span class="tbox-title">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M4 7V5h9v2M9 5v14M6 19h6M17 10l3 3-3 3M20 13H14"/></svg>
+          <span id="fromLabel">Unicode (Mangal) — Source</span>
+        </span>
+      </div>
+      <textarea id="inputText" placeholder="यहाँ यूनिकोड हिंदी टेक्स्ट टाइप करें या पेस्ट करें...">नमस्ते दोस्तों, आपका स्वागत है</textarea>
+      <div class="tbox-foot">
+        <span><span id="inChars">0</span> characters · <span id="inWords">0</span> words</span>
+        <div class="tbox-actions">
+          <button class="btn" id="pasteBtn" type="button">Paste</button>
+          <button class="btn" id="clearInBtn" type="button">Clear</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="tbox">
+      <div class="tbox-head">
+        <span class="tbox-title">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M12 3v13M8 12l4 4 4-4"/><path d="M5 19h14"/></svg>
+          <span id="toLabel">Kruti Dev 010 — Output</span>
+        </span>
+      </div>
+      <textarea id="outputText" placeholder="Kruti Dev output यहाँ दिखेगा..." readonly></textarea>
+      <div class="tbox-foot">
+        <span><span id="outChars">0</span> characters · <span id="outWords">0</span> words</span>
+        <div class="tbox-actions">
+          <button class="btn primary" id="copyBtn" type="button">Copy</button>
+          <button class="btn" id="downloadBtn" type="button">Download</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="swap-row">
+    <button class="swap-btn" id="swapBtn" type="button">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 7h13l-4-4M17 17H4l4 4"/></svg>
+      Switch to KrutiDev → Unicode
+    </button>
+  </div>
+</div>
+
+<div class="toast-wrap"><span id="toast">Copied!</span></div>
+
+<!-- ===== What is / intro ===== -->
+<section class="block tight" id="about-tool">
+  <div class="section-head">
+    <h2>What is this Unicode to KrutiDev converter?</h2>
+  </div>
+  <div class="info-copy">
+    <p>This <strong>unicode to krutidev font converter</strong> is a free browser tool that turns standard Unicode Devanagari (Mangal) text into <strong>Kruti Dev 010</strong> encoding, and back again. Kruti Dev is the legacy font still required by government typing exams (CPCT, SSC, court typing tests), many DTP and printing workflows, and older government office software across India.</p>
+    <p>When you type Hindi on your phone, in WhatsApp, or with Google Input Tools, the text is stored as Unicode. But plenty of exam portals, printing presses, and older desktop software still expect Kruti Dev. This tool bridges that gap instantly — no software download, no signup.</p>
+    <p>The same page also works as a <strong>krutidev to unicode converter online</strong>: just hit the swap button above and paste your Kruti Dev text to get clean, searchable Unicode back.</p>
+  </div>
+</section>
+
+<!-- ===== How to use ===== -->
+<section class="block tight" id="how">
+  <div class="section-head">
+    <h2>How to convert Unicode to Kruti Dev</h2>
+    <p>Three simple steps — works the same way in reverse for Kruti Dev to Unicode.</p>
+  </div>
+  <div class="steps">
+    <div class="step">
+      <span class="step-num">1</span>
+      <div>
+        <h3>Paste or type your text</h3>
+        <p>Drop your Unicode Hindi (Mangal) text into the left box, or type directly. Marathi and Sanskrit text also work since they share the Devanagari script.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">2</span>
+      <div>
+        <h3>Get instant Kruti Dev output</h3>
+        <p>The right box updates as you type, converted to Kruti Dev 010 encoding. This is how to convert unicode to kruti dev 10 without installing anything.</p>
+      </div>
+    </div>
+    <div class="step">
+      <span class="step-num">3</span>
+      <div>
+        <h3>Copy and apply the font</h3>
+        <p>Click Copy, paste into MS Word, Excel, CorelDraw, or PageMaker, then set the font to <strong>Kruti Dev 010</strong> so the text displays correctly in Hindi.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== Why / features ===== -->
+<section class="block tight" id="why">
+  <div class="section-head">
+    <h2>Why use this converter</h2>
+  </div>
+  <div class="info-copy">
+    <ul>
+      <li><strong>Accurate conjunct handling</strong> — Sanyukta Akshar, Reph, and half-letters (क्ष, त्र, ज्ञ, प्र and more) convert correctly instead of showing broken boxes.</li>
+      <li><strong>Works both directions</strong> — same tool doubles as a <strong>font converter krutidev to unicode</strong>, so you're covered whichever way your document needs to go.</li>
+      <li><strong>Good for bulk text</strong> — paste a full paragraph or page; this covers how to convert krutidev bulk text into unicode without doing it line by line.</li>
+      <li><strong>Readable, searchable output</strong> — the Unicode side gives you how to convert krutidev unicode to readable text online that you can actually search and edit.</li>
+      <li><strong>No signup, no limits</strong> — 100% free, runs entirely in your browser.</li>
+      <li><strong>Mobile friendly</strong> — works the same on phone or desktop.</li>
+    </ul>
+  </div>
+</section>
+
+<!-- ===== Comparison table ===== -->
+<section class="block tight" id="compare">
+  <div class="section-head">
+    <h2>Unicode vs Kruti Dev — at a glance</h2>
+  </div>
+  <div class="table-wrap">
+    <table class="cmp">
+      <tr><th>Feature</th><th>Unicode (Mangal)</th><th>Kruti Dev 010 / 055</th></tr>
+      <tr><td>Used in</td><td>Websites, WhatsApp, mobile apps, MS Word</td><td>Government exams, DTP, printing presses</td></tr>
+      <tr><td>Font required</td><td>Any Unicode font (Mangal, Nirmala UI)</td><td>Kruti Dev 010 / 055 must be installed</td></tr>
+      <tr><td>Searchable text</td><td>Yes, everywhere</td><td>Only with matching Kruti Dev font applied</td></tr>
+      <tr><td>Common use case</td><td>Web content, SEO, typing on any device</td><td>Typing tests, court filings, print media</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- ===== Common problem ===== -->
+<section class="block tight" id="fix">
+  <div class="section-head">
+    <h2>Why does the output look like English letters?</h2>
+  </div>
+  <div class="info-copy">
+    <p>This is the most common question about how to use krutidev unicode converter output. The converted text is correct — it's just waiting for the right font.</p>
+    <ul>
+      <li>Copy the Kruti Dev output from the box above.</li>
+      <li>Paste it into Word, Excel, or CorelDraw.</li>
+      <li>Select the pasted text and change the font to <strong>Kruti Dev 010</strong> from the font dropdown.</li>
+      <li>The Hindi text appears instantly — this also answers how to convert unicode to kruti dev in excel sheet: set the cell's font, not the whole sheet.</li>
+    </ul>
+    <p>If Kruti Dev 010 doesn't show up in your font list, the font file isn't installed on that computer yet — download it once and install it like any other font.</p>
+  </div>
+</section>
+
+<!-- ===== FAQ ===== -->
+<section class="block tight" id="faq">
+  <div class="section-head">
+    <h2>Frequently asked questions</h2>
+  </div>
+  <div class="faq-list" id="faqList">
+
+    <div class="faq-item">
+      <button class="faq-q">How can I convert Unicode to Kruti Dev?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Paste your Unicode Hindi text into the box above — this unicode to krutidev converter online converts it automatically. Copy the result and apply the Kruti Dev 010 font wherever you're using it.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Does this work as a krutidev to unicode converter online too?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Yes. Click the swap button to flip the direction, then paste your Kruti Dev text — you'll get clean, readable Unicode back, which also works as a font converter krutidev to unicode for documents you need to edit or search.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How to convert unicode to kruti dev 10 in Excel sheet?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Convert your text on this page first, copy the output, paste it into the Excel cell, then select that cell (or column) and change its font to Kruti Dev 010 from the Home tab's font dropdown.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">How to convert krutidev bulk text into unicode?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Paste your entire paragraph or document into the input box — there's no line-by-line limit. Switch the tool to KrutiDev → Unicode mode first if you're starting from Kruti Dev text.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Which Kruti Dev version does this support?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">This converter targets Kruti Dev 010, the most widely used version for government documents, typing exams, and printing work across North India.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Can I convert Marathi text with this tool?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Yes. Since Marathi uses the Devanagari script, this converts Marathi Unicode text into Kruti Dev layout the same way it handles Hindi.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Is my text saved anywhere?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">No. Conversion happens entirely in your browser — nothing you type is sent to a server or stored.</div></div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q">Is this unicode to krutidev converter free?<span class="plus">+</span></button>
+      <div class="faq-a"><div class="faq-a-inner">Yes, 100% free with no registration, no watermark, and no usage limit.</div></div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>HindiFontGen</h4>
+      <p>Free Hindi font tools — stylish font generator and Unicode ⇄ Kruti Dev converter for everyday use.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Tools</h4>
+      <ul>
+        <li><a href="index.html">Font Generator</a></li>
+        <li><a href="unicode-to-kruti-dev-converter.html">Unicode ⇄ KrutiDev</a></li>
+        <li><a href="#faq">FAQ</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Legal Pages</h4>
+      <ul>
+        <li><a href="privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="terms.html">Terms &amp; Condition</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 HindiFontGen. All rights reserved.</div>
+</footer>
+
+<script>
+/* ===================== Kruti Dev <-> Unicode engine ===================== */
+const CHARS_KD = [
+  "ñ", "Q+Z", "sas", "aa", ")Z", "ZZ", "‘", "’", "“", "”",
+  "å", "ƒ", "„", "…", "†", "‡", "ˆ", "‰", "Š", "‹",
+  "¶+", "d+", "[+k", "[+", "x+", "T+", "t+", "M+", "<+", "Q+", ";+", "j+", "u+",
+  "Ùk", "Ù", "ä", "–", "—", "é", "™", "=kk", "f=k",
+  "à", "á", "â", "ã", "ºz", "º", "í", "{k", "{", "=", "«",
+  "Nî", "Vî", "Bî", "Mî", "<î", "|", "K", "}",
+  "J", "Vª", "Mª", "<ªª", "Nª", "Ø", "Ý", "nzZ", "æ", "ç", "Á", "xz", "#", ":",
+  "v‚", "vks", "vkS", "vk", "v", "b±", "Ã", "bZ", "b", "m", "Å", ",s", ",", "_",
+  "ô", "d", "Dk", "D", "[k", "[", "x", "Xk", "X", "Ä", "?k", "?", "³",
+  "pkS", "p", "Pk", "P", "N", "t", "Tk", "T", ">", "÷", "¥",
+  "ê", "ë", "V", "B", "ì", "ï", "M+", "<+", "M", "<", ".k", ".",
+  "r", "Rk", "R", "Fk", "F", ")", "n", "/k", "èk", "/", "Ë", "è", "u", "Uk", "U",
+  "i", "Ik", "I", "Q", "¶", "c", "Ck", "C", "Hk", "H", "e", "Ek", "E",
+  ";", "¸", "j", "y", "Yk", "Y", "G", "o", "Ok", "O",
+  "'k", "'", "\"k", "\"", "l", "Lk", "L", "g",
+  "È", "z",
+  "Ì", "Í", "Î", "Ï", "Ñ", "Ò", "Ó", "Ô", "Ö", "Ø", "Ù", "Ük", "Ü",
+  "‚", "ks", "kS", "k", "h", "q", "w", "`", "s", "S",
+  "a", "¡", "%", "W", "•", "·", "∙", "\u2219", "~j", "~", "\\", "+", " ः",
+  "^", "*", "Þ", "ß", "(", "¼", "½", "¿", "À", "¾", "A", "-", "&", "Œ", "]", "~ ", "@"
+];
+
+const CHARS_UNICODE = [
+  "॰", "QZ+", "sa", "a", "र्द्ध", "Z", "\u201C", "\u201D", "'", "'",
+  "०", "१", "२", "३", "४", "५", "६", "७", "८", "९",
+  "फ़्", "क़", "ख़", "ख़्", "ग़", "ज़्", "ज़", "ड़", "ढ़", "फ़", "य़", "ऱ", "ऩ",
+  "त्त", "त्त्", "क्त", "दृ", "कृ", "न्न", "न्न्", "=k", "f=",
+  "ह्न", "ह्य", "हृ", "ह्म", "ह्र", "ह्", "द्द", "क्ष", "क्ष्", "त्र", "त्र्",
+  "छ्य", "ट्य", "ठ्य", "ड्य", "ढ्य", "द्य", "ज्ञ", "द्व",
+  "श्र", "ट्र", "ड्र", "ढ्र", "छ्र", "क्र", "फ्र", "र्द्र", "द्र", "प्र", "प्र", "ग्र", "रु", "रू",
+  "ऑ", "ओ", "औ", "आ", "अ", "ईं", "ई", "ई", "इ", "उ", "ऊ", "ऐ", "ए", "ऋ",
+  "क्क", "क", "क", "क्", "ख", "ख्", "ग", "ग", "ग्", "घ", "घ", "घ्", "ङ",
+  "चै", "च", "च", "च्", "छ", "ज", "ज", "ज्", "झ", "झ्", "ञ",
+  "ट्ट", "ट्ठ", "ट", "ठ", "ड्ड", "ड्ढ", "ड़", "ढ़", "ड", "ढ", "ण", "ण्",
+  "त", "त", "त्", "थ", "थ्", "द्ध", "द", "ध", "ध", "ध्", "ध्", "ध्", "न", "न", "न्",
+  "प", "प", "प्", "फ", "फ्", "ब", "ब", "ब्", "भ", "भ्", "म", "म", "म्",
+  "य", "य्", "र", "ल", "ल", "ल्", "ळ", "व", "व", "व्",
+  "श", "श्", "ष", "ष्", "स", "स", "स्", "ह",
+  "ीं", "्र",
+  "द्द", "ट्ट", "ट्ठ", "ड्ड", "कृ", "भ", "्य", "ड्ढ", "झ्", "क्र", "त्त्", "श", "श्",
+  "ॉ", "ो", "ौ", "ा", "ी", "ु", "ू", "ृ", "े", "ै",
+  "ं", "ँ", "ः", "ॅ", "ऽ", "ऽ", "ऽ", "ऽ", "्र", "्", "?", "़", ":",
+  "\u2018", "\u2019", "\u201C", "\u201D", ";", "(", ")", "{", "}", "=", "।", ".", "-", "॰", ",", "् ", "/"
+];
+
+const KD2U_PAIRS = CHARS_KD.map((k, idx) => [k, CHARS_UNICODE[idx]])
+  .filter(([k]) => k.length > 0)
+  .filter(([k]) => k !== "?")
+  .sort((a, b) => b[0].length - a[0].length);
+
+function krutiToUnicode(input) {
+  if (!input) return "";
+  let s = input;
+  s = s.replace(/,(?=\s|$|[,.!?;:()])/g, "\u0007");
+  for (const [kd, uni] of KD2U_PAIRS) {
+    if (s.indexOf(kd) === -1) continue;
+    s = s.split(kd).join(uni);
+  }
+  s = s.split("\u0007").join(",");
+  s = s.split("±").join("Zं");
+  s = s.split("Æ").join("र्f");
+  s = moveMatra(s, "f", "ि", 1);
+  s = s.split("Ç").join("fa");
+  s = s.split("É").join("र्fa");
+  s = moveMatra(s, "fa", "िं", 2);
+  s = s.split("Ê").join("ीZ");
+  s = fixWrongEe(s);
+  s = fixReph(s);
+  return s;
+}
+
+function moveMatra(str, token, replacement, tokenLen) {
+  let out = str;
+  let pos = out.indexOf(token);
+  while (pos > -1) {
+    const nextChar = out.slice(pos + tokenLen, pos + tokenLen + 1);
+    if (!nextChar) break;
+    const toReplace = token + nextChar;
+    out = out.split(toReplace).join(nextChar + replacement);
+    pos = out.indexOf(token, pos + 1);
+  }
+  return out;
+}
+
+function fixWrongEe(str) {
+  let out = str;
+  let pos = out.indexOf("ि्");
+  while (pos > -1) {
+    const nextChar = out.slice(pos + 2, pos + 3);
+    if (!nextChar) break;
+    const toReplace = "ि्" + nextChar;
+    out = out.split(toReplace).join("्" + nextChar + "ि");
+    pos = out.indexOf("ि्", pos + 2);
+  }
+  return out;
+}
+
+function fixReph(str) {
+  const matras = "अ आ इ ई उ ऊ ए ऐ ओ औ ा ि ी ु ू ृ े ै ो ौ ं : ँ ॅ".split(" ").join("");
+  let out = str;
+  let posR = out.indexOf("Z");
+  let guard = 0;
+  while (posR > -1 && guard < 5000) {
+    guard++;
+    let p = posR - 1;
+    if (p < 0) {
+      out = out.slice(0, posR) + out.slice(posR + 1);
+      posR = out.indexOf("Z");
+      continue;
+    }
+    while (p >= 0 && matras.indexOf(out[p]) > -1) p--;
+    if (p < 0) p = 0;
+    const segment = out.slice(p, posR);
+    const toReplace = segment + "Z";
+    const replacement = "र्" + segment;
+    out = out.slice(0, p) + replacement + out.slice(posR + 1);
+    posR = out.indexOf("Z");
+  }
+  return out;
+}
+
+const CONJUNCTS = [
+  ["क्ष", "{", "half"],
+  ["त्र", "=", "full"],
+  ["ज्ञ", "K", "full"],
+  ["श्र", "J", "full"],
+  ["द्व", "}o", "full"],
+  ["द्य", "|", "full"],
+  ["द्ध", ")", "full"],
+  ["ह्न", "à", "full"], ["ह्य", "á", "full"], ["ह्म", "ã", "full"], ["ह्र", "º", "full"],
+  ["क्त", "Dr", "full"],
+  ["त्त", "Rr", "full"],
+  ["न्न", "Uu", "full"],
+  ["ट्ट", "V~V", "full"], ["ट्ठ", "V~B", "full"],
+  ["ड्ड", "M~M", "full"], ["ड्ढ", "M~<", "full"],
+  ["ट्य", "Vî", "full"], ["ठ्य", "Bî", "full"], ["ड्य", "Mî", "full"], ["ढ्य", "<î", "full"], ["छ्य", "Nî", "full"],
+  ["क्र", "Ø", "full"], ["फ्र", "Ý", "full"], ["ग्र", "xz", "full"], ["प्र", "ç", "full"],
+  ["ट्र", "Vª", "full"], ["ड्र", "Mª", "full"],
+  ["रु", "#", "full"], ["रू", ":", "full"]
+];
+
+const IND_VOWEL_U2K = [
+  ["अं","va"],["अः","v%"],
+  ["आ","vk"],["ऐ","S"],["औ","vkS"],["ओ","vks"],
+  ["अ","v"],["इ","b"],["ई","bZ"],["उ","m"],["ऊ","Å"],
+  ["ऋ","_"],["ए",","]
+];
+
+const CONS_FULL = {
+  "क":"d","ख":"[k","ग":"x","घ":"?k","ङ":"³",
+  "च":"p","छ":"N","ज":"t","झ":">","ञ":"´",
+  "ट":"V","ठ":"B","ड":"M","ढ":"<","ण":".k",
+  "त":"r","थ":"Fk","द":"n","ध":"/k","न":"u",
+  "प":"i","फ":"Q","ब":"c","भ":"Hk","म":"e",
+  "य":";","र":"j","ल":"y","व":"o",
+  "श":"'k","ष":"\"k","स":"l","ह":"g","ळ":"G"
+};
+
+const CONS_HALF = {
+  "क":"D","ख":"[","ग":"X","घ":"?","ङ":"³~",
+  "च":"P","छ":"N~","ज":"T","झ":">~","ञ":"´~",
+  "ट":"V~","ठ":"B~","ड":"M~","ढ":"<~","ण":".~",
+  "त":"R","थ":"F","द":"n~","ध":"/","न":"U",
+  "प":"I","फ":"Q~","ब":"C","भ":"H","म":"E",
+  "य":";~","र":"j~","ल":"Y","व":"O",
+  "श":"'","ष":"\"","स":"L","ह":"g~"
+};
+
+const MATRA_U2K = {
+  "ा":"k","ि":"\u0001i","ी":"h","ु":"q","ू":"w",
+  "ृ":"`","े":"s","ै":"S","ो":"ks","ौ":"kS"
+};
+
+const CONJUNCTS_SORTED = CONJUNCTS.slice().sort((a,b) => b[0].length - a[0].length);
+
+function matchConjunct(chars, i) {
+  for (const [uni, kd, form] of CONJUNCTS_SORTED) {
+    const seq = Array.from(uni);
+    let ok = true;
+    for (let k = 0; k < seq.length; k++) {
+      if (chars[i+k] !== seq[k]) { ok = false; break; }
+    }
+    if (ok) return { len: seq.length, kd, form };
+  }
+  return null;
+}
+
+function unicodeToKruti(input) {
+  if (!input) return "";
+  let text = input;
+
+  for (const [uni, kd] of IND_VOWEL_U2K) {
+    if (text.indexOf(uni) === -1) continue;
+    text = text.split(uni).join("\u0001" + kd + "\u0002");
+  }
+  text = text.split("ं").join("a");
+  text = text.split("ः").join("%");
+  text = text.split("ँ").join("¡");
+
+  const chars = Array.from(text);
+  let out = "";
+  let i = 0;
+  const n = chars.length;
+
+  function isCons(ch) { return !!CONS_FULL[ch]; }
+
+  while (i < n) {
+    const c = chars[i];
+
+    if (c === "\u0001" || c === "\u0002") { out += c; i++; continue; }
+
+    if (isCons(c)) {
+      const conj = matchConjunct(chars, i);
+      let j = i;
+      let halfChain = "";
+      let lastKD = null;
+
+      if (conj) {
+        halfChain = "";
+        j = i + conj.len - 1;
+        lastKD = conj.kd;
+      } else {
+        while (chars[j+1] === "\u094D" && isCons(chars[j+2]) && !matchConjunct(chars, j)) {
+          halfChain += CONS_HALF[chars[j]];
+          j += 2;
+        }
+        lastKD = CONS_FULL[chars[j]];
+      }
+
+      if (chars[j+1] === "\u094D" && !isCons(chars[j+2])) {
+        out += halfChain + (lastKD !== null ? (CONS_HALF[chars[j]] || lastKD) : "");
+        i = j + 2;
+        continue;
+      }
+
+      const nextCh = chars[j+1];
+      if (nextCh === "ि") {
+        out += "f" + halfChain + lastKD + (conj && conj.form === "half" ? "k" : "");
+        i = j + 2;
+      } else if (MATRA_U2K[nextCh]) {
+        const aFix = (conj && conj.form === "half") ? "k" : "";
+        out += halfChain + lastKD + aFix + MATRA_U2K[nextCh];
+        i = j + 2;
+      } else if (conj && conj.form === "half") {
+        out += halfChain + lastKD + "k";
+        i = j + 1;
+      } else {
+        out += halfChain + lastKD;
+        i = j + 1;
+      }
+      continue;
+    }
+
+    out += c;
+    i++;
+  }
+  text = out;
+
+  text = text.split("\u0001").join("").split("\u0002").join("");
+
+  const DIGITS = {"०":"0","१":"1","२":"2","३":"3","४":"4","५":"5","६":"6","७":"7","८":"8","९":"9"};
+  for (const d in DIGITS) text = text.split(d).join(DIGITS[d]);
+
+  text = text.split("।").join("A").split("॥").join("AA");
+  text = text.split("\u200C").join("").split("\u200D").join("");
+
+  return text;
+}
+
+/* ===================== UI wiring ===================== */
+(function(){
+  "use strict";
+
+  var inputText  = document.getElementById('inputText');
+  var outputText = document.getElementById('outputText');
+  var fromLabel  = document.getElementById('fromLabel');
+  var toLabel    = document.getElementById('toLabel');
+  var inChars    = document.getElementById('inChars');
+  var inWords    = document.getElementById('inWords');
+  var outChars   = document.getElementById('outChars');
+  var outWords   = document.getElementById('outWords');
+  var copyBtn    = document.getElementById('copyBtn');
+  var downloadBtn= document.getElementById('downloadBtn');
+  var pasteBtn   = document.getElementById('pasteBtn');
+  var clearInBtn = document.getElementById('clearInBtn');
+  var swapBtn    = document.getElementById('swapBtn');
+  var toast      = document.getElementById('toast');
+  var navToggle  = document.getElementById('navToggle');
+  var mainNav    = document.getElementById('mainNav');
+
+  var mode = 'u2k'; // 'u2k' = Unicode -> KrutiDev, 'k2u' = KrutiDev -> Unicode
+  var toastTimer = null;
+
+  function showToast(msg){
+    toast.textContent = msg;
+    toast.classList.add('show');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){ toast.classList.remove('show'); }, 1800);
+  }
+
+  function wordCount(str){
+    var t = str.trim();
+    return t.length ? t.split(/\s+/).length : 0;
+  }
+
+  function convert(){
+    var val = inputText.value;
+    var result = mode === 'u2k' ? unicodeToKruti(val) : krutiToUnicode(val);
+    outputText.value = result;
+    inChars.textContent = val.length;
+    inWords.textContent = wordCount(val);
+    outChars.textContent = result.length;
+    outWords.textContent = wordCount(result);
+  }
+
+  function setMode(newMode){
+    mode = newMode;
+    if (mode === 'u2k') {
+      fromLabel.textContent = 'Unicode (Mangal) — Source';
+      toLabel.textContent = 'Kruti Dev 010 — Output';
+      inputText.placeholder = 'यहाँ यूनिकोड हिंदी टेक्स्ट टाइप करें या पेस्ट करें...';
+      inputText.style.fontFamily = "'Hind',sans-serif";
+      inputText.style.fontSize = '17px';
+      swapBtn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 7h13l-4-4M17 17H4l4 4"/></svg> Switch to KrutiDev \u2192 Unicode';
+    } else {
+      fromLabel.textContent = 'Kruti Dev 010 — Source';
+      toLabel.textContent = 'Unicode (Mangal) — Output';
+      inputText.placeholder = 'Paste your Kruti Dev text here...';
+      inputText.style.fontFamily = "'Kruti Dev 010','Noto Sans',sans-serif";
+      inputText.style.fontSize = '19px';
+      swapBtn.innerHTML = '<svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M7 7h13l-4-4M17 17H4l4 4"/></svg> Switch to Unicode \u2192 KrutiDev';
+    }
+    outputText.style.fontFamily = mode === 'u2k' ? "'Kruti Dev 010','Noto Sans',sans-serif" : "'Hind',sans-serif";
+    outputText.style.fontSize = mode === 'u2k' ? '19px' : '17px';
+    convert();
+  }
+
+  swapBtn.addEventListener('click', function(){
+    // also swap the text itself so user can continue working both ways
+    var prevOut = outputText.value;
+    setMode(mode === 'u2k' ? 'k2u' : 'u2k');
+    if (prevOut) {
+      inputText.value = prevOut;
+      convert();
+    }
+  });
+
+  inputText.addEventListener('input', convert);
+
+  copyBtn.addEventListener('click', function(){
+    var text = outputText.value;
+    if (!text) return;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ showToast('Copied!'); })
+        .catch(function(){ fallbackCopy(text); });
+    } else {
+      fallbackCopy(text);
+    }
+  });
+
+  function fallbackCopy(text){
+    var ta = document.createElement('textarea');
+    ta.value = text;
+    ta.style.position = 'fixed';
+    ta.style.left = '-9999px';
+    document.body.appendChild(ta);
+    ta.focus();
+    ta.select();
+    try { document.execCommand('copy'); showToast('Copied!'); }
+    catch (e) { showToast('Copy failed'); }
+    document.body.removeChild(ta);
+  }
+
+  downloadBtn.addEventListener('click', function(){
+    var text = outputText.value;
+    if (!text) return;
+    var blob = new Blob([text], { type: 'text/plain;charset=utf-8' });
+    var url = URL.createObjectURL(blob);
+    var link = document.createElement('a');
+    link.href = url;
+    link.download = (mode === 'u2k' ? 'kruti-dev-output' : 'unicode-output') + '.txt';
+    link.click();
+    URL.revokeObjectURL(url);
+  });
+
+  pasteBtn.addEventListener('click', function(){
+    if (navigator.clipboard && navigator.clipboard.readText) {
+      navigator.clipboard.readText().then(function(text){
+        inputText.value = text;
+        convert();
+      }).catch(function(){
+        showToast('Paste not allowed');
+      });
+    } else {
+      showToast('Paste not supported');
+    }
+  });
+
+  clearInBtn.addEventListener('click', function(){
+    inputText.value = '';
+    convert();
+  });
+
+  navToggle.addEventListener('click', function(){
+    var isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+  mainNav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ mainNav.classList.remove('open'); });
+  });
+
+  document.querySelectorAll('.faq-item').forEach(function(item){
+    var btn = item.querySelector('.faq-q');
+    var answer = item.querySelector('.faq-a');
+    btn.addEventListener('click', function(){
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item.open').forEach(function(openItem){
+        if (openItem !== item) {
+          openItem.classList.remove('open');
+          openItem.querySelector('.faq-a').style.maxHeight = null;
+        }
+      });
+      if (isOpen) {
+        item.classList.remove('open');
+        answer.style.maxHeight = null;
+      } else {
+        item.classList.add('open');
+        answer.style.maxHeight = answer.scrollHeight + 'px';
+      }
+    });
+  });
+
+  convert();
+})();
+</script>
+
+</body>
+</html>
