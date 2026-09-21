@@ -16,21 +16,24 @@
 <style>
   :root{
     --paper:#FFFFFF;
-    --panel:#FFFFFF;
     --ink:#1D2624;
     --ink-soft:#6B7573;
     --rule:#E1E7E5;
     --accent:#0E8F76;
     --accent-soft:#E3F5EF;
     --accent-dark:#0A6E5A;
-    --focus:#1A56DB;
     --radius:10px;
+    --code-bg:#12201C;
+    --code-key:#7FD9BE;
+    --code-val:#E8B589;
   }
   *{box-sizing:border-box;}
+  html{overflow-x:hidden;}
   body{
     margin:0; background:var(--paper); color:var(--ink);
     font-family:'Poppins',system-ui,sans-serif;
     -webkit-font-smoothing:antialiased; line-height:1.5;
+    overflow-x:hidden;
   }
   a{color:inherit;}
 
@@ -47,48 +50,48 @@
   nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
   nav.main-nav a.current{color:var(--ink); font-weight:600;}
 
-  .hero{max-width:800px; margin:0 auto; padding:48px 24px 8px; text-align:center;}
-  h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(24px,3.6vw,34px); line-height:1.25; margin:0 0 12px;}
-  .hero p{color:var(--ink-soft); font-size:15.5px; max-width:56ch; margin:0 auto;}
+  .hero{max-width:800px; margin:0 auto; padding:44px 20px 4px; text-align:center;}
+  h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(22px,3.6vw,32px); line-height:1.25; margin:0 0 10px;}
+  .hero p{color:var(--ink-soft); font-size:15px; max-width:52ch; margin:0 auto;}
 
-  section.block{max-width:1000px; margin:0 auto; padding:40px 24px;}
+  section.block{max-width:900px; margin:0 auto; padding:32px 20px;}
   section.block.tight{padding-top:0;}
 
-  .map-wrap{border:1px solid var(--rule); border-radius:var(--radius); overflow:hidden; margin-bottom:22px;}
+  /* ---------- Code-style character map ---------- */
+  .map-wrap{
+    border:1px solid var(--rule); border-radius:var(--radius);
+    margin-bottom:22px; overflow:hidden;
+  }
   .map-head{
-    background:var(--accent-soft); padding:14px 20px;
+    background:var(--accent-soft); padding:13px 18px;
     font-family:'Poppins',sans-serif; font-weight:600; font-size:14px; color:var(--accent-dark);
   }
-  .char-grid{
-    display:grid; grid-template-columns:repeat(4,1fr);
-    background:#fff;
+  .map-code{
+    background:var(--code-bg);
+    padding:18px 20px;
+    font-family:ui-monospace,'SFMono-Regular',Consolas,monospace;
+    font-size:13px;
+    line-height:2;
+    overflow-wrap:anywhere;
+    white-space:pre-wrap;
   }
-  .char-cell{
-    display:flex; align-items:center; justify-content:space-between; gap:10px;
-    padding:11px 16px; border-bottom:1px solid var(--rule); border-right:1px solid var(--rule);
-  }
-  .char-cell .glyph{font-family:'Hind',sans-serif; font-size:19px; color:var(--ink);}
-  .char-cell .key{font-family:ui-monospace,Consolas,monospace; font-size:13px; color:var(--accent-dark); font-weight:600;}
-  .char-grid .char-cell:nth-child(4n){border-right:none;}
-
-  @media (max-width:760px){
-    .char-grid{grid-template-columns:repeat(2,1fr);}
-    .char-grid .char-cell:nth-child(4n){border-right:1px solid var(--rule);}
-    .char-grid .char-cell:nth-child(2n){border-right:none;}
-  }
-  @media (max-width:420px){
-    .char-grid{grid-template-columns:1fr;}
-    .char-grid .char-cell{border-right:none;}
-  }
+  .map-code .pair{color:var(--ink-soft);}
+  .map-code .glyph{color:var(--code-key); font-family:'Hind',ui-monospace,monospace;}
+  .map-code .val{color:var(--code-val);}
+  .map-code .punc{color:#5C6B66;}
 
   .info-copy{max-width:760px; margin:0 auto;}
-  .info-copy h2{font-size:19px; margin:0 0 12px;}
-  .info-copy p{color:var(--ink-soft); font-size:15px; margin:0 0 14px;}
+  .info-copy h2{font-size:18px; margin:0 0 12px;}
+  .info-copy p{color:var(--ink-soft); font-size:14.5px; margin:0 0 14px;}
 
-  footer{border-top:1px solid var(--rule); padding:32px 24px 24px; text-align:center;}
+  footer{border-top:1px solid var(--rule); padding:28px 20px 22px; text-align:center;}
   footer p{font-size:12.5px; color:var(--ink-soft); margin:0;}
   footer a{color:var(--ink-soft); text-decoration:none; margin:0 8px;}
   footer a:hover{color:var(--accent);}
+
+  @media (max-width:480px){
+    .map-code{font-size:12px; padding:14px 14px;}
+  }
 </style>
 </head>
 <body>
@@ -106,19 +109,20 @@
 </header>
 
 <section class="hero">
-  <h2>Hindi Character Map</h2>
+  <h1>Hindi Character Map</h1>
+  <p>The Roman/English equivalent for every Hindi character — Kruti Dev and AMS.</p>
 </section>
 
 <section class="block">
 
   <div class="map-wrap">
     <div class="map-head">AMS → Roman Character Map</div>
-    <div class="char-grid" id="amsGrid"></div>
+    <div class="map-code" id="amsCode"></div>
   </div>
 
   <div class="map-wrap">
     <div class="map-head">Kruti Dev → Roman Character Map</div>
-    <div class="char-grid" id="kdGrid"></div>
+    <div class="map-code" id="kdCode"></div>
   </div>
 
 </section>
@@ -126,8 +130,10 @@
 <section class="block tight">
   <div class="info-copy">
     <h2>Why these don't match a normal keyboard</h2>
-    <p>Old Hindi fonts from before Unicode became widely used are Kruti Dev and AMS. Instead of using a standard phonetic layout, each key or code maps to a Hindi character inside the font itself; therefore, the mapping must be looked up rather than guessed.</p>
-    <p>Older government files, court documents, and DTP work from the 2000s still use these fonts. A font converter can convert a block of Kruti Dev or AMS text without requiring you to type it all at once.</p>
+    <p>Old Hindi fonts from before Unicode became widely used are Kruti Dev and AMS. Instead of using a standard phonetic layout, each key or code maps to a Hindi character inside the font itself; therefore, the mapping must be looked up rather than guessed.
+
+</p>
+    <p>TOlder government files, court documents, and DTP work from the 2000s still use these fonts. A font converter can convert a block of Kruti Dev or AMS text without requiring you to type it all at once.</p>
   </div>
 </section>
 
@@ -189,17 +195,22 @@
     return div.innerHTML;
   }
 
-  function renderGrid(id, data){
-    var html = '';
-    data.forEach(function(pair){
-      html += '<div class="char-cell"><span class="glyph">' + escapeHtml(pair[0]) +
-              '</span><span class="key">' + escapeHtml(pair[1]) + '</span></div>';
+  /* Renders as inline "key": "value", pairs wrapped naturally, grouped
+     a few per line — like a plain data listing, no table/grid boxes. */
+  function renderCode(id, data){
+    var out = '';
+    data.forEach(function(pair, idx){
+      out += '<span class="pair"><span class="punc">"</span><span class="glyph">' +
+             escapeHtml(pair[0]) + '</span><span class="punc">": "</span><span class="val">' +
+             escapeHtml(pair[1]) + '</span><span class="punc">"</span>' +
+             (idx < data.length - 1 ? '<span class="punc">, </span>' : '') + '</span>';
+      if ((idx + 1) % 5 === 0) out += '\n';
     });
-    document.getElementById(id).innerHTML = html;
+    document.getElementById(id).innerHTML = out;
   }
 
-  renderGrid('amsGrid', AMS);
-  renderGrid('kdGrid', KRUTI_DEV);
+  renderCode('amsCode', AMS);
+  renderCode('kdCode', KRUTI_DEV);
 })();
 </script>
 
