@@ -237,6 +237,19 @@
   @media (max-width:760px){
     .footer-inner{grid-template-columns:1fr; gap:24px;}
   }
+
+  /* ---------- How-to: 3-step cards ---------- */
+  .htw-wrap{text-align:center;}
+  .htw-rule{width:48px; height:3px; background:#F4C430; border:none; margin:6px auto 30px; border-radius:2px;}
+  .htw-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:20px; text-align:center;}
+  .htw-card{background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius); padding:26px 22px 24px;}
+  .htw-num{width:34px; height:34px; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; background:var(--accent-soft); color:var(--accent-dark); border-radius:50%; font-family:'Poppins',sans-serif; font-weight:700; font-size:14px;}
+  .htw-card h3{font-size:15.5px; font-weight:600; color:var(--ink); margin:0 0 8px;}
+  .htw-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.6; margin:0;}
+  .htw-card strong{color:var(--accent-dark); font-weight:600;}
+  @media (max-width:760px){
+    .htw-grid{grid-template-columns:1fr; gap:14px;}
+  }
 </style>
 </head>
 <body>
@@ -323,29 +336,27 @@
 <!-- ===== How to use ===== -->
 <section class="block tight" id="how">
   <div class="section-head">
-    <h2>How to convert Unicode to Kruti Dev</h2>
-    <p>Three simple steps — works the same way in reverse for Kruti Dev to Unicode.</p>
+    <span class="kicker">Quick Guide</span>
+    <h2>How to Convert Unicode to Kruti Dev</h2>
+    <p>Using this online Unicode to Kruti Dev 010 converter tool is very easy and requires simple 3-steps:</p>
   </div>
-  <div class="steps">
-    <div class="step">
-      <span class="step-num">1</span>
-      <div>
-        <h3>Paste or type your text</h3>
-        <p>Drop your Unicode Hindi (Mangal) text into the left box, or type directly. Marathi and Sanskrit text also work since they share the Devanagari script.</p>
+  <div class="htw-wrap">
+    <hr class="htw-rule">
+    <div class="htw-grid">
+      <div class="htw-card">
+        <div class="htw-num">1</div>
+        <h3>Type or Paste Text</h3>
+        <p>Type or paste your Unicode Hindi (Mangal) text into the box above — copied from WhatsApp, Word, or typed directly.</p>
       </div>
-    </div>
-    <div class="step">
-      <span class="step-num">2</span>
-      <div>
-        <h3>Get instant Kruti Dev output</h3>
-        <p>The right box updates as you type, converted to Kruti Dev 010 encoding. This is how to convert unicode to kruti dev 10 without installing anything.</p>
+      <div class="htw-card">
+        <div class="htw-num">2</div>
+        <h3>Convert &amp; Copy</h3>
+        <p>Text converts automatically into <strong>Kruti Dev 010</strong> encoding. Click <strong>Copy</strong> to copy the output to your clipboard.</p>
       </div>
-    </div>
-    <div class="step">
-      <span class="step-num">3</span>
-      <div>
-        <h3>Copy and apply the font</h3>
-        <p>Click Copy, paste into MS Word, Excel, CorelDraw, or PageMaker, then set the font to <strong>Kruti Dev 010</strong> so the text displays correctly in Hindi.</p>
+      <div class="htw-card">
+        <div class="htw-num">3</div>
+        <h3>Apply Kruti Dev Font</h3>
+        <p>Paste the copied text into MS Word, Photoshop, or PageMaker, then select the installed <strong>Kruti Dev 010</strong> font to see the correct style.</p>
       </div>
     </div>
   </div>
