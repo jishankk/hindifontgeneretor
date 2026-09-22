@@ -16,19 +16,21 @@
 <style>
   :root{
     --paper:#FFFFFF;
+    --panel:#FFFFFF;
     --ink:#1D2624;
     --ink-soft:#6B7573;
     --rule:#E1E7E5;
     --accent:#0E8F76;
     --accent-soft:#E3F5EF;
     --accent-dark:#0A6E5A;
+    --focus:#1A56DB;
     --radius:10px;
     --code-bg:#12201C;
     --code-key:#7FD9BE;
     --code-val:#E8B589;
   }
   *{box-sizing:border-box;}
-  html{overflow-x:hidden;}
+  html{overflow-x:hidden; scroll-behavior:smooth;}
   body{
     margin:0; background:var(--paper); color:var(--ink);
     font-family:'Poppins',system-ui,sans-serif;
@@ -36,6 +38,9 @@
     overflow-x:hidden;
   }
   a{color:inherit;}
+  ::selection{background:var(--accent-soft);}
+  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
+  @media (prefers-reduced-motion: reduce){ *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
 
   header{
     position:sticky; top:0; z-index:50;
@@ -43,12 +48,19 @@
     border-bottom:1px solid var(--rule); padding:16px 24px;
   }
   .header-inner{max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px;}
-  .logo{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; text-decoration:none; color:var(--ink);}
+  .logo{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; text-decoration:none; flex-shrink:0; color:var(--ink);}
   .logo em{font-style:normal; color:var(--accent);}
   nav.main-nav{display:flex; align-items:center; gap:2px;}
-  nav.main-nav a{font-size:14px; color:var(--ink-soft); text-decoration:none; padding:8px 12px; border-radius:7px;}
+  nav.main-nav a{font-size:14px; color:var(--ink-soft); text-decoration:none; padding:8px 12px; border-radius:7px; white-space:nowrap;}
   nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
   nav.main-nav a.current{color:var(--ink); font-weight:600;}
+  .nav-toggle{display:none; border:1px solid var(--rule); background:#fff; border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;}
+  @media (max-width:900px){
+    nav.main-nav{position:absolute; top:100%; left:0; right:0; background:var(--paper); border-bottom:1px solid var(--rule); flex-direction:column; align-items:stretch; padding:8px 16px 16px; display:none;}
+    nav.main-nav.open{display:flex;}
+    nav.main-nav a{padding:10px 8px; border-radius:6px;}
+    .nav-toggle{display:block;}
+  }
 
   .hero{max-width:800px; margin:0 auto; padding:44px 20px 4px; text-align:center;}
   h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(22px,3.6vw,32px); line-height:1.25; margin:0 0 10px;}
@@ -84,10 +96,16 @@
   .info-copy h2{font-size:18px; margin:0 0 12px;}
   .info-copy p{color:var(--ink-soft); font-size:14.5px; margin:0 0 14px;}
 
-  footer{border-top:1px solid var(--rule); padding:28px 20px 22px; text-align:center;}
-  footer p{font-size:12.5px; color:var(--ink-soft); margin:0;}
-  footer a{color:var(--ink-soft); text-decoration:none; margin:0 8px;}
-  footer a:hover{color:var(--accent);}
+  footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
+  .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
+  .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
+  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
+  .footer-col ul{list-style:none; margin:0; padding:0;}
+  .footer-col li{margin-bottom:8px;}
+  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
+  .footer-col a:hover{color:var(--accent);}
+  .footer-bottom{max-width:1180px; margin:32px auto 0; padding-top:20px; border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);}
+  @media (max-width:760px){ .footer-inner{grid-template-columns:1fr; gap:24px;} }
 
   @media (max-width:480px){
     .map-code{font-size:12px; padding:14px 14px;}
@@ -101,11 +119,11 @@
     <a href="https://hindifontgen.in/" class="logo">Hindi<em>FontGen</em></a>
     <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">Menu</button>
     <nav class="main-nav" id="mainNav">
-      <a href="https://hindifontgen.in/" class="current">Home</a>
+      <a href="https://hindifontgen.in/">Home</a>
       <a href="about.html">About</a>
       <a href="contact.html">Contact</a>
       <a href="privacy-policy.html">Privacy Policy</a>
-      <a href="https://hindifontgen.in/character-map.html">Character Map</a>
+      <a href="https://hindifontgen.in/character-map.html" class="current">Character Map</a>
       <a href="https://hindifontgen.in/character-map.html">Unicode ⇄ KrutiDev</a>
     </nav>
   </div>
@@ -169,6 +187,15 @@
   </div>
   <div class="footer-bottom">© 2026 HindiFontGen. All rights reserved.</div>
 </footer>
+
+<script>
+  var navToggle = document.getElementById('navToggle');
+  var mainNav = document.getElementById('mainNav');
+  navToggle.addEventListener('click', function(){
+    var isOpen = mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  });
+</script>
 
 <script>
 (function(){
