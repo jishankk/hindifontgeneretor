@@ -70,7 +70,7 @@
         "Hindi text conversion",
         "Devanagari text conversion",
         "Copy converted text",
-        "Download converted text",
+        "save converted text",
         "Mobile-friendly interface",
         "Browser-based conversion"
       ],
@@ -116,8 +116,8 @@
   :root{
     --paper:#FFFFFF;
     --panel:#FFFFFF;
-    --ink:#1D2624;
-    --ink-soft:#6B7573;
+    --ink:#0B0F10;
+    --ink-soft:#2B3335;
     --rule:#E1E7E5;
     --accent:#0E8F76;
     --accent-soft:#E3F5EF;
@@ -137,7 +137,7 @@
   .logo{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; text-decoration:none; flex-shrink:0; color:var(--ink);}
   .logo em{font-style:normal; color:var(--accent);}
   nav.main-nav{display:flex; align-items:center; gap:2px;}
-  nav.main-nav a{font-size:14px; color:var(--ink-soft); text-decoration:none; padding:8px 12px; border-radius:7px; white-space:nowrap;}
+  nav.main-nav a{font-size:14px; color:var(--ink-soft); font-weight:500; text-decoration:none; padding:8px 12px; border-radius:7px; white-space:nowrap;}
   nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
   nav.main-nav a.current{color:var(--ink); font-weight:600;}
   .nav-toggle{display:none; border:1px solid var(--rule); background:#fff; border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;}
@@ -150,7 +150,7 @@
 
   .hero{max-width:900px; margin:0 auto; padding:52px 24px 8px; text-align:center;}
   h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(22px,3.4vw,34px); line-height:1.28; margin:0 0 12px;}
-  .hero p{color:var(--ink-soft); font-size:15.5px; max-width:64ch; margin:0 auto 30px;}
+  .hero p{color:var(--ink-soft); font-size:15.5px; font-weight:500; max-width:64ch; margin:0 auto 30px;}
 
   .tool-panel{max-width:1180px; margin:0 auto; padding:0 24px 8px;}
   .tool-grid{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
@@ -167,7 +167,7 @@
   .tbox textarea:focus{border-color:var(--focus);}
   #inputText{font-family:'Hind',sans-serif;}
   #outputText{font-family:'Kruti Dev 010','Noto Sans',sans-serif; font-size:19px;}
-  .tbox-foot{display:flex; align-items:center; justify-content:space-between; margin-top:10px; font-size:12.5px; color:var(--ink-soft); gap:8px; flex-wrap:wrap;}
+  .tbox-foot{display:flex; align-items:center; justify-content:space-between; margin-top:10px; font-size:12.5px; color:var(--ink-soft); font-weight:500; gap:8px; flex-wrap:wrap;}
   .tbox-actions{display:flex; gap:8px; flex-wrap:wrap;}
   .btn{
     font-family:'Poppins',sans-serif; font-size:12px; font-weight:600; border:1px solid var(--rule);
@@ -196,11 +196,11 @@
   .section-head{max-width:680px; margin:0 auto 30px; text-align:center;}
   .kicker{display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:10px;}
   .section-head h2{font-family:'Poppins',sans-serif; font-weight:700; font-size:clamp(21px,2.4vw,27px); margin:0 0 10px;}
-  .section-head p{color:var(--ink-soft); font-size:15px; margin:0;}
+  .section-head p{color:var(--ink-soft); font-size:15px; font-weight:500; margin:0;}
 
   .info-copy{max-width:760px; margin:0 auto;}
-  .info-copy p{color:var(--ink-soft); font-size:15px; margin:0 0 14px;}
-  .info-copy ul{color:var(--ink-soft); font-size:15px; padding-left:20px; margin:0 0 14px;}
+  .info-copy p{color:var(--ink-soft); font-size:15px; font-weight:500; margin:0 0 14px;}
+  .info-copy ul{color:var(--ink-soft); font-size:15px; font-weight:500; padding-left:20px; margin:0 0 14px;}
   .info-copy li{margin-bottom:8px;}
   .info-copy strong{color:var(--ink);}
 
@@ -208,12 +208,12 @@
   .step{display:flex; gap:20px; padding:20px 0; border-bottom:1px solid var(--rule);}
   .step .step-num{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; color:var(--accent); flex-shrink:0; width:34px;}
   .step h3{font-size:15px; margin:0 0 5px;}
-  .step p{font-size:14px; color:var(--ink-soft); margin:0;}
+  .step p{font-size:14px; color:var(--ink-soft); font-weight:500; margin:0;}
 
   table.cmp{width:100%; max-width:820px; margin:0 auto; border-collapse:collapse; font-size:14px;}
   table.cmp th, table.cmp td{border:1px solid var(--rule); padding:11px 14px; text-align:left; vertical-align:top;}
   table.cmp th{background:var(--accent-soft); color:var(--ink); font-weight:600;}
-  table.cmp td{color:var(--ink-soft);}
+  table.cmp td{color:var(--ink-soft); font-weight:500;}
   .table-wrap{overflow-x:auto;}
 
   .faq-list{max-width:760px; margin:0 auto; display:flex; flex-direction:column; gap:10px;}
@@ -222,17 +222,17 @@
   .faq-q .plus{font-size:18px; color:var(--accent); flex-shrink:0; transition:transform .2s ease; font-weight:400;}
   .faq-item.open .plus{transform:rotate(45deg);}
   .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
-  .faq-a-inner{padding:0 20px 18px; font-size:14.5px; color:var(--ink-soft);}
+  .faq-a-inner{padding:0 20px 18px; font-size:14.5px; color:var(--ink-soft); font-weight:500;}
 
   footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
   .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
   .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
-  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
+  .footer-col p{font-size:13px; color:var(--ink-soft); font-weight:500; margin:0; max-width:36ch;}
   .footer-col ul{list-style:none; margin:0; padding:0;}
   .footer-col li{margin-bottom:8px;}
-  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
+  .footer-col a{font-size:13px; color:var(--ink-soft); font-weight:500; text-decoration:none;}
   .footer-col a:hover{color:var(--accent);}
-  .footer-bottom{max-width:1180px; margin:32px auto 0; padding-top:20px; border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);}
+  .footer-bottom{max-width:1180px; margin:32px auto 0; padding-top:20px; border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft); font-weight:500;}
 
   @media (max-width:760px){
     .footer-inner{grid-template-columns:1fr; gap:24px;}
@@ -245,7 +245,7 @@
   .htw-card{background:var(--panel); border:1px solid var(--rule); border-radius:var(--radius); padding:26px 22px 24px;}
   .htw-num{width:34px; height:34px; margin:0 auto 16px; display:flex; align-items:center; justify-content:center; background:var(--accent-soft); color:var(--accent-dark); border-radius:50%; font-family:'Poppins',sans-serif; font-weight:700; font-size:14px;}
   .htw-card h3{font-size:15.5px; font-weight:600; color:var(--ink); margin:0 0 8px;}
-  .htw-card p{font-size:13.5px; color:var(--ink-soft); line-height:1.6; margin:0;}
+  .htw-card p{font-size:13.5px; color:var(--ink-soft); font-weight:500; line-height:1.6; margin:0;}
   .htw-card strong{color:var(--accent-dark); font-weight:600;}
   @media (max-width:760px){
     .htw-grid{grid-template-columns:1fr; gap:14px;}
