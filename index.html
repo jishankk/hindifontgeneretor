@@ -62,8 +62,8 @@
   :root{
     --paper:#FFFFFF;
     --panel:#FFFFFF;
-    --ink:#1D2624;
-    --ink-soft:#6B7573;
+    --ink:#0B0F10;
+    --ink-soft:#2B3335;
     --rule:#E1E7E5;
     --accent:#0E8F76;
     --accent-soft:#E3F5EF;
@@ -141,7 +141,7 @@
     line-height:1.25;
     margin:0 0 14px;
   }
-  .hero p{color:var(--ink-soft); font-size:15.5px; max-width:56ch; margin:0 auto 30px;}
+  .hero p{color:var(--ink-soft); font-size:15.5px; font-weight:500; max-width:56ch; margin:0 auto 30px;}
 
   .input-panel{
     background:var(--panel);
@@ -267,9 +267,9 @@
     text-transform:uppercase; color:var(--accent); margin-bottom:10px;
   }
   .section-head h2{font-family:'Poppins',sans-serif; font-weight:700; font-size:clamp(22px,2.6vw,28px); margin:0 0 10px;}
-  .section-head p{color:var(--ink-soft); font-size:15px; margin:0;}
+  .section-head p{color:var(--ink-soft); font-size:15px; font-weight:500; margin:0;}
 
-  .banner-inner p{color:var(--ink-soft); font-size:15px; max-width:80ch; margin:0 0 14px;}
+  .banner-inner p{color:var(--ink-soft); font-size:15px; font-weight:500; max-width:80ch; margin:0 0 14px;}
   .banner-inner strong{color:var(--ink);}
 
   /* ---------- Feature grid (plain white cards, left-aligned) ---------- */
@@ -286,7 +286,7 @@
   }
   .feature-card .ico svg{width:24px; height:24px; stroke:var(--ink); fill:none; stroke-width:1.5;}
   .feature-card h3{font-size:15px; font-weight:600; margin:0 0 8px;}
-  .feature-card p{font-size:13.5px; color:var(--ink-soft); margin:0; line-height:1.55;}
+  .feature-card p{font-size:13.5px; color:var(--ink-soft); font-weight:500; margin:0; line-height:1.55;}
 
   @media (max-width:860px){
     .feature-grid{grid-template-columns:repeat(2,1fr);}
@@ -302,12 +302,12 @@
     font-family:'Poppins',sans-serif; font-weight:700; font-size:20px; color:var(--accent); flex-shrink:0; width:36px;
   }
   .step h3{font-size:15.5px; margin:0 0 6px;}
-  .step p{font-size:14.5px; color:var(--ink-soft); margin:0;}
+  .step p{font-size:14.5px; color:var(--ink-soft); font-weight:500; margin:0;}
 
   /* ---------- Info copy ---------- */
   .info-copy{max-width:760px; margin:0 auto;}
-  .info-copy p{color:var(--ink-soft); font-size:15px; margin:0 0 14px;}
-  .info-copy ul{color:var(--ink-soft); font-size:15px; padding-left:20px; margin:0;}
+  .info-copy p{color:var(--ink-soft); font-size:15px; font-weight:500; margin:0 0 14px;}
+  .info-copy ul{color:var(--ink-soft); font-size:15px; font-weight:500; padding-left:20px; margin:0;}
   .info-copy li{margin-bottom:9px;}
   .info-copy strong{color:var(--ink);}
 
@@ -322,16 +322,16 @@
   .faq-q .plus{font-size:18px; color:var(--accent); flex-shrink:0; transition:transform .2s ease; font-weight:400;}
   .faq-item.open .plus{transform:rotate(45deg);}
   .faq-a{max-height:0; overflow:hidden; transition:max-height .25s ease;}
-  .faq-a-inner{padding:0 20px 18px; font-size:14.5px; color:var(--ink-soft);}
+  .faq-a-inner{padding:0 20px 18px; font-size:14.5px; color:var(--ink-soft); font-weight:500;}
 
   /* ---------- Footer ---------- */
   footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
   .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
   .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
-  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
+  .footer-col p{font-size:13px; color:var(--ink-soft); font-weight:500; margin:0; max-width:36ch;}
   .footer-col ul{list-style:none; margin:0; padding:0;}
   .footer-col li{margin-bottom:8px;}
-  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
+  .footer-col a{font-size:13px; color:var(--ink-soft); font-weight:500; text-decoration:none;}
   .footer-col a:hover{color:var(--accent);}
   .footer-bottom{
     max-width:1180px; margin:32px auto 0; padding-top:20px;
