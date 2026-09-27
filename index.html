@@ -1114,29 +1114,28 @@
 </script>
 
 <div id="cookieConsent" class="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent">
-  <div class="cookie-consent-inner">
-    <div class="cookie-copy">
-      <p class="cookie-title">🍪 Do you like cookies?</p>
-      <p class="cookie-text">
-        Because we do! We use them to make our website work smoothly and improve your experience.
-        <a href="https://hindifontgen.in/privacy-policy.html">Learn more.</a>
-      </p>
-    </div>
-    <div class="cookie-actions">
-      <button type="button" class="btn" id="cookieDecline">No thanks</button>
-      <button type="button" class="btn primary" id="cookieAccept">Accept</button>
-    </div>
+  <p class="cookie-title">🍪 Do you like cookies?</p>
+  <p class="cookie-text">
+    Because we do! We use them to make our website work smoothly and improve your experience.
+    <a href="https://hindifontgen.in/privacy-policy.html">Learn more.</a>
+  </p>
+  <div class="cookie-actions">
+    <button type="button" class="btn" id="cookieDecline">No thanks</button>
+    <button type="button" class="btn primary" id="cookieAccept">Accept</button>
   </div>
 </div>
 
 <style>
   .cookie-consent{
+    box-sizing:border-box;
     position:fixed;
     left:16px;
     right:16px;
     bottom:16px;
     z-index:999;
-    max-width:640px;
+    width:auto;
+    max-width:420px;
+    height:auto;
     margin:0 auto;
     background:var(--panel,#FFFFFF);
     border:1px solid var(--rule,#E1E7E5);
@@ -1149,30 +1148,23 @@
     transition:transform .35s ease, opacity .35s ease;
     pointer-events:none;
   }
+  .cookie-consent *{
+    box-sizing:border-box;
+  }
   .cookie-consent.show{
     transform:translateY(0);
     opacity:1;
     pointer-events:auto;
   }
-  .cookie-consent-inner{
-    display:flex;
-    align-items:center;
-    gap:18px;
-    flex-wrap:wrap;
-  }
-  .cookie-copy{
-    flex:1 1 280px;
-    min-width:0;
-  }
   .cookie-title{
-    margin:0 0 4px;
+    margin:0 0 6px 0;
     font-size:14.5px;
     font-weight:700;
     color:var(--ink,#0B0F10);
     line-height:1.3;
   }
   .cookie-text{
-    margin:0;
+    margin:0 0 14px 0;
     font-size:13px;
     font-weight:500;
     color:var(--ink-soft,#2B3335);
@@ -1182,24 +1174,27 @@
     color:var(--accent,#0E8F76);
     font-weight:600;
     text-decoration:underline;
+    white-space:nowrap;
   }
   .cookie-actions{
     display:flex;
     gap:8px;
-    flex-shrink:0;
-    flex-wrap:nowrap;
-    margin-left:auto;
+    margin:0;
   }
   .cookie-consent .btn{
+    flex:1 1 0;
     font-family:'Poppins',sans-serif;
     font-size:12.5px;
     font-weight:600;
     border:1px solid var(--rule,#E1E7E5);
     background:#fff;
     color:var(--ink,#0B0F10);
-    padding:9px 16px;
+    padding:9px 14px;
+    margin:0;
     border-radius:20px;
     cursor:pointer;
+    text-align:center;
+    line-height:1.2;
     transition:background .15s ease, border-color .15s ease;
     white-space:nowrap;
   }
@@ -1216,11 +1211,13 @@
     border-color:var(--accent-dark,#0A6E5A);
   }
 
-  @media (max-width:560px){
-    .cookie-consent{ left:10px; right:10px; bottom:10px; padding:16px; }
-    .cookie-consent-inner{ flex-direction:column; align-items:stretch; gap:14px; }
-    .cookie-actions{ margin-left:0; justify-content:stretch; }
-    .cookie-consent .btn{ flex:1 1 0; text-align:center; }
+  /* Wider screens: banner sits bottom-left as a compact card, not full width */
+  @media (min-width:560px){
+    .cookie-consent{
+      left:16px;
+      right:auto;
+      max-width:360px;
+    }
   }
 </style>
 
