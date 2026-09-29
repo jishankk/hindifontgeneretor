@@ -263,5 +263,148 @@
 })();
 </script>
 
+  <div id="cookieConsent" class="cookie-consent" role="dialog" aria-live="polite" aria-label="Cookie consent">
+  <p class="cookie-title">🍪 Do you like cookies?</p>
+  <p class="cookie-text">
+    Because we do! We use them to make our website work smoothly and improve your experience.
+    <a href="https://hindifontgen.in/privacy-policy.html">Learn more.</a>
+  </p>
+  <div class="cookie-actions">
+    <button type="button" class="btn" id="cookieDecline">No thanks</button>
+    <button type="button" class="btn primary" id="cookieAccept">Accept</button>
+  </div>
+</div>
+
+<style>
+  .cookie-consent{
+    box-sizing:border-box;
+    position:fixed;
+    left:16px;
+    right:16px;
+    bottom:16px;
+    z-index:999;
+    width:auto;
+    max-width:420px;
+    height:auto;
+    margin:0 auto;
+    background:var(--panel,#FFFFFF);
+    border:1px solid var(--rule,#E1E7E5);
+    border-radius:var(--radius,10px);
+    box-shadow:0 8px 28px rgba(0,0,0,0.14);
+    padding:18px 20px;
+    font-family:'Poppins',system-ui,sans-serif;
+    transform:translateY(140%);
+    opacity:0;
+    transition:transform .35s ease, opacity .35s ease;
+    pointer-events:none;
+  }
+  .cookie-consent *{
+    box-sizing:border-box;
+  }
+  .cookie-consent.show{
+    transform:translateY(0);
+    opacity:1;
+    pointer-events:auto;
+  }
+  .cookie-title{
+    margin:0 0 6px 0;
+    font-size:14.5px;
+    font-weight:700;
+    color:var(--ink,#0B0F10);
+    line-height:1.3;
+  }
+  .cookie-text{
+    margin:0 0 14px 0;
+    font-size:13px;
+    font-weight:500;
+    color:var(--ink-soft,#2B3335);
+    line-height:1.5;
+  }
+  .cookie-text a{
+    color:var(--accent,#0E8F76);
+    font-weight:600;
+    text-decoration:underline;
+    white-space:nowrap;
+  }
+  .cookie-actions{
+    display:flex;
+    gap:8px;
+    margin:0;
+  }
+  .cookie-consent .btn{
+    flex:1 1 0;
+    font-family:'Poppins',sans-serif;
+    font-size:12.5px;
+    font-weight:600;
+    border:1px solid var(--rule,#E1E7E5);
+    background:#fff;
+    color:var(--ink,#0B0F10);
+    padding:9px 14px;
+    margin:0;
+    border-radius:20px;
+    cursor:pointer;
+    text-align:center;
+    line-height:1.2;
+    transition:background .15s ease, border-color .15s ease;
+    white-space:nowrap;
+  }
+  .cookie-consent .btn:hover{
+    border-color:var(--accent,#0E8F76);
+  }
+  .cookie-consent .btn.primary{
+    background:var(--accent,#0E8F76);
+    color:#fff;
+    border-color:var(--accent,#0E8F76);
+  }
+  .cookie-consent .btn.primary:hover{
+    background:var(--accent-dark,#0A6E5A);
+    border-color:var(--accent-dark,#0A6E5A);
+  }
+
+  /* Wider screens: banner sits bottom-left as a compact card, not full width */
+  @media (min-width:560px){
+    .cookie-consent{
+      left:16px;
+      right:auto;
+      max-width:360px;
+    }
+  }
+</style>
+
+<script>
+(function(){
+  "use strict";
+  var KEY = "hfg_cookie_consent";
+  var banner = document.getElementById('cookieConsent');
+  var acceptBtn = document.getElementById('cookieAccept');
+  var declineBtn = document.getElementById('cookieDecline');
+
+  function hasChoice(){
+    try { return !!localStorage.getItem(KEY); }
+    catch(e){ return false; }
+  }
+  function saveChoice(value){
+    try { localStorage.setItem(KEY, value); }
+    catch(e){ /* ignore storage errors */ }
+  }
+  function hideBanner(){
+    banner.classList.remove('show');
+  }
+
+  if (!hasChoice()) {
+    setTimeout(function(){ banner.classList.add('show'); }, 600);
+  }
+
+  acceptBtn.addEventListener('click', function(){
+    saveChoice('accepted');
+    hideBanner();
+  });
+  declineBtn.addEventListener('click', function(){
+    saveChoice('declined');
+    hideBanner();
+  });
+})();
+</script>
+
 </body>
 </html>
