@@ -6,13 +6,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Unicode to Kruti Dev Converter – Hindi Text to Kruti Dev 010 Online</title>
-<meta name="description" content="Convert Hindi Unicode text to Kruti Dev 010 and convert legacy Kruti Dev text back to Unicode. Use the free two way converter, check examples, and prepare text for Word and DTP work.">
+<meta name="description" content="Convert Hindi Unicode text to Kruti Dev 010 and convert legacy Kruti Dev text back to Unicode. Includes key mapping charts, worked examples and fixes for common font problems in Word, Excel and CorelDRAW.">
 <meta name="robots" content="index, follow, max-image-preview:large">
 <link rel="canonical" href="https://hindifontgen.in/unicode-to-krutidev-converter.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HindiFontGen">
 <meta property="og:title" content="Unicode to Kruti Dev Converter Online">
-<meta property="og:description" content="Convert Hindi Unicode text to Kruti Dev 010 and back, with practical examples and tips for Word, Excel and desktop publishing.">
+<meta property="og:description" content="Convert Hindi Unicode text to Kruti Dev 010 and back, with key charts, worked examples and tips for Word, Excel and desktop publishing.">
 <meta property="og:url" content="https://hindifontgen.in/unicode-to-krutidev-converter.html">
 <meta property="og:image" content="https://hindifontgen.in/unicoder.webp">
 <meta name="twitter:card" content="summary_large_image">
@@ -30,138 +30,166 @@
 ]}
 </script>
 <style>
-:root{--paper:#fff;--panel:#fff;--ink:#0B0F10;--ink-soft:#2B3335;--rule:#E1E7E5;--accent:#0E8F76;--accent-soft:#E3F5EF;--accent-dark:#0A6E5A;--focus:#1A56DB;--radius:10px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
-a{color:var(--accent-dark)}:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}img{max-width:100%}
-header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:14px 24px}
-.header-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
-.logo{font-weight:700;font-size:19px;text-decoration:none;color:var(--ink)}.logo em{font-style:normal;color:var(--accent)}
-#mainNav{display:flex;gap:2px}#mainNav a{font-size:14px;color:var(--ink-soft);text-decoration:none;padding:8px 12px;border-radius:7px;white-space:nowrap}
-#mainNav a:hover{background:var(--accent-soft);color:var(--ink)}#mainNav a.current{font-weight:600;color:var(--ink)}
-.nav-toggle{display:none;border:1px solid var(--rule);background:#fff;border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit;font-size:14px}
-@media(max-width:900px){#mainNav{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--rule);flex-direction:column;padding:8px 16px 16px;display:none}#mainNav.open{display:flex}#mainNav a{padding:10px 8px}.nav-toggle{display:block}}
-.hero{max-width:900px;margin:0 auto;padding:48px 24px 8px;text-align:center}
-h1{font-weight:800;font-size:clamp(22px,3.4vw,34px);line-height:1.28;margin:0 0 12px}
-.hero p{color:var(--ink-soft);font-size:15.5px;font-weight:500;max-width:62ch;margin:0 auto 28px}
-.tool-panel{max-width:1180px;margin:0 auto;padding:0 24px 8px}
-.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.tbox{border:1px solid var(--rule);border-radius:var(--radius);padding:18px;display:flex;flex-direction:column}
-.tbox-head{margin-bottom:10px}.tbox-title{font-size:13.5px;font-weight:600;display:flex;align-items:center;gap:7px}
-.tbox-title svg{width:16px;height:16px;stroke:var(--accent)}
-.tbox textarea{width:100%;min-height:230px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:14px 16px;font-size:17px;color:var(--ink);line-height:1.6}
-.tbox textarea:focus{border-color:var(--focus)}
-.tbox-foot{display:flex;align-items:center;justify-content:space-between;margin-top:10px;font-size:12.5px;color:var(--ink-soft);font-weight:500;gap:8px;flex-wrap:wrap}
-.tbox-actions{display:flex;gap:8px;flex-wrap:wrap}
-.btn{font:inherit;font-size:12px;font-weight:600;border:1px solid var(--rule);background:#fff;color:var(--ink);padding:7px 12px;border-radius:20px;cursor:pointer}
-.btn:hover{border-color:var(--accent)}.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.primary:hover{background:var(--accent-dark)}
-.swap-row{display:flex;justify-content:center;margin:14px 0}
-.swap-btn{display:flex;align-items:center;gap:6px;border:1px solid var(--rule);background:#fff;color:var(--ink);font:inherit;font-size:13px;font-weight:600;padding:8px 16px;border-radius:20px;cursor:pointer}
-.swap-btn:hover{border-color:var(--accent);color:var(--accent)}.swap-btn svg{width:15px;height:15px;stroke:currentColor}
-.toast-wrap{max-width:1180px;margin:6px auto 0;padding:0 24px;display:flex;justify-content:flex-end;min-height:20px}
-#toast{font-size:13px;color:var(--accent);font-weight:600;opacity:0;transition:opacity .25s}#toast.show{opacity:1}
-.banner{max-width:808px;margin:0 auto;padding:30px 24px 0}.banner img{display:block;width:100%;height:auto;border-radius:var(--radius)}
-section.block{max-width:1180px;margin:0 auto;padding:56px 24px 0}
-.sh{max-width:700px;margin:0 auto 28px;text-align:center}
-.kicker{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-h2{font-weight:700;font-size:clamp(21px,2.6vw,27px);margin:0 0 10px}.sh p{color:var(--ink-soft);font-size:15px;font-weight:500;margin:0}
-.copy{max-width:760px;margin:0 auto}.copy p,.copy li{color:var(--ink-soft);font-size:15px;font-weight:500}.copy p{margin:0 0 14px}.copy ul{padding-left:20px;margin:0 0 14px}.copy li{margin-bottom:9px}.copy strong{color:var(--ink)}
-.steps{max-width:760px;margin:0 auto;border-top:1px solid var(--rule)}.step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule)}
-.step b{font-size:20px;color:var(--accent);width:30px;flex-shrink:0}.step h3{font-size:15.5px;margin:0 0 4px}.step p{font-size:14.5px;color:var(--ink-soft);font-weight:500;margin:0}
-.tw2{max-width:760px;margin:0 auto;overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;color:var(--ink-soft)}
-th,td{padding:12px 14px;border:1px solid var(--rule);text-align:left;vertical-align:top}th{background:var(--accent-soft);color:var(--ink)}
-td.kd{font-family:Consolas,Menlo,monospace;color:var(--ink);font-weight:600}
-.note{border-left:3px solid var(--accent);background:var(--accent-soft);padding:16px 20px;border-radius:0 var(--radius) var(--radius) 0;color:var(--ink-soft);font-size:14.5px;font-weight:500}
-.author{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;max-width:820px;margin:0 auto;padding:24px;border:1px solid var(--rule);border-radius:var(--radius)}
-.av{width:64px;height:64px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent);font-size:24px;font-weight:800}
-.av img{width:100%;height:100%;object-fit:cover;display:block}.author h3{margin:0 0 4px;font-size:17px}.author p{margin:0;color:var(--ink-soft);font-size:14px;font-weight:500}
-.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
-.faq-item{border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden}
-.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 20px;font:inherit;font-size:14.5px;font-weight:600;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px}
-.faq-q .plus{font-size:18px;color:var(--accent);transition:transform .2s;font-weight:400}.faq-item.open .plus{transform:rotate(45deg)}
-.faq-a{max-height:0;overflow:hidden;transition:max-height .25s}.faq-a-inner{padding:0 20px 18px;font-size:14.5px;color:var(--ink-soft);font-weight:500}
-footer{border-top:1px solid var(--rule);padding:40px 24px 28px;margin-top:56px}
-.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
-.footer-col h4{font-size:13px;margin:0 0 12px}.footer-col p{font-size:13px;color:var(--ink-soft);font-weight:500;margin:0;max-width:52ch}
-.footer-col ul{list-style:none;margin:0;padding:0}.footer-col li{margin-bottom:8px}.footer-col a{font-size:13px;color:var(--ink-soft);font-weight:500;text-decoration:none}.footer-col a:hover{color:var(--accent)}
-.footer-bottom{max-width:1180px;margin:28px auto 0;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-soft)}
-@media(max-width:860px){.tool-grid{grid-template-columns:1fr}.footer-inner{grid-template-columns:1fr;gap:24px}}
-@media(max-width:560px){header{padding:12px 16px}.hero{padding:32px 16px 8px}.tool-panel,.toast-wrap{padding-left:16px;padding-right:16px}section.block{padding:40px 16px 0}.banner{padding:24px 16px 0}th,td{padding:9px 10px;font-size:13px}.author{grid-template-columns:1fr;text-align:center}.av{margin:auto}.sh{margin-bottom:22px}}
+:root{--paper:#fff;--panel:#fff;--ink:#0B0F10;--ink-soft:#2B3335;--rule:#E1E7E5;--accent:#0E8F76;--accent-soft:#E3F5EF;--accent-dark:#0A6E5A;--focus:#1A56DB;--radius:10px;--shadow-soft:0 12px 34px rgba(14,45,39,.06)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.6;overflow-wrap:anywhere}
+a{color:var(--accent-dark)}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:3px}
+img{max-width:100%;height:auto}
 
-/* ===== Responsive refinement and practical content sections ===== */
-:root{--shadow-soft:0 12px 34px rgba(14,45,39,.06)}
-body{overflow-wrap:anywhere}
-header{padding-top:12px;padding-bottom:12px}
-.logo{letter-spacing:-.035em}
-.hero{padding-top:42px;padding-bottom:18px}
-.hero-intro{max-width:68ch!important;line-height:1.8!important}
-.hero-points{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin:0 auto 10px}
-.hero-points span{font-size:12px;font-weight:600;color:var(--accent-dark);background:var(--accent-soft);border:1px solid #ccebe1;border-radius:999px;padding:7px 11px}
-.tool-panel{padding-top:8px}
-.tool-card{border:1px solid var(--rule);border-radius:16px;padding:clamp(16px,2.4vw,28px);box-shadow:var(--shadow-soft);background:linear-gradient(180deg,#fff 0%,#fcfefd 100%)}
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:12px 24px}
+.header-inner{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:700;font-size:19px;text-decoration:none;color:var(--ink);letter-spacing:-.03em}
+.logo em{font-style:normal;color:var(--accent)}
+#mainNav{display:flex;gap:2px}
+#mainNav a{font-size:14px;color:var(--ink-soft);text-decoration:none;padding:8px 12px;border-radius:7px;white-space:nowrap}
+#mainNav a:hover{background:var(--accent-soft);color:var(--ink)}
+#mainNav a.current{font-weight:600;color:var(--ink)}
+.nav-toggle{display:none;border:1px solid var(--rule);background:#fff;border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit;font-size:14px}
+
+/* hero + tool */
+.hero{max-width:900px;margin:0 auto;padding:42px 24px 14px;text-align:center}
+h1{font-weight:800;font-size:clamp(22px,3.4vw,34px);line-height:1.28;margin:0 0 12px}
+.hero-intro{color:var(--ink-soft);font-size:15.5px;font-weight:500;max-width:66ch;margin:0 auto;line-height:1.8}
+.tool-panel{max-width:1180px;margin:0 auto;padding:8px 24px 8px}
+.tool-card{border:1px solid var(--rule);border-radius:16px;padding:clamp(14px,2.4vw,28px);box-shadow:var(--shadow-soft);background:linear-gradient(180deg,#fff 0%,#fcfefd 100%)}
 .tool-card-top{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:18px}
 .tool-eyebrow{font-size:11px;letter-spacing:.12em;color:var(--accent);font-weight:800}
-.tool-card-title{font-size:clamp(20px,2.3vw,25px);margin:4px 0 5px}
+.tool-card-title{font-size:clamp(20px,2.3vw,25px);margin:4px 0 5px;font-weight:700}
 .tool-card-note{margin:0;color:var(--ink-soft);font-size:13.5px;line-height:1.65}
 .local-badge{display:inline-flex;align-items:center;gap:7px;white-space:nowrap;border:1px solid var(--rule);padding:7px 10px;border-radius:999px;font-size:11px;font-weight:600;color:var(--ink-soft)}
 .local-badge span{width:7px;height:7px;background:#1a9b69;border-radius:50%;display:inline-block}
-.tool-grid{gap:16px}
-.tbox{min-width:0;background:#fff;border-radius:12px;padding:clamp(12px,1.8vw,18px)}
-.tbox-title{font-size:13px;line-height:1.5}
-.tbox textarea{display:block;min-width:0;min-height:clamp(190px,25vw,270px);font-family:'Hind',sans-serif;line-height:1.8;overflow-wrap:anywhere}
+.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.tbox{min-width:0;border:1px solid var(--rule);border-radius:12px;padding:clamp(12px,1.8vw,18px);display:flex;flex-direction:column;background:#fff}
+.tbox-head{margin-bottom:10px}
+.tbox-title{font-size:13px;font-weight:600;display:flex;align-items:center;gap:7px;line-height:1.5}
+.tbox-title svg{width:16px;height:16px;stroke:var(--accent);flex-shrink:0}
+.tbox textarea{display:block;width:100%;min-width:0;min-height:clamp(190px,25vw,270px);resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:14px 16px;font-family:'Hind',sans-serif;font-size:17px;color:var(--ink);line-height:1.8;overflow-wrap:anywhere}
+.tbox textarea:focus{border-color:var(--focus)}
 #outputText{background:#fbfdfc}
-.tbox-foot{align-items:flex-start}
-.tbox-actions{gap:6px}
-.btn{min-height:36px;padding:8px 13px;font-size:12px;touch-action:manipulation}
-.btn:focus-visible,.swap-btn:focus-visible,.nav-toggle:focus-visible,.faq-q:focus-visible{outline-offset:3px}
-.swap-row{margin:16px 0 10px}
-.swap-btn{min-height:42px;padding:9px 17px}
-.tool-hint{margin:18px 2px 0;padding:13px 15px;background:var(--accent-soft);border-radius:9px;color:var(--ink-soft);font-size:13px;line-height:1.7}
+.tbox-foot{display:flex;align-items:flex-start;justify-content:space-between;margin-top:10px;font-size:12.5px;color:var(--ink-soft);font-weight:500;gap:8px;flex-wrap:wrap}
+.tbox-actions{display:flex;gap:6px;flex-wrap:wrap}
+.btn{font:inherit;font-size:12px;font-weight:600;border:1px solid var(--rule);background:#fff;color:var(--ink);min-height:36px;padding:8px 13px;border-radius:20px;cursor:pointer;touch-action:manipulation}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.btn.primary:hover{background:var(--accent-dark)}
+.swap-row{display:flex;justify-content:center;margin:16px 0 8px}
+.swap-btn{display:flex;align-items:center;gap:6px;border:1px solid var(--rule);background:#fff;color:var(--ink);font:inherit;font-size:13px;font-weight:600;min-height:42px;padding:9px 17px;border-radius:20px;cursor:pointer}
+.swap-btn:hover{border-color:var(--accent);color:var(--accent)}
+.swap-btn svg{width:15px;height:15px;stroke:currentColor}
+.tool-hint{margin:14px 2px 0;padding:13px 15px;background:var(--accent-soft);border-radius:9px;color:var(--ink-soft);font-size:13px;line-height:1.7}
 .tool-hint strong{color:var(--ink)}
-.quick-links{max-width:900px;margin:26px auto 0;padding:0 24px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
+.toast-wrap{max-width:1180px;margin:6px auto 0;padding:0 24px;display:flex;justify-content:flex-end;min-height:20px}
+#toast{font-size:13px;color:var(--accent);font-weight:600;opacity:0;transition:opacity .25s}
+#toast.show{opacity:1}
+
+/* page navigation + banner */
+.quick-links{max-width:900px;margin:22px auto 0;padding:0 24px;display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap}
 .quick-links span{font-size:12px;color:var(--ink-soft);font-weight:700;margin-right:3px}
 .quick-links a{font-size:12px;font-weight:600;text-decoration:none;border:1px solid var(--rule);border-radius:999px;padding:7px 11px;color:var(--ink-soft);background:#fff}
 .quick-links a:hover{border-color:var(--accent);color:var(--accent-dark)}
-.banner{padding-top:26px}
-.banner img{aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule)}
-section.block{scroll-margin-top:88px;padding-top:58px}
-.sh p{line-height:1.75}
-.copy p,.copy li{line-height:1.85}
-.copy ul{padding-left:22px}
-.steps{border-top:0}
-.step{gap:15px;padding:18px 0}
-.step b{display:flex;align-items:center;justify-content:center;width:34px;height:34px;background:var(--accent-soft);border-radius:10px;font-size:15px}
-.step h3,.check-item h3{line-height:1.5}
+.banner{max-width:808px;margin:0 auto;padding:26px 24px 0}
+.banner img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border:1px solid var(--rule);border-radius:var(--radius)}
+
+/* content */
+section.block{max-width:1180px;margin:0 auto;padding:58px 24px 0;scroll-margin-top:84px}
+.sh{max-width:720px;margin:0 auto 26px;text-align:center}
+.kicker{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
+h2{font-weight:700;font-size:clamp(21px,2.6vw,27px);line-height:1.3;margin:0 0 10px}
+.sh p{color:var(--ink-soft);font-size:15px;font-weight:500;margin:0;line-height:1.75}
+.copy{max-width:760px;margin:0 auto}
+.copy h3{font-size:17px;line-height:1.45;margin:26px 0 8px}
+.copy p,.copy li{color:var(--ink-soft);font-size:15px;font-weight:500;line-height:1.85}
+.copy p{margin:0 0 14px}
+.copy ul,.copy ol{padding-left:22px;margin:0 0 14px}
+.copy li{margin-bottom:9px}
+.copy strong{color:var(--ink)}
+.kdtext{font-family:Consolas,Menlo,monospace;background:var(--accent-soft);color:var(--ink);padding:1px 6px;border-radius:5px;font-size:.92em;font-weight:600}
+.steps{max-width:760px;margin:0 auto}
+.step{display:flex;gap:15px;padding:18px 0;border-bottom:1px solid var(--rule)}
+.step:first-child{border-top:1px solid var(--rule)}
+.step b{display:flex;align-items:center;justify-content:center;flex:0 0 34px;height:34px;background:var(--accent-soft);border-radius:10px;font-size:15px;color:var(--accent)}
+.step h3{font-size:15.5px;line-height:1.5;margin:0 0 4px}
+.step p{font-size:14.5px;line-height:1.75;color:var(--ink-soft);font-weight:500;margin:0}
+.note{border-left:3px solid var(--accent);background:var(--accent-soft);padding:16px 20px;border-radius:0 var(--radius) var(--radius) 0;color:var(--ink-soft);font-size:14.5px;line-height:1.8;font-weight:500}
+.note strong{color:var(--ink)}
+
+/* two-column choice cards */
 .decision-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:900px;margin:0 auto}
 .decision-card{border:1px solid var(--rule);border-radius:14px;padding:22px;background:#fff}
 .decision-label{display:inline-block;color:var(--accent-dark);background:var(--accent-soft);border-radius:999px;padding:6px 10px;font-size:11px;font-weight:700}
 .decision-card h3{font-size:17px;line-height:1.5;margin:13px 0 10px}
 .decision-card ul{padding-left:19px;margin:0 0 12px}
-.decision-card li,.decision-card p{font-size:13.5px;line-height:1.8;color:var(--ink-soft)}
+.decision-card li,.decision-card p{font-size:13.5px;line-height:1.8;color:var(--ink-soft);font-weight:500}
 .decision-card p{margin:0}
+
+/* tables: scroll on tablets, turn into stacked cards on phones */
+.tw2{max-width:860px;margin:0 auto 6px;overflow-x:auto;-webkit-overflow-scrolling:touch}
+table{width:100%;border-collapse:collapse;font-size:14px;color:var(--ink-soft);line-height:1.7}
+th,td{padding:11px 14px;border:1px solid var(--rule);text-align:left;vertical-align:top}
+th{background:var(--accent-soft);color:var(--ink);font-weight:700}
+td.kd{font-family:Consolas,Menlo,monospace;color:var(--ink);font-weight:600}
+.table-caption{max-width:860px;margin:10px auto 0;font-size:13px;color:var(--ink-soft);font-weight:500;line-height:1.7}
+.map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;max-width:860px;margin:0 auto}
+.map-grid h3{font-size:15px;margin:0 0 8px}
+.map-grid .tw2{margin:0}
+
+/* checks */
 .check-grid{max-width:900px;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
 .check-item{display:flex;gap:13px;border:1px solid var(--rule);border-radius:12px;padding:17px;background:#fff}
 .check-number{flex:0 0 36px;height:36px;display:flex;align-items:center;justify-content:center;border-radius:10px;background:var(--accent-soft);color:var(--accent-dark);font-size:12px;font-weight:800}
-.check-item h3{font-size:14px;margin:0 0 5px}
-.check-item p{font-size:13px;line-height:1.75;color:var(--ink-soft);margin:0}
-.quality-note{max-width:900px;margin:16px auto 0;line-height:1.8}
-.tw2{border-radius:10px}
-table{min-width:560px;line-height:1.7}
-th{font-weight:700}
-.author{box-shadow:var(--shadow-soft)}
-.faq-list{gap:9px}
-.faq-q{line-height:1.65}
-.faq-a-inner{line-height:1.8}
-footer{padding-top:36px}
-.footer-inner{align-items:start}
-.footer-col p,.footer-col a{line-height:1.8}
+.check-item h3{font-size:14px;line-height:1.5;margin:0 0 5px}
+.check-item p{font-size:13px;line-height:1.75;color:var(--ink-soft);font-weight:500;margin:0}
+.quality-note{max-width:900px;margin:16px auto 0}
+
+/* author + faq */
+.author{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;max-width:820px;margin:0 auto;padding:24px;border:1px solid var(--rule);border-radius:var(--radius);box-shadow:var(--shadow-soft)}
+.av{width:64px;height:64px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent);font-size:24px;font-weight:800}
+.av img{width:100%;height:100%;object-fit:cover;display:block}
+.author h3{margin:0 0 4px;font-size:17px}
+.author p{margin:0;color:var(--ink-soft);font-size:14px;line-height:1.75;font-weight:500}
+.faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:9px}
+.faq-item{border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden}
+.faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 20px;font:inherit;font-size:14.5px;line-height:1.65;font-weight:600;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.faq-q .plus{font-size:18px;color:var(--accent);transition:transform .2s;font-weight:400}
+.faq-item.open .plus{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .25s}
+.faq-a-inner{padding:0 20px 18px;font-size:14.5px;line-height:1.8;color:var(--ink-soft);font-weight:500}
+
+/* footer */
+footer{border-top:1px solid var(--rule);padding:36px 24px 28px;margin-top:56px}
+.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px;align-items:start}
+.footer-col h4{font-size:13px;margin:0 0 12px}
+.footer-col p{font-size:13px;line-height:1.8;color:var(--ink-soft);font-weight:500;margin:0;max-width:52ch}
+.footer-col ul{list-style:none;margin:0;padding:0}
+.footer-col li{margin-bottom:8px}
+.footer-col a{font-size:13px;line-height:1.8;color:var(--ink-soft);font-weight:500;text-decoration:none}
+.footer-col a:hover{color:var(--accent)}
+.footer-bottom{max-width:1180px;margin:28px auto 0;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:var(--ink-soft)}
+
+/* responsive */
+@media(max-width:900px){
+  header{padding:12px 16px}
+  #mainNav{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--rule);flex-direction:column;padding:8px 16px 16px;display:none}
+  #mainNav.open{display:flex}
+  #mainNav a{padding:11px 8px}
+  .nav-toggle{display:block}
+}
 @media(max-width:860px){
-  .tool-card{padding:16px}
-  .tool-grid{grid-template-columns:1fr}
+  .tool-grid,.decision-grid,.check-grid,.map-grid{grid-template-columns:1fr}
   .tbox textarea{min-height:210px}
-  .decision-grid,.check-grid{grid-template-columns:1fr}
   .footer-inner{grid-template-columns:1fr 1fr;gap:24px}
   .footer-col:first-child{grid-column:1/-1}
+}
+@media(max-width:640px){
+  .rt thead{display:none}
+  .rt,.rt tbody,.rt tr,.rt td{display:block;width:100%}
+  .rt tr{border:1px solid var(--rule);border-radius:10px;margin-bottom:10px;padding:4px 0;background:#fff}
+  .rt td{border:0;padding:6px 14px}
+  .rt td::before{content:attr(data-label);display:block;font-size:10.5px;font-weight:700;color:var(--accent-dark);text-transform:uppercase;letter-spacing:.05em}
+  .tw2{overflow-x:visible}
 }
 @media(max-width:560px){
   header{padding:10px 14px}
@@ -170,9 +198,7 @@ footer{padding-top:36px}
   .nav-toggle{padding:8px 10px}
   .hero{padding:28px 16px 10px}
   h1{font-size:clamp(23px,7vw,30px);line-height:1.25}
-  .hero-intro{font-size:14px!important;margin-bottom:18px!important}
-  .hero-points{gap:6px}
-  .hero-points span{font-size:10.5px;padding:6px 9px}
+  .hero-intro{font-size:14px}
   .tool-panel{padding:6px 12px 0}
   .tool-card{border-radius:13px;padding:12px}
   .tool-card-top{display:block;margin-bottom:14px}
@@ -195,8 +221,8 @@ footer{padding-top:36px}
   .decision-card{padding:17px}
   .check-item{padding:14px;gap:10px}
   .step{gap:12px;padding:16px 0}
-  .step p{line-height:1.75}
-  .author{padding:18px}
+  .author{grid-template-columns:1fr;text-align:center;padding:18px}
+  .av{margin:auto}
   .faq-q{padding:14px;font-size:13.5px}
   .faq-a-inner{padding:0 14px 15px;font-size:13.5px}
   footer{padding:30px 16px 22px;margin-top:42px}
@@ -208,7 +234,6 @@ footer{padding-top:36px}
   html{scroll-behavior:auto}
   *,*::before,*::after{scroll-behavior:auto!important;transition:none!important;animation:none!important}
 }
-
 </style>
 </head>
 <body>
@@ -231,11 +256,11 @@ footer{padding-top:36px}
 <main>
 <section class="hero" id="tool">
   <h1>Unicode to Kruti Dev Converter – Hindi Text to Kruti Dev 010 Online</h1>
-  <p class="hero-intro">Move Hindi text between modern Unicode and legacy Kruti Dev 010 for documents, office work and desktop publishing. Convert in either direction, copy the result, then check a short sample in the software where you plan to use it.</p><div class="hero-points" aria-label="Tool features"><span>Two way conversion</span><span>Copy or save as TXT</span><span>Text stays in your browser</span></div>
+  <p class="hero-intro">Typed your Hindi on a phone or in Google Docs, but the office, print shop or typing task wants Kruti Dev 010? Paste it below and get the Kruti Dev version. Old Kruti Dev files that show strange symbols can be turned back into readable Unicode with the switch button.</p>
 </section>
 
 <div class="tool-panel">
-  <div class="tool-card"><div class="tool-card-top"><div><span class="tool-eyebrow">TEXT CONVERTER</span><h2 class="tool-card-title">Convert your Hindi text</h2><p class="tool-card-note">Start with a short sentence if this is your first conversion. You can edit the source text at any time.</p></div><span class="local-badge"><span aria-hidden="true"></span> Runs locally</span></div>
+  <div class="tool-card"><div class="tool-card-top"><div><span class="tool-eyebrow">TEXT CONVERTER</span><h2 class="tool-card-title">Convert your Hindi text</h2><p class="tool-card-note">Try a short sentence first, check it in your own software, and then convert the full document.</p></div><span class="local-badge"><span aria-hidden="true"></span> Runs in your browser</span></div>
   <div class="tool-grid">
     <div class="tbox">
       <div class="tbox-head"><span class="tbox-title">
@@ -270,177 +295,200 @@ footer{padding-top:36px}
       Switch to KrutiDev → Unicode
     </button>
   </div>
-  <p class="tool-hint"><strong>Before you copy:</strong> Kruti Dev output normally looks like English characters until you apply the <strong>Kruti Dev 010</strong> font in compatible desktop software.</p>
+  <p class="tool-hint"><strong>Why does the output look like English?</strong> Kruti Dev output is made of ordinary Latin characters. It turns into Hindi only after you paste it into software and apply the <strong>Kruti Dev 010</strong> font.</p>
   </div>
 </div>
 <div class="toast-wrap"><span id="toast" role="status" aria-live="polite">Copied!</span></div>
 
-<!-- Image: apni PNG ko WebP bana ke root mein /unicode-to-krutidev-intro.webp naam se upload karo -->
-<div class="quick-links" aria-label="On this page"><span>On this page</span><a href="#how">How to convert</a><a href="#choose-format">Choose a format</a><a href="#mapping">Examples</a><a href="#quality-check">Final checks</a><a href="#faq">FAQs</a></div>
+<div class="quick-links" aria-label="On this page"><span>On this page</span><a href="#about-tool">What is Kruti Dev</a><a href="#how">How to convert</a><a href="#mapping">Key chart</a><a href="#apps">Software tips</a><a href="#fixes">Fixes</a><a href="#faq">FAQs</a></div>
 <div class="banner"><img src="/unicoder.webp" alt="Unicode to Kruti Dev converter showing Hindi text and its Kruti Dev output" width="1672" height="941" loading="lazy" decoding="async"></div>
 
 <section class="block" id="about-tool">
-  <div class="sh"><span class="kicker">Understand the formats</span><h2>Unicode and Kruti Dev solve different typing needs</h2><p>Choose the format your document or workplace actually requires, rather than converting every Hindi file by default.</p></div>
+  <div class="sh"><span class="kicker">Background</span><h2>What Kruti Dev is, and why it is still around</h2></div>
   <div class="copy">
-    <p><strong>Kruti Dev</strong> is an older Hindi font family. It does not store real Hindi letters. Instead, it reuses the normal English keyboard codes and draws a Hindi shape for each one. That is why Kruti Dev text looks like strange English symbols (for example <strong>ueLrs</strong>) until the Kruti Dev font is applied, and then it turns into नमस्ते.</p>
-    <p><strong>Unicode</strong> is the modern standard. Every Hindi letter has its own code, so text typed on a phone, in WhatsApp, on a website or in Google Docs is Unicode. It can be searched, copied and shown on any device.</p>
-    <p>Even so, a lot of Hindi work still happens in Kruti Dev: government and court offices, print shops, DTP software like CorelDRAW and PageMaker, and many Hindi typing tests that follow the Remington layout (check your exam notice for the font and layout it allows). If your text was typed in Unicode but the file must be in Kruti Dev, you need a converter. This page does that in both directions.</p>
+    <p>Before Unicode worked reliably on Windows and the web, Hindi in a computer meant a special font. Fonts like Kruti Dev, Chanakya, DevLys and Walkman Chanakya did not contain a separate code for each Devanagari letter. They borrowed the English keyboard codes and drew a Hindi shape in place of each one. Type <span class="kdtext">ueLrs</span> with Kruti Dev selected and the screen shows नमस्ते. Type the same keys in a normal font and you only see English letters.</p>
+    <p>Unicode fixed this by giving every Hindi letter its own permanent code. That is why Unicode Hindi can be searched, copied between apps, read on any phone and indexed by Google, with no special font installed.</p>
+    <p>Kruti Dev did not disappear, though. Many printing presses, court and government offices, newspaper layouts and typing institutes built their files, templates and habits around it, and the Remington-style keyboard that goes with it. If you receive Unicode text (from WhatsApp, a website, a client's email) and the final file has to be in Kruti Dev, you need to convert it. If you have an old Kruti Dev file and want to put it online or share it on a phone, you need to go the other way. This page handles both.</p>
+    <h3>Two things that surprise first-time users</h3>
+    <ul>
+      <li><strong>The text does not carry the font with it.</strong> The characters in a Kruti Dev file are ordinary English letters. If the font is missing on the next computer, the Hindi disappears and only the letters remain.</li>
+      <li><strong>Hindi is not typed in the order you read it.</strong> In Kruti Dev the ि matra and the reph (र्) follow different positions than in Unicode, so a converter has to reorder characters, not just swap one for another.</li>
+    </ul>
   </div>
 </section>
 
-
 <section class="block" id="choose-format">
-  <div class="sh"><span class="kicker">Choose the right format</span><h2>When should you use Unicode or Kruti Dev?</h2><p>The best format depends on where the text will be read, edited and shared.</p></div>
+  <div class="sh"><span class="kicker">Choosing a format</span><h2>When to use Unicode and when to use Kruti Dev</h2><p>Pick the format the destination needs. Converting everything to Kruti Dev "just in case" usually creates problems later.</p></div>
   <div class="decision-grid">
     <article class="decision-card">
       <span class="decision-label">Use Unicode for</span>
-      <h3>Text that needs to travel between devices</h3>
+      <h3>Anything that will be shared or searched</h3>
       <ul>
-        <li>Web pages, email and messaging apps</li>
-        <li>Searchable documents and online forms</li>
-        <li>Phones, modern word processors and shared files</li>
+        <li>Websites, blogs, email and messaging apps</li>
+        <li>Google Docs, Sheets and online forms</li>
+        <li>Files you want others to open on any device</li>
       </ul>
-      <p>Unicode stores Hindi characters as text, so the recipient usually does not need a special legacy font just to read it.</p>
+      <p>Never publish a web page in Kruti Dev. Search engines read the Latin letters, not the Hindi, so the page cannot be understood or found.</p>
     </article>
     <article class="decision-card">
       <span class="decision-label">Use Kruti Dev 010 for</span>
-      <h3>Workflows that specifically require the legacy font</h3>
+      <h3>Workflows built around the legacy font</h3>
       <ul>
-        <li>Older office or DTP documents</li>
-        <li>Print layouts built around Kruti Dev</li>
-        <li>Typing tasks whose instructions name Kruti Dev 010</li>
+        <li>Print layouts in CorelDRAW, PageMaker or InDesign templates already set in Kruti Dev</li>
+        <li>Office formats that specify Kruti Dev 010</li>
+        <li>Practice for typing tests that name it</li>
       </ul>
-      <p>Confirm the required font version first. Another legacy Hindi font may use different character mappings.</p>
+      <p>Confirm the exact font name first. DevLys, Chanakya and other Kruti Dev versions use different key maps.</p>
     </article>
   </div>
 </section>
 
 <section class="block" id="how">
-  <div class="sh"><span class="kicker">Quick guide</span><h2>How to convert Unicode to Kruti Dev</h2></div>
+  <div class="sh"><span class="kicker">Step by step</span><h2>How to convert Unicode to Kruti Dev</h2></div>
   <div class="steps">
-    <div class="step"><b>1</b><div><h3>Paste your Unicode text</h3><p>Type or paste Hindi text in the left box. It can come from WhatsApp, a website, Word or your phone keyboard.</p></div></div>
-    <div class="step"><b>2</b><div><h3>Check the output</h3><p>The right box fills automatically. It will look like English symbols. This is normal, because the Kruti Dev font is not applied yet.</p></div></div>
-    <div class="step"><b>3</b><div><h3>Copy and paste</h3><p>Press Copy (or Save to get a .txt file) and paste the text into Word, Excel, CorelDRAW, PageMaker or Photoshop.</p></div></div>
-    <div class="step"><b>4</b><div><h3>Apply the Kruti Dev 010 font</h3><p>Select the pasted text and change its font to <strong>Kruti Dev 010</strong>. The Hindi letters appear. The font must be installed on that computer.</p></div></div>
+    <div class="step"><b>1</b><div><h3>Paste your Unicode text</h3><p>Paste or type it in the left box. Text from WhatsApp, a website, Word or a phone keyboard all works. The right box updates as you type.</p></div></div>
+    <div class="step"><b>2</b><div><h3>Look at the output</h3><p>You will see a mix of English letters and symbols. That is expected. The Hindi shapes only appear once the font is applied.</p></div></div>
+    <div class="step"><b>3</b><div><h3>Copy or save</h3><p>Press <strong>Copy</strong> to put it on the clipboard, or <strong>Save</strong> to download a .txt file. A .txt file is safest for long text because it carries no formatting.</p></div></div>
+    <div class="step"><b>4</b><div><h3>Apply the font in your software</h3><p>Paste into Word, Excel, CorelDRAW or similar, select the text and choose <strong>Kruti Dev 010</strong> from the font list. The font has to be installed on that computer.</p></div></div>
+    <div class="step"><b>5</b><div><h3>Proofread in the final application</h3><p>Compare a few lines against the original before printing or submitting. Pay special attention to names, numbers and rare conjuncts.</p></div></div>
   </div>
 </section>
 
 <section class="block" id="mapping">
-  <div class="sh"><span class="kicker">How it works</span><h2>What the converter changes: real examples</h2><p>Conversion is not a simple letter swap. Three things change the order and shape of the text.</p></div>
-  <div class="copy">
+  <div class="sh"><span class="kicker">How the conversion works</span><h2>Key chart and worked examples</h2><p>These are the key positions behind the tool, so you can sanity check any output yourself.</p></div>
+
+  <div class="map-grid">
+    <div>
+      <h3>Consonants</h3>
+      <div class="tw2"><table class="rt">
+        <thead><tr><th>Unicode</th><th>Kruti Dev key</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Unicode">क ख ग घ</td><td class="kd" data-label="Kruti Dev key">d &nbsp; [k &nbsp; x &nbsp; ?k</td></tr>
+          <tr><td data-label="Unicode">च छ ज झ</td><td class="kd" data-label="Kruti Dev key">p &nbsp; N &nbsp; t &nbsp; &gt;</td></tr>
+          <tr><td data-label="Unicode">ट ठ ड ढ ण</td><td class="kd" data-label="Kruti Dev key">V &nbsp; B &nbsp; M &nbsp; &lt; &nbsp; .k</td></tr>
+          <tr><td data-label="Unicode">त थ द ध न</td><td class="kd" data-label="Kruti Dev key">r &nbsp; Fk &nbsp; n &nbsp; /k &nbsp; u</td></tr>
+          <tr><td data-label="Unicode">प फ ब भ म</td><td class="kd" data-label="Kruti Dev key">i &nbsp; Q &nbsp; c &nbsp; Hk &nbsp; e</td></tr>
+          <tr><td data-label="Unicode">य र ल व</td><td class="kd" data-label="Kruti Dev key">; &nbsp; j &nbsp; y &nbsp; o</td></tr>
+          <tr><td data-label="Unicode">श ष स ह</td><td class="kd" data-label="Kruti Dev key">'k &nbsp; "k &nbsp; l &nbsp; g</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+    <div>
+      <h3>Vowels, matras and signs</h3>
+      <div class="tw2"><table class="rt">
+        <thead><tr><th>Unicode</th><th>Kruti Dev key</th></tr></thead>
+        <tbody>
+          <tr><td data-label="Unicode">अ आ इ ई</td><td class="kd" data-label="Kruti Dev key">v &nbsp; vk &nbsp; b &nbsp; bZ</td></tr>
+          <tr><td data-label="Unicode">उ ऊ ए ओ औ</td><td class="kd" data-label="Kruti Dev key">m &nbsp; Å &nbsp; , &nbsp; vks &nbsp; vkS</td></tr>
+          <tr><td data-label="Unicode">ा ी ु ू</td><td class="kd" data-label="Kruti Dev key">k &nbsp; h &nbsp; q &nbsp; w</td></tr>
+          <tr><td data-label="Unicode">े ै ो ौ</td><td class="kd" data-label="Kruti Dev key">s &nbsp; S &nbsp; ks &nbsp; kS</td></tr>
+          <tr><td data-label="Unicode">ि (choti ee)</td><td class="kd" data-label="Kruti Dev key">f (typed before the letter)</td></tr>
+          <tr><td data-label="Unicode">ं ः ँ</td><td class="kd" data-label="Kruti Dev key">a &nbsp; % &nbsp; ¡</td></tr>
+          <tr><td data-label="Unicode">।</td><td class="kd" data-label="Kruti Dev key">A</td></tr>
+        </tbody>
+      </table></div>
+    </div>
+  </div>
+
+  <div class="copy" style="margin-top:34px">
+    <h3>Three rules that cause most of the reordering</h3>
     <ul>
-      <li><strong>The choti ee matra (ि)</strong> is typed <em>before</em> the consonant in Kruti Dev, but it comes <em>after</em> it in Unicode.</li>
-      <li><strong>Reph (र्)</strong> sits on top of a letter, but in Kruti Dev it is typed <em>after</em> that letter as the key Z.</li>
-      <li><strong>Half letters and conjuncts</strong> (like स्, क्ष, त्र, ज्ञ) have their own separate key codes.</li>
+      <li><strong>The choti ee matra (ि)</strong> comes <em>after</em> the consonant in Unicode, but in Kruti Dev the key <span class="kdtext">f</span> is typed <em>before</em> it. So हिन्दी becomes <span class="kdtext">fgUnh</span>, with <span class="kdtext">f</span> first.</li>
+      <li><strong>Reph (र्)</strong> is drawn on top of a letter. In Kruti Dev it is typed <em>after</em> that letter as <span class="kdtext">Z</span>. So कर्म becomes <span class="kdtext">deZ</span>.</li>
+      <li><strong>Half letters and conjuncts</strong> have their own keys. स् is <span class="kdtext">L</span>, ज्ञ is <span class="kdtext">K</span> and श्र is <span class="kdtext">J</span>.</li>
     </ul>
   </div>
-  <div class="tw2"><table>
+
+  <div class="tw2" style="margin-top:22px"><table class="rt">
     <thead><tr><th>Unicode word</th><th>Kruti Dev keys</th><th>What to notice</th></tr></thead>
     <tbody>
-      <tr><td>राम</td><td class="kd">jke</td><td>र = j, ा = k, म = e</td></tr>
-      <tr><td>भारत</td><td class="kd">Hkkjr</td><td>भ = Hk, then ा = k</td></tr>
-      <tr><td>हिन्दी</td><td class="kd">fgUnh</td><td>ि (f) moves before ह; half न = U</td></tr>
-      <tr><td>नमस्ते</td><td class="kd">ueLrs</td><td>half स = L, े = s</td></tr>
-      <tr><td>कर्म</td><td class="kd">deZ</td><td>reph is typed after म as Z</td></tr>
-      <tr><td>धर्म</td><td class="kd">/keZ</td><td>ध = /k, reph again as Z</td></tr>
-      <tr><td>ज्ञान</td><td class="kd">Kku</td><td>ज्ञ is a single key, K</td></tr>
-      <tr><td>श्रम</td><td class="kd">Je</td><td>श्र is a single key, J</td></tr>
+      <tr><td data-label="Unicode word">राम</td><td class="kd" data-label="Kruti Dev keys">jke</td><td data-label="What to notice">र = j, ा = k, म = e</td></tr>
+      <tr><td data-label="Unicode word">भारत</td><td class="kd" data-label="Kruti Dev keys">Hkkjr</td><td data-label="What to notice">भ = Hk, then ा = k</td></tr>
+      <tr><td data-label="Unicode word">हिन्दी</td><td class="kd" data-label="Kruti Dev keys">fgUnh</td><td data-label="What to notice">ि (f) moves before ह; half न = U</td></tr>
+      <tr><td data-label="Unicode word">नमस्ते</td><td class="kd" data-label="Kruti Dev keys">ueLrs</td><td data-label="What to notice">half स = L, े = s</td></tr>
+      <tr><td data-label="Unicode word">कर्म</td><td class="kd" data-label="Kruti Dev keys">deZ</td><td data-label="What to notice">reph is typed after म as Z</td></tr>
+      <tr><td data-label="Unicode word">धर्म</td><td class="kd" data-label="Kruti Dev keys">/keZ</td><td data-label="What to notice">ध = /k, reph again as Z</td></tr>
+      <tr><td data-label="Unicode word">ज्ञान</td><td class="kd" data-label="Kruti Dev keys">Kku</td><td data-label="What to notice">ज्ञ is a single key, K</td></tr>
+      <tr><td data-label="Unicode word">श्रम</td><td class="kd" data-label="Kruti Dev keys">Je</td><td data-label="What to notice">श्र is a single key, J</td></tr>
     </tbody>
   </table></div>
+  <p class="table-caption">The sample sentence already loaded in the tool, नमस्ते दोस्तों, आपका स्वागत है, converts to <span class="kdtext">ueLrs nksLrksa, vkidk Lokxr gS</span>.</p>
 </section>
 
 <section class="block" id="apps">
-  <div class="sh"><h2>Using the converted text in your software</h2></div>
+  <div class="sh"><span class="kicker">After converting</span><h2>Using the converted text in your software</h2></div>
   <div class="copy"><ul>
-    <li><strong>MS Word and LibreOffice:</strong> paste, select all (Ctrl+A) and set the font to Kruti Dev 010. Keep English words in a normal font such as Times New Roman, otherwise they will also turn into Hindi shapes.</li>
-    <li><strong>Excel:</strong> paste into the cell, then change the font of that cell or column from the Home tab.</li>
-    <li><strong>CorelDRAW, PageMaker, Photoshop:</strong> paste into a text box and choose Kruti Dev 010 in the font list.</li>
-    <li><strong>Google Docs and phones:</strong> Kruti Dev is not available there, so the text will stay as symbols. Use Word, LibreOffice or a desktop DTP tool instead.</li>
-    <li><strong>Installing the font:</strong> copy the Kruti Dev 010 .ttf file, right-click it on Windows and choose Install. Download the font only from a source you trust and check its licence.</li>
+    <li><strong>MS Word and LibreOffice Writer:</strong> paste, select the text and set the font to Kruti Dev 010. Keep English words, numbers in English and email addresses in a normal font, otherwise they also turn into Hindi shapes.</li>
+    <li><strong>Excel:</strong> paste into the cell, then change the font of that cell, row or column from the Home tab. Sorting and filtering will follow the Latin letters, not Hindi alphabetical order.</li>
+    <li><strong>CorelDRAW, PageMaker, InDesign and Photoshop:</strong> paste into a text box and choose Kruti Dev 010 from the font list. Some layout programs re-map fonts when opening files on another machine, so keep the font installed there too.</li>
+    <li><strong>Google Docs and phones:</strong> Kruti Dev is not available there, so the text stays as symbols. Do your Kruti Dev work in Word or LibreOffice on a computer.</li>
+    <li><strong>Installing the font:</strong> on Windows, right-click the .ttf file and choose Install. Only use font files from a source you trust, and check the licence if the work is commercial.</li>
   </ul></div>
-</section>
-
-<section class="block" id="fixes">
-  <div class="sh"><h2>Common problems and quick fixes</h2></div>
-  <div class="copy"><ul>
-    <li><strong>I only see English letters:</strong> the Kruti Dev 010 font is not installed or not applied to that text.</li>
-    <li><strong>Letters look wrong or matras are misplaced:</strong> another Kruti Dev version or a different Hindi font is applied. Switch to Kruti Dev 010.</li>
-    <li><strong>English words turned into Hindi shapes:</strong> change only those words back to a normal font.</li>
-    <li><strong>A rare conjunct looks odd:</strong> uncommon letter combinations can differ between fonts. Fix that letter by hand in your document.</li>
-    <li><strong>Text copied from a PDF is garbled:</strong> PDFs often carry broken text. Retype a short sample here and compare.</li>
-  </ul></div>
-</section>
-
-<section class="block" id="compare">
-  <div class="sh"><h2>Unicode vs Kruti Dev</h2></div>
-  <div class="tw2"><table>
-    <thead><tr><th>Feature</th><th>Unicode (Mangal)</th><th>Kruti Dev 010</th></tr></thead>
-    <tbody>
-      <tr><td>Where it works</td><td>Websites, WhatsApp, phones, Google Docs, Word</td><td>Mostly desktop software with the font installed</td></tr>
-      <tr><td>Font needed</td><td>Any Hindi Unicode font</td><td>Kruti Dev 010 must be installed</td></tr>
-      <tr><td>Search and copy</td><td>Works everywhere</td><td>Looks like symbols without the font</td></tr>
-      <tr><td>Typing layout</td><td>Phonetic, Inscript or any keyboard</td><td>Remington-style layout</td></tr>
-      <tr><td>Typical use</td><td>Web content, social media, chat</td><td>Print work, court and office files, typing practice</td></tr>
-    </tbody>
-  </table></div>
 </section>
 
 <section class="block" id="reverse">
-  <div class="sh"><h2>Converting old Kruti Dev files to Unicode</h2></div>
+  <div class="sh"><span class="kicker">The other direction</span><h2>Converting old Kruti Dev files to Unicode</h2></div>
   <div class="copy">
-    <p>Press the switch button under the boxes to reverse the direction. Paste the Kruti Dev text exactly as it appears (the strange symbols) and the right box shows normal Hindi Unicode that you can use on websites, WhatsApp or Google Docs.</p>
+    <p>Press the switch button below the two boxes. The left box now expects Kruti Dev text and the right box shows Unicode. Paste the text exactly as it looks without the font, as in <span class="kdtext">deZ</span>, not as the Hindi you see after applying the font.</p>
     <ul>
-      <li>Paste only text that is really in Kruti Dev. If it already shows proper Hindi in Unicode, there is nothing to convert.</li>
-      <li>Convert in sections for very long documents, and proofread names and numbers afterwards.</li>
+      <li>Copy the text out of the original file as plain text first. Copying from a PDF often mixes characters up, so test a short line before trusting a long paste.</li>
+      <li>English words inside the same paragraph will also be read as Kruti Dev and changed. Convert the Hindi parts separately if the document mixes both languages.</li>
+      <li>If the pasted text already shows proper Hindi, it is already Unicode and does not need converting.</li>
+      <li>Proofread names, numbers and dates. They are the most expensive things to get wrong.</li>
     </ul>
   </div>
 </section>
 
-
-<section class="block" id="quality-check">
-  <div class="sh"><span class="kicker">A careful final check</span><h2>Check these things before using converted text</h2><p>A conversion can save retyping, but a quick review is still important for formal or print-ready work.</p></div>
-  <div class="check-grid">
-    <div class="check-item"><span class="check-number">01</span><div><h3>Test a representative sample</h3><p>Convert two or three lines containing matras, half letters, names and punctuation before processing a long document.</p></div></div>
-    <div class="check-item"><span class="check-number">02</span><div><h3>Apply the matching font</h3><p>For Unicode to Kruti Dev, select the converted text in your desktop application and apply Kruti Dev 010. If the font is missing, the output may look like Latin characters.</p></div></div>
-    <div class="check-item"><span class="check-number">03</span><div><h3>Review names, dates and numbers</h3><p>Compare the converted result with the source, especially for personal names, official terms, amounts and dates.</p></div></div>
-    <div class="check-item"><span class="check-number">04</span><div><h3>Keep an untouched source copy</h3><p>Save the original Unicode or Kruti Dev text before replacing anything. This makes it easier to correct a mismatch without starting over.</p></div></div>
-  </div>
-  <div class="note quality-note"><strong>Good practice:</strong> For court, government, exam or publishing work, follow the receiving office's format instructions and proofread the final document in the application that will open or print it.</div>
+<section class="block" id="fixes">
+  <div class="sh"><span class="kicker">Troubleshooting</span><h2>Common problems and quick fixes</h2></div>
+  <div class="copy"><ul>
+    <li><strong>I only see English letters:</strong> the Kruti Dev 010 font is not installed, or it is not applied to that text. Select the text and set the font again.</li>
+    <li><strong>The ि matra or reph sits in the wrong place:</strong> another Kruti Dev version or a different Hindi font is applied. Switch to Kruti Dev 010.</li>
+    <li><strong>English words turned into Hindi shapes:</strong> select just those words and change them back to a regular font.</li>
+    <li><strong>A rare conjunct looks odd:</strong> unusual letter combinations differ between fonts. Fix that one letter by hand in your document.</li>
+    <li><strong>Text copied from a PDF looks garbled:</strong> PDFs often store Hindi in a broken order. Retype a short sample to compare.</li>
+    <li><strong>The file looked right but is wrong on another computer:</strong> that computer does not have Kruti Dev 010. Install the font there, or send a PDF with fonts embedded.</li>
+  </ul></div>
 </section>
 
-<section class="block" id="limits">
-  <div class="sh"><h2>What this tool can and cannot do</h2></div>
-  <div class="copy"><div class="note"><strong>Be aware:</strong> this converter is built for the Kruti Dev 010 layout. Other Kruti Dev versions can place a few glyphs differently, so test a short sample first. Very rare letter combinations may need a manual fix. Always proofread before submitting an exam, court or government document. Your text is converted in your browser and is not sent to a server.</div></div>
+<section class="block" id="quality-check">
+  <div class="sh"><span class="kicker">Before you submit</span><h2>A short checklist for important documents</h2></div>
+  <div class="check-grid">
+    <div class="check-item"><span class="check-number">01</span><div><h3>Test a small sample first</h3><p>Convert two or three lines with matras, half letters, a name and some punctuation, and check them before doing the whole file.</p></div></div>
+    <div class="check-item"><span class="check-number">02</span><div><h3>Match the exact font</h3><p>Use Kruti Dev 010. If an office asks for another version, results can differ in a few glyphs.</p></div></div>
+    <div class="check-item"><span class="check-number">03</span><div><h3>Re-read names, dates and amounts</h3><p>Compare these against the source line by line. Automatic conversion cannot know when a name is spelled unusually.</p></div></div>
+    <div class="check-item"><span class="check-number">04</span><div><h3>Keep the original text</h3><p>Save the Unicode source before replacing anything, so you can reconvert if a mistake is found.</p></div></div>
+  </div>
+  <div class="note quality-note"><strong>Please note:</strong> this converter follows the Kruti Dev 010 layout and works with rules, not by reading meaning. Very rare combinations may need a manual fix. For court, government, exam or print work, follow the receiving office's format instructions and proofread the final file in the application that will open or print it. Your text is converted in your browser and is not sent to a server.</div>
 </section>
 
 <section class="block" id="author">
-  <div class="sh"><span class="kicker">About the author</span><h2>Meet the creator</h2></div>
+  <div class="sh"><span class="kicker">About the author</span><h2>Who maintains this tool</h2></div>
   <div class="author">
     <div class="av"><img src="/kavya-saxena.webp" alt="Kavya Saxena, creator of HindiFontGen" width="64" height="64" loading="lazy" decoding="async" onerror="this.replaceWith(document.createTextNode('K'))"></div>
-    <div><h3>Kavya Saxena</h3><p>Kavya Saxena runs HindiFontGen and works on free tools for Hindi text, along with practical guides for using Hindi fonts in posts, invitations and thumbnails. If you find a mistake in a conversion or have a suggestion, you can write to him at contact@hindifontgen.in.</p></div>
+    <div><h3>Kavya Saxena</h3><p>Kavya Saxena runs HindiFontGen and maintains its Hindi text tools. If you find a word that converts incorrectly, send the Unicode text and the output you got to contact@hindifontgen.in so the mapping can be checked.</p></div>
   </div>
 </section>
 
 <section class="block" id="faq">
   <div class="sh"><h2>Frequently asked questions</h2></div>
   <div class="faq-list" id="faqList">
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">What is Kruti Dev 010?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">It is a legacy Hindi font that maps Hindi letters onto English keyboard codes. It is still used in print work, many offices and some typing tests.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Why does the converted text look like English symbols?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Because Kruti Dev only turns into Hindi when the Kruti Dev 010 font is applied. Paste the text into Word and set that font.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Which is better, Unicode or Kruti Dev?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Use Unicode for websites, chat and anything that must be searchable. Use Kruti Dev only when the job or software requires it.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I convert Kruti Dev back to Unicode?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Press the switch button below the two boxes and paste your Kruti Dev text in the left box.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">How do I use the output in Excel?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Paste it into the cell, then change that cell or column to the Kruti Dev 010 font from the Home tab.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Does it work in Google Docs or on mobile?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">You can convert on a phone, but Google Docs and most phones do not have Kruti Dev, so the text will show as symbols. Open the result in Word or LibreOffice on a computer that has the font.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Does it support Kruti Dev 055 or other versions?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">The tool is made for Kruti Dev 010. Other versions can differ for a few letters, so check a short sample before converting a long document.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I convert Marathi text?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Marathi uses the Devanagari script and common letters convert the same way. Check Marathi-specific letters and conjuncts after conversion.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Is my text saved anywhere?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">No. The conversion runs in your browser and nothing you type is sent to a server.</div></div></div>
-    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Is it free, and is there a length limit?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">It is free with no signup. There is no fixed limit, but split very large documents into parts so the page stays fast.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">What is the difference between Unicode and Kruti Dev?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Unicode gives each Hindi letter its own code, so the text is readable and searchable anywhere. Kruti Dev stores English keyboard characters and relies on a font to draw Hindi shapes in their place, so it only reads correctly where the font is installed.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Why does my converted text look like English symbols?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">That is how Kruti Dev works. Paste the text into Word or a similar desktop program and apply the Kruti Dev 010 font, and the Hindi appears.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I use Kruti Dev text on my website?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">It is not recommended. Search engines and screen readers see Latin letters, and visitors would need the font installed. Use Unicode for anything published online.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I convert Kruti Dev back to Unicode?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Yes. Press the switch button below the boxes and paste your Kruti Dev text, exactly as it looks without the font, into the left box.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Does it work for Kruti Dev 055, DevLys or Chanakya?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">The tool is built for Kruti Dev 010. Other fonts use different key maps, and even other Kruti Dev versions can differ for some glyphs, so test a short sample before converting a long document.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can I use the output on a phone or in Google Docs?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">You can convert on a phone, but Google Docs and most phones do not include Kruti Dev, so the result will look like symbols. Open it in Word or LibreOffice on a computer that has the font.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Can it convert Marathi text?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">Common Devanagari letters convert the same way. Marathi-specific letters and conjuncts should be checked by hand after conversion.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Is my text stored anywhere?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">No. The conversion runs in your browser and the text is not sent to a server.</div></div></div>
+    <div class="faq-item"><button class="faq-q" type="button" aria-expanded="false">Is there a length limit?<span class="plus">+</span></button><div class="faq-a"><div class="faq-a-inner">There is no fixed limit and no signup. For very large documents, convert in sections so the page stays responsive and proofreading is easier.</div></div></div>
   </div>
 </section>
 </main>
 
 <footer>
   <div class="footer-inner">
-    <div class="footer-col"><h4>HindiFontGen</h4><p>HindiFontGen is a free Hindi font generator made for people who design with Hindi text. Preview your words in 50+ Devanagari fonts, try effects like outline or shadow, and download a PNG. The site also has a Hindi character map and this Unicode to Kruti Dev converter. Everything is free and needs no signup.</p></div>
+    <div class="footer-col"><h4>HindiFontGen</h4><p>Free tools for Hindi text: a font generator with 50+ Devanagari fonts and PNG export, a Hindi character map, and this Unicode to Kruti Dev converter.</p></div>
     <div class="footer-col"><h4>Tools</h4><ul>
       <li><a href="https://hindifontgen.in/">Hindi Font Generator</a></li>
       <li><a href="https://hindifontgen.in/unicode-to-krutidev-converter.html">Unicode ⇄ KrutiDev</a></li>
