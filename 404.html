@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Page Not Found | HindiFontGen</title>
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="icon" href="/icon.png" type="image/png">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      padding: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #f8fafc;
+      color: #202124;
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    .error-box {
+      width: 100%;
+      max-width: 520px;
+      padding: 42px 28px;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      border-radius: 14px;
+    }
+
+    .error-code {
+      margin: 0;
+      color: #2a5ad9;
+      font-size: clamp(64px, 15vw, 100px);
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -4px;
+    }
+
+    h1 {
+      margin: 22px 0 12px;
+      font-size: clamp(23px, 5vw, 30px);
+      line-height: 1.3;
+    }
+
+    p {
+      margin: 0 auto 24px;
+      max-width: 390px;
+      color: #5f6368;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    .home-btn {
+      display: inline-block;
+      padding: 13px 22px;
+      border-radius: 8px;
+      background: #2a5ad9;
+      color: #ffffff;
+      font-size: 15px;
+      font-weight: 700;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .home-btn:hover {
+      background: #1d43aa;
+    }
+
+    .home-btn:focus-visible {
+      outline: 3px solid #93b4ff;
+      outline-offset: 3px;
+    }
+
+    .site-name {
+      display: block;
+      margin-top: 28px;
+      color: #777777;
+      font-size: 13px;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        padding: 16px;
+      }
+
+      .error-box {
+        padding: 34px 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        transition: none !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="error-box">
+    <p class="error-code">404</p>
+
+    <h1>Page not found</h1>
+
+    <p>
+      The page you're looking for may have been moved,
+      removed, or the address may be incorrect.
+      You can return to HindiFontGen and continue browsing.
+    </p>
+
+    <a class="home-btn" href="/">Back to Homepage</a>
+
+    <span class="site-name">HindiFontGen · Hindi font tools</span>
+  </main>
+</body>
+</html>
