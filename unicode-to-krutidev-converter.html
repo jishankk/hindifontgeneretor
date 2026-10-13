@@ -225,6 +225,10 @@ td.kd{font-family:Consolas,Menlo,monospace;color:var(--ink);font-weight:600}
 .av img{width:100%;height:100%;object-fit:cover;display:block}
 .author h3{margin:0 0 4px;font-size:17px}
 .author p{margin:0;color:var(--ink-soft);font-size:14px;line-height:1.75;font-weight:500}
+.as-social{display:flex;gap:10px;margin-top:14px}
+.as-social a{width:36px;height:36px;display:flex;align-items:center;justify-content:center;border:1px solid var(--rule);border-radius:50%;color:var(--ink-soft);transition:.2s}
+.as-social a:hover{border-color:var(--accent);color:var(--accent)}
+.as-social svg{width:18px;height:18px}
 .faq-list{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:9px}
 .faq-item{border:1px solid var(--rule);border-radius:var(--radius);overflow:hidden}
 .faq-q{width:100%;text-align:left;background:none;border:none;padding:16px 20px;font:inherit;font-size:14.5px;line-height:1.65;font-weight:600;color:var(--ink);cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -298,6 +302,7 @@ footer{border-top:1px solid var(--rule);padding:36px 24px 28px;margin-top:56px}
   .step{gap:12px;padding:16px 0}
   .author{grid-template-columns:1fr;text-align:center;padding:18px}
   .av{margin:auto}
+  .as-social{justify-content:center}
   .faq-q{padding:14px;font-size:13.5px}
   .faq-a-inner{padding:0 14px 15px;font-size:13.5px}
   footer{padding:30px 16px 22px;margin-top:42px}
@@ -580,7 +585,7 @@ footer{border-top:1px solid var(--rule);padding:36px 24px 28px;margin-top:56px}
 
 <footer>
   <div class="footer-inner">
-<div><h4>HindiFontGen</h4><p>HindiFontGen is a free Hindi font generator. Type your text in Hindi or English and see it in 50+ Devanagari fonts at once, so you can pick the style that fits your post, invite or thumbnail. You can change the size and colour, add an outline or shadow, and then copy the text or save it as a PNG.</p></div>
+<div class="footer-col"><h4>HindiFontGen</h4><p>HindiFontGen is a free Hindi font generator. Type your text in Hindi or English and see it in 50+ Devanagari fonts at once, so you can pick the style that fits your post, invite or thumbnail. You can change the size and colour, add an outline or shadow, and then copy the text or save it as a PNG.</p></div>
     <div class="footer-col"><h4>Tools</h4><ul>
       <li><a href="https://hindifontgen.in/">Hindi Font Generator</a></li>
       <li><a href="https://hindifontgen.in/unicode-to-krutidev-converter.html">Unicode ⇄ KrutiDev</a></li>
