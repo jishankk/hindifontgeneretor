@@ -1,3 +1,5 @@
+---
+---
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -242,20 +244,7 @@ footer{border-top:1px solid var(--rule);padding:36px 24px 28px;margin-top:56px}
 </head>
 <body>
 
-<header>
-  <div class="header-inner">
-    <a href="https://hindifontgen.in/" class="logo">Hindi<em>FontGen</em></a>
-    <button class="nav-toggle" id="navToggle" aria-label="Toggle main menu" aria-controls="mainNav" aria-expanded="false">Menu</button>
-    <nav id="mainNav" aria-label="Main">
-      <a href="https://hindifontgen.in/">Home</a>
-      <a href="https://hindifontgen.in/character-map.html" class="current">Character Map</a>
-      <a href="https://hindifontgen.in/unicode-to-krutidev-converter.html">Unicode ⇄ KrutiDev</a>
-      <a href="https://hindifontgen.in/about.html">About</a>
-      <a href="https://hindifontgen.in/contact.html">Contact</a>
-      <a href="https://hindifontgen.in/privacy-policy.html">Privacy Policy</a>
-    </nav>
-  </div>
-</header>
+{% include header.html %}
 
 <main>
 <nav class="crumbs" aria-label="Breadcrumb"><a href="https://hindifontgen.in/">Home</a> › Kruti Dev Character Map</nav>
@@ -440,24 +429,7 @@ footer{border-top:1px solid var(--rule);padding:36px 24px 28px;margin-top:56px}
 </section>
 </main>
 
-<footer>
-  <div class="footer-inner">
-    <div class="footer-col"><h4>HindiFontGen</h4><p>HindiFontGen is a free Hindi font generator. Type your text in Hindi or English and see it in 50+ Devanagari fonts at once, so you can pick the style that fits your post, invite or thumbnail. You can change the size and colour, add an outline or shadow, and then copy the text or save it as a PNG.</p></div>
-    <div class="footer-col"><h4>Tools</h4><ul>
-      <li><a href="https://hindifontgen.in/">Hindi Font Generator</a></li>
-      <li><a href="https://hindifontgen.in/unicode-to-krutidev-converter.html">Unicode ⇄ KrutiDev</a></li>
-      <li><a href="https://hindifontgen.in/character-map.html">Character Map</a></li>
-      <li><a href="#faq">FAQ</a></li></ul></div>
-    <div class="footer-col"><h4>Legal Pages</h4><ul>
-      <li><a href="https://hindifontgen.in/about.html">About Us</a></li>
-      <li><a href="https://hindifontgen.in/contact.html">Contact Us</a></li>
-      <li><a href="https://hindifontgen.in/privacy-policy.html">Privacy Policy</a></li>
-      <li><a href="https://hindifontgen.in/terms.html">Terms &amp; Conditions</a></li>
-      <li><a href="https://hindifontgen.in/disclaimer.html">Disclaimer</a></li>
-      <li><a href="https://hindifontgen.in/dmca.html">DMCA</a></li></ul></div>
-  </div>
-  <div class="footer-bottom">© 2026 HindiFontGen. All rights reserved.</div>
-</footer>
+{% include footer.html %}
 
 <script>
 (function(){
