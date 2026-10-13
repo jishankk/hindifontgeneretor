@@ -1,0 +1,17 @@
+<header>
+  <div class="hi header-inner">
+    <a href="/" class="logo">Hindi<em>FontGen</em></a>
+    <button class="nt nav-toggle" id="navToggle" type="button" aria-label="Toggle main menu" aria-controls="mainNav" aria-expanded="false">Menu</button>
+    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+      <a href="/" {% if page.url == "/" or page.url == "/index.html" %}class="current" aria-current="page"{% endif %}>Home</a>
+      <a href="/character-map.html" {% if page.url == "/character-map.html" %}class="current" aria-current="page"{% endif %}>Character Map</a>
+      <a href="/unicode-to-krutidev-converter.html" {% if page.url == "/unicode-to-krutidev-converter.html" %}class="current" aria-current="page"{% endif %}>Unicode ⇄ KrutiDev</a>
+      <a href="/about.html" {% if page.url == "/about.html" %}class="current" aria-current="page"{% endif %}>About</a>
+      <a href="/contact.html" {% if page.url == "/contact.html" %}class="current" aria-current="page"{% endif %}>Contact</a>
+      <a href="/privacy-policy.html" {% if page.url == "/privacy-policy.html" %}class="current" aria-current="page"{% endif %}>Privacy Policy</a>
+      <a href="/terms.html" {% if page.url == "/terms.html" %}class="current" aria-current="page"{% endif %}>Terms</a>
+      <a href="/disclaimer.html" {% if page.url == "/disclaimer.html" %}class="current" aria-current="page"{% endif %}>Disclaimer</a>
+      <a href="/dmca.html" {% if page.url == "/dmca.html" %}class="current" aria-current="page"{% endif %}>DMCA</a>
+    </nav>
+  </div>
+</header>
