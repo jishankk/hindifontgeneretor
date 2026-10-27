@@ -1,64 +1,33 @@
-<footer class="site-footer">
-  <div class="footer-inner">
-    <h3 class="footer-title">Fonts In Hindi</h3>
+<footer class="hfg-footer">
+  <div class="hfg-f-inner">
+    <a class="hfg-f-brand" href="/">HindiFontGen</a>
+    <p class="hfg-f-tag">Free Hindi font generator: preview, copy and download.</p>
 
-    <nav class="footer-links">
-      <a href="/p/about-us.html">About Us</a>
-      <a href="/p/contact.html">Contact</a>
-      <a href="/p/privacy-policy.html">Privacy Policy</a>
-      <a href="/p/disclaimer.html">Disclaimer</a>
-      <a href="/p/dmca.html">DMCA</a>
+    <nav class="hfg-f-links" aria-label="Footer">
+      <a href="/about.html">About Us</a>
+      <a href="/contact.html">Contact</a>
+      <a href="/privacy-policy.html">Privacy Policy</a>
+      <a href="/disclaimer.html">Disclaimer</a>
+      <a href="/dmca.html">DMCA</a>
+      <a href="/character-map.html">Character Map</a>
+      <a href="/unicode-to-krutidev-converter.html">KrutiDev Converter</a>
     </nav>
 
-    <p class="footer-note">This site uses Google Ads for monetization.</p>
+    <p class="hfg-f-note">This site uses Google Ads for monetization.</p>
 
-    <div class="footer-bottom">
-      © 2026 Fonts In Hindi. All Rights Reserved.
-    </div>
+    <div class="hfg-f-bottom">© {{ 'now' | date: "%Y" }} HindiFontGen. All Rights Reserved.</div>
   </div>
 </footer>
 
 <style>
-.site-footer {
-  background: #fff;
-  padding: 40px 16px 24px;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-}
-.footer-inner {
-  max-width: 900px;
-  margin: 0 auto;
-}
-.footer-title {
-  margin: 0 0 18px;
-  font-size: 22px;
-  font-weight: 700;
-  color: #000;
-}
-.footer-links {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px 24px;
-  margin-bottom: 18px;
-}
-.footer-links a {
-  color: #222;
-  font-size: 14px;
-  text-decoration: none;
-}
-.footer-links a:hover {
-  color: #0066ff;
-}
-.footer-note {
-  margin: 0 0 24px;
-  font-size: 12px;
-  color: #888;
-}
-.footer-bottom {
-  border-top: 1px solid #e5e5e5;
-  padding-top: 16px;
-  font-size: 12px;
-  color: #777;
-}
+footer.hfg-footer{background:#fff;border-top:1px solid #D9E4E0;padding:40px 16px 24px;margin:0;text-align:center}
+.hfg-f-inner{max-width:900px;margin:0 auto}
+.hfg-footer .hfg-f-brand{display:inline-block;font-family:Eczar,"Noto Serif Devanagari",Georgia,serif;font-size:1.5rem;font-weight:700;color:#064B3E;text-decoration:none;line-height:1.2}
+.hfg-footer p.hfg-f-tag{margin:6px auto 0;max-width:none;font-size:13px;color:#33433F;font-weight:500}
+.hfg-footer .hfg-f-links{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 22px;margin:22px 0}
+.hfg-footer .hfg-f-links a{font-size:14px;font-weight:500;color:#0F1E1A;text-decoration:none}
+.hfg-footer .hfg-f-links a:hover{color:#0A6E5A;text-decoration:underline;text-underline-offset:3px}
+.hfg-footer p.hfg-f-note{margin:0 auto;max-width:none;font-size:12px;color:#5b6b66}
+.hfg-footer .hfg-f-bottom{margin-top:22px;padding-top:16px;border-top:1px solid #D9E4E0;font-size:12px;color:#33433F}
+@media(max-width:560px){.hfg-footer .hfg-f-links{gap:8px 16px}}
 </style>
