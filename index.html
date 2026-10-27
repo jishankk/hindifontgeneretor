@@ -6,10 +6,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Hindi Font Generator – Stylish & Calligraphy Hindi Fonts Online</title>
-<meta name="description" content="Type Hindi text and preview it in Devanagari fonts. Change size and colour, copy the text or download a PNG or transparent image. Free, no signup.">
+<meta name="description" content="Type Hindi text and preview it in 61 Devanagari fonts. Change size, colour and effects, copy the text or download a PNG or transparent image. Free, no signup.">
 <meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A6E5A">
 <link rel="canonical" href="https://hindifontgen.in/">
 <link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="HindiFontGen">
 <meta property="og:title" content="Hindi Font Generator – Stylish & Calligraphy Hindi Fonts Online">
@@ -19,20 +21,30 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Tailwind via the Play CDN so this page works without a build step.
+     For production, compile a static CSS file instead (see the note delivered with this file),
+     then delete this script tag and the tailwind.config block below. -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#0A6E5A',deep:'#064B3E',ink:'#0F1E1A',soft:'#33433F',mint:'#EEF5F2',line:'#D9E4E0',gold:'#E9A400'}},fontFamily:{sans:['Mukta','system-ui','sans-serif'],display:['Eczar','"Noto Serif Devanagari"','Georgia','serif']}}}};
+</script>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[
 {"@type":"WebSite","@id":"https://hindifontgen.in/#website","url":"https://hindifontgen.in/","name":"HindiFontGen","inLanguage":"en-IN","publisher":{"@id":"https://hindifontgen.in/#organization"}},
-{"@type":"Organization","@id":"https://hindifontgen.in/#organization","name":"HindiFontGen","url":"https://hindifontgen.in/","email":"contact@hindifontgen.in"},
-{"@type":"WebApplication","@id":"https://hindifontgen.in/#tool","name":"Hindi Font Generator","url":"https://hindifontgen.in/","description":"Preview Unicode Devanagari text in 50+ Hindi font styles, adjust size and colours, and download PNG images.","applicationCategory":"DesignApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"provider":{"@id":"https://hindifontgen.in/#organization"}}
+{"@type":"WebPage","@id":"https://hindifontgen.in/#webpage","url":"https://hindifontgen.in/","name":"Hindi Font Generator – Stylish & Calligraphy Hindi Fonts Online","isPartOf":{"@id":"https://hindifontgen.in/#website"},"about":{"@id":"https://hindifontgen.in/#tool"},"inLanguage":"en-IN","dateModified":"2026-10-27"},
+{"@type":"Organization","@id":"https://hindifontgen.in/#organization","name":"HindiFontGen","url":"https://hindifontgen.in/","email":"contact@hindifontgen.in","founder":{"@id":"https://hindifontgen.in/#author"}},
+{"@type":"Person","@id":"https://hindifontgen.in/#author","name":"Ali Hamza","url":"https://hindifontgen.in/about.html","sameAs":["https://www.facebook.com/profile.php?id=61577195696602","https://www.instagram.com/ali_hamza_786_n/","https://x.com/ihamzali","https://www.youtube.com/@alihamzah.Official"]},
+{"@type":"WebApplication","@id":"https://hindifontgen.in/#tool","name":"Hindi Font Generator","url":"https://hindifontgen.in/","description":"Preview Unicode Devanagari text in 61 Google Fonts, adjust size, colours and effects, copy the text and download PNG images.","applicationCategory":"DesignApplication","operatingSystem":"Any","browserRequirements":"Requires JavaScript","isAccessibleForFree":true,"featureList":["Live preview of Hindi text in 61 Devanagari fonts","Font size, text colour and background colour controls","Outline, shadow, glow, 3D and gradient effects","Copy plain text","Download PNG or transparent PNG"],"offers":{"@type":"Offer","price":"0","priceCurrency":"INR"},"creator":{"@id":"https://hindifontgen.in/#author"},"provider":{"@id":"https://hindifontgen.in/#organization"}}
 ]}
 </script>
 <style>
-:root{--paper:#fff;--ink:#0B0F10;--soft:#2B3335;--rule:#E1E7E5;--accent:#0E8F76;--accent-soft:#E3F5EF;--accent-dark:#0A6E5A;--focus:#1A56DB;--r:10px}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:'Poppins',system-ui,sans-serif;-webkit-font-smoothing:antialiased;line-height:1.55}
-a{color:var(--accent-dark)}:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
-@media(prefers-reduced-motion:reduce){*{transition-duration:.01ms!important}}
+:root{--ink:#0F1E1A;--soft:#33433F;--rule:#D9E4E0;--accent:#0A6E5A;--accent-soft:#E6F1ED;--accent-dark:#064B3E;--focus:#1A56DB}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+
+/* ---- shared header (markup lives in _includes/header.html) ---- */
 header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(6px);border-bottom:1px solid var(--rule);padding:14px 24px}
 .hi{max-width:1180px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .logo{font-weight:700;font-size:19px;text-decoration:none;color:var(--ink)}.logo em{font-style:normal;color:var(--accent)}
@@ -40,89 +52,53 @@ header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdro
 #mainNav a:hover{background:var(--accent-soft);color:var(--ink)}#mainNav a.current{font-weight:600;color:var(--ink)}
 #mainNav{display:flex;gap:2px}.nt{display:none;border:1px solid var(--rule);background:#fff;border-radius:8px;padding:8px 12px;cursor:pointer;font:inherit;font-size:14px}
 @media(max-width:900px){#mainNav{position:absolute;top:100%;left:0;right:0;background:#fff;border-bottom:1px solid var(--rule);flex-direction:column;padding:8px 16px 16px;display:none}#mainNav.open{display:flex}#mainNav a{padding:10px 8px}.nt{display:block}}
-.hero{max-width:900px;margin:0 auto;padding:48px 24px 8px;text-align:center}
-h1{font-weight:800;font-size:clamp(24px,3.6vw,36px);line-height:1.25;margin:0 0 14px}
-.hero p{color:var(--soft);font-size:15.5px;font-weight:500;max-width:60ch;margin:0 auto 28px}
-.panel{border:1px solid var(--rule);border-radius:var(--r);padding:22px;text-align:left;max-width:1000px;margin:0 auto}
-#textInput{width:100%;min-height:58px;resize:vertical;border:1px solid var(--rule);border-radius:8px;padding:14px 16px;font-family:inherit;font-size:19px;color:var(--ink)}
-#textInput:focus{border-color:var(--focus)}
-.controls{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:16px}
-.cc{border:1px solid var(--rule);border-radius:var(--r);padding:16px 18px;text-align:center}
-.cc label{display:block;font-size:13.5px;font-weight:600;margin-bottom:12px}
-.cc input[type=range]{width:100%;accent-color:var(--accent)}
-.cc input[type=color]{width:44px;height:32px;border:1px solid var(--rule);border-radius:6px;padding:0;background:none;cursor:pointer}
-@media(max-width:700px){.controls{grid-template-columns:1fr}}
-.tools{display:flex;align-items:center;gap:10px;margin-top:14px;font-size:13px;color:var(--soft)}.tools .cnt{margin-right:auto}
-.tools select{font:inherit;font-size:13px;padding:6px 8px;border:1px solid var(--rule);border-radius:6px}
-.tw{max-width:1180px;margin:20px auto 0;padding:0 24px;display:flex;justify-content:flex-end;min-height:20px}
-#toast{font-size:13px;color:var(--accent);font-weight:600;opacity:0;transition:opacity .25s}#toast.show{opacity:1}
-.grid{max-width:1180px;margin:10px auto 8px;padding:0 24px;display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
-.font-card{border:1px solid var(--rule);border-radius:var(--r);padding:22px 26px;display:flex;flex-direction:column;gap:16px;min-width:0}
-.fname{font-size:14px;font-weight:600;display:flex;gap:7px}.a-mark{color:var(--soft);font-weight:400}
-.preview{font-size:34px;line-height:1.45;word-break:break-word;min-height:80px;display:flex;align-items:center;justify-content:center;text-align:center;padding:10px 12px;border-radius:6px}
-.card-actions{display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-.btn{font:inherit;font-size:12px;font-weight:600;border:1px solid var(--rule);background:#fff;color:var(--ink);padding:7px 12px;border-radius:20px;cursor:pointer}
-.btn:hover{border-color:var(--accent)}.btn.primary{background:var(--accent);color:#fff;border-color:var(--accent)}.btn.primary:hover{background:var(--accent-dark)}
-.empty{max-width:1180px;margin:24px auto 40px;padding:48px 24px;text-align:center;color:var(--soft)}
-.pager{max-width:1180px;margin:8px auto 30px;padding:0 24px;display:flex;justify-content:center;gap:6px;flex-wrap:wrap}
-.page-btn{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--rule);background:#fff;min-width:38px;height:38px;border-radius:8px;cursor:pointer}
-.page-btn:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}.page-btn.active{background:var(--accent);color:#fff;border-color:var(--accent)}.page-btn:disabled{opacity:.4;cursor:not-allowed}
-.banner{max-width:808px;margin:0 auto;padding:30px 24px 0}.banner img{display:block;width:100%;height:auto;border-radius:var(--r)}
-section.block{max-width:1180px;margin:0 auto;padding:56px 24px 0}
-.sh{max-width:700px;margin:0 auto 28px;text-align:center}
-.kicker{display:block;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);margin-bottom:8px}
-h2{font-weight:700;font-size:clamp(22px,2.6vw,28px);margin:0 0 10px}.sh p{color:var(--soft);font-size:15px;font-weight:500;margin:0}
-.copy{max-width:760px;margin:0 auto}.copy p,.copy li{color:var(--soft);font-size:15px;font-weight:500}.copy p{margin:0 0 14px}.copy ul{padding-left:20px;margin:0}.copy li{margin-bottom:9px}.copy strong{color:var(--ink)}
-.fg{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.fc{border:1px solid var(--rule);border-radius:8px;padding:22px}.fc h3{font-size:15px;margin:0 0 8px}.fc p{font-size:13.5px;color:var(--soft);font-weight:500;margin:0}
-@media(max-width:860px){.fg{grid-template-columns:repeat(2,1fr)}}@media(max-width:560px){.fg{grid-template-columns:1fr}}
-.steps{max-width:760px;margin:0 auto;border-top:1px solid var(--rule)}.step{display:flex;gap:20px;padding:20px 0;border-bottom:1px solid var(--rule)}
-.step b{font-size:20px;color:var(--accent);width:30px;flex-shrink:0}.step h3{font-size:15.5px;margin:0 0 4px}.step p{font-size:14.5px;color:var(--soft);font-weight:500;margin:0}
-.tw2{max-width:760px;margin:0 auto;overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:14px;color:var(--soft)}
-th,td{padding:12px 14px;border:1px solid var(--rule);text-align:left;vertical-align:top}th{background:var(--accent-soft);color:var(--ink)}
-.note{border-left:3px solid var(--accent);background:var(--accent-soft);padding:16px 20px;border-radius:0 var(--r) var(--r) 0;color:var(--soft);font-size:14.5px;font-weight:500;margin-bottom:14px}
-.author{display:grid;grid-template-columns:auto 1fr;gap:18px;align-items:center;max-width:820px;margin:0 auto;padding:24px;border:1px solid var(--rule);border-radius:var(--r)}
-.av{width:64px;height:64px;border-radius:50%;overflow:hidden;display:flex;align-items:center;justify-content:center;background:var(--accent-soft);color:var(--accent);font-size:24px;font-weight:800}
-.av img{width:100%;height:100%;object-fit:cover;display:block}
-.author h3{margin:0 0 4px;font-size:17px}.author p{margin:0;color:var(--soft);font-size:14px;font-weight:500}
-@media(max-width:560px){.author{grid-template-columns:1fr;text-align:center}.av{margin:auto}}
-.faq{max-width:760px;margin:0 auto;display:flex;flex-direction:column;gap:10px}
-details{border:1px solid var(--rule);border-radius:var(--r)}summary{cursor:pointer;padding:16px 20px;font-size:14.5px;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px}
-summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--accent);font-size:18px}details[open] summary::after{content:"–"}
-details p{margin:0;padding:0 20px 18px;font-size:14.5px;color:var(--soft);font-weight:500}
-footer{border-top:1px solid var(--rule);padding:40px 24px 28px;margin-top:56px}
+@media(max-width:560px){header{padding:12px 16px}}
+
+/* ---- shared footer (markup lives in _includes/footer.html) ---- */
+footer{border-top:1px solid var(--rule);padding:40px 24px 28px;margin-top:0}
 .fi{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
-footer h4{font-size:13px;margin:0 0 12px}footer p{font-size:13px;color:var(--soft);font-weight:500;margin:0;max-width:36ch}
+footer h4{font-size:13px;font-weight:700;margin:0 0 12px}footer p{font-size:13px;color:var(--soft);font-weight:500;margin:0;max-width:36ch}
 footer ul{list-style:none;margin:0;padding:0}footer li{margin-bottom:8px}footer li a{font-size:13px;color:var(--soft);font-weight:500;text-decoration:none}footer li a:hover{color:var(--accent)}
 .fb{max-width:1180px;margin:28px auto 0;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:var(--soft)}
-@media(max-width:760px){.grid{grid-template-columns:1fr}.preview{font-size:26px}.fi{grid-template-columns:1fr;gap:24px}}
-#cookieConsent{position:fixed;left:16px;bottom:16px;z-index:999;max-width:360px;background:#fff;border:1px solid var(--rule);border-radius:var(--r);box-shadow:0 8px 28px rgba(0,0,0,.14);padding:16px 18px;transform:translateY(140%);opacity:0;transition:.35s;pointer-events:none}
-#cookieConsent.show{transform:none;opacity:1;pointer-events:auto}#cookieConsent p{margin:0 0 12px;font-size:13px;color:var(--soft)}#cookieConsent div{display:flex;gap:8px}#cookieConsent .btn{flex:1}
-.tabs{max-width:1180px;margin:22px auto 0;padding:0 24px;display:flex;gap:8px;flex-wrap:wrap;justify-content:center}
-.tab{font:inherit;font-size:13px;font-weight:600;border:1px solid var(--rule);background:#fff;padding:8px 16px;border-radius:20px;cursor:pointer}
-.tab:hover{border-color:var(--accent)}.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
-.badge{margin-left:auto;font-size:11px;font-weight:600;color:var(--accent-dark);background:var(--accent-soft);padding:2px 9px;border-radius:12px}
-img{max-width:100%}
-@media(max-width:560px){
-header{padding:12px 16px}
-.hero{padding:32px 16px 8px}
-.panel{padding:16px}
-section.block{padding:40px 16px 0}
-.banner{padding:24px 16px 0}
-.grid,.tabs,.pager,.tw{padding-left:16px;padding-right:16px}
-.font-card{padding:18px}
-.tab{padding:7px 12px;font-size:12.5px}
-th,td{padding:9px 10px;font-size:13px}
-.sh{margin-bottom:22px}
-#cookieConsent{right:16px;max-width:none}
-}
-.tools{flex-wrap:wrap}.tools label{display:flex;align-items:center;gap:6px}
-  .as-social{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
-.as-social a{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--accent-soft);color:var(--accent-dark);border:1px solid var(--rule);text-decoration:none;transition:background .2s,color .2s,transform .2s}
-.as-social a:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-2px)}
+@media(max-width:760px){.fi{grid-template-columns:1fr;gap:24px}}
+
+/* ---- page components ---- */
+.bc>*+*{margin-top:1rem}.bc{max-width:46rem}.bc strong{color:var(--ink)}
+.bc ul{list-style:disc;padding-left:1.25rem}.bc ol{list-style:decimal;padding-left:1.25rem}.bc li+li{margin-top:.5rem}
+.bc a,a.lnk{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+a.lnk:hover,.bc a:hover{color:var(--accent-dark)}
+.chip{font:inherit;font-size:.875rem;font-weight:600;border:1px solid var(--rule);background:#fff;color:var(--ink);padding:.4rem .85rem;border-radius:.375rem;cursor:pointer;line-height:1.25}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.chip-sm{font-weight:500;padding:.3rem .65rem}
+.font-card{border:1px solid var(--rule);border-radius:.5rem;padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:.9rem;min-width:0;background:#fff}
+.preview{min-height:96px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 16px;border:1px solid var(--rule);border-radius:.375rem;line-height:1.5;overflow-wrap:anywhere}
+.act{font:inherit;font-size:.8125rem;font-weight:600;border:1px solid var(--rule);background:#fff;color:var(--ink);padding:.4rem .8rem;border-radius:.375rem;cursor:pointer}
+.act:hover{border-color:var(--accent)}
+.act-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.act-primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.pg{font:inherit;font-size:.8125rem;font-weight:600;border:1px solid var(--rule);background:#fff;min-width:2.4rem;height:2.4rem;border-radius:.375rem;cursor:pointer}
+.pg:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.pg[aria-current="page"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pg:disabled{opacity:.4;cursor:not-allowed}
+#toast{opacity:0;transition:opacity .25s}#toast.show{opacity:1}
+.note{border-left:4px solid var(--accent);background:#fff;padding:1rem 1.25rem;border-radius:0 .5rem .5rem 0}
+table.tb{width:100%;border-collapse:collapse;font-size:.95rem}
+table.tb th,table.tb td{padding:.7rem .9rem;border:1px solid var(--rule);text-align:left;vertical-align:top}
+table.tb th{background:var(--accent-soft);color:var(--ink);font-weight:600}
+details{border:1px solid var(--rule);border-radius:.5rem;background:#fff}
+summary{cursor:pointer;padding:1rem 1.25rem;font-size:1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px;color:var(--ink)}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--accent);font-size:1.25rem;line-height:1}details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 1.25rem 1.1rem;color:var(--soft)}
+.as-social{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.as-social a{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--accent-soft);color:var(--accent-dark);border:1px solid var(--rule);text-decoration:none;transition:background .2s,color .2s}
+.as-social a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
 .as-social svg{width:20px;height:20px;display:block}
 @media(max-width:560px){.as-social{justify-content:center}}
-  /* ===== Share rail (left) ===== */
+.gl dt{font-weight:700;color:var(--ink)}.gl dd{margin:.15rem 0 1rem;color:var(--soft)}
+pre.code{background:var(--ink);color:#EAF4F0;border-radius:.5rem;padding:1rem 1.25rem;overflow-x:auto;font-size:.85rem;line-height:1.6;max-width:46rem}
+
+/* ---- share rail (left) ---- */
 .share-rail{position:fixed;left:0;top:50%;transform:translateY(-50%);z-index:60}
 .share-list{display:flex;flex-direction:column;width:44px;border-radius:0 12px 12px 0;overflow:hidden;box-shadow:0 6px 20px rgba(0,0,0,.15)}
 .share-label{background:#fff;color:var(--ink);font-size:11px;font-weight:700;text-align:center;padding:8px 2px;border:1px solid var(--rule);border-left:0;border-radius:0 12px 0 0}
@@ -130,18 +106,7 @@ th,td{padding:9px 10px;font-size:13px}
 .share-list a:hover,.share-list button:hover{background:var(--accent-dark)}
 .share-list svg{width:18px;height:18px;display:block}
 .share-toggle{display:none}
-
-/* ===== Character map floating button (bottom right) ===== */
-.cmap-fab{position:fixed;right:20px;bottom:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:55;width:58px;height:58px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 24px rgba(14,143,118,.4);transition:transform .2s,background .2s}
-.cmap-fab:hover{background:var(--accent-dark);transform:translateY(-3px)}
-.cmap-fab svg{width:28px;height:28px;display:block}
-.cmap-fab span{position:absolute;right:68px;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:6px 10px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
-.cmap-fab:hover span,.cmap-fab:focus-visible span{opacity:1}
-
-@media(max-width:700px){
-  .cmap-fab{width:50px;height:50px;right:14px;bottom:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}
-  .cmap-fab svg{width:24px;height:24px}
-  .cmap-fab span{display:none}
+@media(max-width:1100px){
   .share-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:42px;background:var(--accent);color:#fff;border:0;padding:0;border-radius:0 10px 10px 0;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18)}
   .share-toggle svg{width:18px;height:18px}
   .share-list{display:none;position:absolute;left:38px;top:0;flex-direction:row;width:auto;height:42px;border-radius:10px}
@@ -149,226 +114,571 @@ th,td{padding:9px 10px;font-size:13px}
   .share-label{display:none}
   .share-list a,.share-list button{width:42px}
 }
-@media print{.share-rail,.cmap-fab{display:none!important}}
+
+/* ---- character map button (bottom right) ---- */
+.cmap-fab{position:fixed;right:20px;bottom:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:55;width:58px;height:58px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 24px rgba(10,110,90,.4);transition:transform .2s,background .2s}
+.cmap-fab:hover{background:var(--accent-dark);transform:translateY(-3px)}
+.cmap-fab svg{width:28px;height:28px;display:block}
+.cmap-fab span{position:absolute;right:68px;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:6px 10px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.cmap-fab:hover span,.cmap-fab:focus-visible span{opacity:1}
+@media(max-width:700px){.cmap-fab{width:50px;height:50px;right:14px;bottom:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}.cmap-fab svg{width:24px;height:24px}.cmap-fab span{display:none}}
+
+/* ---- notice ---- */
+#cookieConsent{position:fixed;left:16px;bottom:16px;z-index:999;max-width:380px;background:#fff;border:1px solid var(--rule);border-radius:.5rem;box-shadow:0 8px 28px rgba(0,0,0,.14);padding:16px 18px;transform:translateY(140%);opacity:0;transition:.35s;pointer-events:none}
+#cookieConsent.show{transform:none;opacity:1;pointer-events:auto}
+#cookieConsent p{margin:0 0 12px;font-size:13px;max-width:none;color:var(--soft)}
+#cookieConsent a{color:var(--accent);font-weight:600}
+#cookieConsent button{font:inherit;font-size:13px;font-weight:600;background:var(--accent);color:#fff;border:0;border-radius:.375rem;padding:.45rem 1rem;cursor:pointer}
+#cookieConsent button:hover{background:var(--accent-dark)}
+@media(max-width:560px){#cookieConsent{right:16px;max-width:none}}
+@media print{.share-rail,.cmap-fab,#cookieConsent{display:none!important}}
 </style>
 </head>
-<body>
+<body class="bg-white text-brand-ink antialiased">
+<a href="#tool" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-brand-ink">Skip to the generator</a>
 
 {% include header.html %}
 
 <main>
-<section class="hero" id="tool">
-  <h1>Hindi Font Gen – Calligraphy Hindi Fonts Online</h1>
-  <p>Type your Hindi or English text, preview it in Devanagari fonts, adjust size and colours, then copy the text or save it as a PNG image.</p>
-  <div class="panel">
-    <textarea id="textInput" aria-label="Enter your Hindi or English text" placeholder="Type your text in Hindi or English &amp; see it transform..." maxlength="200">आप कैसे हैं?</textarea>
-    <div class="controls">
-      <div class="cc"><label for="sizeRange">Font Size — <span id="sizeVal">30px</span></label><input type="range" id="sizeRange" min="16" max="56" value="30"></div>
-      <div class="cc"><label for="fontColor">Text Colour</label><input type="color" id="fontColor" value="#211B16"></div>
-      <div class="cc"><label for="bgColor">Background Colour</label><input type="color" id="bgColor" value="#ffffff"></div>
+
+<section id="tool" class="bg-brand-deep text-white">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 pb-28 pt-10 sm:pt-14">
+    <h1 class="max-w-3xl font-display text-[2rem] font-bold leading-[1.15] sm:text-5xl">Hindi Font Generator: see your text in <span data-font-count>61</span> Devanagari fonts</h1>
+    <div class="mt-4 h-1 w-24 bg-brand-gold" aria-hidden="true"></div>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/90">Type Hindi or English, compare it across the fonts below, adjust size, colours and effect, then copy the text or save it as a PNG image.</p>
+  </div>
+</section>
+
+<div class="relative z-10 -mt-20 mx-auto max-w-[1228px] px-4 min-[561px]:px-6">
+  <div class="rounded-lg border border-brand-line bg-white p-4 sm:p-6">
+    <label for="textInput" class="mb-2 block text-sm font-semibold">Your text</label>
+    <textarea id="textInput" rows="2" maxlength="200" lang="hi" class="block w-full resize-y rounded-md border border-brand-line bg-white px-4 py-3 text-2xl leading-snug text-brand-ink focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" placeholder="Type your text in Hindi or English &amp; see it transform...">आप कैसे हैं?</textarea>
+    <div class="mt-3 flex flex-wrap items-center gap-2 text-sm">
+      <span class="mr-2 text-brand-soft"><span id="charCount">0</span>/200 characters</span>
+      <span class="text-brand-soft">Try a phrase:</span>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="शुभ दीपावली">शुभ दीपावली</button>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="सुप्रभात">सुप्रभात</button>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="आपका स्वागत है">आपका स्वागत है</button>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="श्री गणेशाय नमः">श्री गणेशाय नमः</button>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="जन्मदिन की हार्दिक शुभकामनाएं">जन्मदिन की हार्दिक शुभकामनाएं</button>
     </div>
-    <div class="tools">
-      <span class="cnt"><span id="charCount">0</span>/200</span>
-      <label>Effect <select id="effectSel"><option value="none">None</option><option value="outline">Outline</option><option value="shadow">Shadow</option><option value="glow">Glow</option><option value="3d">3D</option><option value="gradient">Gradient</option></select></label>
-      <label>Sort <select id="sortOrder"><option value="default">Default</option><option value="az">A–Z</option></select></label>
-    </div>
-  </div>
-</section>
 
-<div class="tabs" id="tabs" role="group" aria-label="Filter fonts by style">
-  <button type="button" class="tab active" data-cat="all">All</button>
-  <button type="button" class="tab" data-cat="s">Stylish &amp; Calligraphy</button>
-  <button type="button" class="tab" data-cat="b">Bold</button>
-  <button type="button" class="tab" data-cat="c">Classic</button>
-  <button type="button" class="tab" data-cat="n">Clean</button>
-</div>
-<div class="tw"><span id="toast" role="status" aria-live="polite">Copied!</span></div>
-<div class="grid" id="fontGrid"></div>
-<div class="empty" id="emptyState" style="display:none">Type some text above to see font previews.</div>
-<div class="pager" id="pagination" role="navigation" aria-label="Font pages"></div>
-<noscript><p class="empty">This generator needs JavaScript to show live font previews. Please enable it in your browser.</p></noscript>
-
-<div class="banner"><img src="/hindifontgen-intro.webp" alt="Hindi Font Generator preview showing Hindi text in multiple font styles" width="1672" height="941" loading="lazy" decoding="async"></div>
-
-<section class="block" id="about-tool">
-  <div class="sh"><span class="kicker">Hindi typography online</span><h2>What is a Hindi font generator?</h2></div>
-  <div class="copy">
-    <p>A Hindi font generator shows the same Unicode Hindi text in many different Devanagari typefaces side by side. Instead of switching fonts one by one in a design app, you type once and compare every style at the same time.</p>
-    <p>Nothing is converted into symbols. Your text stays normal Unicode, and only the typeface changes how it looks. That is why this tool is useful for names, quotes, Instagram and WhatsApp graphics, wedding cards, posters and thumbnails: you see your real words, with real matras and conjuncts, before you design anything.</p>
-    <p>Pick a style, adjust size and colours, then use <strong>Copy</strong> for plain text or <strong>PNG</strong> and <strong>Transparent</strong> to save the exact styled look as an image.</p>
-  </div>
-</section>
-
-<section class="block" id="how">
-  <div class="sh"><h2>How to use it in 4 steps</h2></div>
-  <div class="steps">
-    <div class="step"><b>1</b><div><h3>Type your text</h3><p>Enter Hindi or English text in the box at the top (up to 200 characters).</p></div></div>
-    <div class="step"><b>2</b><div><h3>Set size and colours</h3><p>Move the slider, pick text and background colours, and optionally an effect: Outline, Shadow, Glow, 3D or Gradient.</p></div></div>
-    <div class="step"><b>3</b><div><h3>Browse the styles</h3><p>Use the Stylish, Bold, Classic and Clean tabs to filter, then scroll through the pages. Each card shows your text in a different font.</p></div></div>
-    <div class="step"><b>4</b><div><h3>Copy or download</h3><p>Use Copy for text, PNG or Transparent for an image, or Font to open that typeface on Google Fonts.</p></div></div>
-  </div>
-</section>
-
-<section class="block" id="font-picks">
-  <div class="sh"><span class="kicker">Font guide</span><h2>Hindi fonts in this tool and where they work best</h2><p>Fonts are grouped by look. Use the tabs above the previews to filter them.</p></div>
-  <div class="tw2"><table>
-    <thead><tr><th>Group</th><th>Fonts</th><th>Best for</th></tr></thead>
-    <tbody>
-      <tr><td>Stylish &amp; calligraphy</td><td>Kalam, Playpen Sans Devanagari, Amita, Tillana, Modak, Jaini, Yatra One, Rozha One, Sahitya, Sarala</td><td>Names, quotes, Instagram bios, greeting and wedding cards</td></tr>
-      <tr><td>Bold</td><td>Khand, Teko, Rajdhani, Sarpanch, Biryani, Baloo 2</td><td>Posters, banners, YouTube thumbnails</td></tr>
-      <tr><td>Classic serif</td><td>Eczar, Noto Serif Devanagari, Inknut Antiqua, Vesper Libre, Rhodium Libre</td><td>Formal invitations, certificates, book-style text</td></tr>
-      <tr><td>Clean sans-serif</td><td>Hind, Mukta, Noto Sans Devanagari, Anek Devanagari, Palanquin</td><td>Captions, longer text, website headings</td></tr>
-    </tbody>
-  </table></div>
-</section>
-
-<section class="block" id="devanagari-basics">
-  <div class="sh"><span class="kicker">Typography basics</span><h2>What makes Hindi text look right in a font</h2></div>
-  <div class="copy">
-    <p>Most Devanagari letters hang from a horizontal line called the <strong>shirorekha</strong>. In a well-made font that line runs unbroken from one letter to the next, so a word reads as a single strip. If you see small gaps in it, the cause is usually extra letter-spacing added in a design app. Leave letter-spacing at zero for Hindi.</p>
-    <p><strong>Matras</strong> (vowel signs) sit above, below or beside the letter, as in कि, की, कु, कू, के and कै. They need vertical room, so a tight line height can make them touch the line above. For text on more than one line, about 1.5 times the font size is a safe line height.</p>
-    <p><strong>Conjuncts</strong> such as क्ष, त्र, ज्ञ and श्र are single shapes built from two or more letters. Most modern fonts draw them well, but some decorative fonts stack them awkwardly or show a visible halant (्). That is the main reason to test your own phrase instead of judging a font by one letter.</p>
-    <p>Thin strokes also do not survive shrinking. Small marks like the chandrabindu (ँ) and the nukta (the dot in ड़ or क़) are the first to vanish, so pick a medium or bold weight for anything people will read on a phone.</p>
-  </div>
-</section>
-
-<section class="block" id="try-phrases">
-  <div class="sh"><h2>Phrases to try and fonts that suit them</h2><p>These are starting points only. Type the phrase in the box above and judge the result yourself.</p></div>
-  <div class="tw2"><table>
-    <thead><tr><th>Phrase</th><th>Typical use</th><th>Fonts worth trying</th></tr></thead>
-    <tbody>
-      <tr><td>शुभ दीपावली</td><td>Festival greetings, WhatsApp status</td><td>Yatra One, Rozha One, Tillana</td></tr>
-      <tr><td>जन्मदिन की हार्दिक शुभकामनाएं</td><td>Birthday posts and cards (long phrase, so readability matters)</td><td>Kalam, Hind, Mukta</td></tr>
-      <tr><td>आपका स्वागत है</td><td>Shop banners, event boards</td><td>Khand, Baloo 2, Sarpanch</td></tr>
-      <tr><td>सुप्रभात</td><td>Good-morning images</td><td>Playpen Sans Devanagari, Amita, Sahitya</td></tr>
-      <tr><td>श्री गणेशाय नमः</td><td>Invitations, pooja and wedding cards</td><td>Tiro Devanagari Hindi, Eczar, Sanskrit Text</td></tr>
-    </tbody>
-  </table></div>
-</section>
-
-<section class="block" id="unicode-guide">
-  <div class="sh"><span class="kicker">Useful knowledge</span><h2>Unicode Hindi fonts vs. old font-based text</h2></div>
-  <div class="copy">
-    <p>Modern Hindi typing uses <strong>Unicode Devanagari</strong>. A word like <strong>नमस्ते</strong> is stored as standard characters that can be searched, copied and read by any website or app. The font only changes how those characters look.</p>
-    <p>Older legacy workflows (such as KrutiDev) depend on a special character mapping, so changing the font alone does not convert them. If you have legacy text, use the <a href="https://hindifontgen.in/unicode-to-krutidev-converter.html">Unicode ⇄ KrutiDev converter</a>. To find a specific symbol or matra, try the <a href="https://hindifontgen.in/character-map.html">Hindi character map</a>.</p>
-  </div>
-</section>
-
-<section class="block" id="use-image">
-  <div class="sh"><h2>Using your PNG on social media and in designs</h2></div>
-  <div class="copy"><ul>
-    <li><strong>Canva or Photoshop:</strong> download the <em>Transparent</em> PNG and drop it onto any photo or background.</li>
-    <li><strong>Instagram and WhatsApp:</strong> download the normal <em>PNG</em> with your chosen background colour and post it as an image or status.</li>
-    <li><strong>Word or other apps:</strong> pasted text uses the app's own font. Download the font from its Google Fonts page and install it, or use the PNG.</li>
-  </ul></div>
-</section>
-
-<section class="block" id="effects-guide">
-  <div class="sh"><h2>Which effect works on which background</h2></div>
-  <div class="copy"><ul>
-    <li><strong>Outline</strong> keeps a busy photo visible through the letters. Use it with bold fonts, because a thin font looks weak when only the edges are drawn.</li>
-    <li><strong>Shadow</strong> separates text from a light photo or plain light background without changing the colour.</li>
-    <li><strong>Glow</strong> needs a dark background. On white it is almost invisible.</li>
-    <li><strong>3D</strong> suits short headings of a word or two. On a long line it turns messy.</li>
-    <li><strong>Gradient</strong> blends from your text colour to purple. Keep it to a headline or one short line.</li>
-  </ul></div>
-</section>
-
-<section class="block" id="sizes">
-  <div class="sh"><h2>Image sizes and PNG output</h2></div>
-  <div class="copy">
-    <p>The PNG you download is drawn at three times the size shown in the preview, so a 40px preview gives letters about 120px tall. That is plenty for a sticker, caption or overlay. For a full post, download the Transparent PNG and place it at the canvas size you need in your design app.</p>
-    <ul>
-      <li>Instagram square post: 1080 × 1080 px</li>
-      <li>Instagram story, reel or WhatsApp status: 1080 × 1920 px</li>
-      <li>YouTube thumbnail: 1280 × 720 px</li>
-    </ul>
-    <p style="margin-top:14px">As a rough guide, a headline on a 1080px-wide post needs letters around 80 to 150px tall to stay readable on a phone.</p>
-  </div>
-</section>
-
-<section class="block" id="fixes">
-  <div class="sh"><h2>Common problems and quick fixes</h2></div>
-  <div class="copy"><ul>
-    <li><strong>Boxes instead of letters:</strong> the font is still loading or does not contain that character. Wait a second, then try another style.</li>
-    <li><strong>Different look after pasting into another app:</strong> the clipboard carries text only, never the font. Use the PNG when the look must stay exactly the same.</li>
-    <li><strong>Letters clipped at the top in your design app:</strong> matras need space. Increase the line height instead of squeezing lines together.</li>
-    <li><strong>A dot floating beside ड़, ढ़ or क़:</strong> some keyboards type the nukta as a separate character and not every font joins it neatly. Retype the letter or try a different font.</li>
-    <li><strong>PNG spacing differs slightly from the preview:</strong> the image is drawn on a canvas, so tiny spacing differences can appear. Open the PNG once before you publish it.</li>
-  </ul></div>
-</section>
-
-<section class="block" id="privacy-tool">
-  <div class="sh"><span class="kicker">How the tool works</span><h2>Your text and the preview</h2></div>
-  <div class="copy">
-    <div class="note"><strong>Browser-based:</strong> previews, colour changes and PNG creation run in your browser, and no account is needed. Font files are loaded from Google Fonts when the page needs them. See our <a href="https://hindifontgen.in/privacy-policy.html">Privacy Policy</a> for details.</div>
-    <p>When you change the size or colours the previews update instantly without reloading, and the PNG is created on your own device.</p>
-  </div>
-</section>
-<section class="block" id="author">
-  <div class="sh"><h2>About Author</h2></div>
-  <div class="author">
-    <div class="av"><img src="/ali.png" alt="Ali Hamza, creator of HindiFontGen" width="64" height="64" loading="lazy" decoding="async" onerror="this.replaceWith(document.createTextNode('A'))"></div>
-    <div>
-      <h3>Ali Hamza</h3>
-      <p>Hi, I’m Ali Hamza, the guy behind HindiFontGen. I got tired of switching between a dozen sites just to find a good Hindi font, so I built one place where you can see your text in every style. Got feedback or spotted a bug? Mail me at <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p>
-      <div class="as-social" aria-label="Follow Ali Hamza">
-        <a href="https://www.facebook.com/profile.php?id=61577195696602" target="_blank" rel="noopener noreferrer me" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
-        </a>
-        <a href="https://www.instagram.com/ali_hamza_786_n/" target="_blank" rel="noopener noreferrer me" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
-        </a>
-        <a href="https://x.com/ihamzali" target="_blank" rel="noopener noreferrer me" aria-label="X (Twitter)">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-        </a>
-        <a href="https://www.youtube.com/@alihamzah.Official" target="_blank" rel="noopener noreferrer me" aria-label="YouTube">
-          <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg>
-        </a>
+    <div class="mt-5 grid gap-4 border-t border-brand-line pt-5 sm:grid-cols-2 lg:grid-cols-5">
+      <div>
+        <label for="sizeRange" class="mb-2 block text-sm font-semibold">Font size: <span id="sizeVal">30px</span></label>
+        <input type="range" id="sizeRange" min="16" max="56" value="30" class="w-full accent-brand">
+      </div>
+      <div>
+        <label for="fontColor" class="mb-2 block text-sm font-semibold">Text colour</label>
+        <input type="color" id="fontColor" value="#211B16" class="h-10 w-full cursor-pointer rounded border border-brand-line bg-white p-1">
+      </div>
+      <div>
+        <label for="bgColor" class="mb-2 block text-sm font-semibold">Background colour</label>
+        <input type="color" id="bgColor" value="#ffffff" class="h-10 w-full cursor-pointer rounded border border-brand-line bg-white p-1">
+      </div>
+      <div>
+        <label for="effectSel" class="mb-2 block text-sm font-semibold">Effect</label>
+        <select id="effectSel" class="h-10 w-full rounded border border-brand-line bg-white px-2 text-sm"><option value="none">None</option><option value="outline">Outline</option><option value="shadow">Shadow</option><option value="glow">Glow</option><option value="3d">3D</option><option value="gradient">Gradient</option></select>
+      </div>
+      <div>
+        <label for="sortOrder" class="mb-2 block text-sm font-semibold">Sort</label>
+        <select id="sortOrder" class="h-10 w-full rounded border border-brand-line bg-white px-2 text-sm"><option value="default">Default</option><option value="az">A–Z</option></select>
       </div>
     </div>
+    <p class="mt-4 text-sm text-brand-soft"><strong class="text-brand-ink">Copy</strong> copies plain text only. <strong class="text-brand-ink">PNG</strong> and <strong class="text-brand-ink">Transparent</strong> save the styled look as an image.</p>
+  </div>
+
+  <div class="mt-8">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div id="tabs" role="group" aria-label="Filter fonts by style" class="flex flex-wrap gap-2">
+        <button type="button" class="chip" data-cat="all" aria-pressed="true">All</button>
+        <button type="button" class="chip" data-cat="s" aria-pressed="false">Stylish &amp; Calligraphy</button>
+        <button type="button" class="chip" data-cat="b" aria-pressed="false">Bold</button>
+        <button type="button" class="chip" data-cat="c" aria-pressed="false">Classic</button>
+        <button type="button" class="chip" data-cat="n" aria-pressed="false">Clean</button>
+      </div>
+      <div>
+        <label for="fontSearch" class="sr-only">Search fonts by name</label>
+        <input id="fontSearch" type="search" autocomplete="off" placeholder="Search font name" class="h-10 w-full rounded border border-brand-line bg-white px-3 text-sm lg:w-64">
+      </div>
+    </div>
+    <div id="picks" role="group" aria-label="Fonts suggested for a use" class="mt-3 flex flex-wrap items-center gap-2 text-sm">
+      <span class="mr-1 text-brand-soft">Best for:</span>
+      <button type="button" class="chip chip-sm" data-pick="names" aria-pressed="false">Names</button>
+      <button type="button" class="chip chip-sm" data-pick="wedding" aria-pressed="false">Wedding &amp; invitations</button>
+      <button type="button" class="chip chip-sm" data-pick="festival" aria-pressed="false">Festival greetings</button>
+      <button type="button" class="chip chip-sm" data-pick="poster" aria-pressed="false">Posters &amp; thumbnails</button>
+      <button type="button" class="chip chip-sm" data-pick="text" aria-pressed="false">Captions &amp; longer text</button>
+    </div>
+    <div class="mt-4 flex min-h-[1.5rem] items-center justify-between text-sm text-brand-soft">
+      <p id="resultCount" aria-live="polite"></p>
+      <span id="toast" role="status" aria-live="polite" class="font-semibold text-brand">Copied!</span>
+    </div>
+  </div>
+
+  <div class="mt-2 grid gap-5 md:grid-cols-2" id="fontGrid"></div>
+  <div class="py-12 text-center text-brand-soft" id="emptyState" style="display:none">Type some text above to see font previews.</div>
+  <div class="py-12 text-center text-brand-soft" id="noMatch" style="display:none">No font matches these filters. <button type="button" id="clearFilters" class="lnk font-semibold text-brand underline">Clear filters</button></div>
+  <div class="mt-8 flex flex-wrap justify-center gap-2" id="pagination" role="navigation" aria-label="Font pages"></div>
+  <noscript><p class="py-12 text-center text-brand-soft">This generator needs JavaScript to show live font previews. Please enable it in your browser. The guides below work without it.</p></noscript>
+
+  <div class="mx-auto mt-14 max-w-3xl">
+    <img src="/hindifontgen-intro.webp" alt="Hindi Font Generator preview showing Hindi text in multiple font styles" width="1672" height="941" loading="lazy" decoding="async" class="w-full rounded-lg border border-brand-line">
+  </div>
+</div>
+
+<div class="h-14"></div>
+<section id="about-tool" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">What is a Hindi font generator?</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>A Hindi font generator shows the same Unicode Hindi text in many different Devanagari typefaces side by side. Instead of switching fonts one by one in a design app, you type once and compare every style at the same time.</p>
+<p>Nothing is converted into symbols. Your text stays normal Unicode, and only the typeface changes how it looks. That is why this tool is useful for names, quotes, Instagram and WhatsApp graphics, wedding cards, posters and thumbnails: you see your real words, with real matras and conjuncts, before you design anything.</p>
+<p>Pick a style, adjust size and colours, then use <strong>Copy</strong> for plain text or <strong>PNG</strong> and <strong>Transparent</strong> to save the exact styled look as an image.</p>
+</div>
+<div class="mt-10 grid gap-8 sm:grid-cols-2">
+  <div class="border-l-4 border-brand pl-5">
+    <h3 class="font-display text-xl font-bold text-brand-ink">What it does</h3>
+    <ul class="bc mt-3 text-brand-soft">
+      <li>Shows your text in <span data-font-count>61</span> Devanagari fonts, 12 at a time</li>
+      <li>Changes size, text colour, background colour and effect</li>
+      <li>Copies your text as plain Unicode</li>
+      <li>Saves a PNG with a background, or a transparent PNG</li>
+      <li>Opens each font's Google Fonts page</li>
+    </ul>
+  </div>
+  <div class="border-l-4 border-brand-gold pl-5">
+    <h3 class="font-display text-xl font-bold text-brand-ink">What it does not do</h3>
+    <ul class="bc mt-3 text-brand-soft">
+      <li>Install fonts on your phone or computer</li>
+      <li>Keep the font when you paste text into another app</li>
+      <li>Convert to Kruti Dev here (use the <a href="https://hindifontgen.in/unicode-to-krutidev-converter.html">converter</a>)</li>
+      <li>Save the text you type on a server</li>
+      <li>Offer fonts that are not on Google Fonts</li>
+    </ul>
+  </div>
+</div>
+</div>
+  </div>
+</section>
+<section id="how" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">How to use it in 4 steps</h2>
+    <div>
+<ol class="max-w-2xl divide-y divide-brand-line border-y border-brand-line">
+  <li class="flex gap-5 py-5"><b class="w-8 shrink-0 font-display text-3xl leading-none text-brand">1</b><div><h3 class="text-lg font-semibold text-brand-ink">Type your text</h3><p class="mt-1 text-brand-soft">Enter Hindi or English text in the box at the top (up to 200 characters), or tap one of the sample phrases.</p></div></li>
+  <li class="flex gap-5 py-5"><b class="w-8 shrink-0 font-display text-3xl leading-none text-brand">2</b><div><h3 class="text-lg font-semibold text-brand-ink">Set size and colours</h3><p class="mt-1 text-brand-soft">Move the slider, pick text and background colours, and optionally an effect: Outline, Shadow, Glow, 3D or Gradient.</p></div></li>
+  <li class="flex gap-5 py-5"><b class="w-8 shrink-0 font-display text-3xl leading-none text-brand">3</b><div><h3 class="text-lg font-semibold text-brand-ink">Narrow down the styles</h3><p class="mt-1 text-brand-soft">Use the Stylish, Bold, Classic and Clean tabs, the Best for shortcuts, or search a font by name. Each card shows your text in a different font.</p></div></li>
+  <li class="flex gap-5 py-5"><b class="w-8 shrink-0 font-display text-3xl leading-none text-brand">4</b><div><h3 class="text-lg font-semibold text-brand-ink">Copy or download</h3><p class="mt-1 text-brand-soft">Use Copy for text, PNG or Transparent for an image, or Get font to open that typeface on Google Fonts.</p></div></li>
+</ol>
+</div>
+  </div>
+</section>
+<section id="font-picks" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">All <span data-font-count>61</span> fonts, grouped by look</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>Every font in the generator is listed here, so you can see what is available before you type anything. Names link to the font's Google Fonts page, where you can read the licence and download the family.</p>
+</div>
+<div class="mt-8 max-w-3xl space-y-8">
+  <div class="border-t border-brand-line pt-5"><h3 class="font-display text-xl font-bold text-brand-ink">Stylish &amp; calligraphy (25)</h3><p class="mt-1 text-brand-soft">Handwriting, display and decorative faces. Best for names, quotes, Instagram bios, greeting and wedding cards.</p><ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem]"><li><a class="lnk" href="https://fonts.google.com/specimen/Kalam" target="_blank" rel="noopener">Kalam</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Playpen+Sans+Devanagari" target="_blank" rel="noopener">Playpen Sans Devanagari</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Amita" target="_blank" rel="noopener">Amita</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Tillana" target="_blank" rel="noopener">Tillana</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Modak" target="_blank" rel="noopener">Modak</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Jaini" target="_blank" rel="noopener">Jaini</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Jaini+Purva" target="_blank" rel="noopener">Jaini Purva</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Gajraj+One" target="_blank" rel="noopener">Gajraj One</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Yatra+One" target="_blank" rel="noopener">Yatra One</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Rozha+One" target="_blank" rel="noopener">Rozha One</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Sahitya" target="_blank" rel="noopener">Sahitya</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Sarala" target="_blank" rel="noopener">Sarala</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Halant" target="_blank" rel="noopener">Halant</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Kurale" target="_blank" rel="noopener">Kurale</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Sanskrit+Text" target="_blank" rel="noopener">Sanskrit Text</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Tiro+Devanagari+Hindi" target="_blank" rel="noopener">Tiro Devanagari Hindi</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Tiro+Devanagari+Marathi" target="_blank" rel="noopener">Tiro Devanagari Marathi</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Tiro+Devanagari+Sanskrit" target="_blank" rel="noopener">Tiro Devanagari Sanskrit</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Shobhika" target="_blank" rel="noopener">Shobhika</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Amiko" target="_blank" rel="noopener">Amiko</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Sura" target="_blank" rel="noopener">Sura</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Bakbak+One" target="_blank" rel="noopener">Bakbak One</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Sansita" target="_blank" rel="noopener">Sansita</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Arya" target="_blank" rel="noopener">Arya</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Karma" target="_blank" rel="noopener">Karma</a></li></ul></div>
+  <div class="border-t border-brand-line pt-5"><h3 class="font-display text-xl font-bold text-brand-ink">Bold (10)</h3><p class="mt-1 text-brand-soft">Heavy, condensed or high-impact faces. Best for posters, banners and YouTube thumbnails.</p><ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem]"><li><a class="lnk" href="https://fonts.google.com/specimen/Khand" target="_blank" rel="noopener">Khand</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Teko" target="_blank" rel="noopener">Teko</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Rajdhani" target="_blank" rel="noopener">Rajdhani</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Sarpanch" target="_blank" rel="noopener">Sarpanch</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Biryani" target="_blank" rel="noopener">Biryani</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Jaldi" target="_blank" rel="noopener">Jaldi</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Baloo+2" target="_blank" rel="noopener">Baloo 2</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Pragati+Narrow" target="_blank" rel="noopener">Pragati Narrow</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Khula" target="_blank" rel="noopener">Khula</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Kadwa" target="_blank" rel="noopener">Kadwa</a></li></ul></div>
+  <div class="border-t border-brand-line pt-5"><h3 class="font-display text-xl font-bold text-brand-ink">Classic serif (9)</h3><p class="mt-1 text-brand-soft">Serif faces with traditional proportions. Best for formal invitations, certificates and book-style text.</p><ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem]"><li><a class="lnk" href="https://fonts.google.com/specimen/Eczar" target="_blank" rel="noopener">Eczar</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Noto+Serif+Devanagari" target="_blank" rel="noopener">Noto Serif Devanagari</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Inknut+Antiqua" target="_blank" rel="noopener">Inknut Antiqua</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Vesper+Libre" target="_blank" rel="noopener">Vesper Libre</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Rhodium+Libre" target="_blank" rel="noopener">Rhodium Libre</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Glegoo" target="_blank" rel="noopener">Glegoo</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Asar" target="_blank" rel="noopener">Asar</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Martel" target="_blank" rel="noopener">Martel</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Annapurna+SIL" target="_blank" rel="noopener">Annapurna SIL</a></li></ul></div>
+  <div class="border-t border-brand-line pt-5"><h3 class="font-display text-xl font-bold text-brand-ink">Clean sans-serif (17)</h3><p class="mt-1 text-brand-soft">Plain, readable faces. Best for captions, longer text and website headings.</p><ul class="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-[0.95rem]"><li><a class="lnk" href="https://fonts.google.com/specimen/Hind" target="_blank" rel="noopener">Hind</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Mukta" target="_blank" rel="noopener">Mukta</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Noto+Sans+Devanagari" target="_blank" rel="noopener">Noto Sans Devanagari</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Anek+Devanagari" target="_blank" rel="noopener">Anek Devanagari</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Palanquin" target="_blank" rel="noopener">Palanquin</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Palanquin+Dark" target="_blank" rel="noopener">Palanquin Dark</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Martel+Sans" target="_blank" rel="noopener">Martel Sans</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Yantramanav" target="_blank" rel="noopener">Yantramanav</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Laila" target="_blank" rel="noopener">Laila</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Ranga" target="_blank" rel="noopener">Ranga</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Dekko" target="_blank" rel="noopener">Dekko</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Gotu" target="_blank" rel="noopener">Gotu</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Sumana" target="_blank" rel="noopener">Sumana</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Cambay" target="_blank" rel="noopener">Cambay</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Akshar" target="_blank" rel="noopener">Akshar</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Poppins" target="_blank" rel="noopener">Poppins</a></li><li><a class="lnk" href="https://fonts.google.com/specimen/Noto+Sans" target="_blank" rel="noopener">Noto Sans</a></li></ul></div>
+</div>
+</div>
+  </div>
+</section>
+<section id="devanagari-basics" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">What makes Hindi text look right in a font</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>Most Devanagari letters hang from a horizontal line called the <strong>shirorekha</strong>. In a well-made font that line runs unbroken from one letter to the next, so a word reads as a single strip. If you see small gaps in it, the cause is usually extra letter-spacing added in a design app. Leave letter-spacing at zero for Hindi.</p>
+<p><strong>Matras</strong> (vowel signs) sit above, below or beside the letter, as in <span lang="hi">कि, की, कु, कू, के</span> and <span lang="hi">कै</span>. They need vertical room, so a tight line height can make them touch the line above. For text on more than one line, about 1.5 times the font size is a safe line height.</p>
+<p><strong>Conjuncts</strong> such as <span lang="hi">क्ष, त्र, ज्ञ</span> and <span lang="hi">श्र</span> are single shapes built from two or more letters. Most modern fonts draw them well, but some decorative fonts stack them awkwardly or show a visible halant (<span lang="hi">्</span>). That is the main reason to test your own phrase instead of judging a font by one letter.</p>
+<p>Thin strokes also do not survive shrinking. Small marks like the chandrabindu (<span lang="hi">ँ</span>) and the nukta (the dot in <span lang="hi">ड़</span> or <span lang="hi">क़</span>) are the first to vanish, so pick a medium or bold weight for anything people will read on a phone.</p>
+</div>
+</div>
+  </div>
+</section>
+<section id="try-phrases" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Phrases to try and fonts that suit them</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft"><p>These are starting points only. Press Try to load a phrase into the generator, then judge the result yourself.</p></div>
+<div class="mt-6 max-w-3xl overflow-x-auto">
+<table class="tb">
+  <thead><tr><th>Phrase</th><th>Typical use</th><th>Fonts worth trying</th><th><span class="sr-only">Load phrase</span></th></tr></thead>
+  <tbody>
+    <tr><td lang="hi">शुभ दीपावली</td><td>Festival greetings, WhatsApp status</td><td>Yatra One, Rozha One, Tillana</td><td><button type="button" class="chip chip-sm" data-phrase="शुभ दीपावली" aria-label="Try the phrase शुभ दीपावली">Try</button></td></tr>
+    <tr><td lang="hi">जन्मदिन की हार्दिक शुभकामनाएं</td><td>Birthday posts and cards (long phrase, so readability matters)</td><td>Kalam, Hind, Mukta</td><td><button type="button" class="chip chip-sm" data-phrase="जन्मदिन की हार्दिक शुभकामनाएं" aria-label="Try the phrase जन्मदिन की हार्दिक शुभकामनाएं">Try</button></td></tr>
+    <tr><td lang="hi">आपका स्वागत है</td><td>Shop banners, event boards</td><td>Khand, Baloo 2, Sarpanch</td><td><button type="button" class="chip chip-sm" data-phrase="आपका स्वागत है" aria-label="Try the phrase आपका स्वागत है">Try</button></td></tr>
+    <tr><td lang="hi">सुप्रभात</td><td>Good-morning images</td><td>Playpen Sans Devanagari, Amita, Sahitya</td><td><button type="button" class="chip chip-sm" data-phrase="सुप्रभात" aria-label="Try the phrase सुप्रभात">Try</button></td></tr>
+    <tr><td lang="hi">श्री गणेशाय नमः</td><td>Invitations, pooja and wedding cards</td><td>Tiro Devanagari Hindi, Eczar, Sanskrit Text</td><td><button type="button" class="chip chip-sm" data-phrase="श्री गणेशाय नमः" aria-label="Try the phrase श्री गणेशाय नमः">Try</button></td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+  </div>
+</section>
+<section id="unicode-guide" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Unicode Hindi fonts vs. old font-based text</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>Modern Hindi typing uses <strong>Unicode Devanagari</strong>. A word like <strong lang="hi">नमस्ते</strong> is stored as standard characters that can be searched, copied and read by any website or app. The font only changes how those characters look.</p>
+<p>Older legacy workflows (such as KrutiDev) depend on a special character mapping, so changing the font alone does not convert them. If you have legacy text, use the <a href="https://hindifontgen.in/unicode-to-krutidev-converter.html">Unicode ⇄ KrutiDev converter</a>. To find a specific symbol or matra, try the <a href="https://hindifontgen.in/character-map.html">Hindi character map</a>.</p>
+</div>
+</div>
+  </div>
+</section>
+<section id="use-image" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Using your PNG on social media and in designs</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<ul>
+  <li><strong>Canva or Photoshop:</strong> download the <em>Transparent</em> PNG and drop it onto any photo or background.</li>
+  <li><strong>Instagram and WhatsApp:</strong> download the normal <em>PNG</em> with your chosen background colour and post it as an image or status.</li>
+  <li><strong>Word or other apps:</strong> pasted text uses the app's own font. Install the font (see the steps further down) or use the PNG.</li>
+</ul>
+</div>
+</div>
+  </div>
+</section>
+<section id="sizes" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Image sizes and PNG output</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>The PNG is drawn at three times the size shown in the preview, so a 40px preview gives letters about 120px tall. Very large images are drawn at a smaller scale automatically so that phone browsers can still create the file. Long text wraps at about 900px of preview width, and each line is centred, as it is in the preview. For a full post, download the Transparent PNG and place it at the canvas size you need in your design app.</p>
+<ul>
+  <li>Instagram square post: 1080 × 1080 px</li>
+  <li>Instagram story, reel or WhatsApp status: 1080 × 1920 px</li>
+  <li>YouTube thumbnail: 1280 × 720 px</li>
+</ul>
+<p>As a rough guide, a headline on a 1080px-wide post needs letters around 80 to 150px tall to stay readable on a phone.</p>
+</div>
+</div>
+  </div>
+</section>
+<section id="effects-guide" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Which effect works on which background</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<ul>
+  <li><strong>Outline</strong> keeps a busy photo visible through the letters. Use it with bold fonts, because a thin font looks weak when only the edges are drawn.</li>
+  <li><strong>Shadow</strong> separates text from a light photo or plain light background without changing the colour.</li>
+  <li><strong>Glow</strong> needs a dark background. On white it is almost invisible.</li>
+  <li><strong>3D</strong> suits short headings of a word or two. On a long line it turns messy.</li>
+  <li><strong>Gradient</strong> blends from your text colour to purple. Keep it to a headline or one short line.</li>
+</ul>
+</div>
+<div class="mt-8 grid max-w-3xl gap-4 sm:grid-cols-2 lg:grid-cols-3"><figure class="rounded-lg border border-brand-line p-4" style="background:#FFFFFF"><div class="font-display text-[2.75rem] font-bold leading-[1.3] " lang="hi" style="-webkit-text-stroke:1.5px #0A6E5A;color:transparent">भारत</div><figcaption class="mt-2 text-sm text-brand-soft"><strong>Outline</strong><br>Works on busy photos; use bold fonts.</figcaption></figure><figure class="rounded-lg border border-brand-line p-4" style="background:#FFFFFF"><div class="font-display text-[2.75rem] font-bold leading-[1.3] " lang="hi" style="color:#0F1E1A;text-shadow:3px 3px 3px rgba(0,0,0,.3)">भारत</div><figcaption class="mt-2 text-sm text-brand-soft"><strong>Shadow</strong><br>Lifts text off a light background.</figcaption></figure><figure class="rounded-lg border border-brand-line p-4" style="background:#0B1F1A"><div class="font-display text-[2.75rem] font-bold leading-[1.3] " lang="hi" style="color:#5FE3C0;text-shadow:0 0 6px #5FE3C0,0 0 16px #5FE3C0">भारत</div><figcaption class="mt-2 text-sm text-white/85"><strong>Glow</strong><br>Needs a dark background.</figcaption></figure><figure class="rounded-lg border border-brand-line p-4" style="background:#FFFFFF"><div class="font-display text-[2.75rem] font-bold leading-[1.3] " lang="hi" style="color:#0A6E5A;text-shadow:1px 1px 0 rgba(0,0,0,.4),2px 2px 0 rgba(0,0,0,.4),3px 3px 0 rgba(0,0,0,.4),4px 4px 0 rgba(0,0,0,.4)">भारत</div><figcaption class="mt-2 text-sm text-brand-soft"><strong>3D</strong><br>Short headings of one or two words.</figcaption></figure><figure class="rounded-lg border border-brand-line p-4" style="background:#FFFFFF"><div class="font-display text-[2.75rem] font-bold leading-[1.3] " lang="hi" style="background:linear-gradient(90deg,#0A6E5A,#7C3AED);-webkit-background-clip:text;background-clip:text;color:transparent">भारत</div><figcaption class="mt-2 text-sm text-brand-soft"><strong>Gradient</strong><br>A headline or one short line.</figcaption></figure></div>
+<p class="mt-3 max-w-3xl text-sm text-brand-soft">These samples use the same effect settings as the generator, shown here with example colours.</p>
+</div>
+  </div>
+</section>
+<section id="fixes" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Common problems and quick fixes</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<ul>
+  <li><strong>Boxes instead of letters:</strong> the font is still loading or does not contain that character. Wait a second, then try another style.</li>
+  <li><strong>A card says the preview is unavailable:</strong> the font request failed, usually because of a weak connection or a blocker. Reload the page or try again in a moment.</li>
+  <li><strong>Different look after pasting into another app:</strong> the clipboard carries text only, never the font. Use the PNG when the look must stay exactly the same.</li>
+  <li><strong>Letters clipped at the top in your design app:</strong> matras need space. Increase the line height instead of squeezing lines together.</li>
+  <li><strong>A dot floating beside <span lang="hi">ड़</span>, <span lang="hi">ढ़</span> or <span lang="hi">क़</span>:</strong> some keyboards type the nukta as a separate character and not every font joins it neatly. Retype the letter or try a different font.</li>
+  <li><strong>PNG line breaks differ from the preview:</strong> the image is drawn on a canvas and wraps long text at a fixed width. Press Enter to place your own line breaks, and open the PNG once before you publish it.</li>
+</ul>
+</div>
+</div>
+  </div>
+</section>
+<section id="install" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Using a font outside this tool</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>Copying text from this page never carries the font with it. To use one of these typefaces in another program, install the font family from its Google Fonts page.</p>
+<ol>
+  <li>Press <strong>Get font</strong> on a card (or click a name in the font list above) to open its Google Fonts page, then use the download option to get the family as a ZIP file.</li>
+  <li>On Windows, unzip the file, right-click the font file (.ttf) and choose Install. On a Mac, double-click the file and choose Install Font.</li>
+  <li>Close and reopen Word or your design app so it reloads its font list.</li>
+</ol>
+<p>Google Docs and Canva have their own font menus with many Google Fonts, so search the font name there before installing anything. On a phone, installing fonts is usually awkward, so the PNG is the easier route.</p>
+</div>
+</div>
   </div>
 </section>
 
-<section class="block" id="faq">
-  <div class="sh"><h2>Frequently asked questions</h2></div>
-  <div class="faq">
-    <details><summary>Which is the best Hindi font?</summary><p>It depends on the job. For readable text, clean fonts like Hind, Mukta or Noto Sans Devanagari work well. For wedding cards and invitations, Tiro Devanagari Hindi, Eczar or Rozha One look elegant. For posters and thumbnails, try bold styles like Yatra One, Modak or Khand.</p></details>
-    <details><summary>Will copied text keep its font style?</summary><p>No. The clipboard only stores plain Unicode text, so the app you paste into shows it in its own font. Download the PNG if you need the exact look.</p></details>
-    <details><summary>Can I use these fonts for commercial work?</summary><p>All fonts in this tool come from Google Fonts, which are published under open licences (mostly the SIL Open Font License). For a large commercial project, check the licence on the font's Google Fonts page first.</p></details>
-    <details><summary>Does it work for Marathi, Sanskrit or Nepali?</summary><p>Yes. Any text written in Devanagari script works, including Marathi, Sanskrit, Nepali and Bhojpuri.</p></details>
-    <details><summary>Is my text stored anywhere?</summary><p>No. Previews and PNG creation happen in your browser, and the text you type is not saved by this tool.</p></details>
-    <details><summary>How do I use a font in Word?</summary><p>Click the Font button on a card to open its Google Fonts page, download the family and install it on your computer. It will then appear in Word's font list.</p></details>
-    <details><summary>Which font is best for names?</summary><p>Slightly bold or handwritten styles such as Sarala, Halant or Kalam usually make names look distinctive.</p></details>
-    <details><summary>How do I type Hindi if I only have an English keyboard?</summary><p>On a phone, add Hindi in your keyboard settings. Gboard and the iPhone keyboard both offer a transliteration mode where typing "namaste" gives नमस्ते. On Windows or Mac, add Hindi as an input language in the system settings. You can also copy Hindi text from any website and paste it into the box above.</p></details>
-    <details><summary>What size is the PNG I download?</summary><p>It is three times the size of the preview, with a small margin around the text. Choose Transparent if you plan to resize it or place it on a photo in another app.</p></details>
-    <details><summary>Why do the previews take a moment to appear?</summary><p>Fonts are loaded only for the cards on the current page, and only for the letters you typed, which keeps the download small. On a slow connection a card may show a plain font for a second before the real style appears.</p></details>
-    <details><summary>Why is the text limited to 200 characters?</summary><p>The limit keeps previews fast, because every card redraws as you type. For a long paragraph, use the tool to choose a font and then set the text in your design app.</p></details>
-    <details><summary>Is this the same as a "fancy text" generator?</summary><p>No. Fancy text generators swap letters for special Unicode symbols, which mostly work for English letters and not for Devanagari. HindiFontGen keeps your normal Hindi characters and applies a real font, so the text stays searchable. To keep the look outside this tool, download the PNG.</p></details>
-    <details><summary>Why do some letters look different or broken in a font?</summary><p>Matras and conjuncts are drawn differently in every typeface. If a style looks odd for your phrase, open its Google Fonts page with the Font button to check the glyphs, or simply pick another style.</p></details>
-    <details><summary>Why test a full sentence instead of one word?</summary><p>Devanagari uses combining marks and conjuncts whose spacing and shape differ by typeface, so a full phrase shows real readability.</p></details>
+<!-- ===================== NEW CONTENT SECTIONS ===================== -->
+<section id="history" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Devanagari in brief: the script behind Hindi fonts</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>Devanagari is an <strong>abugida</strong>: a writing system where each consonant carries an inherent vowel sound, and other vowels are added with marks called matras. It is written left to right and descends from the ancient Brahmi script through the Nagari scripts of medieval India. Besides Hindi, it is used for Marathi, Nepali, Sanskrit, Konkani, Maithili, Bodo and many other languages. Hindi written in Devanagari is the official language of the Union of India under Article 343 of the Constitution.</p>
+<p>For type designers this makes Devanagari far more demanding than Latin. A single font must draw consonants, independent vowels, matras, numerals and punctuation, and also the many conjunct forms where two or more consonants fuse into one shape. In the days of metal type this meant a very large case of pieces. Digital fonts solve it with <strong>OpenType layout features</strong>, rules that tell the software when to swap letters for a conjunct, when to move a reph (the small hook that stands for a leading <span lang="hi">र्</span>, as in <span lang="hi">कर्म</span>) above the next letter, and how to position matras.</p>
+<p>In Unicode, the main Devanagari block runs from U+0900 to U+097F. Every character you type here, from <span lang="hi">अ</span> to the halant <span lang="hi">्</span>, comes from that block. Good fonts do not change which characters you typed; they only change how the shaping engine draws them. This is why two fonts can show the same word with different conjunct shapes while the stored text stays identical.</p>
+<p>The fonts in this generator come from Google Fonts, whose Devanagari collection has grown considerably over the past decade. It now covers everything from newspaper-style serifs and plain interface sans-serifs to brush-style display faces and handwriting, which is the reason a side-by-side comparison is worth doing before you commit to a design.</p>
+</div>
+</div>
   </div>
 </section>
+<section id="choose-font" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">How to choose a Hindi font for your project</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>The right font depends on where people will see the text and how long they will look at it. Use this table as a starting point, then test your own phrase in the generator above.</p>
+</div>
+<div class="mt-6 max-w-3xl overflow-x-auto">
+<table class="tb">
+  <thead><tr><th>Project</th><th>What to look for</th><th>Fonts to try</th></tr></thead>
+  <tbody>
+    <tr><td>Instagram and WhatsApp quotes</td><td>Friendly, medium weight, clear matras at phone size</td><td>Kalam, Sarala, Playpen Sans Devanagari</td></tr>
+    <tr><td>YouTube thumbnails</td><td>Heavy strokes, narrow width so long titles fit, strong outline or shadow</td><td>Khand, Teko, Rajdhani, Modak</td></tr>
+    <tr><td>Wedding and pooja invitations</td><td>Classic proportions, fine detail that still prints cleanly</td><td>Tiro Devanagari Hindi, Eczar, Sanskrit Text, Annapurna SIL</td></tr>
+    <tr><td>Festival greetings</td><td>Expressive display faces with warm, traditional character</td><td>Yatra One, Rozha One, Tillana, Amita</td></tr>
+    <tr><td>Shop signs and banners</td><td>Legible from a distance, high contrast, short text</td><td>Baloo 2, Sarpanch, Gajraj One, Bakbak One</td></tr>
+    <tr><td>Blog, captions and long text</td><td>Even rhythm, open counters, regular and bold weights available</td><td>Hind, Mukta, Noto Sans Devanagari, Palanquin</td></tr>
+    <tr><td>Certificates and formal letters</td><td>Serif with steady stroke contrast</td><td>Noto Serif Devanagari, Martel, Inknut Antiqua</td></tr>
+    <tr><td>Websites and apps</td><td>Variable or multi-weight family, good screen rendering</td><td>Noto Sans Devanagari, Anek Devanagari, Hind, Poppins</td></tr>
+  </tbody>
+</table>
+</div>
+<div class="bc mt-8 text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p><strong>Three quick tests before you decide:</strong></p>
+<ol>
+  <li><strong>Type the longest word you plan to use.</strong> Long conjunct-heavy words such as <span lang="hi">विद्यालय</span> or <span lang="hi">प्रतिष्ठान</span> reveal spacing problems that a short word hides.</li>
+  <li><strong>Shrink the preview to the smallest size your audience will see.</strong> If the matras and the nukta disappear, choose a heavier weight.</li>
+  <li><strong>Check it against your background.</strong> Thin calligraphy on a busy photo almost always needs an outline or a plain colour block behind it.</li>
+</ol>
+</div>
+</div>
+  </div>
+</section>
+<section id="colours" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Colour combinations that keep Hindi text readable</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>Devanagari has fine details above and below the line, so low contrast hurts it more than it hurts plain Latin text. The Web Content Accessibility Guidelines ask for a contrast ratio of at least 4.5:1 for normal text and 3:1 for large text. Even for a poster that nobody will audit, those numbers are a useful target. The pairs below are easy to read; you can paste the hex codes into the colour pickers above.</p>
+</div>
+<div class="mt-8 grid max-w-3xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  <figure class="rounded-lg border border-brand-line p-4" style="background:#064B3E"><div class="font-display text-3xl font-bold leading-[1.4]" lang="hi" style="color:#FFFFFF">शुभ दीपावली</div><figcaption class="mt-2 text-sm text-white/90"><strong>#FFFFFF on #064B3E</strong><br>Clean and calm. Good for websites and notices.</figcaption></figure>
+  <figure class="rounded-lg border border-brand-line p-4" style="background:#4A0E0E"><div class="font-display text-3xl font-bold leading-[1.4]" lang="hi" style="color:#FFE9A8">शुभ विवाह</div><figcaption class="mt-2 text-sm text-white/90"><strong>#FFE9A8 on #4A0E0E</strong><br>Warm gold on maroon. Suits invitations.</figcaption></figure>
+  <figure class="rounded-lg border border-brand-line p-4" style="background:#0F1E1A"><div class="font-display text-3xl font-bold leading-[1.4]" lang="hi" style="color:#E9A400">जय हिंद</div><figcaption class="mt-2 text-sm text-white/90"><strong>#E9A400 on #0F1E1A</strong><br>Gold on near-black. Strong for thumbnails.</figcaption></figure>
+  <figure class="rounded-lg border border-brand-line p-4" style="background:#FFF4D6"><div class="font-display text-3xl font-bold leading-[1.4]" lang="hi" style="color:#3B1F0B">सुप्रभात</div><figcaption class="mt-2 text-sm text-brand-soft"><strong>#3B1F0B on #FFF4D6</strong><br>Soft cream with dark brown. Gentle and readable.</figcaption></figure>
+  <figure class="rounded-lg border border-brand-line p-4" style="background:#FFFFFF"><div class="font-display text-3xl font-bold leading-[1.4]" lang="hi" style="color:#0A6E5A">आपका स्वागत है</div><figcaption class="mt-2 text-sm text-brand-soft"><strong>#0A6E5A on #FFFFFF</strong><br>Brand green on white. Fine for headings.</figcaption></figure>
+  <figure class="rounded-lg border border-brand-line p-4" style="background:#1B2A4A"><div class="font-display text-3xl font-bold leading-[1.4]" lang="hi" style="color:#FFFFFF">धन्यवाद</div><figcaption class="mt-2 text-sm text-white/90"><strong>#FFFFFF on #1B2A4A</strong><br>Navy with white. Formal and professional.</figcaption></figure>
+</div>
+<div class="bc mt-8 text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p><strong>Pairs to avoid:</strong> red on green, yellow on white, light grey on white and any bright colour on a busy photo without an outline or shadow. If you must put text on a photo, a darker overlay behind the text is more reliable than any effect.</p>
+</div>
+</div>
+  </div>
+</section>
+<section id="mistakes" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Seven common mistakes with Hindi typography</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<ol>
+  <li><strong>Adding letter-spacing.</strong> Spacing that works for English breaks the shirorekha and can pull matras away from their letters. Keep it at zero.</li>
+  <li><strong>Tight line height.</strong> Matras above and below need room. Around 1.5 to 1.8 times the font size suits Hindi paragraphs.</li>
+  <li><strong>Using faux bold or italic.</strong> If a font has no real bold or italic, the app fakes it by smearing or slanting the letters. Devanagari has no true italic tradition, so slanted Hindi usually looks wrong. Choose a family that ships a real bold weight instead.</li>
+  <li><strong>Justified text on narrow columns.</strong> Hindi words are often long, and justification on a phone-width column opens ugly gaps. Left-align short columns.</li>
+  <li><strong>Mixing too many fonts.</strong> One display font for the headline and one plain font for the body is enough. A third font rarely helps.</li>
+  <li><strong>Choosing thin hairline fonts for small sizes.</strong> The nukta and chandrabindu disappear. Use a medium or bold weight below about 18px.</li>
+  <li><strong>Trusting a single test word.</strong> Test the exact phrase, including its conjuncts and punctuation. The generator exists to make that easy.</li>
+</ol>
+</div>
+</div>
+  </div>
+</section>
+<section id="typing" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">How to type Hindi on phone, Windows and Mac</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>You do not need a special keyboard to use this tool. Any way of producing Unicode Hindi will work, and these are the most common.</p>
+<ul>
+  <li><strong>Android (Gboard):</strong> open Settings, then Languages and input, add Hindi, and choose the transliteration layout if you want to type "namaste" and get <span lang="hi">नमस्ते</span>. The handwriting and the standard Hindi layouts are also available.</li>
+  <li><strong>iPhone:</strong> go to Settings, General, Keyboard, Keyboards, Add New Keyboard, then pick Hindi and either the Transliteration or the Devanagari layout.</li>
+  <li><strong>Windows:</strong> add Hindi under Time and language, Language and region. Then switch between layouts with the Windows key plus Space. Hindi Traditional and the phonetic options both produce Unicode text.</li>
+  <li><strong>Mac:</strong> add Hindi in System Settings under Keyboard, Input Sources. The default shortcut for switching input sources is Control plus Space.</li>
+  <li><strong>Browser-based typing tools:</strong> many free transliteration websites let you type phonetically and copy the Hindi result, which you can paste into the box at the top of this page.</li>
+</ul>
+<p>If a word will not come out right, the <a href="https://hindifontgen.in/character-map.html">Hindi character map</a> lets you click individual letters, matras and symbols, which is handy for rare conjuncts and the nukta.</p>
+</div>
+</div>
+  </div>
+</section>
+<section id="webdev" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Using Hindi fonts on your own website</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+<p>If you build websites, the same Google Fonts you preview here can be loaded on your own pages. Here is a minimal, practical setup.</p>
+</div>
+<pre class="code mt-4"><code>&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
+&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin&gt;
+&lt;link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&amp;display=swap" rel="stylesheet"&gt;
+
+&lt;style&gt;
+  html:lang(hi) body {
+    font-family: "Hind", "Noto Sans Devanagari", system-ui, sans-serif;
+    line-height: 1.7;      /* room for matras */
+    letter-spacing: 0;     /* never add spacing to Devanagari */
+  }
+&lt;/style&gt;</code></pre>
+<div class="bc mt-6 text-[1.0625rem] leading-[1.7] text-brand-soft">
+<ul>
+  <li><strong>Declare the language.</strong> Put <code>lang="hi"</code> on the page or on the element. It helps browsers choose the right fallback font and helps screen readers pronounce the text correctly.</li>
+  <li><strong>Always add a fallback.</strong> List a second Devanagari font after your first choice, so text stays readable if the first font fails to load.</li>
+  <li><strong>Use <code>display=swap</code>.</strong> The page shows text in a fallback font at once and swaps when the real font arrives, so visitors are never staring at blank space.</li>
+  <li><strong>Load only the weights you use.</strong> Each extra weight is another download. Two weights, regular and bold, cover most designs.</li>
+  <li><strong>Check licences.</strong> The fonts listed here are open-licensed on Google Fonts, but you should still read the licence on a font's page before shipping it in a commercial product.</li>
+</ul>
+</div>
+</div>
+  </div>
+</section>
+<section id="greetings" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Hindi greeting phrases for common occasions</h2>
+    <div>
+<div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft"><p>A ready list of short, correctly spelled phrases you can load into the generator in one tap. The suggested fonts are only a starting point: change the size and colour and see what fits your design.</p></div>
+<div class="mt-6 max-w-3xl overflow-x-auto">
+<table class="tb">
+  <thead><tr><th>Phrase</th><th>Occasion</th><th>Fonts worth trying</th><th><span class="sr-only">Load phrase</span></th></tr></thead>
+  <tbody>
+    <tr><td lang="hi">दीपावली की हार्दिक शुभकामनाएं</td><td>Diwali</td><td>Yatra One, Tillana, Rozha One</td><td><button type="button" class="chip chip-sm" data-phrase="दीपावली की हार्दिक शुभकामनाएं" aria-label="Try the phrase दीपावली की हार्दिक शुभकामनाएं">Try</button></td></tr>
+    <tr><td lang="hi">होली की हार्दिक शुभकामनाएं</td><td>Holi</td><td>Modak, Baloo 2, Amita</td><td><button type="button" class="chip chip-sm" data-phrase="होली की हार्दिक शुभकामनाएं" aria-label="Try the phrase होली की हार्दिक शुभकामनाएं">Try</button></td></tr>
+    <tr><td lang="hi">रक्षाबंधन की हार्दिक बधाई</td><td>Raksha Bandhan</td><td>Amita, Kalam, Sahitya</td><td><button type="button" class="chip chip-sm" data-phrase="रक्षाबंधन की हार्दिक बधाई" aria-label="Try the phrase रक्षाबंधन की हार्दिक बधाई">Try</button></td></tr>
+    <tr><td lang="hi">गणतंत्र दिवस की शुभकामनाएं</td><td>Republic Day</td><td>Khand, Rajdhani, Teko</td><td><button type="button" class="chip chip-sm" data-phrase="गणतंत्र दिवस की शुभकामनाएं" aria-label="Try the phrase गणतंत्र दिवस की शुभकामनाएं">Try</button></td></tr>
+    <tr><td lang="hi">स्वतंत्रता दिवस की हार्दिक बधाई</td><td>Independence Day</td><td>Yatra One, Khand, Sarpanch</td><td><button type="button" class="chip chip-sm" data-phrase="स्वतंत्रता दिवस की हार्दिक बधाई" aria-label="Try the phrase स्वतंत्रता दिवस की हार्दिक बधाई">Try</button></td></tr>
+    <tr><td lang="hi">नववर्ष मंगलमय हो</td><td>New Year</td><td>Rozha One, Eczar, Gajraj One</td><td><button type="button" class="chip chip-sm" data-phrase="नववर्ष मंगलमय हो" aria-label="Try the phrase नववर्ष मंगलमय हो">Try</button></td></tr>
+    <tr><td lang="hi">विवाह की हार्दिक शुभकामनाएं</td><td>Wedding wishes</td><td>Tiro Devanagari Hindi, Sanskrit Text, Inknut Antiqua</td><td><button type="button" class="chip chip-sm" data-phrase="विवाह की हार्दिक शुभकामनाएं" aria-label="Try the phrase विवाह की हार्दिक शुभकामनाएं">Try</button></td></tr>
+    <tr><td lang="hi">शुभ रात्रि</td><td>Good-night images</td><td>Playpen Sans Devanagari, Sahitya, Kalam</td><td><button type="button" class="chip chip-sm" data-phrase="शुभ रात्रि" aria-label="Try the phrase शुभ रात्रि">Try</button></td></tr>
+    <tr><td lang="hi">धन्यवाद</td><td>Thank-you cards</td><td>Sarala, Halant, Mukta</td><td><button type="button" class="chip chip-sm" data-phrase="धन्यवाद" aria-label="Try the phrase धन्यवाद">Try</button></td></tr>
+    <tr><td lang="hi">जय हिंद</td><td>Patriotic posts</td><td>Khand, Teko, Yatra One</td><td><button type="button" class="chip chip-sm" data-phrase="जय हिंद" aria-label="Try the phrase जय हिंद">Try</button></td></tr>
+  </tbody>
+</table>
+</div>
+</div>
+  </div>
+</section>
+<section id="glossary" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Hindi typography glossary</h2>
+    <div>
+<dl class="gl max-w-3xl text-[1.0625rem] leading-[1.7]">
+  <dt>Shirorekha (<span lang="hi">शिरोरेखा</span>)</dt><dd>The horizontal line along the top of most Devanagari letters. In good fonts it joins neighbouring letters into one continuous bar.</dd>
+  <dt>Matra (<span lang="hi">मात्रा</span>)</dt><dd>A vowel sign attached to a consonant, such as the <span lang="hi">ा</span> in <span lang="hi">का</span> or the <span lang="hi">ि</span> in <span lang="hi">कि</span>. The short <span lang="hi">ि</span> is written before the consonant but pronounced after it, which is a classic test of font shaping.</dd>
+  <dt>Halant or virama (<span lang="hi">हलन्त</span>)</dt><dd>The mark <span lang="hi">्</span> that removes a consonant's inherent vowel. It is what joins consonants into conjuncts.</dd>
+  <dt>Conjunct (<span lang="hi">संयुक्ताक्षर</span>)</dt><dd>A combined letter form built from two or more consonants, for example <span lang="hi">क्ष</span>, <span lang="hi">त्र</span> and <span lang="hi">ज्ञ</span>.</dd>
+  <dt>Reph</dt><dd>The superscript form of <span lang="hi">र</span> when it comes before another consonant, as in <span lang="hi">धर्म</span>.</dd>
+  <dt>Nukta (<span lang="hi">नुक्ता</span>)</dt><dd>The dot placed under a letter to make sounds such as <span lang="hi">क़</span>, <span lang="hi">ख़</span> or <span lang="hi">ज़</span>.</dd>
+  <dt>Chandrabindu and anusvara</dt><dd>The nasal marks <span lang="hi">ँ</span> and <span lang="hi">ं</span>. Thin fonts can make them hard to see at small sizes.</dd>
+  <dt>Visarga</dt><dd>The two-dot mark <span lang="hi">ः</span>, common in Sanskrit words such as <span lang="hi">नमः</span>.</dd>
+  <dt>Glyph</dt><dd>The drawn shape for a character or combination of characters in a given font. One Unicode character can have several glyphs.</dd>
+  <dt>OpenType shaping</dt><dd>The set of rules inside a font and the software that applies them, which decides how typed characters turn into the final glyphs on screen.</dd>
+  <dt>Unicode</dt><dd>The international standard that gives every character a unique code, so the same Hindi text works across devices, apps and fonts.</dd>
+</dl>
+</div>
+  </div>
+</section>
+<!-- =================== END NEW CONTENT SECTIONS =================== -->
+
+<section id="privacy-tool" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Your text and the preview</h2>
+    <div>
+<div class="note max-w-3xl text-[1.0625rem] leading-[1.7] text-brand-soft"><strong class="text-brand-ink">How your text is handled:</strong> previews, colour changes and PNG creation run in your browser, and no account is needed. This site does not save the text you type. To show each font, your browser requests it from Google Fonts, and that request includes the distinct characters you typed (without repeats) so that only those letters are downloaded. See the <a class="lnk" href="https://hindifontgen.in/privacy-policy.html">Privacy Policy</a> for details.</div>
+<div data-x="1" class="bc mt-4 text-[1.0625rem] leading-[1.7] text-brand-soft"><p>When you change the size or colours the previews update instantly without reloading, and the PNG is created on your own device.</p></div>
+</div>
+  </div>
+</section>
+<section id="author" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">About the author</h2>
+    <div>
+<div class="grid max-w-3xl items-center gap-5 rounded-lg border border-brand-line bg-white p-6 sm:grid-cols-[auto_1fr]">
+  <div class="mx-auto flex h-16 w-16 items-center justify-center overflow-hidden rounded-full bg-brand-mint text-2xl font-bold text-brand sm:mx-0"><img src="/ali.png" alt="Ali Hamza, creator of HindiFontGen" width="64" height="64" loading="lazy" decoding="async" class="h-full w-full object-cover" onerror="this.replaceWith(document.createTextNode('A'))"></div>
+  <div class="text-center sm:text-left">
+    <h3 class="font-display text-xl font-bold text-brand-ink">Ali Hamza</h3>
+    <p class="mt-1 text-brand-soft">Hi, I’m Ali Hamza, the guy behind HindiFontGen. I got tired of switching between a dozen sites just to find a good Hindi font, so I built one place where you can see your text in every style. Got feedback or spotted a bug? Mail me at <a class="lnk" href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p>
+    <div class="as-social" aria-label="Follow Ali Hamza">
+      <a href="https://www.facebook.com/profile.php?id=61577195696602" target="_blank" rel="noopener noreferrer me" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+      <a href="https://www.instagram.com/ali_hamza_786_n/" target="_blank" rel="noopener noreferrer me" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+      <a href="https://x.com/ihamzali" target="_blank" rel="noopener noreferrer me" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+      <a href="https://www.youtube.com/@alihamzah.Official" target="_blank" rel="noopener noreferrer me" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg></a>
+    </div>
+  </div>
+</div>
+</div>
+  </div>
+</section>
+<section id="faq" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Frequently asked questions</h2>
+    <div><div class="max-w-3xl space-y-3">
+<details><summary>Which is the best Hindi font?</summary><p>It depends on the job. For readable text, clean fonts like Hind, Mukta or Noto Sans Devanagari work well. For wedding cards and invitations, Tiro Devanagari Hindi, Eczar or Rozha One look elegant. For posters and thumbnails, try bold styles like Yatra One, Modak or Khand.</p></details>
+<details><summary>Will copied text keep its font style?</summary><p>No. The clipboard only stores plain Unicode text, so the app you paste into shows it in its own font. Download the PNG if you need the exact look.</p></details>
+<details><summary>Can I use these fonts for commercial work?</summary><p>All fonts in this tool come from Google Fonts, which are published under open licences (mostly the SIL Open Font License). For a large commercial project, check the licence on the font's Google Fonts page first.</p></details>
+<details><summary>Does it work for Marathi, Sanskrit or Nepali?</summary><p>Yes. Any text written in Devanagari script works, including Marathi, Sanskrit, Nepali and Bhojpuri.</p></details>
+<details><summary>Is my text stored anywhere?</summary><p>Not by this site. Previews and PNG creation happen in your browser, and the text you type is not saved on a server. To load the fonts, your browser asks Google Fonts for the letters it needs, so the distinct characters you type are part of that request.</p></details>
+<details><summary>How do I use a font in Word?</summary><p>Click the Get font button on a card to open its Google Fonts page, download the family and install it on your computer. It will then appear in Word's font list.</p></details>
+<details><summary>Which font is best for names?</summary><p>Slightly bold or handwritten styles such as Sarala, Halant or Kalam usually make names look distinctive. The Names shortcut above the previews shows a few more.</p></details>
+<details><summary>How do I type Hindi if I only have an English keyboard?</summary><p>On a phone, add Hindi in your keyboard settings. Gboard and the iPhone keyboard both offer a transliteration mode where typing "namaste" gives <span lang="hi">नमस्ते</span>. On Windows or Mac, add Hindi as an input language in the system settings. You can also copy Hindi text from any website and paste it into the box above.</p></details>
+<details><summary>What size is the PNG I download?</summary><p>It is up to three times the size of the preview, with a small margin around the text, and long text wraps at a fixed width. Very large images are drawn at a smaller scale automatically so that phone browsers can create them. Choose Transparent if you plan to resize it or place it on a photo in another app.</p></details>
+<details><summary>Why do the previews take a moment to appear?</summary><p>Fonts are loaded only for the cards on the current page, and only for the letters you typed, which keeps the download small. On a slow connection a card may show a plain font for a second before the real style appears.</p></details>
+<details><summary>Why is the text limited to 200 characters?</summary><p>The limit keeps previews fast, because every card redraws as you type. For a long paragraph, use the tool to choose a font and then set the text in your design app.</p></details>
+<details><summary>Is this the same as a "fancy text" generator?</summary><p>No. Fancy text generators swap letters for special Unicode symbols, which mostly work for English letters and not for Devanagari. HindiFontGen keeps your normal Hindi characters and applies a real font, so the text stays searchable. To keep the look outside this tool, download the PNG.</p></details>
+<details><summary>Why do some letters look different or broken in a font?</summary><p>Matras and conjuncts are drawn differently in every typeface. If a style looks odd for your phrase, open its Google Fonts page with the Get font button to check the glyphs, or simply pick another style.</p></details>
+<details><summary>Why test a full sentence instead of one word?</summary><p>Devanagari uses combining marks and conjuncts whose spacing and shape differ by typeface, so a full phrase shows real readability.</p></details>
+<details><summary>How many fonts are there, and can I suggest one?</summary><p>The generator lists <span data-font-count>61</span> Google Fonts families that include Devanagari. A font is added only if it is on Google Fonts and its licence allows free use. If you know one that is missing, send its name to <a class="lnk" href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p></details>
+<details><summary>What is the difference between Hindi and Devanagari?</summary><p>Hindi is a language and Devanagari is the script it is written in. The same script is used for other languages such as Marathi, Nepali and Sanskrit, which is why a Devanagari font works for all of them.</p></details>
+<details><summary>Can I use the PNG on a monetised YouTube channel or in a product I sell?</summary><p>The fonts are open-licensed, and an image made with them is generally fine to use in thumbnails, posts and printed designs. If you plan to redistribute the font file itself or embed it in software, read the licence on its Google Fonts page first. The text you typed is yours.</p></details>
+<details><summary>Why does my Hindi look different on an iPhone and on Android?</summary><p>If a page or app does not load its own Devanagari font, each device falls back to a built-in one, so the same text can look a little different. Downloading the PNG removes that difference, because the letters are already drawn into the image.</p></details>
+<details><summary>Which fonts look like handwriting?</summary><p>Kalam, Playpen Sans Devanagari, Sarala and Sahitya have a hand-drawn feel, and Amita and Tillana are more brush-like. Open the Stylish &amp; Calligraphy tab to compare them with your own text.</p></details>
+<details><summary>Can I make Hindi text bold or italic if the font does not have that weight?</summary><p>You can in most apps, but the result is a fake: the app thickens or slants the letters and the shapes often look rough. For Hindi it is better to pick a font that has a real bold weight. Most fonts here are shown in their bold or semibold weight for exactly this reason.</p></details>
+<details><summary>Does this tool support Gujarati, Bengali or Tamil?</summary><p>No. It is built only for Devanagari. Other Indian scripts have their own fonts and shaping rules, so they are not part of this generator.</p></details>
+<details><summary>Why is the PNG a bit different from the preview on my screen?</summary><p>The preview is drawn by your browser's text engine, while the PNG is drawn on a canvas at a larger size. In most cases they match, but line wrapping and very fine spacing can differ slightly. Open the PNG once before you publish it.</p></details>
+</div>
+<p class="mt-8 max-w-3xl text-sm text-brand-soft">Last reviewed October 2026. If something on this page is wrong, write to <a class="lnk" href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p></div>
+  </div>
+</section>
+
 </main>
-  <aside class="share-rail" id="shareRail" aria-label="Share this page">
+
+<aside class="share-rail" id="shareRail" aria-label="Share this page">
   <button type="button" class="share-toggle" id="shareToggle" aria-expanded="false" aria-label="Share options">
     <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 16.1c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11A2.99 2.99 0 1 0 15 5c0 .24.04.47.09.7L8.04 9.81a3 3 0 1 0 0 4.38l7.12 4.17c-.05.21-.08.43-.08.64a2.92 2.92 0 1 0 2.92-2.9z"/></svg>
   </button>
   <div class="share-list" id="shareList">
-    <span class="share-label">1.43k Shares</span>
-    <a id="shWa" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">
+    <span class="share-label">Share</span>
+    <a id="shWa" href="https://wa.me/?text=Hindi%20Font%20Generator%20https%3A%2F%2Fhindifontgen.in%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on WhatsApp">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11.8 11.8 0 0 0 2.1 17.7L1 23l5.4-1.4a11.8 11.8 0 0 0 5.6 1.4h.01A11.8 11.8 0 0 0 20.5 3.5zM12 21.2a9.8 9.8 0 0 1-5-1.4l-.36-.21-3.2.84.86-3.12-.23-.38A9.8 9.8 0 1 1 12 21.2zm5.4-7.3c-.3-.15-1.75-.86-2.02-.96s-.47-.15-.67.15-.77.96-.94 1.16-.35.22-.64.07a8 8 0 0 1-2.36-1.46 8.8 8.8 0 0 1-1.63-2.03c-.17-.3 0-.46.13-.6.13-.14.3-.35.45-.52s.2-.3.3-.5.05-.37-.03-.52-.67-1.6-.91-2.2c-.24-.58-.48-.5-.67-.5h-.57a1.1 1.1 0 0 0-.8.37 3.35 3.35 0 0 0-1.04 2.48 5.8 5.8 0 0 0 1.22 3.08 13.3 13.3 0 0 0 5.1 4.5c.7.3 1.25.48 1.68.62a4 4 0 0 0 1.86.12 3 3 0 0 0 1.97-1.39 2.4 2.4 0 0 0 .17-1.4c-.07-.12-.27-.2-.57-.35z"/></svg>
     </a>
-    <a id="shFb" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
+    <a id="shFb" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhindifontgen.in%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Facebook">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg>
     </a>
-    <a id="shX" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on X">
+    <a id="shX" href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fhindifontgen.in%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on X">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
     </a>
     <button type="button" id="shPrint" aria-label="Print this page">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19 8H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3zm-3 11H8v-5h8v5zm3-7a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM18 3H6v4h12V3z"/></svg>
     </button>
-    <a id="shPin" href="#" target="_blank" rel="noopener noreferrer" aria-label="Share on Pinterest">
+    <a id="shPin" href="https://pinterest.com/pin/create/button/?url=https%3A%2F%2Fhindifontgen.in%2F" target="_blank" rel="noopener noreferrer" aria-label="Share on Pinterest">
       <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a10 10 0 0 0-3.64 19.3c-.09-.82-.17-2.08.04-2.98l1.2-5.08s-.3-.61-.3-1.52c0-1.42.82-2.48 1.85-2.48.87 0 1.29.65 1.29 1.44 0 .88-.56 2.19-.85 3.4-.24 1.02.51 1.85 1.51 1.85 1.82 0 3.22-1.92 3.22-4.69 0-2.45-1.76-4.17-4.28-4.17-2.92 0-4.63 2.19-4.63 4.45 0 .88.34 1.82.76 2.33.08.1.09.19.07.29l-.28 1.16c-.04.18-.15.22-.34.13-1.28-.6-2.08-2.47-2.08-3.97 0-3.23 2.35-6.2 6.78-6.2 3.56 0 6.33 2.54 6.33 5.93 0 3.54-2.23 6.39-5.33 6.39-1.04 0-2.02-.54-2.35-1.18l-.64 2.44c-.23.89-.86 2-1.28 2.68A10 10 0 1 0 12 2z"/></svg>
     </a>
   </div>
@@ -381,9 +691,9 @@ th,td{padding:9px 10px;font-size:13px}
 
 {% include footer.html %}
 
-<div id="cookieConsent" role="dialog" aria-label="Cookie consent">
-  <p><strong>🍪 Cookies</strong><br>We use cookies to run the site and improve your experience. <a href="https://hindifontgen.in/privacy-policy.html">Learn more</a>.</p>
-  <div><button type="button" class="btn" id="cookieDecline">No thanks</button><button type="button" class="btn primary" id="cookieAccept">Accept</button></div>
+<div id="cookieConsent" role="dialog" aria-label="Privacy notice">
+  <p><strong>Privacy notice</strong><br>This site does not store your text. To show fonts, your browser asks Google Fonts for the characters you type. This notice saves one setting on your device so it does not appear again. <a href="https://hindifontgen.in/privacy-policy.html">Privacy Policy</a></p>
+  <button type="button" id="cookieAccept">Got it</button>
 </div>
 
 <script>
@@ -391,18 +701,38 @@ th,td{padding:9px 10px;font-size:13px}
 "use strict";
 // Format: category/Name|GoogleFamilyParam (param optional). Categories: s=Stylish, b=Bold, c=Classic, n=Clean.
 // Self-hosted font: add e.g. s/My Font|/fonts/my-font.woff2 (only use fonts whose licence allows it).
-var RAW="s/Kalam|Kalam:wght@700,s/Playpen Sans Devanagari,s/Amita|Amita:wght@700,s/Tillana|Tillana:wght@700,s/Modak,s/Jaini,s/Jaini Purva,s/Gajraj One,s/Yatra One,s/Rozha One,s/Sahitya|Sahitya:wght@700,s/Sarala|Sarala:wght@700,s/Halant|Halant:wght@600,s/Kurale,s/Sanskrit Text,s/Tiro Devanagari Hindi,s/Tiro Devanagari Marathi,s/Tiro Devanagari Sanskrit,s/Shobhika,s/Amiko|Amiko:wght@700,s/Sura,s/Bakbak One,s/Sansita|Sansita:wght@700,s/Arya|Arya:wght@700,s/Karma|Karma:wght@700,b/Khand|Khand:wght@700,b/Teko|Teko:wght@600,b/Rajdhani|Rajdhani:wght@700,b/Sarpanch|Sarpanch:wght@800,b/Biryani|Biryani:wght@800,b/Jaldi|Jaldi:wght@700,b/Baloo 2|Baloo+2:wght@700,b/Pragati Narrow|Pragati+Narrow:wght@700,b/Khula|Khula:wght@800,b/Kadwa|Kadwa:wght@700,c/Eczar|Eczar:wght@700,c/Noto Serif Devanagari|Noto+Serif+Devanagari:wght@700,c/Inknut Antiqua|Inknut+Antiqua:wght@700,c/Vesper Libre|Vesper+Libre:wght@700,c/Rhodium Libre,c/Glegoo|Glegoo:wght@700,c/Asar,c/Martel|Martel:wght@800,n/Hind|Hind:wght@600,n/Mukta|Mukta:wght@600,n/Noto Sans Devanagari|Noto+Sans+Devanagari:wght@600,n/Anek Devanagari|Anek+Devanagari:wght@600,n/Palanquin|Palanquin:wght@700,n/Palanquin Dark|Palanquin+Dark:wght@700,n/Martel Sans|Martel+Sans:wght@800,n/Yantramanav|Yantramanav:wght@700,n/Laila|Laila:wght@700,n/Ranga|Ranga:wght@700,n/Dekko,n/Gotu,n/Sumana,n/Cambay|Cambay:wght@700,n/Akshar|Akshar:wght@700";
+// If you add or remove a font here, also update the font list section in the page body.
+var RAW="s/Kalam|Kalam:wght@700,s/Playpen Sans Devanagari,s/Amita|Amita:wght@700,s/Tillana|Tillana:wght@700,s/Modak,s/Jaini,s/Jaini Purva,s/Gajraj One,s/Yatra One,s/Rozha One,s/Sahitya|Sahitya:wght@700,s/Sarala|Sarala:wght@700,s/Halant|Halant:wght@600,s/Kurale,s/Sanskrit Text,s/Tiro Devanagari Hindi,s/Tiro Devanagari Marathi,s/Tiro Devanagari Sanskrit,s/Shobhika,s/Amiko|Amiko:wght@700,s/Sura,s/Bakbak One,s/Sansita|Sansita:wght@700,s/Arya|Arya:wght@700,s/Karma|Karma:wght@700,b/Khand|Khand:wght@700,b/Teko|Teko:wght@600,b/Rajdhani|Rajdhani:wght@700,b/Sarpanch|Sarpanch:wght@800,b/Biryani|Biryani:wght@800,b/Jaldi|Jaldi:wght@700,b/Baloo 2|Baloo+2:wght@700,b/Pragati Narrow|Pragati+Narrow:wght@700,b/Khula|Khula:wght@800,b/Kadwa|Kadwa:wght@700,c/Eczar|Eczar:wght@700,c/Noto Serif Devanagari|Noto+Serif+Devanagari:wght@700,c/Inknut Antiqua|Inknut+Antiqua:wght@700,c/Vesper Libre|Vesper+Libre:wght@700,c/Rhodium Libre,c/Glegoo|Glegoo:wght@700,c/Asar,c/Martel|Martel:wght@800,c/Annapurna SIL|Annapurna+SIL:wght@700,n/Hind|Hind:wght@600,n/Mukta|Mukta:wght@600,n/Noto Sans Devanagari|Noto+Sans+Devanagari:wght@600,n/Anek Devanagari|Anek+Devanagari:wght@600,n/Palanquin|Palanquin:wght@700,n/Palanquin Dark|Palanquin+Dark:wght@700,n/Martel Sans|Martel+Sans:wght@800,n/Yantramanav|Yantramanav:wght@700,n/Laila|Laila:wght@700,n/Ranga|Ranga:wght@700,n/Dekko,n/Gotu,n/Sumana,n/Cambay|Cambay:wght@700,n/Akshar|Akshar:wght@700,n/Poppins|Poppins:wght@600,n/Noto Sans|Noto+Sans:wght@600";
 var LAB={s:"Stylish",b:"Bold",c:"Classic",n:"Clean"};
 var FONTS=RAW.split(",").map(function(x){var i=x.indexOf("/"),r=x.slice(i+1).split("|");return {n:r[0],p:r[1]||r[0].replace(/ /g,"+"),c:x.slice(0,i)};});
-var PAGE=12,page=1,loaded={},tt,dt,shown=[];
+var PICKS={
+  names:["Kalam","Sarala","Halant","Amita","Playpen Sans Devanagari","Sahitya","Tillana","Karma"],
+  wedding:["Tiro Devanagari Hindi","Eczar","Rozha One","Sanskrit Text","Inknut Antiqua","Amita","Vesper Libre","Shobhika","Annapurna SIL"],
+  festival:["Yatra One","Rozha One","Tillana","Jaini","Amita","Modak"],
+  poster:["Khand","Teko","Rajdhani","Sarpanch","Modak","Yatra One","Baloo 2","Gajraj One","Bakbak One"],
+  text:["Hind","Mukta","Noto Sans Devanagari","Anek Devanagari","Palanquin","Yantramanav","Poppins","Noto Sans"]
+};
+var PAGE=12,page=1,cat="all",pick="",q="",loaded={},failed={},tt,dt,shown=[];
 function $(id){return document.getElementById(id);}
-var input=$("textInput"),range=$("sizeRange"),fc=$("fontColor"),bc=$("bgColor"),sort=$("sortOrder"),grid=$("fontGrid"),empty=$("emptyState"),toast=$("toast"),pager=$("pagination");
+var input=$("textInput"),range=$("sizeRange"),fc=$("fontColor"),bc=$("bgColor"),sort=$("sortOrder"),eff=$("effectSel"),
+    grid=$("fontGrid"),empty=$("emptyState"),noMatch=$("noMatch"),toast=$("toast"),pager=$("pagination"),search=$("fontSearch"),count=$("resultCount");
+var tabs=document.querySelectorAll("#tabs [data-cat]"),picksBtns=document.querySelectorAll("#picks [data-pick]");
 
-function say(m){toast.textContent=m;toast.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove("show");},1800);}
-var cat="all",eff=$("effectSel");
-function list(){var l=FONTS.filter(function(f){return cat==="all"||f.c===cat;});if(sort.value==="az")l.sort(function(a,b){return a.n.localeCompare(b.n);});return l;}
+Array.prototype.forEach.call(document.querySelectorAll("[data-font-count]"),function(el){el.textContent=FONTS.length;});
+
+function say(m){toast.textContent=m;toast.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove("show");},2200);}
+
+function list(){
+  var set=pick?PICKS[pick]:null,qq=q.trim().toLowerCase();
+  var l=FONTS.filter(function(f){
+    return (cat==="all"||f.c===cat)&&(!set||set.indexOf(f.n)>-1)&&(!qq||f.n.toLowerCase().indexOf(qq)>-1);
+  });
+  if(sort.value==="az")l.sort(function(a,b){return a.n.localeCompare(b.n);});
+  return l;
+}
 function pages(){return Math.max(1,Math.ceil(list().length/PAGE));}
 function tkey(){return Array.from(new Set((input.value.replace(/[\r\n]/g,"")+" ").split(""))).join("");}
+
 function efx(e,c){
   if(e==="outline")return "-webkit-text-stroke:1.5px "+c+";color:transparent";
   if(e==="shadow")return "text-shadow:3px 3px 3px rgba(0,0,0,.3)";
@@ -410,6 +740,25 @@ function efx(e,c){
   if(e==="3d")return "text-shadow:1px 1px 0 rgba(0,0,0,.4),2px 2px 0 rgba(0,0,0,.4),3px 3px 0 rgba(0,0,0,.4),4px 4px 0 rgba(0,0,0,.4)";
   if(e==="gradient")return "background:linear-gradient(90deg,"+c+",#7C3AED);-webkit-background-clip:text;background-clip:text;color:transparent";
   return "";
+}
+
+/* ---- font loading: one combined request per page; if it fails, retry each family on its own ---- */
+function cssUrl(fs,key){return "https://fonts.googleapis.com/css2?"+fs.map(function(f){return "family="+f.p;}).join("&")+"&text="+encodeURIComponent(key)+"&display=swap";}
+function sheet(href){
+  return new Promise(function(res){
+    var l=document.createElement("link"),done=false;
+    function fin(ok){if(!done){done=true;res(ok);}}
+    l.rel="stylesheet";l.href=href;
+    l.onload=function(){fin(true);};l.onerror=function(){fin(false);};
+    setTimeout(function(){fin(true);},4000);
+    document.head.appendChild(l);
+  });
+}
+function markFailed(){
+  Array.prototype.forEach.call(grid.querySelectorAll(".font-card"),function(card){
+    var n=card.getAttribute("data-name"),note=card.querySelector("[data-fail]");
+    if(note)note.classList.toggle("hidden",!failed[n]);
+  });
 }
 function loadFonts(items){
   var key=tkey(),todo=[];
@@ -423,56 +772,67 @@ function loadFonts(items){
     loaded[f.n]=key;todo.push(f);
   });
   if(!todo.length)return Promise.resolve();
-  var l=document.createElement("link");
-  l.rel="stylesheet";
-  l.href="https://fonts.googleapis.com/css2?"+todo.map(function(f){return "family="+f.p;}).join("&")+"&text="+encodeURIComponent(key)+"&display=swap";
-  var pr=new Promise(function(res){l.onload=l.onerror=res;setTimeout(res,4000);});
-  document.head.appendChild(l);
-  return pr;
+  return sheet(cssUrl(todo,key)).then(function(ok){
+    if(ok){todo.forEach(function(f){failed[f.n]=false;});return;}
+    return Promise.all(todo.map(function(f){
+      return sheet(cssUrl([f],key)).then(function(ok2){failed[f.n]=!ok2;if(!ok2)loaded[f.n]="";});
+    }));
+  }).then(markFailed);
 }
 
 function buildPager(){
   pager.innerHTML="";var n=pages();if(n<2)return;
-  function add(t,p,dis,act){
+  function add(t,p,dis,act,label){
     var b=document.createElement("button");
-    b.type="button";b.className="page-btn"+(act?" active":"");b.textContent=t;b.disabled=!!dis;
-    b.setAttribute("aria-label","Page "+p);b.onclick=function(){go(p);};pager.appendChild(b);
+    b.type="button";b.className="pg";b.textContent=t;b.disabled=!!dis;
+    b.setAttribute("aria-label",label||("Page "+p));
+    if(act)b.setAttribute("aria-current","page");
+    b.onclick=function(){go(p);};pager.appendChild(b);
   }
-  add("‹",page-1,page===1);
+  add("‹",page-1,page===1,false,"Previous page");
   for(var i=1;i<=n;i++)add(i,i,false,i===page);
-  add("›",page+1,page===n);
+  add("›",page+1,page===n,false,"Next page");
 }
-
 function go(p){
   if(p<1||p>pages()||p===page)return;
   page=p;build();$("tool").scrollIntoView({behavior:"smooth"});
 }
 
 function build(){
-  var items=list().slice((page-1)*PAGE,page*PAGE);
+  var all=list(),items=all.slice((page-1)*PAGE,page*PAGE);
   grid.innerHTML="";
   items.forEach(function(f){
     var name=f.n,card=document.createElement("div");
-    card.className="font-card";
-    card.innerHTML='<div class="fname"><span class="a-mark">A</span><span>'+name+'</span><span class="badge">'+LAB[f.c]+'</span></div><div class="preview" style="font-family:\''+name+'\'"><span></span></div><div class="card-actions"></div>';
-    var act=card.querySelector(".card-actions");
-    var btns=[["Copy","btn primary",copyText],["Transparent","btn",function(){png(name,true);}],["PNG","btn",function(){png(name,false);}]];
-    if(f.p.charAt(0)!=="/")btns.push(["Font","btn",function(){window.open("https://fonts.google.com/specimen/"+name.replace(/ /g,"+"),"_blank","noopener");}]);
-    btns.forEach(function(a){var b=document.createElement("button");b.type="button";b.className=a[1];b.textContent=a[0];b.onclick=a[2];act.appendChild(b);});
+    card.className="font-card";card.setAttribute("data-name",name);
+    card.innerHTML='<div class="flex items-baseline justify-between gap-3"><h3 class="text-[0.95rem] font-semibold text-brand-ink" data-n></h3><span class="text-xs font-medium text-brand-soft" data-g></span></div>'+
+      '<div class="preview"><span></span></div>'+
+      '<p class="hidden text-sm text-brand-soft" data-fail>Preview unavailable: this font could not be loaded. Reload the page or try again in a moment.</p>'+
+      '<div class="flex flex-wrap gap-2" data-actions></div>';
+    card.querySelector("[data-n]").textContent=name;
+    card.querySelector("[data-g]").textContent=LAB[f.c];
+    card.querySelector(".preview").style.fontFamily="'"+name+"',sans-serif";
+    var act=card.querySelector("[data-actions]");
+    var btns=[["Copy","act act-primary",copyText,"Copy your text"],
+              ["PNG","act",function(){png(name,false);},"Download PNG in "+name],
+              ["Transparent","act",function(){png(name,true);},"Download transparent PNG in "+name]];
+    if(f.p.charAt(0)!=="/")btns.push(["Get font","act",function(){window.open("https://fonts.google.com/specimen/"+name.replace(/ /g,"+"),"_blank","noopener");},"Open "+name+" on Google Fonts"]);
+    btns.forEach(function(a){var b=document.createElement("button");b.type="button";b.className=a[1];b.textContent=a[0];b.setAttribute("aria-label",a[3]);b.onclick=a[2];act.appendChild(b);});
     grid.appendChild(card);
   });
-  shown=items;buildPager();applyStyles();loadFonts(items);
+  shown=items;buildPager();applyStyles();loadFonts(items);markFailed();
 }
 
 function applyStyles(){
-  var t=input.value.trim(),has=t.length>0;
+  var t=input.value.trim(),has=t.length>0,all=list();
   empty.style.display=has?"none":"block";
-  grid.style.display=has?"grid":"none";
-  pager.style.display=has?"flex":"none";
+  noMatch.style.display=(has&&!all.length)?"block":"none";
+  grid.style.display=(has&&all.length)?"grid":"none";
+  pager.style.display=(has&&all.length)?"flex":"none";
+  count.textContent=(has&&all.length)?("Showing "+((page-1)*PAGE+1)+"–"+Math.min(page*PAGE,all.length)+" of "+all.length+(all.length===FONTS.length?"":" matching")+" fonts"):"";
   var st=efx(eff.value,fc.value);
-  grid.querySelectorAll(".preview").forEach(function(p){
+  Array.prototype.forEach.call(grid.querySelectorAll(".preview"),function(p){
     p.style.fontSize=range.value+"px";p.style.color=fc.value;p.style.background=bc.value;
-    var sp=p.firstChild;sp.textContent=t;sp.style.cssText=st;
+    var sp=p.firstChild;sp.textContent=t;sp.style.cssText=(st?st+";":"")+"white-space:pre-wrap;max-width:100%";
   });
 }
 
@@ -481,7 +841,7 @@ function copyText(){
   var fallback=function(){
     var a=document.createElement("textarea");a.value=t;a.style.cssText="position:fixed;left:-9999px";
     document.body.appendChild(a);a.select();
-    try{document.execCommand("copy");say("Copied!");}catch(e){say("Copy failed");}
+    try{document.execCommand("copy");say("Copied!");}catch(e){say("Copy failed. Select the text in the box and copy it.");}
     a.remove();
   };
   if(navigator.clipboard&&navigator.clipboard.writeText){
@@ -491,59 +851,97 @@ function copyText(){
 
 async function png(name,transparent){
   var text=input.value.trim();if(!text)return;
-  var size=+range.value,pad=32,sc=3,font=size+'px "'+name+'"';
+  var size=+range.value,pad=32,MAXW=900,font=size+'px "'+name+'"';
   var f=FONTS.filter(function(x){return x.n===name;})[0];
   try{await loadFonts([f]);await document.fonts.load(font,text);}catch(e){}
+  if(failed[name]){say("This font could not be loaded, so the PNG was not created.");return;}
   var cv=document.createElement("canvas"),ctx=cv.getContext("2d");
   ctx.font=font;
-  var lines=text.split("\n"),lh=Math.round(size*1.5),mw=10;
+  function wrap(line){
+    var words=line.split(" "),out=[],cur="";
+    words.forEach(function(w){
+      var t=cur?cur+" "+w:w;
+      if(cur&&ctx.measureText(t).width>MAXW){out.push(cur);cur=w;}else{cur=t;}
+    });
+    out.push(cur);return out;
+  }
+  var lines=[];
+  text.split("\n").forEach(function(l){wrap(l).forEach(function(x){lines.push(x);});});
+  var m=ctx.measureText("A"),asc=m.fontBoundingBoxAscent||size*0.95,desc=m.fontBoundingBoxDescent||size*0.45;
+  var lh=Math.round(Math.max(size*1.5,asc+desc)),mw=10;
   lines.forEach(function(l){mw=Math.max(mw,ctx.measureText(l).width);});
-  var w=Math.ceil(mw+pad*2),h=Math.ceil(lh*lines.length+pad*2);
+  var w=Math.ceil(mw+pad*2),h=Math.ceil(lh*lines.length+pad*2),sc=3;
+  while(sc>1&&(w*sc)*(h*sc)>16000000)sc--;
   cv.width=w*sc;cv.height=h*sc;ctx.scale(sc,sc);
   if(!transparent){ctx.fillStyle=bc.value;ctx.fillRect(0,0,w,h);}
-  ctx.font=font;ctx.textBaseline="top";
-  var e=eff.value,c=fc.value;
+  ctx.font=font;ctx.textAlign="center";ctx.textBaseline="alphabetic";
+  var cx=w/2,e=eff.value,c=fc.value;
   lines.forEach(function(l,i){
-    var x=pad,y=pad+i*lh;
+    var y=pad+i*lh+(lh-(asc+desc))/2+asc;
     ctx.save();ctx.fillStyle=c;
-    if(e==="outline"){ctx.lineWidth=1.5;ctx.strokeStyle=c;ctx.lineJoin="round";ctx.strokeText(l,x,y);}
+    if(e==="outline"){ctx.lineWidth=1.5;ctx.strokeStyle=c;ctx.lineJoin="round";ctx.strokeText(l,cx,y);}
     else{
-      if(e==="3d"){ctx.fillStyle="rgba(0,0,0,.4)";for(var k=4;k>0;k--)ctx.fillText(l,x+k,y+k);ctx.fillStyle=c;}
+      if(e==="3d"){ctx.fillStyle="rgba(0,0,0,.4)";for(var k=4;k>0;k--)ctx.fillText(l,cx+k,y+k);ctx.fillStyle=c;}
       if(e==="shadow"){ctx.shadowColor="rgba(0,0,0,.3)";ctx.shadowOffsetX=ctx.shadowOffsetY=3*sc;ctx.shadowBlur=3*sc;}
-      if(e==="glow"){ctx.shadowColor=c;ctx.shadowBlur=14*sc;}
-      if(e==="gradient"){var g=ctx.createLinearGradient(x,0,x+mw,0);g.addColorStop(0,c);g.addColorStop(1,"#7C3AED");ctx.fillStyle=g;}
-      ctx.fillText(l,x,y);
+      if(e==="glow"){ctx.shadowColor=c;ctx.shadowBlur=16*sc;ctx.fillText(l,cx,y);ctx.shadowBlur=6*sc;}
+      if(e==="gradient"){var g=ctx.createLinearGradient(cx-mw/2,0,cx+mw/2,0);g.addColorStop(0,c);g.addColorStop(1,"#7C3AED");ctx.fillStyle=g;}
+      ctx.fillText(l,cx,y);
     }
     ctx.restore();
   });
-  var a=document.createElement("a");
-  a.download="hindi-font-"+name.toLowerCase().replace(/\s+/g,"-")+(e!=="none"?"-"+e:"")+(transparent?"-transparent":"")+".png";
-  a.href=cv.toDataURL("image/png");a.click();
+  var fname="hindi-font-"+name.toLowerCase().replace(/\s+/g,"-")+(e!=="none"?"-"+e:"")+(transparent?"-transparent":"")+".png";
+  cv.toBlob(function(b){
+    if(!b){say("Could not create the image. Try a smaller size or shorter text.");return;}
+    var u=URL.createObjectURL(b),a=document.createElement("a");
+    a.download=fname;a.href=u;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(u);},4000);
+  },"image/png");
 }
 
-input.addEventListener("input",function(){$("charCount").textContent=input.value.length;applyStyles();clearTimeout(dt);dt=setTimeout(function(){loadFonts(shown);},350);});
+function onInput(){$("charCount").textContent=input.value.length;applyStyles();clearTimeout(dt);dt=setTimeout(function(){loadFonts(shown);},350);}
+input.addEventListener("input",onInput);
 range.addEventListener("input",function(){$("sizeVal").textContent=range.value+"px";applyStyles();});
 fc.addEventListener("input",applyStyles);bc.addEventListener("input",applyStyles);eff.addEventListener("change",applyStyles);
 sort.addEventListener("change",function(){page=1;build();});
+search.addEventListener("input",function(){q=search.value;page=1;build();});
 
+function syncChips(){
+  Array.prototype.forEach.call(tabs,function(b){b.setAttribute("aria-pressed",String(!pick&&b.getAttribute("data-cat")===cat));});
+  Array.prototype.forEach.call(picksBtns,function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-pick")===pick));});
+}
+Array.prototype.forEach.call(tabs,function(b){b.addEventListener("click",function(){cat=b.getAttribute("data-cat");pick="";page=1;syncChips();build();});});
+Array.prototype.forEach.call(picksBtns,function(b){b.addEventListener("click",function(){var p=b.getAttribute("data-pick");pick=(pick===p)?"":p;cat="all";page=1;syncChips();build();});});
+$("clearFilters").addEventListener("click",function(){cat="all";pick="";q="";search.value="";page=1;syncChips();build();});
+
+document.addEventListener("click",function(e){
+  var b=e.target&&e.target.closest?e.target.closest("[data-phrase]"):null;
+  if(!b)return;
+  input.value=b.getAttribute("data-phrase");
+  onInput();
+  $("tool").scrollIntoView({behavior:"smooth"});
+  input.focus({preventScroll:true});
+});
+
+/* ---- mobile menu (needs #navToggle and #mainNav from header.html) ---- */
 var nt=$("navToggle"),nav=$("mainNav");
-nt.addEventListener("click",function(){nt.setAttribute("aria-expanded",nav.classList.toggle("open"));});
+if(nt&&nav){
+  nt.addEventListener("click",function(){nt.setAttribute("aria-expanded",nav.classList.toggle("open"));});
+  document.addEventListener("keydown",function(e){if(e.key==="Escape"&&nav.classList.contains("open")){nav.classList.remove("open");nt.setAttribute("aria-expanded","false");nt.focus();}});
+}
 
 $("charCount").textContent=input.value.length;
-var tabs=document.querySelectorAll(".tab");
-tabs.forEach(function(b){b.onclick=function(){cat=b.dataset.cat;page=1;tabs.forEach(function(x){x.classList.toggle("active",x===b);});build();};});
+syncChips();
 build();
 
-// Cookie banner
+/* ---- privacy notice ---- */
 var KEY="hfg_cookie_consent",cb=$("cookieConsent");
 function has(){try{return !!localStorage.getItem(KEY);}catch(e){return false;}}
-function save(v){try{localStorage.setItem(KEY,v);}catch(e){}cb.classList.remove("show");}
+function save(){try{localStorage.setItem(KEY,"seen");}catch(e){}cb.classList.remove("show");}
 if(!has())setTimeout(function(){cb.classList.add("show");},600);
-$("cookieAccept").onclick=function(){save("accepted");};
-$("cookieDecline").onclick=function(){save("declined");};
+$("cookieAccept").onclick=save;
 })();
 </script>
-  <script>
+<script>
 (function(){
   var u=encodeURIComponent("https://hindifontgen.in/"),
       t=encodeURIComponent("Hindi Font Generator – Stylish & Calligraphy Hindi Fonts Online"),
@@ -553,10 +951,12 @@ $("cookieDecline").onclick=function(){save("declined");};
   s("shFb","https://www.facebook.com/sharer/sharer.php?u="+u);
   s("shX","https://twitter.com/intent/tweet?url="+u+"&text="+t);
   s("shPin","https://pinterest.com/pin/create/button/?url="+u+"&media="+img+"&description="+t);
-  document.getElementById("shPrint").addEventListener("click",function(){window.print();});
+  var pr=document.getElementById("shPrint");if(pr)pr.addEventListener("click",function(){window.print();});
   var rail=document.getElementById("shareRail"),tg=document.getElementById("shareToggle");
-  tg.addEventListener("click",function(e){e.stopPropagation();tg.setAttribute("aria-expanded",rail.classList.toggle("open"));});
-  document.addEventListener("click",function(e){if(!rail.contains(e.target)){rail.classList.remove("open");tg.setAttribute("aria-expanded","false");}});
+  if(rail&&tg){
+    tg.addEventListener("click",function(e){e.stopPropagation();tg.setAttribute("aria-expanded",rail.classList.toggle("open"));});
+    document.addEventListener("click",function(e){if(!rail.contains(e.target)){rail.classList.remove("open");tg.setAttribute("aria-expanded","false");}});
+  }
 })();
 </script>
 </body>
