@@ -1,0 +1,118 @@
+
+<style>
+  #hfg-cc {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 2147483000;
+    width: 300px;
+    max-width: calc(100vw - 32px);
+    box-sizing: border-box;
+    padding: 14px 16px;
+    background: #ffffff;
+    color: #1b2421;
+    border: 1px solid #cfdad6;
+    border-top: 3px solid #0A6E5A;
+    border-radius: 12px;
+    box-shadow: 0 6px 22px rgba(10, 30, 25, 0.16);
+    font-size: 13px;
+    line-height: 1.5;
+    font-family: inherit;
+    display: none;
+  }
+  #hfg-cc.hfg-show { display: block; }
+  #hfg-cc .hfg-title { margin: 0 0 4px; font-weight: 700; font-size: 14px; color: #0A6E5A; }
+  #hfg-cc p { margin: 0 0 10px; }
+  #hfg-cc a { color: #0A6E5A; text-decoration: underline; }
+  #hfg-cc .hfg-row { display: flex; gap: 8px; }
+  #hfg-cc button {
+    flex: 1 1 0;
+    appearance: none;
+    cursor: pointer;
+    min-height: 36px;
+    padding: 0 10px;
+    border-radius: 8px;
+    border: 1.5px solid #0A6E5A;
+    font: inherit;
+    font-weight: 600;
+  }
+  #hfg-cc .hfg-accept { background: #0A6E5A; color: #ffffff; }
+  #hfg-cc .hfg-reject { background: #ffffff; color: #0A6E5A; }
+  #hfg-cc button:focus-visible,
+  #hfg-cc a:focus-visible { outline: 3px solid #f2b705; outline-offset: 2px; }
+  @media (max-width: 480px) {
+    #hfg-cc { left: 10px; bottom: 10px; width: 280px; max-width: calc(100vw - 20px); }
+  }
+  @media (prefers-color-scheme: dark) {
+    #hfg-cc { background: #14201c; color: #e6efec; border-color: #2c403a; border-top-color: #2fb89b; }
+    #hfg-cc .hfg-title, #hfg-cc a { color: #6fd9c0; }
+    #hfg-cc .hfg-accept { background: #2fb89b; border-color: #2fb89b; color: #07201a; }
+    #hfg-cc .hfg-reject { background: transparent; color: #6fd9c0; border-color: #2fb89b; }
+  }
+</style>
+
+<script>
+(function () {
+  var KEY = 'hfg_consent';
+
+  function read() {
+    try { return localStorage.getItem(KEY); } catch (e) { return null; }
+  }
+  function write(v) {
+    try { localStorage.setItem(KEY, v); } catch (e) {}
+  }
+
+  // Runs immediately, before ad units load.
+  // Personalised ads only after the visitor clicks Accept.
+  function applyAds(v) {
+    window.adsbygoogle = window.adsbygoogle || [];
+    window.adsbygoogle.requestNonPersonalizedAds = (v === 'accepted') ? 0 : 1;
+  }
+  applyAds(read());
+
+  function build() {
+    var old = document.getElementById('hfg-cc');
+    if (old) return old;
+    var box = document.createElement('div');
+    box.id = 'hfg-cc';
+    box.setAttribute('role', 'dialog');
+    box.setAttribute('aria-label', 'Cookie choices');
+    box.innerHTML =
+      '<p class="hfg-title">Cookies</p>' +
+      '<p>We use cookies for ads. Accept for personalised ads or reject for non-personalised. ' +
+      '<a href="/cookie-policy.html">Learn more</a></p>' +
+      '<div class="hfg-row">' +
+        '<button type="button" class="hfg-reject">Reject</button>' +
+        '<button type="button" class="hfg-accept">Accept</button>' +
+      '</div>';
+    document.body.appendChild(box);
+    box.querySelector('.hfg-accept').addEventListener('click', function () { choose('accepted'); });
+    box.querySelector('.hfg-reject').addEventListener('click', function () { choose('rejected'); });
+    return box;
+  }
+
+  function choose(v) {
+    write(v);
+    applyAds(v);
+    var box = document.getElementById('hfg-cc');
+    if (box) box.classList.remove('hfg-show');
+  }
+
+
+  window.hfgOpenConsent = function () {
+    var box = build();
+    box.classList.add('hfg-show');
+    var btn = box.querySelector('.hfg-accept');
+    if (btn) btn.focus();
+  };
+
+  function init() {
+    if (!read()) { build().classList.add('hfg-show'); }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+</script>
