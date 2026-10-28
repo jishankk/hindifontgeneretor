@@ -5,122 +5,173 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>About Us</title>
+<title>About HindiFontGen – Free Hindi Font Generator by Ali Hamza</title>
+<meta name="description" content="HindiFontGen is a free tool to preview Hindi text in 61 Devanagari fonts and download it as an image. Built by Ali Hamza. Learn why it exists and how it works.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A6E5A">
 <link rel="canonical" href="https://hindifontgen.in/about.html">
 <link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HindiFontGen">
+<meta property="og:title" content="About HindiFontGen – Free Hindi Font Generator by Ali Hamza">
+<meta property="og:description" content="Why HindiFontGen exists, how it works and who built it.">
+<meta property="og:url" content="https://hindifontgen.in/about.html">
+<meta property="og:image" content="https://hindifontgen.in/hindifontgen-intro.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Tailwind via the Play CDN, same as the homepage. Compile a static CSS file for production. -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#0A6E5A',deep:'#064B3E',ink:'#0F1E1A',soft:'#33433F',mint:'#EEF5F2',line:'#D9E4E0',gold:'#E9A400'}},fontFamily:{sans:['Mukta','system-ui','sans-serif'],display:['Eczar','"Noto Serif Devanagari"','Georgia','serif']}}}};
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"AboutPage","@id":"https://hindifontgen.in/about.html#webpage","url":"https://hindifontgen.in/about.html","name":"About HindiFontGen","isPartOf":{"@id":"https://hindifontgen.in/#website"},"about":{"@id":"https://hindifontgen.in/#organization"},"mainEntity":{"@id":"https://hindifontgen.in/#author"},"inLanguage":"en-IN","dateModified":"2026-10-28"},
+{"@type":"Person","@id":"https://hindifontgen.in/#author","name":"Ali Hamza","url":"https://hindifontgen.in/about.html","jobTitle":"Creator of HindiFontGen","email":"contact@hindifontgen.in","sameAs":["https://www.facebook.com/profile.php?id=61577195696602","https://www.instagram.com/ali_hamza_786_n/","https://x.com/ihamzali","https://www.youtube.com/@alihamzah.Official"]}
+]}
+</script>
 <style>
-  :root{
-    --paper:#FFFFFF; --panel:#FFFFFF; --ink:#1D2624; --ink-soft:#6B7573;
-    --rule:#E1E7E5; --accent:#0E8F76; --accent-soft:#E3F5EF; --accent-dark:#0A6E5A;
-    --focus:#1A56DB; --radius:10px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0; background:var(--paper); color:var(--ink); font-family:'Poppins',system-ui,sans-serif; -webkit-font-smoothing:antialiased; line-height:1.5;}
-  a{color:inherit;}
-  ::selection{background:var(--accent-soft);}
-  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
-  @media (prefers-reduced-motion: reduce){ *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
+:root{--ink:#0F1E1A;--soft:#33433F;--rule:#D9E4E0;--accent:#0A6E5A;--accent-soft:#E6F1ED;--accent-dark:#064B3E;--focus:#1A56DB}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+body{overflow-x:clip}
+img,svg,video{max-width:100%;height:auto}
 
-  header{position:sticky; top:0; z-index:50; background:rgba(251,247,240,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--rule); padding:16px 24px;}
-  .header-inner{max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px;}
-  .logo{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; text-decoration:none; flex-shrink:0; color:var(--ink);}
-  .logo em{font-style:normal; color:var(--accent);}
-  nav.main-nav{display:flex; align-items:center; gap:2px;}
-  nav.main-nav a{font-size:14px; color:var(--ink-soft); text-decoration:none; padding:8px 12px; border-radius:7px; white-space:nowrap;}
-  nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
-  nav.main-nav a.current{color:var(--ink); font-weight:600;}
-  .nav-toggle{display:none; border:1px solid var(--rule); background:#fff; border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;}
-  @media (max-width:900px){
-    nav.main-nav{position:absolute; top:100%; left:0; right:0; background:var(--paper); border-bottom:1px solid var(--rule); flex-direction:column; align-items:stretch; padding:8px 16px 16px; display:none;}
-    nav.main-nav.open{display:flex;}
-    nav.main-nav a{padding:10px 8px; border-radius:6px;}
-    .nav-toggle{display:block;}
-  }
+/* ---- shared footer (markup lives in _includes/footer.html) ---- */
+footer{border-top:1px solid var(--rule);padding:40px 24px 28px;margin-top:0}
+.fi{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer h4{font-size:13px;font-weight:700;margin:0 0 12px}footer p{font-size:13px;color:var(--soft);font-weight:500;margin:0;max-width:36ch}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin-bottom:8px}footer li a{font-size:13px;color:var(--soft);font-weight:500;text-decoration:none}footer li a:hover{color:var(--accent)}
+.fb{max-width:1180px;margin:28px auto 0;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:var(--soft)}
+@media(max-width:760px){.fi{grid-template-columns:1fr;gap:24px}}
 
-  section.block{max-width:900px; margin:0 auto; padding:52px 24px 30px;}
-  .page-head{max-width:680px; margin:0 auto 30px;}
-  .kicker{display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:10px;}
-  h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(24px,3.6vw,34px); margin:0 0 10px;}
-
-  .legal-copy h2{font-size:19px; font-weight:700; margin:30px 0 12px;}
-  .legal-copy p{font-size:15px; color:var(--ink-soft); margin:0 0 14px; line-height:1.7;}
-  .legal-copy ul{font-size:15px; color:var(--ink-soft); padding-left:20px; margin:0 0 14px;}
-  .legal-copy li{margin-bottom:8px; line-height:1.6;}
-  .legal-copy a{color:var(--accent); text-decoration:underline;}
-  .legal-copy strong{color:var(--ink);}
-
-  section.block.banner{
-    background:var(--panel); border-top:1px solid var(--rule); border-bottom:1px solid var(--rule);
-    max-width:none; padding:44px 24px;
-  }
-  .banner-inner{max-width:760px; margin:0 auto; text-align:center;}
-  .banner-inner p{color:var(--ink-soft); font-size:15px; margin:0;}
-
-  .feature-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; max-width:900px; margin:0 auto; padding:0 24px 60px;}
-  .feature-card{background:#FFFFFF; border:1px solid var(--rule); border-radius:8px; padding:22px 22px 24px; text-align:left;}
-  .feature-card .ico{width:30px; height:30px; margin:0 0 14px; display:flex; align-items:center; justify-content:flex-start;}
-  .feature-card .ico svg{width:24px; height:24px; stroke:var(--ink); fill:none; stroke-width:1.5;}
-  .feature-card h3{font-size:15px; font-weight:600; margin:0 0 8px;}
-  .feature-card p{font-size:13.5px; color:var(--ink-soft); margin:0; line-height:1.55;}
-  @media (max-width:860px){ .feature-grid{grid-template-columns:repeat(2,1fr);} }
-  @media (max-width:560px){ .feature-grid{grid-template-columns:1fr;} }
-
-  footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
-  .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
-  .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
-  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
-  .footer-col ul{list-style:none; margin:0; padding:0;}
-  .footer-col li{margin-bottom:8px;}
-  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
-  .footer-col a:hover{color:var(--accent);}
-  .footer-bottom{max-width:1180px; margin:32px auto 0; padding-top:20px; border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);}
-  @media (max-width:760px){ .footer-inner{grid-template-columns:1fr; gap:24px;} }
+/* ---- page components ---- */
+.bc>*+*{margin-top:1rem}.bc{max-width:46rem}.bc strong{color:var(--ink)}
+.bc ul{list-style:disc;padding-left:1.25rem}.bc ol{list-style:decimal;padding-left:1.25rem}.bc li+li{margin-top:.5rem}
+.bc a,a.lnk{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+a.lnk:hover,.bc a:hover{color:var(--accent-dark)}
+.bc,.bc *{overflow-wrap:anywhere}
+.note{border-left:4px solid var(--accent);background:#fff;padding:1rem 1.25rem;border-radius:0 .5rem .5rem 0}
+.btn{display:inline-flex;align-items:center;justify-content:center;font-weight:600;font-size:.95rem;padding:.7rem 1.25rem;border-radius:.375rem;text-decoration:none;border:1px solid var(--accent);background:var(--accent);color:#fff}
+.btn:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.btn-ghost{background:#fff;color:var(--ink);border-color:var(--rule)}
+.btn-ghost:hover{background:#fff;color:var(--accent);border-color:var(--accent)}
+.stat{border:1px solid var(--rule);border-radius:.5rem;padding:1.1rem 1.25rem;background:#fff}
+.stat b{display:block;font-family:Eczar,Georgia,serif;font-size:2rem;line-height:1.1;color:var(--accent)}
+.stat span{display:block;margin-top:.35rem;font-size:.9rem;color:var(--soft);font-weight:500}
+details{border:1px solid var(--rule);border-radius:.5rem;background:#fff}
+summary{cursor:pointer;padding:1rem 1.25rem;font-size:1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px;color:var(--ink)}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--accent);font-size:1.25rem;line-height:1}details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 1.25rem 1.1rem;color:var(--soft)}
+.as-social{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+.as-social a{width:40px;height:40px;display:inline-flex;align-items:center;justify-content:center;border-radius:50%;background:var(--accent-soft);color:var(--accent-dark);border:1px solid var(--rule);text-decoration:none;transition:background .2s,color .2s}
+.as-social a:hover{background:var(--accent);color:#fff;border-color:var(--accent)}
+.as-social svg{width:20px;height:20px;display:block}
+@media(max-width:560px){.as-social{justify-content:center}}
 </style>
+{% include cookie-banner.html %}
 </head>
-<body>
+<body class="bg-white text-brand-ink antialiased">
+<a href="#about" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-brand-ink">Skip to content</a>
 
 {% include header.html %}
 
-<section class="block">
-  <div class="page-head">
-    <span class="kicker">About Us</span>
-  <h1>Welcome to the HindiFontGen 👋</h1>
+<main>
+
+<section class="bg-brand-deep text-white">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 pb-14 pt-10 sm:pt-14">
+    <p class="mb-3 text-sm font-bold uppercase tracking-[.08em] text-brand-gold">About us</p>
+    <h1 class="max-w-3xl font-display text-[2rem] font-bold leading-[1.15] sm:text-5xl">One place to see your Hindi text in every style</h1>
+    <div class="mt-4 h-1 w-24 bg-brand-gold" aria-hidden="true"></div>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/90">HindiFontGen is a free tool that shows your Hindi text in <span data-font-count>61</span> Devanagari fonts side by side, so you can pick a look and save it as an image. Built by Ali Hamza.</p>
+    <div class="mt-7 flex flex-wrap gap-3">
+      <a class="btn" style="background:#E9A400;border-color:#E9A400;color:#0F1E1A" href="https://hindifontgen.in/">Try the generator</a>
+      <a class="btn btn-ghost" href="#author">Meet the author</a>
+    </div>
   </div>
-
-  <div class="legal-copy">
-    <p>This tool gives your Hindi characters a fresh look. With hindifontgen, you can customize your Hindi words to make them more visually appealing, utilizing various options such as:</p>
-    <ul>
-      <li>Text color</li>
-      <li>Background color</li>
-      <li>Font styles</li>
-      <li>Text size</li>
-    </ul>
-    <p>Additionally, if you wish to save your preferred font designs, several options are available, including:</p>
-    <ul>
-      <li>Copying the text</li>
-      <li>Saving a transparent image of the font</li>
-      <li>Saving the full font design</li>
-      <li>Accessing the original font URL to view complete details</li>
-    </ul>
-    <p>Hindi fonts are versatile and can be used for various purposes—such as Instagram captions, wedding invitation designs, YouTube thumbnails, or any other project you have in mind.</p>
-    <p>Using hindifontgen.in is simple and straightforward; it's not rocket science. You simply need to enter your Hindi text into the designated area, select your favorite font style, and copy or save it for use in any project, big or small.</p>
-    <p>All services provided by this tool are completely free; there are no charges, and you don't even need to create an account. You can use it for free, whenever and wherever you like.</p>
-    <p>If you need to get in touch with us, you can send an email contact@hindifontgen.in, and we will try to reply as soon as possible. While you likely won't need to—given how easily you can master this tool—please feel free to contact us if you encounter any issues regarding the website or its services. Thank you.</p>
 </section>
-{% include footer.html %}
-<script>
-  var navToggle = document.getElementById('navToggle');
-  var mainNav = document.getElementById('mainNav');
-  navToggle.addEventListener('click', function(){
-    var isOpen = mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-</script>
 
+<section id="about" class="bg-white py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Why HindiFontGen exists</h2>
+    <div>
+      <div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+        <p>Finding a good Hindi font usually means opening a dozen different sites, typing the same words again and again, and still not knowing how your real phrase will look. Conjuncts, matras and the shirorekha can look very different from one font to the next, so judging a font by a single sample letter does not work.</p>
+        <p>HindiFontGen fixes that. You type your own text once, and the page shows it in every font at the same time. Then you adjust size and colours, add an effect if you like, copy the text, or download a PNG or a transparent PNG for Instagram, WhatsApp, Canva, posters and thumbnails.</p>
+        <p>The tool is free, needs no sign-up, and works on phones as well as computers.</p>
+      </div>
+      <div class="mt-10 grid max-w-3xl gap-4 sm:grid-cols-3">
+        <div class="stat"><b data-font-count>Free</b><span>Devanagari fonts from Google Fonts</span></div>
+        <div class="stat"><b>Customize</b><span>Effects: outline, shadow, glow, 3D, gradient</span></div>
+        <div class="stat"><b>Gift</b><span>Free, with no account needed</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="principles" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">What we stand for</h2>
+    <div>
+      <div class="grid max-w-3xl gap-8 sm:grid-cols-2">
+        <div class="border-l-4 border-brand pl-5">
+          <h3 class="font-display text-xl font-bold text-brand-ink">Real Unicode, not tricks</h3>
+          <p class="mt-2 text-brand-soft">Your text stays normal Unicode Devanagari. Only the typeface changes, so what you copy always works in any app.</p>
+        </div>
+        <div class="border-l-4 border-brand-gold pl-5">
+          <h3 class="font-display text-xl font-bold text-brand-ink">Your text stays with you</h3>
+          <p class="mt-2 text-brand-soft">Previews and PNG creation run in your browser, and we do not save what you type on a server. See the <a class="lnk" href="https://hindifontgen.in/privacy-policy.html">Privacy Policy</a>.</p>
+        </div>
+        <div class="border-l-4 border-brand pl-5">
+          <h3 class="font-display text-xl font-bold text-brand-ink">Open-licensed fonts only</h3>
+          <p class="mt-2 text-brand-soft">Every font comes from Google Fonts, and each card links to the font's own page so you can read the licence and download it.</p>
+        </div>
+        <div class="border-l-4 border-brand-gold pl-5">
+          <h3 class="font-display text-xl font-bold text-brand-ink">Honest about limits</h3>
+          <p class="mt-2 text-brand-soft">The tool does not install fonts or keep the font when you paste text elsewhere. We say so clearly, and the PNG is there for when the exact look matters.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="author" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">About the author</h2>
+    <div>
+      <div class="grid max-w-3xl items-center gap-5 rounded-lg border border-brand-line bg-white p-6 sm:grid-cols-[auto_1fr]">
+        <div class="mx-auto flex h-24 w-24 items-center justify-center overflow-hidden rounded-full bg-brand-mint text-4xl font-bold text-brand sm:mx-0"><img src="/ali.png" alt="Ali Hamza, creator of HindiFontGen" width="96" height="96" loading="lazy" decoding="async" class="h-full w-full object-cover" onerror="this.replaceWith(document.createTextNode('A'))"></div>
+        <div class="text-center sm:text-left">
+          <h3 class="font-display text-2xl font-bold text-brand-ink">Ali Hamza</h3>
+          <p class="text-sm font-semibold text-brand">Creator of HindiFontGen</p>
+          <p class="mt-2 text-brand-soft">Hi, I’m Ali Hamza, the guy behind HindiFontGen. I got tired of switching between a dozen sites just to find a good Hindi font, so I built one place where you can see your text in every style.</p>
+          <p class="mt-2 text-brand-soft">I keep improving the tool based on what people ask for. Got feedback, a font suggestion or spotted a bug? Mail me at <a class="lnk" href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p>
+          <div class="as-social" aria-label="Follow Ali Hamza">
+            <a href="https://www.facebook.com/profile.php?id=61577195696602" target="_blank" rel="noopener noreferrer me" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.78l-.44 2.89h-2.34v6.99A10 10 0 0 0 22 12z"/></svg></a>
+            <a href="https://www.instagram.com/ali_hamza_786_n/" target="_blank" rel="noopener noreferrer me" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg></a>
+            <a href="https://x.com/ihamzali" target="_blank" rel="noopener noreferrer me" aria-label="X (Twitter)"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+            <a href="https://www.youtube.com/@alihamzah.Official" target="_blank" rel="noopener noreferrer me" aria-label="YouTube"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2C.5 9.1.5 12 .5 12s0 2.9.5 4.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1c.5-1.9.5-4.8.5-4.8s0-2.9-.5-4.8zM9.7 15.5v-7l6 3.5-6 3.5z"/></svg></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+{% include footer.html %}
+
+<script>
+(function(){
+  Array.prototype.forEach.call(document.querySelectorAll("[data-font-count]"),function(el){el.textContent="61";});
+  var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
+  if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
+})();
+</script>
 </body>
 </html>
