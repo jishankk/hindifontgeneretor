@@ -3,252 +3,311 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DMCA Policy</title>
-<link rel="canonical" href="https://hindifontgen.in/dmca.html">
-<link rel="icon" type="image/png" href="/favicon.png">
+  <title>DMCA Policy | HindiFontGen</title>
+  <meta name="description" content="Learn how to submit a copyright complaint about content on HindiFontGen, what details to include in a DMCA notice, and how we handle copyright concerns.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A6E5A">
+  <link rel="canonical" href="https://hindifontgen.in/dmca.html">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <link rel="apple-touch-icon" href="/icon.png">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-  :root{
-    --paper:#FFFFFF;
-    --panel:#FFFFFF;
-    --ink:#1D2624;
-    --ink-soft:#6B7573;
-    --rule:#E1E7E5;
-    --accent:#0E8F76;
-    --accent-soft:#E3F5EF;
-    --accent-dark:#0A6E5A;
-    --focus:#1A56DB;
-    --radius:10px;
-  }
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#0A6E5A',
+              deep: '#064B3E',
+              ink: '#0F1E1A',
+              soft: '#33433F',
+              mint: '#EEF5F2',
+              line: '#D9E4E0',
+              gold: '#E9A400'
+            }
+          },
+          fontFamily: {
+            sans: ['Mukta', 'system-ui', 'sans-serif'],
+            display: ['Eczar', '"Noto Serif Devanagari"', 'Georgia', 'serif']
+          }
+        }
+      }
+    };
+  </script>
 
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Poppins',system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.5;
-  }
-  a{color:inherit;}
-  ::selection{background:var(--accent-soft);}
-  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
-  }
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: clip; }
 
-  /* ---------- Header ---------- */
-  header{
-    position:sticky; top:0; z-index:50;
-    background:rgba(251,247,240,0.94);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--rule);
-    padding:16px 24px;
-  }
-  .header-inner{
-    max-width:1180px; margin:0 auto;
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
-  }
-  .logo{
-    font-family:'Poppins',sans-serif;
-    font-weight:700;
-    font-size:19px;
-    text-decoration:none;
-    flex-shrink:0;
-    color:var(--ink);
-  }
-  .logo em{font-style:normal; color:var(--accent);}
-  nav.main-nav{display:flex; align-items:center; gap:2px;}
-  nav.main-nav a{
-    font-size:14px; color:var(--ink-soft); text-decoration:none;
-    padding:8px 12px; border-radius:7px; white-space:nowrap;
-  }
-  nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
-  nav.main-nav a.current{color:var(--ink); font-weight:600;}
-  .nav-toggle{
-    display:none; border:1px solid var(--rule); background:#fff;
-    border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;
-  }
-  @media (max-width:900px){
-    nav.main-nav{
-      position:absolute; top:100%; left:0; right:0; background:var(--paper);
-      border-bottom:1px solid var(--rule); flex-direction:column; align-items:stretch;
-      padding:8px 16px 16px; display:none;
+    .dmca-copy p {
+      margin-top: 0.85rem;
+      color: #33433F;
+      font-size: 1.0625rem;
+      line-height: 1.8;
     }
-    nav.main-nav.open{display:flex;}
-    nav.main-nav a{padding:10px 8px; border-radius:6px;}
-    .nav-toggle{display:block;}
-  }
 
-  /* ---------- Legal page shell ---------- */
-  .legal-hero{max-width:760px; margin:0 auto; padding:52px 24px 0;}
-  .kicker{
-    display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em;
-    text-transform:uppercase; color:var(--accent); margin-bottom:10px;
-  }
-  .legal-hero h1{
-    font-family:'Poppins',sans-serif;
-    font-weight:800;
-    font-size:clamp(24px,3.6vw,34px);
-    line-height:1.25;
-    margin:0 0 10px;
-  }
-  .legal-hero .updated{color:var(--ink-soft); font-size:13.5px; margin:0 0 8px;}
-  .legal-hero .lede{color:var(--ink-soft); font-size:15.5px; max-width:65ch; margin:0 0 8px;}
+    .dmca-copy ul,
+    .dmca-copy ol {
+      margin: 0.8rem 0 1rem 1.35rem;
+      color: #33433F;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+    }
 
-  .legal-body{max-width:760px; margin:0 auto; padding:28px 24px 60px;}
-  .legal-body h2{
-    font-family:'Poppins',sans-serif; font-weight:700; font-size:19px;
-    margin:34px 0 12px; padding-top:10px; border-top:1px solid var(--rule);
-  }
-  .legal-body h2:first-of-type{border-top:none; padding-top:0; margin-top:8px;}
-  .legal-body h3{font-size:15.5px; font-weight:600; margin:20px 0 8px;}
-  .legal-body p{color:var(--ink-soft); font-size:15px; margin:0 0 14px;}
-  .legal-body ul, .legal-body ol{color:var(--ink-soft); font-size:15px; padding-left:20px; margin:0 0 14px;}
-  .legal-body li{margin-bottom:8px;}
-  .legal-body strong{color:var(--ink);}
-  .legal-body a{color:var(--accent); text-decoration:underline; text-decoration-color:var(--accent-soft);}
-  .legal-body a:hover{color:var(--accent-dark);}
+    .dmca-copy ul { list-style: disc; }
+    .dmca-copy ol { list-style: decimal; }
 
-  .info-card{
-    background:var(--accent-soft); border:1px solid var(--rule); border-radius:var(--radius);
-    padding:18px 20px; margin:0 0 14px;
-  }
-  .info-card p{margin:0 0 8px; color:var(--ink);}
-  .info-card p:last-child{margin-bottom:0;}
-  .info-card strong{color:var(--ink);}
+    .dmca-copy li {
+      padding-left: 0.2rem;
+      margin-top: 0.35rem;
+    }
 
-  .contact-card{
-    border:1px solid var(--rule); border-radius:var(--radius);
-    padding:20px 22px; margin:14px 0 14px;
-  }
-  .contact-card p{margin:0 0 6px; font-size:14.5px;}
-  .contact-card p:last-child{margin-bottom:0;}
+    .dmca-copy a {
+      color: #0A6E5A;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
 
-  .warning-card{
-    background:#FBEEEA; border:1px solid #E9C9BC; border-radius:var(--radius);
-    padding:16px 20px; margin:0 0 14px;
-  }
-  .warning-card p{margin:0; color:var(--ink); font-size:14.5px;}
+    .dmca-copy a:hover { color: #064B3E; }
 
-  /* ---------- Footer ---------- */
-  footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
-  .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
-  .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
-  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
-  .footer-col ul{list-style:none; margin:0; padding:0;}
-  .footer-col li{margin-bottom:8px;}
-  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
-  .footer-col a:hover{color:var(--accent);}
-  .footer-bottom{
-    max-width:1180px; margin:32px auto 0; padding-top:20px;
-    border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);
-  }
+    .dmca-copy h2 {
+      margin-top: 2.2rem;
+      color: #0F1E1A;
+      font-family: 'Eczar', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
 
-  @media (max-width:760px){
-    .footer-inner{grid-template-columns:1fr; gap:24px;}
+    @media (max-width: 560px) {
+      .dmca-copy h2 { font-size: 1.35rem; }
+      .dmca-copy p,
+      .dmca-copy ul,
+      .dmca-copy ol { font-size: 1rem; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "DMCA Policy",
+    "url": "https://hindifontgen.in/dmca.html",
+    "description": "Copyright complaint and DMCA policy for HindiFontGen.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "HindiFontGen",
+      "url": "https://hindifontgen.in/"
+    },
+    "inLanguage": "en-IN"
   }
-</style>
+  </script>
+
+  {% include cookie-banner.html %}
 </head>
-<body>
 
-{% include header.html %}
+<body class="bg-white text-brand-ink antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-brand-ink">
+    Skip to content
+  </a>
 
+  {% include header.html %}
 
-<section class="legal-hero">
-  <span class="kicker">Legal</span>
-  <h1>DMCA Policy</h1>
-  <p class="updated">Last updated: September 19, 2026</p>
-  <p class="lede">HindiFontGen.in ("we", "us", "our") respects the intellectual property rights of others and expects our users to do the same. This page explains our policy and process under the Digital Millennium Copyright Act (DMCA) for handling claims of copyright infringement.</p>
-</section>
+  <main id="main-content">
+    <section class="bg-brand-deep text-white">
+      <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 pb-12 pt-10 sm:pb-16 sm:pt-14">
+        <p class="text-sm font-semibold uppercase tracking-[0.12em] text-white/75">
+          Copyright information
+        </p>
+        <h1 class="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-5xl">
+          DMCA Policy
+        </h1>
+        <div class="mt-5 h-1 w-20 bg-brand-gold" aria-hidden="true"></div>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/90">
+          We respect intellectual property rights. This page explains how to report material that you believe infringes your copyright on HindiFontGen.
+        </p>
+      </div>
+    </section>
 
-<div class="legal-body">
+    <section class="border-b border-brand-line bg-brand-mint">
+      <div class="mx-auto max-w-[1228px] px-4 py-5 min-[561px]:px-6">
+        <p class="text-sm leading-relaxed text-brand-soft">
+          <strong class="text-brand-ink">Effective date:</strong> October 28, 2026
+          <span class="mx-2" aria-hidden="true">·</span>
+          <strong class="text-brand-ink">Website:</strong>
+          <a class="text-brand underline underline-offset-2" href="https://hindifontgen.in/">HindiFontGen.in</a>
+        </p>
+      </div>
+    </section>
 
-  <h2>1. Our Approach to Copyright</h2>
-  <p>HindiFontGen is a browser-based Hindi font preview tool. The text you type into the tool is processed entirely on your own device — it is never uploaded to, stored on, or displayed publicly from our servers. Because of this, our site does not host user-generated content, image galleries, or file uploads in the way many other websites do.</p>
-  <p>The typefaces displayed on this site are sourced from <a href="https://fonts.google.com/" target="_blank" rel="noopener">Google Fonts</a>, and each is distributed under an open font license (typically the SIL Open Font License) that permits this kind of use. If you believe any content on this website — including text, images, code, or design elements that we do host and control — infringes a copyright you own, this policy tells you how to notify us.</p>
+    <section class="bg-white py-10 sm:py-14">
+      <div class="mx-auto grid max-w-[1228px] gap-10 px-4 min-[561px]:px-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
 
-  <h2>2. Filing a DMCA Takedown Notice</h2>
-  <p>If you are a copyright owner, or an agent authorised to act on a copyright owner's behalf, and you believe that material appearing on HindiFontGen.in infringes your copyright, you may submit a written takedown notice to our designated agent. Under 17 U.S.C. § 512(c)(3), a valid notice must include the following:</p>
-  <ol>
-    <li>A physical or electronic signature of a person authorised to act on behalf of the copyright owner.</li>
-    <li>Identification of the copyrighted work claimed to have been infringed, or, if multiple works are covered by a single notice, a representative list of such works.</li>
-    <li>Identification of the material that is claimed to be infringing, with enough detail (such as a specific URL on our site) to allow us to locate it.</li>
-    <li>Your contact information, including at minimum an address, telephone number, and email address.</li>
-    <li>A statement that you have a good-faith belief that the disputed use is not authorised by the copyright owner, its agent, or the law.</li>
-    <li>A statement, made under penalty of perjury, that the information in your notice is accurate and that you are the copyright owner or authorised to act on the owner's behalf.</li>
-  </ol>
+        <aside class="self-start rounded-lg border border-brand-line bg-brand-mint p-5 lg:sticky lg:top-24">
+          <h2 class="font-display text-xl font-bold text-brand-ink">On this page</h2>
+          <nav class="mt-4" aria-label="DMCA Policy sections">
+            <ul class="space-y-2.5 text-sm leading-relaxed text-brand-soft">
+              <li><a class="hover:text-brand" href="#purpose">1. Purpose</a></li>
+              <li><a class="hover:text-brand" href="#website-content">2. Website Content</a></li>
+              <li><a class="hover:text-brand" href="#submit-notice">3. Submit a Copyright Notice</a></li>
+              <li><a class="hover:text-brand" href="#review-process">4. Review Process</a></li>
+              <li><a class="hover:text-brand" href="#counter-notice">5. Counter-Notice</a></li>
+              <li><a class="hover:text-brand" href="#repeat-infringement">6. Repeat Infringement</a></li>
+              <li><a class="hover:text-brand" href="#good-faith">7. Good-Faith Reporting</a></li>
+              <li><a class="hover:text-brand" href="#third-party">8. Third-Party Services</a></li>
+              <li><a class="hover:text-brand" href="#policy-changes">9. Policy Updates</a></li>
+              <li><a class="hover:text-brand" href="#contact">10. Contact Us</a></li>
+            </ul>
+          </nav>
+        </aside>
 
-  <div class="warning-card">
-    <p><strong>Important:</strong> Under Section 512(f) of the DMCA, anyone who knowingly and materially misrepresents that material is infringing may be liable for damages. Please be certain of your claim before submitting a notice.</p>
-  </div>
+        <article class="dmca-copy min-w-0">
+          <p>
+            HindiFontGen respects the intellectual property rights of creators, publishers, font designers and other rights holders. We take copyright concerns seriously and encourage anyone who believes that material available on our website infringes their rights to contact us with clear and relevant details.
+          </p>
+          <p>
+            This policy describes how to submit a copyright complaint concerning
+            <a href="https://hindifontgen.in/">hindifontgen.in</a>. It is intended to help us identify and review reported material. It does not guarantee that every request will result in removal.
+          </p>
 
-  <h2>3. Where to Send a Notice</h2>
-  <div class="contact-card">
-    <p><strong>DMCA Designated Agent</strong></p>
-    <p>HindiFontGen.in</p>
-    <p>Email: <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a></p>
-    <p>For general enquiries only, you may also use: <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a></p>
-  </div>
-  <p>Notices sent to the designated agent above are the fastest way to reach us regarding a copyright claim. Please include the word "DMCA Notice" in your subject line.</p>
+          <h2 id="purpose">1. Purpose of This Policy</h2>
+          <p>
+            This DMCA Policy provides a process for reporting content that you believe infringes copyright. We review notices in good faith and may take appropriate action when a complaint is sufficiently clear and supported by the information provided.
+          </p>
+          <p>
+            The Digital Millennium Copyright Act (DMCA) is a United States copyright law. Where applicable, notices and counter-notices may be subject to its requirements. Other copyright laws may apply depending on the circumstances and the location of the parties.
+          </p>
 
-  <h2>4. What Happens After We Receive a Notice</h2>
-  <p>Upon receiving a complete and valid notice, we will:</p>
-  <ul>
-    <li>Review the notice to confirm it satisfies the requirements listed in Section 2 above.</li>
-    <li>Remove or disable access to the identified material that is within our control, where the claim appears valid.</li>
-    <li>Make a good-faith attempt to notify the party responsible for the content, where applicable, that the material has been removed or disabled and why.</li>
-  </ul>
-  <p>Incomplete notices — for example, those missing a signature, a specific URL, or a good-faith statement — may delay our ability to act and may be returned to the sender for correction.</p>
+          <h2 id="website-content">2. Content on HindiFontGen</h2>
+          <p>
+            HindiFontGen provides browser-based tools for previewing Hindi and other Devanagari text in different fonts. Font families may be delivered by third-party providers, and their respective creators or licensors may retain ownership of those fonts.
+          </p>
+          <p>
+            The presence of a font, link, description or other material on this website does not necessarily mean that HindiFontGen owns that material. If you believe that content displayed on a page under our control infringes your copyright, please identify the specific material and its location.
+          </p>
+          <p>
+            If your concern relates to a font or service hosted and controlled by a third party, you may also need to contact that provider directly.
+          </p>
 
-  <h2>5. Filing a Counter-Notice</h2>
-  <p>If material you posted or that you believe was wrongly removed has been taken down as a result of a mistake or misidentification, you may submit a counter-notice under 17 U.S.C. § 512(g)(3). A valid counter-notice must include:</p>
-  <ol>
-    <li>Your physical or electronic signature.</li>
-    <li>Identification of the material that was removed or disabled, and its location before removal.</li>
-    <li>A statement, under penalty of perjury, that you have a good-faith belief the material was removed as a result of mistake or misidentification.</li>
-    <li>Your name, address, and telephone number, and a statement that you consent to the jurisdiction of the federal district court for the judicial district in which your address is located (or, if outside the United States, for any judicial district in which we may be found), and that you will accept service of process from the person who filed the original takedown notice or their agent.</li>
-  </ol>
-  <p>If we receive a valid counter-notice, we may forward it to the original complaining party. Under the DMCA, the original complainant then has the opportunity to seek a court order restraining the alleged infringer from engaging in the infringing activity. If we receive no such notice of legal action within a reasonable time, we may, at our discretion, restore the removed material.</p>
+          <h2 id="submit-notice">3. How to Submit a Copyright Notice</h2>
+          <p>
+            If you are a copyright owner or authorised to act on behalf of one, you can send a copyright complaint to:
+          </p>
 
-  <h2>6. Repeat Infringers</h2>
-  <p>Where applicable to our site's functionality, we reserve the right, in appropriate circumstances, to disable or terminate access for users who are found to be repeat infringers of copyright.</p>
+          <div class="mt-5 rounded-lg border border-brand-line bg-brand-mint p-5 sm:p-6">
+            <h3 class="font-display text-xl font-bold text-brand-ink">Copyright Contact</h3>
+            <p class="mt-2">
+              Email:
+              <a href="mailto:contact@hindifontgen.in?subject=Copyright%20Complaint">contact@hindifontgen.in</a>
+            </p>
+            <p class="mt-2 text-sm">
+              Suggested subject: Copyright Complaint – HindiFontGen
+            </p>
+          </div>
 
-  <h2>7. No Legal Advice</h2>
-  <p>This page is provided for informational purposes and explains our internal process for responding to DMCA notices. It is not legal advice. If you are uncertain about your rights or obligations under copyright law, we recommend consulting a qualified attorney.</p>
+          <p>
+            To help us understand and assess your request, please include the following information where applicable:
+          </p>
+          <ol>
+            <li>Your full name and contact details, including an email address where we can reach you.</li>
+            <li>A description of the copyrighted work that you believe has been infringed.</li>
+            <li>The exact URL of the page or material on HindiFontGen that you want us to review.</li>
+            <li>An explanation of why you believe the identified material infringes your copyright or the rights of the person you represent.</li>
+            <li>A statement that you have a good-faith belief that the use of the material is not authorised by the copyright owner, its agent or the law.</li>
+            <li>A statement that the information in your notice is accurate and, where legally required, that you are the copyright owner or authorised to act on the owner's behalf.</li>
+            <li>Your physical or electronic signature, where required for a formal notice.</li>
+          </ol>
+          <p>
+            Please provide enough information for us to identify the specific material and understand your concern. Avoid sending passwords, payment information or unrelated sensitive personal information.
+          </p>
 
-  <h2>8. Changes to This Policy</h2>
-  <p>We may update this DMCA Policy from time to time to reflect changes in our practices or applicable law. Any changes will be posted on this page with a revised "last updated" date.</p>
+          <h2 id="review-process">4. How We Review Copyright Notices</h2>
+          <p>
+            After receiving a complaint, we may review the information provided and determine whether further clarification is needed. We may contact the reporting person for additional details if the notice does not clearly identify the material or the rights involved.
+          </p>
+          <p>
+            Where appropriate and legally justified, we may remove or restrict access to material under our control. We may also decline to act on a notice that is incomplete, unclear or does not provide a reasonable basis for the requested action.
+          </p>
+          <p>
+            We aim to handle copyright concerns responsibly, but we do not guarantee a specific response time or outcome. Please do not assume that material has been removed until you receive confirmation or verify the result.
+          </p>
 
-  <h2>9. Contact Us</h2>
-  <p>For copyright-related notices, please use <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>. For all other questions about this policy or the site in general, contact us at <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p>
+          <h2 id="counter-notice">5. Counter-Notice</h2>
+          <p>
+            If material you provided or have rights to use has been removed or restricted following a copyright complaint and you believe this action was mistaken, you may contact us at the email address above with an explanation and the relevant URL.
+          </p>
+          <p>
+            Include your contact details, identify the affected material and explain why you believe the removal or restriction was incorrect. If you are submitting a formal counter-notice under the DMCA, additional statements and information may be legally required.
+          </p>
+          <p>
+            A message sent to HindiFontGen is not automatically a legally valid DMCA counter-notice. Where a formal statutory process applies, the requirements of the relevant law must be followed. We will review counter-notices and determine any appropriate next steps.
+          </p>
 
-</div>
+          <h2 id="repeat-infringement">6. Repeat Infringement</h2>
+          <p>
+            Where appropriate and supported by the circumstances, we may take action against repeated copyright infringement involving material or activity under our control. Any action will depend on the nature of the issue, the information available and applicable law.
+          </p>
 
-{% include footer.html %}
+          <h2 id="good-faith">7. Good-Faith Reporting</h2>
+          <p>
+            Please make sure that you have a genuine basis for submitting a copyright complaint. Before sending a notice, consider whether the material may be licensed, used with permission or otherwise legally permitted.
+          </p>
+          <p>
+            Knowingly submitting materially false or misleading copyright claims may have legal consequences. If you are unsure whether a use infringes copyright, consider obtaining qualified legal advice before submitting a formal notice.
+          </p>
 
-<script>
-(function(){
-  "use strict";
-  var navToggle = document.getElementById('navToggle');
-  var mainNav = document.getElementById('mainNav');
-  navToggle.addEventListener('click', function(){
-    var isOpen = mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-  mainNav.querySelectorAll('a').forEach(function(a){
-    a.addEventListener('click', function(){ mainNav.classList.remove('open'); });
-  });
-})();
-</script>
+          <h2 id="third-party">8. Third-Party Content and Services</h2>
+          <p>
+            Some fonts and technical features available through HindiFontGen may rely on third-party services. We may not host or control every font file, external page or linked resource displayed or referenced by the website.
+          </p>
+          <p>
+            If your complaint concerns material hosted by another provider, please identify the exact resource in your message. You may also need to contact the provider that hosts or controls that material. We cannot guarantee that a third party will respond to or act on a complaint.
+          </p>
 
+          <h2 id="policy-changes">9. Changes to This Policy</h2>
+          <p>
+            We may update this DMCA Policy when our website, processes or applicable requirements change. Any revised version will be published on this page, along with an updated effective date where appropriate.
+          </p>
+          <p>
+            We encourage visitors and rights holders to review this page periodically.
+          </p>
+
+          <h2 id="contact">10. Contact Us</h2>
+          <p>
+            For copyright complaints, requests for clarification or other questions about this policy, contact us using the email address below.
+          </p>
+
+          <div class="mt-5 rounded-lg border border-brand-line bg-brand-mint p-5 sm:p-6">
+            <h3 class="font-display text-xl font-bold text-brand-ink">HindiFontGen</h3>
+            <p class="mt-2">
+              Email:
+              <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>
+            </p>
+            <p class="mt-2 text-sm">
+              Website:
+              <a href="https://hindifontgen.in/">https://hindifontgen.in/</a>
+            </p>
+          </div>
+
+          <p class="mt-8 text-sm">
+            For related information, read our
+            <a href="/terms.html">Terms and Conditions</a> and
+            <a href="/privacy-policy.html">Privacy Policy</a>.
+          </p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  {% include footer.html %}
 </body>
 </html>
