@@ -1,3 +1,4 @@
+
 ---
 ---
 <!DOCTYPE html>
@@ -7,209 +8,270 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Contact Us | HindiFontGen</title>
-<meta name="description" content="Contact HindiFontGen for Hindi font requests, technical issues, feedback, or general questions. Email us and we'll do our best to help.">
-<link rel="icon" type="image/png" href="/icon.png">
+<meta name="description" content="Contact HindiFontGen for technical issues, Hindi font suggestions, feedback, or general questions. Email Ali Hamza for assistance.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A6E5A">
+
 <link rel="canonical" href="https://hindifontgen.in/contact.html">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#0A6E5A',deep:'#064B3E',ink:'#0F1E1A',soft:'#33433F',mint:'#EEF5F2',line:'#D9E4E0',gold:'#E9A400'}},fontFamily:{sans:['Mukta','system-ui','sans-serif'],display:['Eczar','"Noto Serif Devanagari"','Georgia','serif']}}}};
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"ContactPage",
+  "@id":"https://hindifontgen.in/contact.html#webpage",
+  "url":"https://hindifontgen.in/contact.html",
+  "name":"Contact Us | HindiFontGen",
+  "description":"Contact HindiFontGen for technical issues, Hindi font suggestions, feedback, or general questions.",
+  "inLanguage":"en-IN",
+  "isPartOf":{"@id":"https://hindifontgen.in/#website"},
+  "about":{"@id":"https://hindifontgen.in/#organization"},
+  "mainEntity":{
+    "@type":"Organization",
+    "@id":"https://hindifontgen.in/#organization",
+    "name":"HindiFontGen",
+    "url":"https://hindifontgen.in/",
+    "email":"contact@hindifontgen.in"
+  }
+}
+</script>
 
 <style>
 :root{
-  --paper:#FFFFFF;
-  --panel:#FFFFFF;
-  --ink:#1D2624;
-  --ink-soft:#687572;
-  --rule:#E1E7E5;
+  --ink:#0F1E1A;
+  --soft:#33433F;
+  --rule:#D9E4E0;
   --accent:#0A6E5A;
-  --accent-soft:#E7F4F0;
+  --accent-soft:#E6F1ED;
+  --accent-dark:#064B3E;
   --focus:#1A56DB;
-  --radius:12px;
-}
-*{box-sizing:border-box;}
-html{scroll-behavior:smooth;}
-body{
-  margin:0;
-  background:var(--paper);
-  color:var(--ink);
-  font-family:'Poppins',system-ui,sans-serif;
-  -webkit-font-smoothing:antialiased;
-  line-height:1.6;
-}
-a{color:inherit;}
-::selection{background:var(--accent-soft);}
-:focus-visible{outline:2.5px solid var(--focus);outline-offset:3px;}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{
-    animation-duration:0.01ms!important;
-    transition-duration:0.01ms!important;
-    scroll-behavior:auto!important;
-  }
 }
 
-/* Contact page */
-.contact-section{
-  max-width:1000px;
-  margin:0 auto;
-  padding:54px 24px 72px;
+html{
+  scroll-behavior:smooth;
+  scroll-padding-top:5rem;
 }
-.contact-heading{
-  max-width:720px;
-  margin:0 auto 32px;
-}
-.contact-kicker{
-  display:inline-block;
-  margin-bottom:10px;
-  color:var(--accent);
-  font-size:12px;
-  font-weight:700;
-  letter-spacing:.07em;
-  text-transform:uppercase;
-}
-.contact-heading h1{
-  margin:0 0 14px;
-  font-size:clamp(28px,4vw,38px);
-  line-height:1.25;
-  font-weight:800;
-  letter-spacing:-.6px;
-}
-.contact-heading p{
-  max-width:650px;
+
+body{
   margin:0;
-  color:var(--ink-soft);
-  font-size:15px;
-  line-height:1.8;
+  overflow-x:clip;
+  background:#fff;
+  color:var(--ink);
+  font-family:'Mukta',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
 }
-.contact-content{
-  max-width:720px;
-  margin:0 auto;
+
+:focus-visible{
+  outline:2.5px solid var(--focus);
+  outline-offset:3px;
 }
-.contact-card{
-  padding:26px;
-  margin-bottom:22px;
-  background:var(--panel);
-  border:1px solid var(--rule);
-  border-radius:var(--radius);
+
+.contact-copy{
+  max-width:46rem;
+  color:var(--soft);
+  font-size:1.0625rem;
+  line-height:1.7;
 }
-.contact-card h2{
-  margin:0 0 12px;
-  font-size:19px;
-  line-height:1.4;
-  font-weight:700;
+
+.contact-copy>*+*{
+  margin-top:1rem;
 }
-.contact-card p{
-  margin:0 0 14px;
-  color:var(--ink-soft);
-  font-size:14px;
-  line-height:1.85;
+
+.contact-copy a{
+  color:var(--accent);
+  font-weight:600;
+  text-decoration:underline;
+  text-underline-offset:2px;
+  overflow-wrap:anywhere;
 }
-.contact-card p:last-child{margin-bottom:0;}
+
+.contact-copy a:hover{
+  color:var(--accent-dark);
+}
+
 .contact-email{
   display:inline-block;
-  margin:2px 0 12px;
   color:var(--accent);
-  font-size:16px;
-  font-weight:600;
+  font-weight:700;
   overflow-wrap:anywhere;
   text-decoration:underline;
   text-underline-offset:3px;
 }
-.contact-email:hover{color:#075343;}
+
+.contact-email:hover{
+  color:var(--accent-dark);
+}
+
 .contact-list{
-  margin:0;
-  padding-left:21px;
-  color:var(--ink-soft);
-  font-size:14px;
+  list-style:disc;
+  padding-left:1.25rem;
 }
-.contact-list li{
-  margin-bottom:10px;
-  padding-left:3px;
-  line-height:1.75;
+
+.contact-list li+li{
+  margin-top:.5rem;
 }
-.contact-list li:last-child{margin-bottom:0;}
-.contact-list a,.contact-card p a{
-  color:var(--accent);
-  text-decoration:underline;
-  text-underline-offset:2px;
-}
-.contact-list a:hover,.contact-card p a:hover{text-decoration-thickness:2px;}
-.contact-note{
-  padding:18px 20px;
-  background:var(--accent-soft);
-  border-radius:10px;
-  color:var(--ink);
-  font-size:13px;
-  line-height:1.8;
-}
-.contact-note strong{font-weight:700;}
-@media(max-width:600px){
-  .contact-section{padding:38px 18px 52px;}
-  .contact-heading{margin-bottom:25px;}
-  .contact-heading h1{font-size:29px;}
-  .contact-heading p{font-size:14px;}
-  .contact-card{padding:21px 18px;}
-  .contact-card h2{font-size:18px;}
+
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{transition-duration:.01ms!important}
 }
 </style>
+
+{% include cookie-banner.html %}
 </head>
-<body>
+
+<body class="bg-white text-brand-ink antialiased">
 
 {% include header.html %}
 
 <main>
-  <section class="contact-section">
-    <div class="contact-heading">
-      <span class="contact-kicker">Get in Touch</span>
-      <h1>Contact Us</h1>
-      <p>Have a question about HindiFontGen, found something that isn't working correctly, or want to suggest a font? Send us an email. Your feedback helps us improve the website and make the font tools more useful.</p>
+
+<!-- Hero: same visual treatment as the homepage -->
+<section class="bg-brand-deep text-white">
+  <div class="mx-auto max-w-[1228px] px-4 pb-16 pt-10 min-[561px]:px-6 sm:pb-20 sm:pt-14">
+    <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-white/80">
+      HindiFontGen
+    </p>
+
+    <h1 class="max-w-3xl font-display text-[2rem] font-bold leading-[1.15] sm:text-5xl">
+      Contact Us
+    </h1>
+
+    <div class="mt-4 h-1 w-24 bg-brand-gold" aria-hidden="true"></div>
+
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/90">
+      Have a question, found a problem, or want to suggest a Hindi font? Get in touch with us by email. Your feedback helps us make HindiFontGen more useful.
+    </p>
+  </div>
+</section>
+
+<!-- Main content -->
+<section class="bg-white py-12 sm:py-16">
+  <div class="mx-auto grid max-w-[1228px] gap-8 px-4 min-[561px]:px-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+
+    <div>
+      <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24">
+        Get in Touch
+      </h2>
     </div>
 
-    <div class="contact-content">
-      <section class="contact-card">
-        <h2>Send Us an Email</h2>
-        <p>For general questions, technical problems, suggestions, or other enquiries, email us at the address below.</p>
-        <a class="contact-email" href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>
-        <p>We aim to reply as soon as reasonably possible. Response times may vary depending on the type and number of enquiries we receive.</p>
-      </section>
+    <div class="contact-copy">
+      <p>
+        HindiFontGen offers tools for previewing Hindi text in different Devanagari font styles. If you have a question about using the website, experience a technical issue, or have an idea for improving the tools, you can contact us directly.
+      </p>
 
-      <section class="contact-card">
-        <h2>How Can We Help?</h2>
-        <p>You can contact us about topics such as:</p>
-        <ul class="contact-list">
-          <li>Reporting a broken feature, display issue, or other technical problem</li>
-          <li>Suggesting a Hindi or Devanagari font style for the website</li>
-          <li>Sharing feedback or ideas for improving the font tools</li>
-          <li>Asking questions about using the website or creating font-style images</li>
-          <li>Questions about our <a href="/privacy-policy.html">Privacy Policy</a> or <a href="/terms.html">Terms &amp; Conditions</a></li>
-          <li>Advertising, business, or partnership enquiries</li>
-        </ul>
-      </section>
+      <h3 class="font-display text-xl font-bold text-brand-ink">
+        Email Support
+      </h3>
 
-      <section class="contact-card">
-        <h2>Before You Contact Us</h2>
-        <p>If you're reporting a technical issue, please explain what you were trying to do and what happened instead. Mentioning the browser or device you're using may also help us understand the problem.</p>
-        <p>Please don't include passwords, payment details, or other sensitive personal information in your message.</p>
-      </section>
+      <p>
+        For general questions, technical problems, suggestions, feedback, or business enquiries, email us at:
+      </p>
 
-      <div class="contact-note">
-        <strong>A quick note:</strong> HindiFontGen currently handles enquiries by email. We don't offer phone or live-chat support. Email allows us to review each message and respond when we can.
+      <p>
+        <a class="contact-email text-lg" href="mailto:contact@hindifontgen.in">
+          contact@hindifontgen.in
+        </a>
+      </p>
+
+      <p>
+        We aim to respond as soon as reasonably possible. Response times may vary depending on the nature and number of messages we receive.
+      </p>
+
+      <h3 class="font-display text-xl font-bold text-brand-ink">
+        What Can You Contact Us About?
+      </h3>
+
+      <ul class="contact-list">
+        <li>Reporting a broken feature, error, or display problem.</li>
+        <li>Suggesting a Hindi or Devanagari font style.</li>
+        <li>Sharing feedback about the website or its tools.</li>
+        <li>Asking how to use the font generator or save a styled PNG image.</li>
+        <li>Questions about our <a href="/privacy-policy.html">Privacy Policy</a> or <a href="/terms.html">Terms &amp; Conditions</a>.</li>
+        <li>Advertising, business, or partnership enquiries.</li>
+      </ul>
+
+      <h3 class="font-display text-xl font-bold text-brand-ink">
+        Reporting a Technical Issue
+      </h3>
+
+      <p>
+        Please explain what you were trying to do, what happened, and what you expected to happen instead. If relevant, include the browser and device you are using. This information can help us understand the problem.
+      </p>
+
+      <p>
+        Please do not include passwords, payment details, or other sensitive personal information in your email.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- Author: matching the homepage's restrained style -->
+<section class="border-t border-brand-line bg-brand-mint py-12 sm:py-14">
+  <div class="mx-auto grid max-w-[1228px] gap-6 px-4 min-[561px]:px-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">
+      About the Author
+    </h2>
+
+    <div class="max-w-3xl">
+      <div class="flex items-start gap-4">
+        <div class="flex h-16 w-16 shrink-0 items-center justify-center overflow-hidden rounded-full border border-brand-line bg-white text-2xl font-bold text-brand">
+          <img
+            src="/ali.png"
+            alt="Ali Hamza, creator of HindiFontGen"
+            width="64"
+            height="64"
+            loading="lazy"
+            decoding="async"
+            class="h-full w-full object-cover"
+            onerror="this.replaceWith(document.createTextNode('A'))">
+        </div>
+
+        <div>
+          <h3 class="font-display text-xl font-bold text-brand-ink">
+            Ali Hamza
+          </h3>
+
+          <p class="mt-2 text-base leading-7 text-brand-soft">
+            Ali Hamza is the creator of HindiFontGen, a website built to help people preview Hindi text in different Devanagari fonts and create styled text images. Feedback and suggestions from visitors help guide improvements to the website.
+          </p>
+
+          <p class="mt-3 text-base leading-7 text-brand-soft">
+            For questions or feedback, email
+            <a class="font-semibold text-brand underline underline-offset-2" href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.
+          </p>
+        </div>
       </div>
     </div>
-  </section>
+
+  </div>
+</section>
+
 </main>
 
 {% include footer.html %}
 
 <script>
 (function(){
-  var navToggle = document.getElementById('navToggle');
-  var mainNav = document.getElementById('mainNav');
+  var navToggle=document.getElementById('navToggle');
+  var mainNav=document.getElementById('mainNav');
 
-  if(navToggle && mainNav){
-    navToggle.addEventListener('click', function(){
-      var isOpen = mainNav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+  if(navToggle&&mainNav){
+    navToggle.addEventListener('click',function(){
+      var isOpen=mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded',isOpen?'true':'false');
     });
   }
 })();
