@@ -5,200 +5,233 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Privacy Policy</title>
-<link rel="icon" type="image/png" href="/favicon.png">
+<title>Privacy Policy – HindiFontGen</title>
+<meta name="description" content="How HindiFontGen handles your data: text you type stays in your browser, no account needed. Read about cookies, Google Fonts, analytics and advertising.">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0A6E5A">
 <link rel="canonical" href="https://hindifontgen.in/privacy-policy.html">
-
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HindiFontGen">
+<meta property="og:title" content="Privacy Policy – HindiFontGen">
+<meta property="og:description" content="How HindiFontGen handles your data, cookies and third-party services.">
+<meta property="og:url" content="https://hindifontgen.in/privacy-policy.html">
+<meta property="og:image" content="https://hindifontgen.in/hindifontgen-intro.webp">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<!-- Tailwind via the Play CDN, same as the homepage. Compile a static CSS file for production. -->
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#0A6E5A',deep:'#064B3E',ink:'#0F1E1A',soft:'#33433F',mint:'#EEF5F2',line:'#D9E4E0',gold:'#E9A400'}},fontFamily:{sans:['Mukta','system-ui','sans-serif'],display:['Eczar','"Noto Serif Devanagari"','Georgia','serif']}}}};
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebPage","@id":"https://hindifontgen.in/privacy-policy.html#webpage","url":"https://hindifontgen.in/privacy-policy.html","name":"Privacy Policy – HindiFontGen","isPartOf":{"@id":"https://hindifontgen.in/#website"},"inLanguage":"en-IN","dateModified":"2026-10-28"}
+</script>
 <style>
-  :root{
-    --paper:#FFFFFF;
-    --panel:#FFFFFF;
-    --ink:#1D2624;
-    --ink-soft:#6B7573;
-    --rule:#E1E7E5;
-    --accent:#0E8F76;
-    --accent-soft:#E3F5EF;
-    --accent-dark:#0A6E5A;
-    --focus:#1A56DB;
-    --radius:10px;
-  }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{
-    margin:0;
-    background:var(--paper);
-    color:var(--ink);
-    font-family:'Poppins',system-ui,sans-serif;
-    -webkit-font-smoothing:antialiased;
-    line-height:1.5;
-  }
-  a{color:inherit;}
-  ::selection{background:var(--accent-soft);}
-  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
-  @media (prefers-reduced-motion: reduce){
-    *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;}
-  }
+:root{--ink:#0F1E1A;--soft:#33433F;--rule:#D9E4E0;--accent:#0A6E5A;--accent-soft:#E6F1ED;--accent-dark:#064B3E;--focus:#1A56DB}
+html{scroll-behavior:smooth;scroll-padding-top:5rem;-webkit-text-size-adjust:100%}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+body{overflow-x:clip}
+img,svg,video{max-width:100%;height:auto}
 
-  header{
-    position:sticky; top:0; z-index:50;
-    background:rgba(251,247,240,0.94);
-    backdrop-filter:blur(6px);
-    border-bottom:1px solid var(--rule);
-    padding:16px 24px;
-  }
-  .header-inner{
-    max-width:1180px; margin:0 auto;
-    display:flex; align-items:center; justify-content:space-between; gap:16px;
-  }
-  .logo{
-    font-family:'Poppins',sans-serif;
-    font-weight:700;
-    font-size:19px;
-    text-decoration:none;
-    flex-shrink:0;
-    color:var(--ink);
-  }
-  .logo em{font-style:normal; color:var(--accent);}
-  nav.main-nav{display:flex; align-items:center; gap:2px;}
-  nav.main-nav a{
-    font-size:14px; color:var(--ink-soft); text-decoration:none;
-    padding:8px 12px; border-radius:7px; white-space:nowrap;
-  }
-  nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
-  nav.main-nav a.current{color:var(--ink); font-weight:600;}
-  .nav-toggle{
-    display:none; border:1px solid var(--rule); background:#fff;
-    border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;
-  }
-  @media (max-width:900px){
-    nav.main-nav{
-      position:absolute; top:100%; left:0; right:0; background:var(--paper);
-      border-bottom:1px solid var(--rule); flex-direction:column; align-items:stretch;
-      padding:8px 16px 16px; display:none;
-    }
-    nav.main-nav.open{display:flex;}
-    nav.main-nav a{padding:10px 8px; border-radius:6px;}
-    .nav-toggle{display:block;}
-  }
+/* ---- shared footer (markup lives in _includes/footer.html) ---- */
+footer{border-top:1px solid var(--rule);padding:40px 24px 28px;margin-top:0}
+.fi{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer h4{font-size:13px;font-weight:700;margin:0 0 12px}footer p{font-size:13px;color:var(--soft);font-weight:500;margin:0;max-width:36ch}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin-bottom:8px}footer li a{font-size:13px;color:var(--soft);font-weight:500;text-decoration:none}footer li a:hover{color:var(--accent)}
+.fb{max-width:1180px;margin:28px auto 0;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:var(--soft)}
+@media(max-width:760px){.fi{grid-template-columns:1fr;gap:24px}}
 
-  section.block{max-width:900px; margin:0 auto; padding:52px 24px 70px;}
-  .page-head{max-width:680px; margin:0 auto 34px;}
-  .kicker{
-    display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em;
-    text-transform:uppercase; color:var(--accent); margin-bottom:10px;
-  }
-  h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(24px,3.6vw,34px); margin:0 0 10px;}
-  .updated{color:var(--ink-soft); font-size:13.5px; margin:0 0 8px;}
-
-  .legal-copy h2{font-size:19px; font-weight:700; margin:34px 0 12px;}
-  .legal-copy h3{font-size:16px; font-weight:600; margin:22px 0 8px;}
-  .legal-copy p{font-size:15px; color:var(--ink-soft); margin:0 0 14px; line-height:1.7;}
-  .legal-copy ul{font-size:15px; color:var(--ink-soft); padding-left:20px; margin:0 0 14px;}
-  .legal-copy li{margin-bottom:8px; line-height:1.6;}
-  .legal-copy a{color:var(--accent); text-decoration:underline;}
-  .legal-copy strong{color:var(--ink);}
-
-  footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
-  .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
-  .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
-  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
-  .footer-col ul{list-style:none; margin:0; padding:0;}
-  .footer-col li{margin-bottom:8px;}
-  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
-  .footer-col a:hover{color:var(--accent);}
-  .footer-bottom{
-    max-width:1180px; margin:32px auto 0; padding-top:20px;
-    border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);
-  }
-  @media (max-width:760px){
-    .footer-inner{grid-template-columns:1fr; gap:24px;}
-  }
+/* ---- legal page components ---- */
+.legal{max-width:46rem;font-size:1.0625rem;line-height:1.75;color:var(--soft)}
+.legal section{padding-top:2rem;margin-top:2rem;border-top:1px solid var(--rule)}
+.legal section:first-child{border-top:0;margin-top:0;padding-top:0}
+.legal h2{font-family:Eczar,"Noto Serif Devanagari",Georgia,serif;font-size:1.5rem;font-weight:700;line-height:1.25;color:var(--ink);margin:0 0 .9rem;display:flex;gap:.75rem;align-items:baseline}
+.legal h2 .num{color:var(--accent);font-size:1.5rem;min-width:2rem}
+.legal p{margin:0 0 1rem}
+.legal ul{list-style:disc;padding-left:1.25rem;margin:0 0 1rem}
+.legal li+li{margin-top:.5rem}
+.legal strong{color:var(--ink)}
+.legal a{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+.legal a:hover{color:var(--accent-dark)}
+.legal,.legal *{overflow-wrap:anywhere}
+.note{border-left:4px solid var(--accent);background:#fff;padding:1rem 1.25rem;border-radius:0 .5rem .5rem 0}
+.toc a{display:block;padding:.4rem .75rem;border-left:2px solid var(--rule);font-size:.9rem;font-weight:500;color:var(--soft);text-decoration:none;line-height:1.35}
+.toc a:hover{color:var(--accent);border-left-color:var(--accent);background:var(--accent-soft)}
+.glance{border:1px solid var(--rule);border-radius:.5rem;padding:1.1rem 1.25rem;background:#fff}
+.glance h3{font-family:Eczar,Georgia,serif;font-size:1.1rem;font-weight:700;color:var(--ink);margin:0 0 .6rem}
+.glance ul{list-style:none;padding:0;margin:0;font-size:.95rem;line-height:1.55;color:var(--soft)}
+.glance li{padding-left:1.4rem;position:relative}
+.glance li+li{margin-top:.45rem}
+.glance li::before{content:"";position:absolute;left:0;top:.5em;width:.55rem;height:.55rem;border-radius:50%}
+.glance.yes li::before{background:var(--accent)}
+.glance.no li::before{background:#E9A400}
 </style>
+{% include cookie-banner.html %}
 </head>
-<body>
+<body class="bg-white text-brand-ink antialiased">
+<a href="#policy" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-brand-ink">Skip to the policy</a>
 
 {% include header.html %}
 
-<section class="block">
-  <div class="page-head">
-    <span class="kicker">Legal</span>
-    <h1>Privacy Policy</h1>
-    <p class="updated">Last updated: September 17, 2026</p>
-  </div>
+<main>
 
-  <div class="legal-copy">
-    <p>This Privacy Policy explains how HindiFontGen.in ("we", "us", "our website") handles information when you visit and use our Hindi Font Generator tool. We built this site to be simple and privacy-respecting, and this page sets out exactly what happens to your data.</p>
-
-    <h2>1. Information We Do Not Collect</h2>
-    <p>The core function of this website — typing text and previewing it in different Hindi fonts — runs entirely inside your own browser. The text you type into the tool is never sent to our servers, stored in any database, or shared with anyone. When you close the tab or refresh the page, that text is gone.</p>
-    <p>We do not require account creation, sign-up, or login to use any feature of this site.</p>
-
-    <h2>2. Information Collected Automatically</h2>
-    <p>Like most websites, our server and any third-party services we use (such as analytics or advertising providers) may automatically collect limited technical information when you visit, including:</p>
-    <ul>
-      <li>Browser type and version</li>
-      <li>Device type and operating system</li>
-      <li>Pages visited and time spent on the site</li>
-      <li>Approximate location derived from IP address (country/region level)</li>
-      <li>Referring website or search terms that led you here</li>
-    </ul>
-    <p>This information is used only in aggregate form to understand how visitors use the site and to improve performance. It is not used to personally identify individual visitors by us.</p>
-
-    <h2>3. Cookies</h2>
-    <p>Cookies are small text files stored on your device by your browser. This site may use cookies for:</p>
-    <ul>
-      <li><strong>Essential functionality</strong> — remembering basic preferences such as your last-selected settings.</li>
-      <li><strong>Analytics</strong> — understanding aggregate traffic patterns (for example, via Google Analytics).</li>
-      <li><strong>Advertising</strong> — third-party advertising partners, including Google, may use cookies to serve ads based on your prior visits to this or other websites.</li>
-    </ul>
-    <p>You can control or delete cookies at any time through your browser settings. Disabling cookies may affect how some parts of the site or ads display, but it will not affect the core font-preview tool.</p>
-
-    <h2>4. Google AdSense &amp; Third-Party Advertising</h2>
-    <p>We may display advertisements on this website through Google AdSense and/or other third-party ad networks. These third parties may use cookies, web beacons, or similar technologies to collect information about your visits to this and other websites in order to provide advertisements about goods and services that may interest you.</p>
-    <ul>
-      <li>Google's use of advertising cookies enables it and its partners to serve ads to our visitors based on their visit to this site and/or other sites on the internet.</li>
-      <li>You may opt out of personalised advertising by visiting <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google Ads Settings</a>.</li>
-      <li>You can also opt out of some third-party vendor cookies by visiting the <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">Digital Advertising Alliance opt-out page</a>.</li>
-      <li>Third-party ad vendors' use of cookies is governed by their own privacy policies, not this one. We do not control the content or cookies used by these third parties.</li>
-    </ul>
-
-    <h2>5. Analytics</h2>
-    <p>We may use third-party analytics services (such as Google Analytics) to help us understand how visitors interact with the site. These services may use cookies and similar technologies to collect and analyse usage data. The information collected is generally aggregated and does not directly identify you.</p>
-
-    <h2>6. Third-Party Links</h2>
-    <p>Our site includes links to external sites, such as Google Fonts specimen pages. We are not responsible for the content, privacy practices, or terms of any third-party websites you may visit through these links. We encourage you to review the privacy policy of any site you visit.</p>
-
-    <h2>7. Children's Privacy</h2>
-    <p>This website is not directed at children under the age of 13, and we do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us so we can address it.</p>
-
-    <h2>8. Data Security</h2>
-    <p>Since the tool itself processes your text locally in your browser and does not transmit or store it on our servers, there is minimal personal data for us to secure in relation to the core tool. Where any data is collected (such as through analytics or advertising cookies), we rely on the security practices of the respective third-party providers.</p>
-
-    <h2>9. Your Choices</h2>
-    <p>You can manage cookie preferences through your browser at any time. Most browsers allow you to block or delete cookies, though this may limit certain features. You may also use browser extensions or opt-out tools to limit ad personalisation.</p>
-
-    <h2>10. Changes to This Policy</h2>
-    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. Any changes will be posted on this page with an updated revision date. We encourage you to review this page periodically.</p>
-
-    <h2>11. Contact Us</h2>
-    <p>If you have any questions about this Privacy Policy or how your information is handled, please reach out to us at <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p>
+<section class="bg-brand-deep text-white">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 pb-14 pt-10 sm:pt-14">
+    <p class="mb-3 text-sm font-bold uppercase tracking-[.08em] text-brand-gold">Legal</p>
+    <h1 class="max-w-3xl font-display text-[2rem] font-bold leading-[1.15] sm:text-5xl">Privacy Policy</h1>
+    <div class="mt-4 h-1 w-24 bg-brand-gold" aria-hidden="true"></div>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/90">The text you type stays in your browser, and you never need an account. Here is exactly what happens to your data on HindiFontGen.</p>
+    <p class="mt-4 text-sm text-white/75">Last updated: October 28, 2026</p>
   </div>
 </section>
+
+<section id="policy" class="bg-white py-12 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-8 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+
+    <aside class="lg:sticky lg:top-24 lg:self-start">
+      <p class="mb-3 text-sm font-bold text-brand-ink">On this page</p>
+      <nav class="toc" aria-label="Privacy policy sections">
+        <a href="#s1">1. What stays in your browser</a>
+        <a href="#s2">2. Google Fonts</a>
+        <a href="#s3">3. Automatic information</a>
+        <a href="#s4">4. Cookies</a>
+        <a href="#s5">5. Google AdSense &amp; ads</a>
+        <a href="#s6">6. Analytics</a>
+        <a href="#s7">7. Third-party links</a>
+        <a href="#s8">8. Children's privacy</a>
+        <a href="#s9">9. Data security</a>
+        <a href="#s10">10. Your choices</a>
+        <a href="#s11">11. Changes to this policy</a>
+        <a href="#s12">12. Contact us</a>
+      </nav>
+    </aside>
+
+    <div class="legal">
+
+      <p>This Privacy Policy explains how HindiFontGen.in ("we", "us", "our website") handles information when you visit and use our Hindi Font Generator tool. We built this site to be simple and privacy-respecting, and this page sets out exactly what happens to your data.</p>
+
+      <div class="mb-10 grid gap-4 sm:grid-cols-2">
+        <div class="glance yes">
+          <h3>What we do</h3>
+          <ul>
+            <li>Run previews and PNG creation in your browser</li>
+            <li>Let you use every feature without an account</li>
+            <li>Use aggregate analytics to improve the site</li>
+          </ul>
+        </div>
+        <div class="glance no">
+          <h3>What we don't do</h3>
+          <ul>
+            <li>Save the text you type on our servers</li>
+            <li>Ask for your name, email or login</li>
+            <li>Sell your personal information</li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="s1">
+        <h2><span class="num">1.</span>Information we do not collect</h2>
+        <p>The core function of this website, typing text and previewing it in different Hindi fonts, runs inside your own browser. The text you type into the tool is not sent to our servers, stored in any database, or shared by us with anyone. When you close the tab or refresh the page, that text is gone.</p>
+        <p>We do not require account creation, sign-up, or login to use any feature of this site.</p>
+      </section>
+
+      <section id="s2">
+        <h2><span class="num">2.</span>Google Fonts and your text</h2>
+        <div class="note mb-4">
+          <strong>Please note:</strong> to show each font, your browser requests it from Google Fonts. That request includes the distinct characters you typed (without repeats), so that only those letters are downloaded. Our servers never receive or store your text.
+        </div>
+        <p>Google handles these requests under its own privacy policy. If you prefer that nothing you type is included in such a request, avoid typing sensitive content into the tool.</p>
+      </section>
+
+      <section id="s3">
+        <h2><span class="num">3.</span>Information collected automatically</h2>
+        <p>Like most websites, our server and any third-party services we use (such as analytics or advertising providers) may automatically collect limited technical information when you visit, including:</p>
+        <ul>
+          <li>Browser type and version</li>
+          <li>Device type and operating system</li>
+          <li>Pages visited and time spent on the site</li>
+          <li>Approximate location derived from IP address (country or region level)</li>
+          <li>Referring website or search terms that led you here</li>
+        </ul>
+        <p>This information is used only in aggregate form to understand how visitors use the site and to improve performance. We do not use it to personally identify individual visitors.</p>
+      </section>
+
+      <section id="s4">
+        <h2><span class="num">4.</span>Cookies</h2>
+        <p>Cookies are small text files stored on your device by your browser. This site may use cookies for:</p>
+        <ul>
+          <li><strong>Essential functionality:</strong> remembering basic preferences such as your cookie choice.</li>
+          <li><strong>Analytics:</strong> understanding aggregate traffic patterns (for example, via Google Analytics).</li>
+          <li><strong>Advertising:</strong> third-party advertising partners, including Google, may use cookies to serve ads based on your prior visits to this or other websites.</li>
+        </ul>
+        <p>You can control or delete cookies at any time through your browser settings. Disabling cookies may affect how some parts of the site or ads display, but it will not affect the core font-preview tool.</p>
+      </section>
+
+      <section id="s5">
+        <h2><span class="num">5.</span>Google AdSense &amp; third-party advertising</h2>
+        <p>We may display advertisements on this website through Google AdSense and/or other third-party ad networks. These third parties may use cookies, web beacons, or similar technologies to collect information about your visits to this and other websites in order to provide advertisements about goods and services that may interest you.</p>
+        <ul>
+          <li>Google's use of advertising cookies enables it and its partners to serve ads to our visitors based on their visit to this site and/or other sites on the internet.</li>
+          <li>You may opt out of personalised advertising by visiting <a href="https://adssettings.google.com/" target="_blank" rel="noopener">Google Ads Settings</a>.</li>
+          <li>You can also opt out of some third-party vendor cookies by visiting the <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener">Digital Advertising Alliance opt-out page</a>.</li>
+          <li>Third-party ad vendors' use of cookies is governed by their own privacy policies, not this one. We do not control the content or cookies used by these third parties.</li>
+        </ul>
+      </section>
+
+      <section id="s6">
+        <h2><span class="num">6.</span>Analytics</h2>
+        <p>We may use third-party analytics services (such as Google Analytics) to help us understand how visitors interact with the site. These services may use cookies and similar technologies to collect and analyse usage data. The information collected is generally aggregated and does not directly identify you.</p>
+      </section>
+
+      <section id="s7">
+        <h2><span class="num">7.</span>Third-party links</h2>
+        <p>Our site includes links to external sites, such as Google Fonts specimen pages. We are not responsible for the content, privacy practices, or terms of any third-party websites you may visit through these links. We encourage you to review the privacy policy of any site you visit.</p>
+      </section>
+
+      <section id="s8">
+        <h2><span class="num">8.</span>Children's privacy</h2>
+        <p>This website is not directed at children under the age of 13, and we do not knowingly collect personal information from children. If you believe a child has provided us with personal information, please contact us so we can address it.</p>
+      </section>
+
+      <section id="s9">
+        <h2><span class="num">9.</span>Data security</h2>
+        <p>Since the tool processes your text locally in your browser and does not transmit it to our servers, there is minimal personal data for us to secure in relation to the core tool. Where any data is collected (such as through analytics or advertising cookies), we rely on the security practices of the respective third-party providers.</p>
+      </section>
+
+      <section id="s10">
+        <h2><span class="num">10.</span>Your choices</h2>
+        <p>You can manage cookie preferences through your browser at any time. Most browsers allow you to block or delete cookies, though this may limit certain features. You may also use browser extensions or opt-out tools to limit ad personalisation.</p>
+      </section>
+
+      <section id="s11">
+        <h2><span class="num">11.</span>Changes to this policy</h2>
+        <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for legal, operational, or regulatory reasons. Any changes will be posted on this page with an updated revision date. We encourage you to review this page periodically.</p>
+      </section>
+
+      <section id="s12">
+        <h2><span class="num">12.</span>Contact us</h2>
+        <p>If you have any questions about this Privacy Policy or how your information is handled, please write to us at <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p>
+        <p><a href="https://hindifontgen.in/">&larr; Back to the Hindi Font Generator</a></p>
+      </section>
+
+    </div>
+  </div>
+</section>
+
+</main>
 
 {% include footer.html %}
 
 <script>
-  var navToggle = document.getElementById('navToggle');
-  var mainNav = document.getElementById('mainNav');
-  navToggle.addEventListener('click', function(){
-    var isOpen = mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
+(function(){
+  var t=document.getElementById('navToggle'),n=document.getElementById('mainNav');
+  if(t&&n){t.addEventListener('click',function(){var o=n.classList.toggle('open');t.setAttribute('aria-expanded',o?'true':'false');});}
+})();
 </script>
-
 </body>
 </html>
