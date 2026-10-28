@@ -3,139 +3,314 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Terms and Condition</title>
-<link rel="icon" type="image/png" href="/favicon.png">
-<link rel="canonical" href="https://hindifontgen.in/terms.html">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms and Conditions | HindiFontGen</title>
+  <meta name="description" content="Read the Terms and Conditions for using HindiFontGen, including rules for using our Hindi font previews, text tools, downloads and website content.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A6E5A">
+  <link rel="canonical" href="https://hindifontgen.in/terms.html">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-<style>
-  :root{
-    --paper:#FFFFFF; --panel:#FFFFFF; --ink:#1D2624; --ink-soft:#6B7573;
-    --rule:#E1E7E5; --accent:#0E8F76; --accent-soft:#E3F5EF; --accent-dark:#0A6E5A;
-    --focus:#1A56DB; --radius:10px;
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: '#0A6E5A',
+              deep: '#064B3E',
+              ink: '#0F1E1A',
+              soft: '#33433F',
+              mint: '#EEF5F2',
+              line: '#D9E4E0',
+              gold: '#E9A400'
+            }
+          },
+          fontFamily: {
+            sans: ['Mukta', 'system-ui', 'sans-serif'],
+            display: ['Eczar', '"Noto Serif Devanagari"', 'Georgia', 'serif']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html { scroll-behavior: smooth; }
+    body { overflow-x: clip; }
+    .terms-copy p {
+      margin-top: 0.85rem;
+      color: #33433F;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+    }
+    .terms-copy ul {
+      margin: 0.8rem 0 1rem 1.35rem;
+      list-style: disc;
+      color: #33433F;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+    }
+    .terms-copy li { padding-left: 0.2rem; margin-top: 0.35rem; }
+    .terms-copy a {
+      color: #0A6E5A;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      overflow-wrap: anywhere;
+    }
+    .terms-copy a:hover { color: #064B3E; }
+    .terms-copy h2 {
+      margin-top: 2.2rem;
+      color: #0F1E1A;
+      font-family: 'Eczar', Georgia, serif;
+      font-size: 1.55rem;
+      font-weight: 700;
+      line-height: 1.3;
+    }
+    .terms-copy h3 {
+      margin-top: 1.3rem;
+      color: #0F1E1A;
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+    @media (max-width: 560px) {
+      .terms-copy h2 { font-size: 1.35rem; }
+      .terms-copy p, .terms-copy ul { font-size: 1rem; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Terms and Conditions",
+    "url": "https://hindifontgen.in/terms.html",
+    "description": "Terms and Conditions for using HindiFontGen.",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "HindiFontGen",
+      "url": "https://hindifontgen.in/"
+    },
+    "inLanguage": "en-IN"
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0; background:var(--paper); color:var(--ink); font-family:'Poppins',system-ui,sans-serif; -webkit-font-smoothing:antialiased; line-height:1.5;}
-  a{color:inherit;}
-  ::selection{background:var(--accent-soft);}
-  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
-  @media (prefers-reduced-motion: reduce){ *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
+  </script>
 
-  header{position:sticky; top:0; z-index:50; background:rgba(251,247,240,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--rule); padding:16px 24px;}
-  .header-inner{max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px;}
-  .logo{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; text-decoration:none; flex-shrink:0; color:var(--ink);}
-  .logo em{font-style:normal; color:var(--accent);}
-  nav.main-nav{display:flex; align-items:center; gap:2px;}
-  nav.main-nav a{font-size:14px; color:var(--ink-soft); text-decoration:none; padding:8px 12px; border-radius:7px; white-space:nowrap;}
-  nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
-  nav.main-nav a.current{color:var(--ink); font-weight:600;}
-  .nav-toggle{display:none; border:1px solid var(--rule); background:#fff; border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;}
-  @media (max-width:900px){
-    nav.main-nav{position:absolute; top:100%; left:0; right:0; background:var(--paper); border-bottom:1px solid var(--rule); flex-direction:column; align-items:stretch; padding:8px 16px 16px; display:none;}
-    nav.main-nav.open{display:flex;}
-    nav.main-nav a{padding:10px 8px; border-radius:6px;}
-    .nav-toggle{display:block;}
-  }
-
-  section.block{max-width:900px; margin:0 auto; padding:52px 24px 70px;}
-  .page-head{max-width:680px; margin:0 auto 34px;}
-  .kicker{display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:10px;}
-  h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(24px,3.6vw,34px); margin:0 0 10px;}
-  .updated{color:var(--ink-soft); font-size:13.5px; margin:0 0 8px;}
-
-  .legal-copy h2{font-size:19px; font-weight:700; margin:34px 0 12px;}
-  .legal-copy p{font-size:15px; color:var(--ink-soft); margin:0 0 14px; line-height:1.7;}
-  .legal-copy ul{font-size:15px; color:var(--ink-soft); padding-left:20px; margin:0 0 14px;}
-  .legal-copy li{margin-bottom:8px; line-height:1.6;}
-  .legal-copy a{color:var(--accent); text-decoration:underline;}
-  .legal-copy strong{color:var(--ink);}
-
-  footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
-  .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
-  .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
-  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
-  .footer-col ul{list-style:none; margin:0; padding:0;}
-  .footer-col li{margin-bottom:8px;}
-  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
-  .footer-col a:hover{color:var(--accent);}
-  .footer-bottom{max-width:1180px; margin:32px auto 0; padding-top:20px; border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);}
-  @media (max-width:760px){ .footer-inner{grid-template-columns:1fr; gap:24px;} }
-</style>
+  {% include cookie-banner.html %}
 </head>
-<body>
 
-{% include header.html %}
+<body class="bg-white text-brand-ink antialiased">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:font-semibold focus:text-brand-ink">
+    Skip to content
+  </a>
 
-<section class="block">
-  <div class="page-head">
-    <span class="kicker">Legal</span>
-    <h1>Terms &amp; Conditions</h1>
-    <p class="updated">Last updated: September 17, 2026</p>
-  </div>
+  {% include header.html %}
 
-  <div class="legal-copy">
-    <p>Welcome to HindiFontGen.in. By accessing or using this website, you agree to be bound by the following Terms &amp; Conditions. Please read them carefully before using the site. If you do not agree with any part of these terms, please discontinue use of the website.</p>
+  <main id="main-content">
+    <section class="bg-brand-deep text-white">
+      <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 pb-12 pt-10 sm:pb-16 sm:pt-14">
+        <p class="text-sm font-semibold uppercase tracking-[0.12em] text-white/75">Website information</p>
+        <h1 class="mt-3 max-w-3xl font-display text-3xl font-bold leading-tight sm:text-5xl">
+          Terms and Conditions
+        </h1>
+        <div class="mt-5 h-1 w-20 bg-brand-gold" aria-hidden="true"></div>
+        <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/90">
+          Please read these terms before using HindiFontGen. They explain the basic rules for accessing our website and using its font previews and text tools.
+        </p>
+      </div>
+    </section>
 
-    <h2>1. About This Website</h2>
-    <p>HindiFontGen.in provides a free browser-based tool that lets visitors preview text rendered in a range of Hindi/Devanagari-script fonts, adjust size and colour, copy plain text, and download styled images. The tool is provided for personal and commercial creative use, such as social media graphics, captions, and design projects.</p>
+    <section class="border-b border-brand-line bg-brand-mint">
+      <div class="mx-auto max-w-[1228px] px-4 py-5 min-[561px]:px-6">
+        <p class="text-sm leading-relaxed text-brand-soft">
+          <strong class="text-brand-ink">Effective date:</strong> October 28, 2026
+          <span class="mx-2" aria-hidden="true">·</span>
+          <strong class="text-brand-ink">Website:</strong>
+          <a class="text-brand underline underline-offset-2" href="https://hindifontgen.in/">HindiFontGen.in</a>
+        </p>
+      </div>
+    </section>
 
-    <h2>2. Use of the Service</h2>
-    <p>You agree to use this website only for lawful purposes. You must not use the site to:</p>
-    <ul>
-      <li>Generate or distribute content that is unlawful, defamatory, obscene, or infringes on the rights of others.</li>
-      <li>Attempt to disrupt, overload, or interfere with the normal operation of the website.</li>
-      <li>Reverse-engineer, scrape, or misuse the website's underlying code beyond normal browser use.</li>
-      <li>Misrepresent the origin of content generated using this tool.</li>
-    </ul>
+    <section class="bg-white py-10 sm:py-14">
+      <div class="mx-auto grid max-w-[1228px] gap-10 px-4 min-[561px]:px-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
 
-    <h2>3. Fonts and Licensing</h2>
-    <p>All fonts made available for preview and download through this tool are sourced from Google Fonts and are distributed under their respective open-source licences (typically the SIL Open Font License or Apache License). We do not own these fonts; we simply provide a convenient interface to preview and access them. You are responsible for confirming the specific licence terms of any font on its Google Fonts page before using it in a commercial project, though the vast majority permit both personal and commercial use freely.</p>
+        <aside class="self-start rounded-lg border border-brand-line bg-brand-mint p-5 lg:sticky lg:top-24">
+          <h2 class="font-display text-xl font-bold text-brand-ink">On this page</h2>
+          <nav class="mt-4" aria-label="Terms and Conditions sections">
+            <ul class="space-y-2.5 text-sm leading-relaxed text-brand-soft">
+              <li><a class="hover:text-brand" href="#acceptance">1. Acceptance of Terms</a></li>
+              <li><a class="hover:text-brand" href="#about-service">2. About the Service</a></li>
+              <li><a class="hover:text-brand" href="#permitted-use">3. Permitted Use</a></li>
+              <li><a class="hover:text-brand" href="#text-and-downloads">4. Your Text and Downloads</a></li>
+              <li><a class="hover:text-brand" href="#fonts-and-ownership">5. Fonts and Ownership</a></li>
+              <li><a class="hover:text-brand" href="#third-party">6. Third-Party Services</a></li>
+              <li><a class="hover:text-brand" href="#availability">7. Availability and Changes</a></li>
+              <li><a class="hover:text-brand" href="#disclaimer">8. Disclaimer</a></li>
+              <li><a class="hover:text-brand" href="#liability">9. Limitation of Liability</a></li>
+              <li><a class="hover:text-brand" href="#privacy">10. Privacy</a></li>
+              <li><a class="hover:text-brand" href="#changes">11. Changes to These Terms</a></li>
+              <li><a class="hover:text-brand" href="#governing-law">12. Governing Law</a></li>
+              <li><a class="hover:text-brand" href="#contact">13. Contact Us</a></li>
+            </ul>
+          </nav>
+        </aside>
 
-    <h2>4. Content You Create</h2>
-    <p>Any text you type into the tool remains yours. We do not claim ownership over the text you input or the images you generate using this tool. Since your text is processed entirely in your browser and is never transmitted to or stored on our servers, we have no access to it and cannot be held responsible for its content.</p>
+        <article class="terms-copy min-w-0">
+          <p>
+            Welcome to HindiFontGen. These Terms and Conditions explain the rules that apply when you visit or use
+            <a href="https://hindifontgen.in/">hindifontgen.in</a> and its available features. By accessing or using the website, you agree to these terms. If you do not agree, please stop using the website.
+          </p>
 
-    <h2>5. No Warranty</h2>
-    <p>This website and its tool are provided on an "as is" and "as available" basis, without warranties of any kind, either express or implied. We do not guarantee that the service will be uninterrupted, error-free, or free of defects. Font rendering may vary slightly depending on your browser, operating system, and device.</p>
+          <p>
+            These terms apply to visitors and users of HindiFontGen. Please also read our
+            <a href="/privacy-policy.html">Privacy Policy</a>, which explains how information may be handled when you use the website.
+          </p>
 
-    <h2>6. Limitation of Liability</h2>
-    <p>To the fullest extent permitted by law, HindiFontGen.in and its operators shall not be liable for any direct, indirect, incidental, or consequential damages arising from your use of, or inability to use, this website or its tool.</p>
+          <h2 id="acceptance">1. Acceptance of Terms</h2>
+          <p>
+            By visiting, browsing or using HindiFontGen, you confirm that you have read and understood these Terms and Conditions and agree to follow them, along with applicable laws and regulations.
+          </p>
+          <p>
+            If you use the website on behalf of another person or organisation, you are responsible for ensuring that your use is permitted and that you can agree to these terms on their behalf.
+          </p>
 
-    <h2>7. Third-Party Advertising</h2>
-    <p>This website may display advertisements served by third-party networks, including Google AdSense. We are not responsible for the content of these advertisements or for the practices of the advertisers or ad networks themselves. Please refer to our <a href="privacy-policy.html">Privacy Policy</a> for more information on how advertising cookies are used.</p>
+          <h2 id="about-service">2. About the Service</h2>
+          <p>
+            HindiFontGen provides browser-based tools for previewing Hindi and other Devanagari text in different font styles. Depending on the available features, you may be able to enter text, compare font appearances, adjust display settings, copy text or create and download an image of your text.
+          </p>
+          <p>
+            The website is intended to help users explore font styles for personal, educational, design and other lawful projects. Features may vary, and we may add, update or discontinue individual features over time.
+          </p>
 
-    <h2>8. Third-Party Links</h2>
-    <p>Our site may contain links to external websites, such as font specimen pages on Google Fonts. We are not responsible for the content or practices of any linked third-party sites.</p>
+          <h2 id="permitted-use">3. Permitted Use</h2>
+          <p>
+            You may use HindiFontGen for lawful purposes and in a way that does not interfere with the website or other users. You agree not to:
+          </p>
+          <ul>
+            <li>Use the website to violate any applicable law or the rights of another person.</li>
+            <li>Attempt to gain unauthorised access to the website, its systems or related services.</li>
+            <li>Interfere with the website's normal operation, security or availability.</li>
+            <li>Use automated methods to overload, disrupt or abuse the service.</li>
+            <li>Introduce malicious code or attempt to bypass reasonable technical restrictions.</li>
+            <li>Misrepresent ownership of fonts, designs, text or other material that belongs to someone else.</li>
+            <li>Use downloaded material in a way that infringes copyright, trademark, privacy or other legal rights.</li>
+          </ul>
+          <p>
+            We may take reasonable steps to protect the website if we detect misuse, harmful activity or conduct that conflicts with these terms.
+          </p>
 
-    <h2>9. Changes to the Service</h2>
-    <p>We reserve the right to modify, suspend, or discontinue any part of the website or tool at any time, without prior notice.</p>
+          <h2 id="text-and-downloads">4. Your Text and Downloads</h2>
+          <p>
+            You are responsible for the text you enter into HindiFontGen and for how you use, share or publish any output you create. Do not enter or use material that you are not legally entitled to use, or material that violates another person's rights.
+          </p>
+          <p>
+            You should check the downloaded image or copied text before using it in a project. The appearance of text can differ between fonts, browsers, operating systems and applications. We cannot guarantee that every font will display every character or combination exactly as expected.
+          </p>
+          <p>
+            You are responsible for keeping copies of any files you download and wish to retain. Do not rely on the website as the only place where your work is stored.
+          </p>
 
-    <h2>10. Changes to These Terms</h2>
-    <p>We may revise these Terms &amp; Conditions from time to time. Updated terms will be posted on this page with a revised date. Continued use of the website after changes are posted constitutes your acceptance of the updated terms.</p>
+          <h2 id="fonts-and-ownership">5. Fonts and Ownership</h2>
+          <p>
+            The HindiFontGen website, including its original text, layout, branding, design and code, is protected by applicable intellectual property laws, except where material belongs to third parties or is otherwise made available under different terms.
+          </p>
+          <p>
+            Font families shown on the website may be provided by third-party font services or their respective creators. The availability of a font in a preview does not mean HindiFontGen owns that font or grants you additional rights to it.
+          </p>
+          <p>
+            Before using a font in commercial work, redistribution, embedding or another project with specific licensing requirements, check the font's own licence and follow its conditions. You are responsible for confirming that your intended use is permitted.
+          </p>
 
-    <h2>11. Governing Law</h2>
-    <p>These Terms &amp; Conditions shall be governed by and interpreted in accordance with the laws of India, without regard to conflict-of-law principles.</p>
+          <h2 id="third-party">6. Third-Party Services and Links</h2>
+          <p>
+            Some website features may rely on third-party services, including font delivery services, or link to external websites. Those services and websites may have their own terms, privacy practices and availability.
+          </p>
+          <p>
+            We do not control third-party websites and are not responsible for their content, policies or operations. An external link is provided for convenience and does not necessarily mean that HindiFontGen endorses the linked service.
+          </p>
+          <p>
+            Your use of a third-party service is subject to the terms and policies applicable to that service. For information about data handling on HindiFontGen, please read our <a href="/privacy-policy.html">Privacy Policy</a>.
+          </p>
 
-    <h2>12. Contact Us</h2>
-    <p>If you have any questions about these Terms &amp; Conditions, please contact us at <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.</p>
-  </div>
-</section>
+          <h2 id="availability">7. Website Availability and Changes</h2>
+          <p>
+            We aim to keep HindiFontGen useful and accessible, but we do not guarantee uninterrupted availability or that every feature will always work without errors. The website may occasionally be unavailable because of maintenance, technical problems, network issues or circumstances outside our control.
+          </p>
+          <p>
+            We may modify, improve, suspend or remove features when necessary. We may also update website content to correct errors or provide clearer information.
+          </p>
 
-{% include footer.html %}
+          <h2 id="disclaimer">8. Disclaimer</h2>
+          <p>
+            HindiFontGen is provided on an “as is” and “as available” basis, to the extent permitted by applicable law. We make reasonable efforts to provide useful tools, but we do not guarantee that the website will be error-free, uninterrupted or suitable for every specific purpose.
+          </p>
+          <p>
+            Font previews are provided to help you compare appearances. The final result may vary depending on your device, browser, selected font, available characters and the application in which the output is used. You should review your output before relying on it for an important project.
+          </p>
 
-<script>
-  var navToggle = document.getElementById('navToggle');
-  var mainNav = document.getElementById('mainNav');
-  navToggle.addEventListener('click', function(){
-    var isOpen = mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
-</script>
+          <h2 id="liability">9. Limitation of Liability</h2>
+          <p>
+            To the extent permitted by applicable law, HindiFontGen and the people responsible for operating it will not be liable for indirect, incidental, special or consequential losses arising from your use of, or inability to use, the website.
+          </p>
+          <p>
+            This includes losses associated with interruptions, display differences, lost files or reliance on website output. Nothing in these terms excludes or limits liability where doing so would be unlawful under applicable law.
+          </p>
+          <p>
+            You remain responsible for checking the suitability of any text, image or font for your intended use and for complying with any relevant licence or legal requirement.
+          </p>
 
+          <h2 id="privacy">10. Privacy</h2>
+          <p>
+            Your use of HindiFontGen is also subject to our
+            <a href="/privacy-policy.html">Privacy Policy</a>. It explains relevant information about website operation, cookies or similar technologies, and third-party services.
+          </p>
+          <p>
+            Please review the Privacy Policy to understand these practices. If you have a question about privacy or the handling of information, you can contact us using the details below.
+          </p>
+
+          <h2 id="changes">11. Changes to These Terms</h2>
+          <p>
+            We may update these Terms and Conditions when the website, its features or applicable requirements change. When we make an update, we will revise the effective date shown at the top of this page.
+          </p>
+          <p>
+            Your continued use of HindiFontGen after revised terms are published means that you accept the updated terms, to the extent permitted by applicable law. We encourage you to revisit this page from time to time.
+          </p>
+
+          <h2 id="governing-law">12. Governing Law</h2>
+          <p>
+            These terms are intended to be interpreted in accordance with applicable laws. Any disputes relating to the use of HindiFontGen will be handled under the laws and legal procedures that apply to the matter and the parties involved.
+          </p>
+
+          <h2 id="contact">13. Contact Us</h2>
+          <p>
+            If you have a question about these Terms and Conditions, need clarification about website use or want to report an issue, please contact us by email.
+          </p>
+          <div class="mt-5 rounded-lg border border-brand-line bg-brand-mint p-5 sm:p-6">
+            <h3 class="mt-0 font-display text-xl font-bold text-brand-ink">HindiFontGen</h3>
+            <p class="mt-2">
+              Email:
+              <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>
+            </p>
+            <p class="mt-2 text-sm">
+              Website:
+              <a href="https://hindifontgen.in/">https://hindifontgen.in/</a>
+            </p>
+          </div>
+
+          <div class="mt-10 border-t border-brand-line pt-5">
+            <p class="text-sm">
+              Thank you for using HindiFontGen. We appreciate your interest in the website and its Hindi font tools.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  {% include footer.html %}
 </body>
 </html>
