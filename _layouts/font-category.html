@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{ page.title }}</title>
+<meta name="description" content="{{ page.description | escape }}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="theme-color" content="#0A6E5A">
+<link rel="canonical" href="https://hindifontgen.in{{ page.url }}">
+<link rel="icon" type="image/png" href="/icon.png">
+<link rel="apple-touch-icon" href="/icon.png">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HindiFontGen">
+<meta property="og:title" content="{{ page.title | escape }}">
+<meta property="og:description" content="{{ page.description | escape }}">
+<meta property="og:url" content="https://hindifontgen.in{{ page.url }}">
+<meta property="og:image" content="https://hindifontgen.in/hindifontgen-intro.webp">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Eczar:wght@600;700&family=Mukta:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config={theme:{extend:{colors:{brand:{DEFAULT:'#0A6E5A',deep:'#064B3E',ink:'#0F1E1A',soft:'#33433F',mint:'#EEF5F2',line:'#D9E4E0',gold:'#E9A400'}},fontFamily:{sans:['Mukta','system-ui','sans-serif'],display:['Eczar','"Noto Serif Devanagari"','Georgia','serif']}}}};
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@graph":[
+{"@type":"WebPage","@id":"https://hindifontgen.in{{ page.url }}#webpage","url":"https://hindifontgen.in{{ page.url }}","name":"{{ page.title | escape }}","isPartOf":{"@id":"https://hindifontgen.in/#website"},"inLanguage":"en-IN","author":{"@id":"https://hindifontgen.in/#author"}},
+{"@type":"BreadcrumbList","itemListElement":[
+{"@type":"ListItem","position":1,"name":"Home","item":"https://hindifontgen.in/"},
+{"@type":"ListItem","position":2,"name":"{{ page.label | escape }} fonts","item":"https://hindifontgen.in{{ page.url }}"}]}
+]}
+</script>
+<style>
+:root{--ink:#0F1E1A;--soft:#33433F;--rule:#D9E4E0;--accent:#0A6E5A;--accent-soft:#E6F1ED;--accent-dark:#064B3E;--focus:#1A56DB}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition-duration:.01ms!important}}
+
+/* ---- shared footer ---- */
+footer{border-top:1px solid var(--rule);padding:40px 24px 28px;margin-top:0}
+.fi{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:32px}
+footer h4{font-size:13px;font-weight:700;margin:0 0 12px}footer p{font-size:13px;color:var(--soft);font-weight:500;margin:0;max-width:36ch}
+footer ul{list-style:none;margin:0;padding:0}footer li{margin-bottom:8px}footer li a{font-size:13px;color:var(--soft);font-weight:500;text-decoration:none}footer li a:hover{color:var(--accent)}
+.fb{max-width:1180px;margin:28px auto 0;padding-top:18px;border-top:1px solid var(--rule);font-size:12px;color:var(--soft)}
+@media(max-width:760px){.fi{grid-template-columns:1fr;gap:24px}}
+
+/* ---- page components ---- */
+.bc>*+*{margin-top:1rem}.bc{max-width:46rem}.bc strong{color:var(--ink)}
+.bc ul{list-style:disc;padding-left:1.25rem}.bc ol{list-style:decimal;padding-left:1.25rem}.bc li+li{margin-top:.5rem}
+.bc a,a.lnk{color:var(--accent);font-weight:600;text-decoration:underline;text-underline-offset:2px}
+a.lnk:hover,.bc a:hover{color:var(--accent-dark)}
+.chip{font:inherit;font-size:.875rem;font-weight:600;border:1px solid var(--rule);background:#fff;color:var(--ink);padding:.4rem .85rem;border-radius:.375rem;cursor:pointer;line-height:1.25}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.chip-sm{font-weight:500;padding:.3rem .65rem}
+.font-card{border:1px solid var(--rule);border-radius:.5rem;padding:1.1rem 1.25rem;display:flex;flex-direction:column;gap:.9rem;min-width:0;background:#fff}
+.preview{min-height:96px;display:flex;align-items:center;justify-content:center;text-align:center;padding:14px 16px;border:1px solid var(--rule);border-radius:.375rem;line-height:1.5;overflow-wrap:anywhere}
+.act{font:inherit;font-size:.8125rem;font-weight:600;border:1px solid var(--rule);background:#fff;color:var(--ink);padding:.4rem .8rem;border-radius:.375rem;cursor:pointer}
+.act:hover{border-color:var(--accent)}
+.act-primary{background:var(--accent);border-color:var(--accent);color:#fff}
+.act-primary:hover{background:var(--accent-dark);border-color:var(--accent-dark)}
+.pg{font:inherit;font-size:.8125rem;font-weight:600;border:1px solid var(--rule);background:#fff;min-width:2.4rem;height:2.4rem;border-radius:.375rem;cursor:pointer}
+.pg:hover:not(:disabled){border-color:var(--accent);color:var(--accent)}
+.pg[aria-current="page"]{background:var(--accent);color:#fff;border-color:var(--accent)}
+.pg:disabled{opacity:.4;cursor:not-allowed}
+#toast{opacity:0;transition:opacity .25s}#toast.show{opacity:1}
+.note{border-left:4px solid var(--accent);background:#fff;padding:1rem 1.25rem;border-radius:0 .5rem .5rem 0}
+table.tb{width:100%;border-collapse:collapse;font-size:.95rem}
+table.tb th,table.tb td{padding:.7rem .9rem;border:1px solid var(--rule);text-align:left;vertical-align:top}
+table.tb th{background:var(--accent-soft);color:var(--ink);font-weight:600}
+details{border:1px solid var(--rule);border-radius:.5rem;background:#fff}
+summary{cursor:pointer;padding:1rem 1.25rem;font-size:1rem;font-weight:600;list-style:none;display:flex;justify-content:space-between;gap:12px;color:var(--ink)}
+summary::-webkit-details-marker{display:none}summary::after{content:"+";color:var(--accent);font-size:1.25rem;line-height:1}details[open] summary::after{content:"–"}
+details p{margin:0;padding:0 1.25rem 1.1rem;color:var(--soft)}
+.card-link{display:block;border:1px solid var(--rule);border-radius:.5rem;padding:1.1rem 1.25rem;background:#fff;text-decoration:none;color:var(--ink);transition:border-color .2s}
+.card-link:hover{border-color:var(--accent)}
+.card-link strong{display:block;font-size:1.05rem}
+.card-link span{display:block;margin-top:.3rem;font-size:.92rem;color:var(--soft)}
+
+/* ---- character map button ---- */
+.cmap-fab{position:fixed;right:20px;bottom:20px;bottom:calc(20px + env(safe-area-inset-bottom,0px));z-index:55;width:58px;height:58px;border-radius:50%;background:var(--accent);color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;box-shadow:0 8px 24px rgba(10,110,90,.4);transition:transform .2s,background .2s}
+.cmap-fab:hover{background:var(--accent-dark);transform:translateY(-3px)}
+.cmap-fab svg{width:28px;height:28px;display:block}
+.cmap-fab span{position:absolute;right:68px;background:var(--ink);color:#fff;font-size:12px;font-weight:600;padding:6px 10px;border-radius:6px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s}
+.cmap-fab:hover span,.cmap-fab:focus-visible span{opacity:1}
+@media(max-width:700px){.cmap-fab{width:50px;height:50px;right:14px;bottom:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}.cmap-fab svg{width:24px;height:24px}.cmap-fab span{display:none}}
+
+/* ---- notice ---- */
+#cookieConsent{position:fixed;left:16px;bottom:16px;z-index:999;max-width:380px;background:#fff;border:1px solid var(--rule);border-radius:.5rem;box-shadow:0 8px 28px rgba(0,0,0,.14);padding:16px 18px;transform:translateY(140%);opacity:0;transition:.35s;pointer-events:none}
+#cookieConsent.show{transform:none;opacity:1;pointer-events:auto}
+#cookieConsent p{margin:0 0 12px;font-size:13px;max-width:none;color:var(--soft)}
+#cookieConsent a{color:var(--accent);font-weight:600}
+#cookieConsent button{font:inherit;font-size:13px;font-weight:600;background:var(--accent);color:#fff;border:0;border-radius:.375rem;padding:.45rem 1rem;cursor:pointer}
+#cookieConsent button:hover{background:var(--accent-dark)}
+@media(max-width:560px){#cookieConsent{right:16px;max-width:none}}
+@media print{.cmap-fab,#cookieConsent{display:none!important}}
+
+/* ---- mobile / no horizontal scroll ---- */
+html{-webkit-text-size-adjust:100%}
+body{overflow-x:clip}
+img,svg,video{max-width:100%;height:auto}
+.grid>*{min-width:0}
+@media(max-width:1023px){section>div.grid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:767px){#fontGrid{grid-template-columns:minmax(0,1fr)}}
+@media(max-width:639px){.grid{grid-template-columns:minmax(0,1fr)}}
+.bc,.bc *{overflow-wrap:anywhere}
+table.tb{min-width:34rem}
+.overflow-x-auto{position:relative}
+@media(max-width:560px){
+  .font-card{padding:.9rem 1rem}
+  .preview{min-height:80px;padding:12px}
+  summary{padding:.9rem 1rem}
+  details p{padding:0 1rem 1rem}
+  #cookieConsent{left:12px;right:12px;bottom:12px}
+}
+</style>
+</head>
+<body class="bg-white text-brand-ink antialiased">
+<a href="#tool" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-brand-ink">Skip to the generator</a>
+
+{% include header.html %}
+
+<main>
+
+<section id="tool" class="bg-brand-deep text-white">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 pb-28 pt-10 sm:pt-14">
+    <nav aria-label="Breadcrumb" class="mb-4 text-sm text-white/80"><a href="https://hindifontgen.in/" class="underline underline-offset-2 hover:text-white">Home</a> <span aria-hidden="true">›</span> <span>{{ page.label }} fonts</span></nav>
+    <h1 class="max-w-3xl font-display text-[2rem] font-bold leading-[1.15] sm:text-5xl">{{ page.h1 }}</h1>
+    <div class="mt-4 h-1 w-24 bg-brand-gold" aria-hidden="true"></div>
+    <p class="mt-5 max-w-2xl text-lg leading-relaxed text-white/90">{{ page.lead }}</p>
+  </div>
+</section>
+
+<div class="relative z-10 -mt-20 mx-auto max-w-[1228px] px-4 min-[561px]:px-6">
+  <div class="rounded-lg border border-brand-line bg-white p-4 sm:p-6">
+    <label for="textInput" class="mb-2 block text-sm font-semibold">Your text</label>
+    <textarea id="textInput" rows="2" maxlength="200" lang="hi" class="block w-full resize-y rounded-md border border-brand-line bg-white px-4 py-3 text-2xl leading-snug text-brand-ink focus:border-brand focus:outline-none focus:ring-2 focus:ring-brand/30" placeholder="Type your text in Hindi or English &amp; see it transform...">आप कैसे हैं?</textarea>
+    <div class="mt-3 flex flex-wrap items-center gap-2 text-sm">
+      <span class="mr-2 text-brand-soft"><span id="charCount">0</span>/200 characters</span>
+      <span class="text-brand-soft">Try a phrase:</span>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="शुभ दीपावली">शुभ दीपावली</button>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="सुप्रभात">सुप्रभात</button>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="आपका स्वागत है">आपका स्वागत है</button>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="श्री गणेशाय नमः">श्री गणेशाय नमः</button>
+      <button type="button" class="chip chip-sm" lang="hi" data-phrase="जन्मदिन की हार्दिक शुभकामनाएं">जन्मदिन की हार्दिक शुभकामनाएं</button>
+    </div>
+
+    <div class="mt-5 grid gap-4 border-t border-brand-line pt-5 sm:grid-cols-2 lg:grid-cols-5">
+      <div>
+        <label for="sizeRange" class="mb-2 block text-sm font-semibold">Font size: <span id="sizeVal">30px</span></label>
+        <input type="range" id="sizeRange" min="16" max="56" value="30" class="w-full accent-brand">
+      </div>
+      <div>
+        <label for="fontColor" class="mb-2 block text-sm font-semibold">Text colour</label>
+        <input type="color" id="fontColor" value="#211B16" class="h-10 w-full cursor-pointer rounded border border-brand-line bg-white p-1">
+      </div>
+      <div>
+        <label for="bgColor" class="mb-2 block text-sm font-semibold">Background colour</label>
+        <input type="color" id="bgColor" value="#ffffff" class="h-10 w-full cursor-pointer rounded border border-brand-line bg-white p-1">
+      </div>
+      <div>
+        <label for="effectSel" class="mb-2 block text-sm font-semibold">Effect</label>
+        <select id="effectSel" class="h-10 w-full rounded border border-brand-line bg-white px-2 text-sm"><option value="none">None</option><option value="outline">Outline</option><option value="shadow">Shadow</option><option value="glow">Glow</option><option value="3d">3D</option><option value="gradient">Gradient</option></select>
+      </div>
+      <div>
+        <label for="sortOrder" class="mb-2 block text-sm font-semibold">Sort</label>
+        <select id="sortOrder" class="h-10 w-full rounded border border-brand-line bg-white px-2 text-sm"><option value="default">Default</option><option value="az">A–Z</option></select>
+      </div>
+    </div>
+    <p class="mt-4 text-sm text-brand-soft"><strong class="text-brand-ink">Copy</strong> copies plain text only. <strong class="text-brand-ink">PNG</strong> and <strong class="text-brand-ink">Transparent</strong> save the styled look as an image.</p>
+  </div>
+
+  <div class="mt-8">
+    <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+      <div id="tabs" role="group" aria-label="Filter fonts by style" class="flex flex-wrap gap-2">
+        <button type="button" class="chip" data-cat="all" aria-pressed="false">All</button>
+        <button type="button" class="chip" data-cat="s" aria-pressed="false">Stylish &amp; Calligraphy</button>
+        <button type="button" class="chip" data-cat="b" aria-pressed="false">Bold</button>
+        <button type="button" class="chip" data-cat="c" aria-pressed="false">Classic</button>
+        <button type="button" class="chip" data-cat="n" aria-pressed="false">Clean</button>
+      </div>
+      <div>
+        <label for="fontSearch" class="sr-only">Search fonts by name</label>
+        <input id="fontSearch" type="search" autocomplete="off" placeholder="Search font name" class="h-10 w-full rounded border border-brand-line bg-white px-3 text-sm lg:w-64">
+      </div>
+    </div>
+    <div id="picks" role="group" aria-label="Fonts suggested for a use" class="mt-3 flex flex-wrap items-center gap-2 text-sm">
+      <span class="mr-1 text-brand-soft">Best for:</span>
+      <button type="button" class="chip chip-sm" data-pick="names" aria-pressed="false">Names</button>
+      <button type="button" class="chip chip-sm" data-pick="wedding" aria-pressed="false">Wedding &amp; invitations</button>
+      <button type="button" class="chip chip-sm" data-pick="festival" aria-pressed="false">Festival greetings</button>
+      <button type="button" class="chip chip-sm" data-pick="poster" aria-pressed="false">Posters &amp; thumbnails</button>
+      <button type="button" class="chip chip-sm" data-pick="text" aria-pressed="false">Captions &amp; longer text</button>
+    </div>
+    <div class="mt-4 flex min-h-[1.5rem] items-center justify-between text-sm text-brand-soft">
+      <p id="resultCount" aria-live="polite"></p>
+      <span id="toast" role="status" aria-live="polite" class="font-semibold text-brand">Copied!</span>
+    </div>
+  </div>
+
+  <div class="mt-2 grid gap-5 md:grid-cols-2" id="fontGrid"></div>
+  <div class="py-12 text-center text-brand-soft" id="emptyState" style="display:none">Type some text above to see font previews.</div>
+  <div class="py-12 text-center text-brand-soft" id="noMatch" style="display:none">No font matches these filters. <button type="button" id="clearFilters" class="lnk font-semibold text-brand underline">Clear filters</button></div>
+  <div class="mt-8 flex flex-wrap justify-center gap-2" id="pagination" role="navigation" aria-label="Font pages"></div>
+  <noscript><p class="py-12 text-center text-brand-soft">This generator needs JavaScript to show live font previews. Please enable it in your browser. The font list below works without it.</p></noscript>
+</div>
+
+<div class="h-14"></div>
+
+{{ content }}
+
+<section id="more-categories" class="bg-brand-mint border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6 grid gap-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+    <h2 class="font-display text-[1.75rem] font-bold leading-tight text-brand-ink sm:text-3xl lg:sticky lg:top-24 lg:self-start">Explore other font styles</h2>
+    <div>
+<div class="grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {% unless page.group == 's' %}<a class="card-link" href="https://hindifontgen.in/fonts/stylish.html"><strong>Stylish &amp; calligraphy fonts</strong><span>Handwriting, brush and decorative faces.</span></a>{% endunless %}
+  {% unless page.group == 'b' %}<a class="card-link" href="https://hindifontgen.in/fonts/bold.html"><strong>Bold Hindi fonts</strong><span>Heavy, high-impact faces for posters and thumbnails.</span></a>{% endunless %}
+  {% unless page.group == 'c' %}<a class="card-link" href="https://hindifontgen.in/fonts/classic.html"><strong>Classic serif fonts</strong><span>Traditional faces for invitations and formal text.</span></a>{% endunless %}
+  {% unless page.group == 'n' %}<a class="card-link" href="https://hindifontgen.in/fonts/clean.html"><strong>Clean sans-serif fonts</strong><span>Plain, readable faces for captions and websites.</span></a>{% endunless %}
+  <a class="card-link" href="https://hindifontgen.in/"><strong>All 61 fonts</strong><span>Compare every style side by side on the home page.</span></a>
+  <a class="card-link" href="https://hindifontgen.in/how-to-use.html"><strong>How to use the generator</strong><span>A step-by-step guide to every control.</span></a>
+</div>
+</div>
+  </div>
+</section>
+
+</main>
+
+<a class="cmap-fab" href="https://hindifontgen.in/character-map.html" aria-label="Open Hindi Character Map" title="Hindi Character Map">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M6 13h.01M10 13h.01M14 13h.01M18 13h.01M8 16.2h8"/></svg>
+  <span>Character Map</span>
+</a>
+
+{% include footer.html %}
+
+<div id="cookieConsent" role="dialog" aria-label="Privacy notice">
+  <p><strong>Privacy notice</strong><br>This site does not store your text. To show fonts, your browser asks Google Fonts for the characters you type. This notice saves one setting on your device so it does not appear again. <a href="https://hindifontgen.in/privacy-policy.html">Privacy Policy</a></p>
+  <button type="button" id="cookieAccept">Got it</button>
+</div>
+
+<script>
+(function(){
+"use strict";
+// Format: category/Name|GoogleFamilyParam (param optional). Categories: s=Stylish, b=Bold, c=Classic, n=Clean.
+var RAW="s/Kalam|Kalam:wght@700,s/Playpen Sans Devanagari,s/Amita|Amita:wght@700,s/Tillana|Tillana:wght@700,s/Modak,s/Jaini,s/Jaini Purva,s/Gajraj One,s/Yatra One,s/Rozha One,s/Sahitya|Sahitya:wght@700,s/Sarala|Sarala:wght@700,s/Halant|Halant:wght@600,s/Kurale,s/Sanskrit Text,s/Tiro Devanagari Hindi,s/Tiro Devanagari Marathi,s/Tiro Devanagari Sanskrit,s/Shobhika,s/Amiko|Amiko:wght@700,s/Sura,s/Bakbak One,s/Sansita|Sansita:wght@700,s/Arya|Arya:wght@700,s/Karma|Karma:wght@700,b/Khand|Khand:wght@700,b/Teko|Teko:wght@600,b/Rajdhani|Rajdhani:wght@700,b/Sarpanch|Sarpanch:wght@800,b/Biryani|Biryani:wght@800,b/Jaldi|Jaldi:wght@700,b/Baloo 2|Baloo+2:wght@700,b/Pragati Narrow|Pragati+Narrow:wght@700,b/Khula|Khula:wght@800,b/Kadwa|Kadwa:wght@700,c/Eczar|Eczar:wght@700,c/Noto Serif Devanagari|Noto+Serif+Devanagari:wght@700,c/Inknut Antiqua|Inknut+Antiqua:wght@700,c/Vesper Libre|Vesper+Libre:wght@700,c/Rhodium Libre,c/Glegoo|Glegoo:wght@700,c/Asar,c/Martel|Martel:wght@800,c/Annapurna SIL|Annapurna+SIL:wght@700,n/Hind|Hind:wght@600,n/Mukta|Mukta:wght@600,n/Noto Sans Devanagari|Noto+Sans+Devanagari:wght@600,n/Anek Devanagari|Anek+Devanagari:wght@600,n/Palanquin|Palanquin:wght@700,n/Palanquin Dark|Palanquin+Dark:wght@700,n/Martel Sans|Martel+Sans:wght@800,n/Yantramanav|Yantramanav:wght@700,n/Laila|Laila:wght@700,n/Ranga|Ranga:wght@700,n/Dekko,n/Gotu,n/Sumana,n/Cambay|Cambay:wght@700,n/Akshar|Akshar:wght@700,n/Poppins|Poppins:wght@600,n/Noto Sans|Noto+Sans:wght@600";
+var LAB={s:"Stylish",b:"Bold",c:"Classic",n:"Clean"};
+var FONTS=RAW.split(",").map(function(x){var i=x.indexOf("/"),r=x.slice(i+1).split("|");return {n:r[0],p:r[1]||r[0].replace(/ /g,"+"),c:x.slice(0,i)};});
+var PICKS={
+  names:["Kalam","Sarala","Halant","Amita","Playpen Sans Devanagari","Sahitya","Tillana","Karma"],
+  wedding:["Tiro Devanagari Hindi","Eczar","Rozha One","Sanskrit Text","Inknut Antiqua","Amita","Vesper Libre","Shobhika","Annapurna SIL"],
+  festival:["Yatra One","Rozha One","Tillana","Jaini","Amita","Modak"],
+  poster:["Khand","Teko","Rajdhani","Sarpanch","Modak","Yatra One","Baloo 2","Gajraj One","Bakbak One"],
+  text:["Hind","Mukta","Noto Sans Devanagari","Anek Devanagari","Palanquin","Yantramanav","Poppins","Noto Sans"]
+};
+/* This page starts filtered to one style group (set in the page's front matter). */
+var PAGE=12,page=1,cat="{{ page.group | default: 'all' }}",pick="",q="",loaded={},failed={},tt,dt,shown=[];
+function $(id){return document.getElementById(id);}
+var input=$("textInput"),range=$("sizeRange"),fc=$("fontColor"),bc=$("bgColor"),sort=$("sortOrder"),eff=$("effectSel"),
+    grid=$("fontGrid"),empty=$("emptyState"),noMatch=$("noMatch"),toast=$("toast"),pager=$("pagination"),search=$("fontSearch"),count=$("resultCount");
+var tabs=document.querySelectorAll("#tabs [data-cat]"),picksBtns=document.querySelectorAll("#picks [data-pick]");
+
+Array.prototype.forEach.call(document.querySelectorAll("[data-font-count]"),function(el){el.textContent=FONTS.length;});
+
+function say(m){toast.textContent=m;toast.classList.add("show");clearTimeout(tt);tt=setTimeout(function(){toast.classList.remove("show");},2200);}
+
+function list(){
+  var set=pick?PICKS[pick]:null,qq=q.trim().toLowerCase();
+  var l=FONTS.filter(function(f){
+    return (cat==="all"||f.c===cat)&&(!set||set.indexOf(f.n)>-1)&&(!qq||f.n.toLowerCase().indexOf(qq)>-1);
+  });
+  if(sort.value==="az")l.sort(function(a,b){return a.n.localeCompare(b.n);});
+  return l;
+}
+function pages(){return Math.max(1,Math.ceil(list().length/PAGE));}
+function tkey(){return Array.from(new Set((input.value.replace(/[\r\n]/g,"")+" ").split(""))).join("");}
+
+function efx(e,c){
+  if(e==="outline")return "-webkit-text-stroke:1.5px "+c+";color:transparent";
+  if(e==="shadow")return "text-shadow:3px 3px 3px rgba(0,0,0,.3)";
+  if(e==="glow")return "text-shadow:0 0 6px "+c+",0 0 16px "+c;
+  if(e==="3d")return "text-shadow:1px 1px 0 rgba(0,0,0,.4),2px 2px 0 rgba(0,0,0,.4),3px 3px 0 rgba(0,0,0,.4),4px 4px 0 rgba(0,0,0,.4)";
+  if(e==="gradient")return "background:linear-gradient(90deg,"+c+",#7C3AED);-webkit-background-clip:text;background-clip:text;color:transparent";
+  return "";
+}
+
+function cssUrl(fs,key){return "https://fonts.googleapis.com/css2?"+fs.map(function(f){return "family="+f.p;}).join("&")+"&text="+encodeURIComponent(key)+"&display=swap";}
+function sheet(href){
+  return new Promise(function(res){
+    var l=document.createElement("link"),done=false;
+    function fin(ok){if(!done){done=true;res(ok);}}
+    l.rel="stylesheet";l.href=href;
+    l.onload=function(){fin(true);};l.onerror=function(){fin(false);};
+    setTimeout(function(){fin(true);},4000);
+    document.head.appendChild(l);
+  });
+}
+function markFailed(){
+  Array.prototype.forEach.call(grid.querySelectorAll(".font-card"),function(card){
+    var n=card.getAttribute("data-name"),note=card.querySelector("[data-fail]");
+    if(note)note.classList.toggle("hidden",!failed[n]);
+  });
+}
+function loadFonts(items){
+  var key=tkey(),todo=[];
+  items.forEach(function(f){
+    if(f.p.charAt(0)==="/"){
+      if(loaded[f.n])return;loaded[f.n]="local";
+      var st=document.createElement("style");st.textContent='@font-face{font-family:"'+f.n+'";src:url("'+f.p+'");font-display:swap}';document.head.appendChild(st);
+      return;
+    }
+    if(loaded[f.n]===key)return;
+    loaded[f.n]=key;todo.push(f);
+  });
+  if(!todo.length)return Promise.resolve();
+  return sheet(cssUrl(todo,key)).then(function(ok){
+    if(ok){todo.forEach(function(f){failed[f.n]=false;});return;}
+    return Promise.all(todo.map(function(f){
+      return sheet(cssUrl([f],key)).then(function(ok2){failed[f.n]=!ok2;if(!ok2)loaded[f.n]="";});
+    }));
+  }).then(markFailed);
+}
+
+function buildPager(){
+  pager.innerHTML="";var n=pages();if(n<2)return;
+  function add(t,p,dis,act,label){
+    var b=document.createElement("button");
+    b.type="button";b.className="pg";b.textContent=t;b.disabled=!!dis;
+    b.setAttribute("aria-label",label||("Page "+p));
+    if(act)b.setAttribute("aria-current","page");
+    b.onclick=function(){go(p);};pager.appendChild(b);
+  }
+  add("‹",page-1,page===1,false,"Previous page");
+  for(var i=1;i<=n;i++)add(i,i,false,i===page);
+  add("›",page+1,page===n,false,"Next page");
+}
+function go(p){
+  if(p<1||p>pages()||p===page)return;
+  page=p;build();$("tool").scrollIntoView({behavior:"smooth"});
+}
+
+function build(){
+  var all=list(),items=all.slice((page-1)*PAGE,page*PAGE);
+  grid.innerHTML="";
+  items.forEach(function(f){
+    var name=f.n,card=document.createElement("div");
+    card.className="font-card";card.setAttribute("data-name",name);
+    card.innerHTML='<div class="flex items-baseline justify-between gap-3"><h3 class="text-[0.95rem] font-semibold text-brand-ink" data-n></h3><span class="text-xs font-medium text-brand-soft" data-g></span></div>'+
+      '<div class="preview"><span></span></div>'+
+      '<p class="hidden text-sm text-brand-soft" data-fail>Preview unavailable: this font could not be loaded. Reload the page or try again in a moment.</p>'+
+      '<div class="flex flex-wrap gap-2" data-actions></div>';
+    card.querySelector("[data-n]").textContent=name;
+    card.querySelector("[data-g]").textContent=LAB[f.c];
+    card.querySelector(".preview").style.fontFamily="'"+name+"',sans-serif";
+    var act=card.querySelector("[data-actions]");
+    var btns=[["Copy","act act-primary",copyText,"Copy your text"],
+              ["PNG","act",function(){png(name,false);},"Download PNG in "+name],
+              ["Transparent","act",function(){png(name,true);},"Download transparent PNG in "+name]];
+    if(f.p.charAt(0)!=="/")btns.push(["Get font","act",function(){window.open("https://fonts.google.com/specimen/"+name.replace(/ /g,"+"),"_blank","noopener");},"Open "+name+" on Google Fonts"]);
+    btns.forEach(function(a){var b=document.createElement("button");b.type="button";b.className=a[1];b.textContent=a[0];b.setAttribute("aria-label",a[3]);b.onclick=a[2];act.appendChild(b);});
+    grid.appendChild(card);
+  });
+  shown=items;buildPager();applyStyles();loadFonts(items);markFailed();
+}
+
+function applyStyles(){
+  var t=input.value.trim(),has=t.length>0,all=list();
+  empty.style.display=has?"none":"block";
+  noMatch.style.display=(has&&!all.length)?"block":"none";
+  grid.style.display=(has&&all.length)?"grid":"none";
+  pager.style.display=(has&&all.length)?"flex":"none";
+  count.textContent=(has&&all.length)?("Showing "+((page-1)*PAGE+1)+"–"+Math.min(page*PAGE,all.length)+" of "+all.length+(all.length===FONTS.length?"":" matching")+" fonts"):"";
+  var st=efx(eff.value,fc.value);
+  Array.prototype.forEach.call(grid.querySelectorAll(".preview"),function(p){
+    p.style.fontSize=range.value+"px";p.style.color=fc.value;p.style.background=bc.value;
+    var sp=p.firstChild;sp.textContent=t;sp.style.cssText=(st?st+";":"")+"white-space:pre-wrap;max-width:100%";
+  });
+}
+
+function copyText(){
+  var t=input.value.trim();if(!t)return;
+  var fallback=function(){
+    var a=document.createElement("textarea");a.value=t;a.style.cssText="position:fixed;left:-9999px";
+    document.body.appendChild(a);a.select();
+    try{document.execCommand("copy");say("Copied!");}catch(e){say("Copy failed. Select the text in the box and copy it.");}
+    a.remove();
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(t).then(function(){say("Copied!");}).catch(fallback);
+  }else{fallback();}
+}
+
+async function png(name,transparent){
+  var text=input.value.trim();if(!text)return;
+  var size=+range.value,pad=32,MAXW=900,font=size+'px "'+name+'"';
+  var f=FONTS.filter(function(x){return x.n===name;})[0];
+  try{await loadFonts([f]);await document.fonts.load(font,text);}catch(e){}
+  if(failed[name]){say("This font could not be loaded, so the PNG was not created.");return;}
+  var cv=document.createElement("canvas"),ctx=cv.getContext("2d");
+  ctx.font=font;
+  function wrap(line){
+    var words=line.split(" "),out=[],cur="";
+    words.forEach(function(w){
+      var t=cur?cur+" "+w:w;
+      if(cur&&ctx.measureText(t).width>MAXW){out.push(cur);cur=w;}else{cur=t;}
+    });
+    out.push(cur);return out;
+  }
+  var lines=[];
+  text.split("\n").forEach(function(l){wrap(l).forEach(function(x){lines.push(x);});});
+  var m=ctx.measureText("A"),asc=m.fontBoundingBoxAscent||size*0.95,desc=m.fontBoundingBoxDescent||size*0.45;
+  var lh=Math.round(Math.max(size*1.5,asc+desc)),mw=10;
+  lines.forEach(function(l){mw=Math.max(mw,ctx.measureText(l).width);});
+  var w=Math.ceil(mw+pad*2),h=Math.ceil(lh*lines.length+pad*2),sc=3;
+  while(sc>1&&(w*sc)*(h*sc)>16000000)sc--;
+  cv.width=w*sc;cv.height=h*sc;ctx.scale(sc,sc);
+  if(!transparent){ctx.fillStyle=bc.value;ctx.fillRect(0,0,w,h);}
+  ctx.font=font;ctx.textAlign="center";ctx.textBaseline="alphabetic";
+  var cx=w/2,e=eff.value,c=fc.value;
+  lines.forEach(function(l,i){
+    var y=pad+i*lh+(lh-(asc+desc))/2+asc;
+    ctx.save();ctx.fillStyle=c;
+    if(e==="outline"){ctx.lineWidth=1.5;ctx.strokeStyle=c;ctx.lineJoin="round";ctx.strokeText(l,cx,y);}
+    else{
+      if(e==="3d"){ctx.fillStyle="rgba(0,0,0,.4)";for(var k=4;k>0;k--)ctx.fillText(l,cx+k,y+k);ctx.fillStyle=c;}
+      if(e==="shadow"){ctx.shadowColor="rgba(0,0,0,.3)";ctx.shadowOffsetX=ctx.shadowOffsetY=3*sc;ctx.shadowBlur=3*sc;}
+      if(e==="glow"){ctx.shadowColor=c;ctx.shadowBlur=16*sc;ctx.fillText(l,cx,y);ctx.shadowBlur=6*sc;}
+      if(e==="gradient"){var g=ctx.createLinearGradient(cx-mw/2,0,cx+mw/2,0);g.addColorStop(0,c);g.addColorStop(1,"#7C3AED");ctx.fillStyle=g;}
+      ctx.fillText(l,cx,y);
+    }
+    ctx.restore();
+  });
+  var fname="hindi-font-"+name.toLowerCase().replace(/\s+/g,"-")+(e!=="none"?"-"+e:"")+(transparent?"-transparent":"")+".png";
+  cv.toBlob(function(b){
+    if(!b){say("Could not create the image. Try a smaller size or shorter text.");return;}
+    var u=URL.createObjectURL(b),a=document.createElement("a");
+    a.download=fname;a.href=u;document.body.appendChild(a);a.click();a.remove();
+    setTimeout(function(){URL.revokeObjectURL(u);},4000);
+  },"image/png");
+}
+
+function onInput(){$("charCount").textContent=input.value.length;applyStyles();clearTimeout(dt);dt=setTimeout(function(){loadFonts(shown);},350);}
+input.addEventListener("input",onInput);
+range.addEventListener("input",function(){$("sizeVal").textContent=range.value+"px";applyStyles();});
+fc.addEventListener("input",applyStyles);bc.addEventListener("input",applyStyles);eff.addEventListener("change",applyStyles);
+sort.addEventListener("change",function(){page=1;build();});
+search.addEventListener("input",function(){q=search.value;page=1;build();});
+
+function syncChips(){
+  Array.prototype.forEach.call(tabs,function(b){b.setAttribute("aria-pressed",String(!pick&&b.getAttribute("data-cat")===cat));});
+  Array.prototype.forEach.call(picksBtns,function(b){b.setAttribute("aria-pressed",String(b.getAttribute("data-pick")===pick));});
+}
+Array.prototype.forEach.call(tabs,function(b){b.addEventListener("click",function(){cat=b.getAttribute("data-cat");pick="";page=1;syncChips();build();});});
+Array.prototype.forEach.call(picksBtns,function(b){b.addEventListener("click",function(){var p=b.getAttribute("data-pick");pick=(pick===p)?"":p;cat="all";page=1;syncChips();build();});});
+$("clearFilters").addEventListener("click",function(){cat="{{ page.group | default: 'all' }}";pick="";q="";search.value="";page=1;syncChips();build();});
+
+document.addEventListener("click",function(e){
+  var b=e.target&&e.target.closest?e.target.closest("[data-phrase]"):null;
+  if(!b)return;
+  input.value=b.getAttribute("data-phrase");
+  onInput();
+  $("tool").scrollIntoView({behavior:"smooth"});
+  input.focus({preventScroll:true});
+});
+
+$("charCount").textContent=input.value.length;
+syncChips();
+build();
+
+/* ---- privacy notice ---- */
+var KEY="hfg_cookie_consent",cb=$("cookieConsent");
+function has(){try{return !!localStorage.getItem(KEY);}catch(e){return false;}}
+function save(){try{localStorage.setItem(KEY,"seen");}catch(e){}cb.classList.remove("show");}
+if(!has())setTimeout(function(){cb.classList.add("show");},600);
+$("cookieAccept").onclick=save;
+})();
+</script>
+</body>
+</html>
