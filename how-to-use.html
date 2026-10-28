@@ -89,15 +89,6 @@ details p{margin:0;padding:0 1.25rem 1.1rem;color:var(--soft)}
 .cmap-fab:hover span,.cmap-fab:focus-visible span{opacity:1}
 @media(max-width:700px){.cmap-fab{width:50px;height:50px;right:14px;bottom:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px))}.cmap-fab svg{width:24px;height:24px}.cmap-fab span{display:none}}
 
-/* ---- notice ---- */
-#cookieConsent{position:fixed;left:16px;bottom:16px;z-index:999;max-width:380px;background:#fff;border:1px solid var(--rule);border-radius:.5rem;box-shadow:0 8px 28px rgba(0,0,0,.14);padding:16px 18px;transform:translateY(140%);opacity:0;transition:.35s;pointer-events:none}
-#cookieConsent.show{transform:none;opacity:1;pointer-events:auto}
-#cookieConsent p{margin:0 0 12px;font-size:13px;max-width:none;color:var(--soft)}
-#cookieConsent a{color:var(--accent);font-weight:600}
-#cookieConsent button{font:inherit;font-size:13px;font-weight:600;background:var(--accent);color:#fff;border:0;border-radius:.375rem;padding:.45rem 1rem;cursor:pointer}
-#cookieConsent button:hover{background:var(--accent-dark)}
-@media(max-width:560px){#cookieConsent{right:16px;max-width:none}}
-@media print{.cmap-fab,#cookieConsent{display:none!important}}
 
 /* ---- mobile / no horizontal scroll ---- */
 html{-webkit-text-size-adjust:100%}
@@ -112,9 +103,9 @@ table.tb{min-width:34rem}
 @media(max-width:560px){
   summary{padding:.9rem 1rem}
   details p{padding:0 1rem 1rem}
-  #cookieConsent{left:12px;right:12px;bottom:12px}
 }
 </style>
+   {% include cookie-banner.html %}
 </head>
 <body class="bg-white text-brand-ink antialiased">
 <a href="#guide" class="sr-only focus:not-sr-only focus:fixed focus:left-3 focus:top-3 focus:z-[100] focus:rounded focus:bg-white focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-brand-ink">Skip to the guide</a>
@@ -463,20 +454,7 @@ table.tb{min-width:34rem}
 
 {% include footer.html %}
 
-<div id="cookieConsent" role="dialog" aria-label="Privacy notice">
-  <p><strong>Privacy notice</strong><br>This site does not store your text. To show fonts, your browser asks Google Fonts for the characters you type. This notice saves one setting on your device so it does not appear again. <a href="https://hindifontgen.in/privacy-policy.html">Privacy Policy</a></p>
-  <button type="button" id="cookieAccept">Got it</button>
-</div>
 
-<script>
-(function(){
-"use strict";
-var KEY="hfg_cookie_consent",cb=document.getElementById("cookieConsent");
-function has(){try{return !!localStorage.getItem(KEY);}catch(e){return false;}}
-function save(){try{localStorage.setItem(KEY,"seen");}catch(e){}cb.classList.remove("show");}
-if(!has())setTimeout(function(){cb.classList.add("show");},600);
-document.getElementById("cookieAccept").onclick=save;
-})();
-</script>
+
 </body>
 </html>
