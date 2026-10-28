@@ -5,107 +5,214 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact Us</title>
-<meta name="description" content="Contact HindiFontGen.in. Email Ali Hamza for bug reports, font requests, feedback or advertising enquiries.">
+
+<title>Contact Us | HindiFontGen</title>
+<meta name="description" content="Contact HindiFontGen for Hindi font requests, technical issues, feedback, or general questions. Email us and we'll do our best to help.">
 <link rel="icon" type="image/png" href="/icon.png">
 <link rel="canonical" href="https://hindifontgen.in/contact.html">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Hind:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Hind:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
-  :root{
-    --paper:#FFFFFF; --panel:#FFFFFF; --ink:#1D2624; --ink-soft:#6B7573;
-    --rule:#E1E7E5; --accent:#0E8F76; --accent-soft:#E3F5EF; --accent-dark:#0A6E5A;
-    --focus:#1A56DB; --radius:10px;
+:root{
+  --paper:#FFFFFF;
+  --panel:#FFFFFF;
+  --ink:#1D2624;
+  --ink-soft:#687572;
+  --rule:#E1E7E5;
+  --accent:#0A6E5A;
+  --accent-soft:#E7F4F0;
+  --focus:#1A56DB;
+  --radius:12px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Poppins',system-ui,sans-serif;
+  -webkit-font-smoothing:antialiased;
+  line-height:1.6;
+}
+a{color:inherit;}
+::selection{background:var(--accent-soft);}
+:focus-visible{outline:2.5px solid var(--focus);outline-offset:3px;}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms!important;
+    transition-duration:0.01ms!important;
+    scroll-behavior:auto!important;
   }
-  *{box-sizing:border-box;}
-  html{scroll-behavior:smooth;}
-  body{margin:0; background:var(--paper); color:var(--ink); font-family:'Poppins',system-ui,sans-serif; -webkit-font-smoothing:antialiased; line-height:1.5;}
-  a{color:inherit;}
-  ::selection{background:var(--accent-soft);}
-  :focus-visible{outline:2.5px solid var(--focus); outline-offset:2px;}
-  @media (prefers-reduced-motion: reduce){ *{animation-duration:0.01ms !important; transition-duration:0.01ms !important;} }
+}
 
-  header{position:sticky; top:0; z-index:50; background:rgba(251,247,240,0.94); backdrop-filter:blur(6px); border-bottom:1px solid var(--rule); padding:16px 24px;}
-  .header-inner{max-width:1180px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; gap:16px;}
-  .logo{font-family:'Poppins',sans-serif; font-weight:700; font-size:19px; text-decoration:none; flex-shrink:0; color:var(--ink);}
-  .logo em{font-style:normal; color:var(--accent);}
-  nav.main-nav{display:flex; align-items:center; gap:2px;}
-  nav.main-nav a{font-size:14px; color:var(--ink-soft); text-decoration:none; padding:8px 12px; border-radius:7px; white-space:nowrap;}
-  nav.main-nav a:hover{color:var(--ink); background:var(--accent-soft);}
-  nav.main-nav a.current{color:var(--ink); font-weight:600;}
-  .nav-toggle{display:none; border:1px solid var(--rule); background:#fff; border-radius:8px; padding:8px 10px; cursor:pointer; font-size:14px;}
-  @media (max-width:900px){
-    nav.main-nav{position:absolute; top:100%; left:0; right:0; background:var(--paper); border-bottom:1px solid var(--rule); flex-direction:column; align-items:stretch; padding:8px 16px 16px; display:none;}
-    nav.main-nav.open{display:flex;}
-    nav.main-nav a{padding:10px 8px; border-radius:6px;}
-    .nav-toggle{display:block;}
-  }
-
-  section.block{max-width:900px; margin:0 auto; padding:52px 24px 70px;}
-  .page-head{max-width:680px; margin:0 auto 34px;}
-  .kicker{display:block; font-size:12.5px; font-weight:700; letter-spacing:.06em; text-transform:uppercase; color:var(--accent); margin-bottom:10px;}
-  h1{font-family:'Poppins',sans-serif; font-weight:800; font-size:clamp(24px,3.6vw,34px); margin:0 0 10px;}
-
-  .legal-copy h2{font-size:19px; font-weight:700; margin:34px 0 12px;}
-  .legal-copy p{font-size:15px; color:var(--ink-soft); margin:0 0 14px; line-height:1.7;}
-  .legal-copy ul{font-size:15px; color:var(--ink-soft); padding-left:20px; margin:0 0 14px;}
-  .legal-copy li{margin-bottom:8px; line-height:1.6;}
-  .legal-copy a{color:var(--accent); text-decoration:underline;}
-  .legal-copy strong{color:var(--ink);}
-
-
-  footer{border-top:1px solid var(--rule); padding:40px 24px 28px;}
-  .footer-inner{max-width:1180px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:32px;}
-  .footer-col h4{font-size:13px; margin:0 0 12px; color:var(--ink);}
-  .footer-col p{font-size:13px; color:var(--ink-soft); margin:0; max-width:36ch;}
-  .footer-col ul{list-style:none; margin:0; padding:0;}
-  .footer-col li{margin-bottom:8px;}
-  .footer-col a{font-size:13px; color:var(--ink-soft); text-decoration:none;}
-  .footer-col a:hover{color:var(--accent);}
-  .footer-bottom{max-width:1180px; margin:32px auto 0; padding-top:20px; border-top:1px solid var(--rule); font-size:12px; color:var(--ink-soft);}
-  @media (max-width:760px){ .footer-inner{grid-template-columns:1fr; gap:24px;} }
+/* Contact page */
+.contact-section{
+  max-width:1000px;
+  margin:0 auto;
+  padding:54px 24px 72px;
+}
+.contact-heading{
+  max-width:720px;
+  margin:0 auto 32px;
+}
+.contact-kicker{
+  display:inline-block;
+  margin-bottom:10px;
+  color:var(--accent);
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:.07em;
+  text-transform:uppercase;
+}
+.contact-heading h1{
+  margin:0 0 14px;
+  font-size:clamp(28px,4vw,38px);
+  line-height:1.25;
+  font-weight:800;
+  letter-spacing:-.6px;
+}
+.contact-heading p{
+  max-width:650px;
+  margin:0;
+  color:var(--ink-soft);
+  font-size:15px;
+  line-height:1.8;
+}
+.contact-content{
+  max-width:720px;
+  margin:0 auto;
+}
+.contact-card{
+  padding:26px;
+  margin-bottom:22px;
+  background:var(--panel);
+  border:1px solid var(--rule);
+  border-radius:var(--radius);
+}
+.contact-card h2{
+  margin:0 0 12px;
+  font-size:19px;
+  line-height:1.4;
+  font-weight:700;
+}
+.contact-card p{
+  margin:0 0 14px;
+  color:var(--ink-soft);
+  font-size:14px;
+  line-height:1.85;
+}
+.contact-card p:last-child{margin-bottom:0;}
+.contact-email{
+  display:inline-block;
+  margin:2px 0 12px;
+  color:var(--accent);
+  font-size:16px;
+  font-weight:600;
+  overflow-wrap:anywhere;
+  text-decoration:underline;
+  text-underline-offset:3px;
+}
+.contact-email:hover{color:#075343;}
+.contact-list{
+  margin:0;
+  padding-left:21px;
+  color:var(--ink-soft);
+  font-size:14px;
+}
+.contact-list li{
+  margin-bottom:10px;
+  padding-left:3px;
+  line-height:1.75;
+}
+.contact-list li:last-child{margin-bottom:0;}
+.contact-list a,.contact-card p a{
+  color:var(--accent);
+  text-decoration:underline;
+  text-underline-offset:2px;
+}
+.contact-list a:hover,.contact-card p a:hover{text-decoration-thickness:2px;}
+.contact-note{
+  padding:18px 20px;
+  background:var(--accent-soft);
+  border-radius:10px;
+  color:var(--ink);
+  font-size:13px;
+  line-height:1.8;
+}
+.contact-note strong{font-weight:700;}
+@media(max-width:600px){
+  .contact-section{padding:38px 18px 52px;}
+  .contact-heading{margin-bottom:25px;}
+  .contact-heading h1{font-size:29px;}
+  .contact-heading p{font-size:14px;}
+  .contact-card{padding:21px 18px;}
+  .contact-card h2{font-size:18px;}
+}
 </style>
 </head>
 <body>
+
 {% include header.html %}
 
-<section class="block">
-  <div class="page-head">
-    <span class="kicker">Get in Touch</span>
-    <h1>Contact Us</h1>
-  </div>
+<main>
+  <section class="contact-section">
+    <div class="contact-heading">
+      <span class="contact-kicker">Get in Touch</span>
+      <h1>Contact Us</h1>
+      <p>Have a question about HindiFontGen, found something that isn't working correctly, or want to suggest a font? Send us an email. Your feedback helps us improve the website and make the font tools more useful.</p>
+    </div>
 
-  <div class="legal-copy">
-    <p>Hi, I'm <strong>Ali Hamza</strong>, the author of HindiFontGen.in. Whether you've found a bug, have a font request, want to give feedback, or just have a general question, drop me a message.</p>
+    <div class="contact-content">
+      <section class="contact-card">
+        <h2>Send Us an Email</h2>
+        <p>For general questions, technical problems, suggestions, or other enquiries, email us at the address below.</p>
+        <a class="contact-email" href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>
+        <p>We aim to reply as soon as reasonably possible. Response times may vary depending on the type and number of enquiries we receive.</p>
+      </section>
 
-    <h2>Email</h2>
-    <p>The best way to reach us is by email at <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>. We read every message that comes in and try to respond within a couple of business days.</p>
+      <section class="contact-card">
+        <h2>How Can We Help?</h2>
+        <p>You can contact us about topics such as:</p>
+        <ul class="contact-list">
+          <li>Reporting a broken feature, display issue, or other technical problem</li>
+          <li>Suggesting a Hindi or Devanagari font style for the website</li>
+          <li>Sharing feedback or ideas for improving the font tools</li>
+          <li>Asking questions about using the website or creating font-style images</li>
+          <li>Questions about our <a href="/privacy-policy.html">Privacy Policy</a> or <a href="/terms.html">Terms &amp; Conditions</a></li>
+          <li>Advertising, business, or partnership enquiries</li>
+        </ul>
+      </section>
 
-    <h2>What You Can Write to Us About</h2>
-    <ul>
-      <li>Reporting a bug or something that isn't working as expected</li>
-      <li>Requesting a new font style to be added</li>
-      <li>General feedback or suggestions to improve the tool</li>
-      <li>Questions about our <a href="privacy-policy.html">Privacy Policy</a> or <a href="terms.html">Terms &amp; Conditions</a></li>
-      <li>Advertising or partnership enquiries</li>
-    </ul>
+      <section class="contact-card">
+        <h2>Before You Contact Us</h2>
+        <p>If you're reporting a technical issue, please explain what you were trying to do and what happened instead. Mentioning the browser or device you're using may also help us understand the problem.</p>
+        <p>Please don't include passwords, payment details, or other sensitive personal information in your message.</p>
+      </section>
 
-    <p>We currently don't offer phone or live chat support, but email works well for us and lets us give every message proper attention.</p>
-  </div>
-</section>
+      <div class="contact-note">
+        <strong>A quick note:</strong> HindiFontGen currently handles enquiries by email. We don't offer phone or live-chat support. Email allows us to review each message and respond when we can.
+      </div>
+    </div>
+  </section>
+</main>
 
 {% include footer.html %}
-  
+
 <script>
+(function(){
   var navToggle = document.getElementById('navToggle');
   var mainNav = document.getElementById('mainNav');
-  navToggle.addEventListener('click', function(){
-    var isOpen = mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-  });
+
+  if(navToggle && mainNav){
+    navToggle.addEventListener('click', function(){
+      var isOpen = mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
+})();
 </script>
 
 </body>
