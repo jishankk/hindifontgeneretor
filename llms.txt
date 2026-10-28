@@ -1,116 +1,41 @@
-# Hindi Font Generator
+# HindiFontGen
 
-> Hindi Font Generator is a free online browser-based tool for creating, previewing, and customizing Hindi and Devanagari text in a variety of stylish font styles.
+> HindiFontGen is a free online Hindi font generator that lets users preview Hindi and other Devanagari-script text in different typefaces, customize text size and colours, apply visual effects, copy Unicode text, and download styled text as PNG or transparent PNG images. The website helps users choose suitable fonts for names, quotes, social media graphics, invitations, posters, greetings, and other creative designs.
 
-## Primary Website
+HindiFontGen focuses on practical Hindi typography, readable Devanagari text, font previews, and image creation without requiring users to create an account.
 
-- https://hindifontgen.in/ — Official Hindi Font Generator website.
+## Main Website
 
-## Main Tool
+- [HindiFontGen Homepage](https://hindifontgen.in/): Main Hindi font generator and guide to the website's features, font styles, customization options, and common uses.
 
-- https://hindifontgen.in/ — Create and preview Hindi and Devanagari text using multiple font styles directly in the browser.
+## Font Generator Features
 
-## Core Capabilities
+- [Hindi Font Generator](https://hindifontgen.in/): Type Hindi or English text and preview it in multiple Devanagari typefaces.
+- [Text Customization and Effects](https://hindifontgen.in/): Adjust text size, text colour, background colour, and supported visual effects such as outline, shadow, glow, 3D, and gradient.
+- [Copy Text and Download PNG](https://hindifontgen.in/): Copy plain Unicode text or export a styled text image, including a transparent PNG where supported.
+- [Hindi Typography Guide](https://hindifontgen.in/): Learn about Devanagari font selection, matras, conjuncts, readability, and choosing typefaces for different design needs.
 
-- Generate and preview Hindi text in multiple Devanagari font styles.
-- Type Hindi, Devanagari, English, or mixed-language text.
-- View text changes in real time across different font styles.
-- Adjust font size according to the intended design.
-- Customize text color.
-- Customize background color.
-- Copy generated text for use in supported applications.
-- Save styled text as an image when an exact visual appearance is required.
-- Use the tool without creating an account.
-- Process text directly in the browser.
+## Hindi Text and Font Information
 
-## Font and Typography
+- [Unicode Hindi Text](https://hindifontgen.in/): Understand how Unicode Devanagari text works and why changing a typeface does not convert text into a different encoding.
+- [Font Selection Guide](https://hindifontgen.in/): Compare decorative, handwritten, bold, serif, and sans-serif styles for headings, names, invitations, and digital graphics.
+- [Font Usage and Installation](https://hindifontgen.in/): Learn how to use downloaded PNG images in designs and how to obtain font files from their respective Google Fonts pages.
+- [Troubleshooting Hindi Fonts](https://hindifontgen.in/): Find guidance for missing glyphs, matra spacing, conjunct rendering, clipboard formatting, and differences between previews and exported images.
 
-The tool focuses on Hindi and Devanagari typography and provides a collection of font styles suitable for different creative and design purposes.
+## Policies and Website Information
 
-The available styles can be used to explore different visual appearances of Hindi text, including calligraphic, handwritten, decorative, and bold typography styles.
+- [Privacy Policy](https://hindifontgen.in/privacy-policy.html): Information about privacy and the website's handling of user data.
+- [Terms and Conditions](https://hindifontgen.in/terms.html): Terms governing use of the website and its tools.
+- [Disclaimer](https://hindifontgen.in/disclaimer.html): General information about the website, font previews, and use of its tools and content.
+- [DMCA Policy](https://hindifontgen.in/dmca.html): Instructions for submitting copyright-related concerns about website content.
 
-## Common Use Cases
+## Important Usage Notes
 
-Hindi Font Generator can be useful for:
+- The generator is intended to preview and style text, not to convert Unicode Hindi into legacy font encodings simply by changing the typeface.
+- Copying text generally preserves the Unicode characters, not the visual font styling. Use a downloaded image when the exact appearance needs to be preserved.
+- Font availability, glyph rendering, licensing, and supported features may vary by typeface. Users should consult the relevant font's licence before using it in commercial projects.
+- The website describes its text previews and PNG creation as browser-based and states that the text entered into the generator is not saved by the tool. Refer to the Privacy Policy for the site's full privacy information.
 
-- Hindi typography
-- Hindi calligraphy
-- Stylish Hindi text
-- Hindi font styles
-- Hindi text for Instagram captions and stories
-- Hindi text for YouTube content
-- Hindi text for WhatsApp
-- Hindi poster designs
-- Hindi invitation designs
-- Social media graphics
-- Creative Devanagari text
-- Hindi name styling
-- Devanagari design projects
+## Optional
 
-## Text Behavior
-
-The generated previews are intended to show how the entered text appears using the selected font style.
-
-When text is copied as plain text, the receiving application determines which font is used to display it. Applications that do not support or use the selected font may display the copied characters using their own default font.
-
-For designs where the exact visual appearance needs to remain consistent, the tool provides an image-based option for preserving the selected typography and styling.
-
-## User Interface
-
-The tool provides a simple interface focused on the main typography controls:
-
-- Text input
-- Font size
-- Text color
-- Background color
-- Font style previews
-
-The interface is designed to allow users to enter text once and compare multiple font styles without repeatedly changing the text manually.
-
-## Language Support
-
-The primary purpose of the tool is Hindi and Devanagari text.
-
-English and mixed Hindi-English text can also be entered where supported by the selected font.
-
-## Privacy and Processing
-
-The tool is designed to operate directly in the user's browser. Users can enter and preview text without creating an account.
-
-No account is required to use the main font-generation functionality.
-
-## Technology
-
-The website is implemented as a lightweight web application using:
-
-- HTML
-- CSS
-- JavaScript
-- Google Fonts
-- Devanagari-compatible web fonts
-
-## Project Repository
-
-- https://github.com/jishankk/hindifontgeneretor — Source repository for the Hindi Font Generator project.
-
-## Important Pages
-
-- https://hindifontgen.in/ — Main Hindi Font Generator.
-
-## Content Topics
-
-Relevant topics associated with this website include:
-
-- Hindi Font Generator
-- Hindi Font Generator Online
-- Stylish Hindi Font Generator
-- Hindi Font Style Generator
-- Hindi Calligraphy Font Generator
-- Hindi Fonts
-- Hindi Typography
-- Devanagari Fonts
-- Devanagari Typography
-- Stylish Hindi Text
-- Hindi Text Generator
-- Hindi Fonts for Instagram
-- Hindi Calligraphy
+- [Google Fonts](https://fonts.google.com/): External resource for exploring, downloading, and checking licences for supported font families.
