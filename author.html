@@ -1,0 +1,340 @@
+
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>About Ali Hamza | HindiFontGen</title>
+  <meta name="description" content="Meet Ali Hamza, the creator of HindiFontGen. Learn about the purpose of the website and its tools for previewing and styling Hindi fonts online.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0A6E5A">
+  <link rel="canonical" href="https://hindifontgen.in/about.html">
+  <link rel="icon" type="image/png" href="/icon.png">
+  <link rel="apple-touch-icon" href="/icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Eczar:wght@400;500;600;700&family=Mukta:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+ {% include cookie-banner.html %}
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              DEFAULT: "#0A6E5A",
+              green: "#0A6E5A",
+              deep: "#064B3E",
+              ink: "#0F1E1A",
+              soft: "#33433F",
+              mint: "#EEF5F2",
+              line: "#D9E4E0",
+              gold: "#E9A400"
+            }
+          },
+          fontFamily: {
+            sans: ["Mukta", "sans-serif"],
+            display: ["Eczar", "serif"]
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: "Mukta", sans-serif;
+      color: #0F1E1A;
+      background: #fff;
+    }
+
+    .about-copy p {
+      margin: 0 0 1rem;
+      color: #33433F;
+      font-size: 1.0625rem;
+      line-height: 1.8;
+    }
+
+    .about-copy h2 {
+      margin: 2rem 0 0.75rem;
+      color: #0F1E1A;
+      font-family: "Eczar", serif;
+      font-size: 1.65rem;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .about-copy h2:first-child {
+      margin-top: 0;
+    }
+
+    .about-copy a {
+      color: #0A6E5A;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .about-copy a:hover {
+      color: #064B3E;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "@id": "https://hindifontgen.in/about.html#aboutpage",
+    "url": "https://hindifontgen.in/about.html",
+    "name": "About Ali Hamza | HindiFontGen",
+    "description": "Learn about Ali Hamza and the purpose behind HindiFontGen.",
+    "isPartOf": {
+      "@id": "https://hindifontgen.in/#website"
+    },
+    "mainEntity": {
+      "@id": "https://hindifontgen.in/#author"
+    }
+  }
+  </script>
+</head>
+
+<body class="bg-white text-brand-ink antialiased">
+
+  {% include header.html %}
+
+  <main>
+    <!-- Page heading -->
+    <section class="bg-brand-deep text-white">
+      <div class="mx-auto max-w-[1228px] px-4 py-12 min-[561px]:px-6 sm:py-16 lg:py-20">
+        <div class="max-w-3xl">
+          <p class="mb-3 text-sm font-semibold uppercase tracking-wider text-white/75">
+            About the Creator
+          </p>
+
+          <h1 class="font-display text-4xl font-bold leading-tight sm:text-5xl">
+            About Ali Hamza
+          </h1>
+
+          <div class="mt-5 h-1 w-16 rounded-full bg-brand-gold"></div>
+
+          <p class="mt-6 max-w-2xl text-lg leading-8 text-white/85">
+            The person behind HindiFontGen and the idea of making Hindi font
+            styling easier to explore and use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Author and introduction -->
+    <section class="border-t border-brand-line bg-white py-12 sm:py-16">
+      <div class="mx-auto grid max-w-[1228px] gap-8 px-4 min-[561px]:px-6 lg:grid-cols-[15rem_minmax(0,1fr)] lg:gap-14">
+
+        <aside class="lg:self-start">
+          <div class="mx-auto max-w-[15rem] lg:mx-0">
+            <div class="overflow-hidden rounded-lg border border-brand-line bg-brand-mint">
+              <img
+                src="/ali.png"
+                alt="Ali Hamza, creator of HindiFontGen"
+                width="600"
+                height="600"
+                class="aspect-square w-full object-cover"
+                loading="eager"
+                decoding="async"
+                onerror="this.style.display='none'; this.parentElement.textContent='Ali Hamza'; this.parentElement.classList.add('flex','min-h-48','items-center','justify-center','p-4','font-display','text-xl','font-bold','text-brand-green');"
+              >
+            </div>
+
+            <h2 class="mt-5 font-display text-2xl font-bold text-brand-ink">
+              Ali Hamza
+            </h2>
+
+            <p class="mt-1 text-brand-soft">
+              Creator of HindiFontGen
+            </p>
+
+            <div class="mt-4 h-px bg-brand-line"></div>
+
+            <p class="mt-4 text-base leading-7 text-brand-soft">
+              Building a practical online resource for people who want to
+              preview and style Hindi text.
+            </p>
+
+            <a class="mt-3 inline-block font-semibold text-brand-green underline underline-offset-4"
+               href="mailto:contact@hindifontgen.in">
+              Contact by email
+            </a>
+          </div>
+        </aside>
+
+        <article class="about-copy min-w-0">
+          <h2>Who I Am</h2>
+
+          <p>
+            Hello, I’m Ali Hamza, the creator of HindiFontGen. I started this
+            project with a straightforward idea: make it easier for people to
+            explore Hindi fonts and see how their text looks in different
+            styles, without needing to learn complicated design software first.
+          </p>
+
+          <p>
+            Hindi text is used in social media graphics, invitations, posters,
+            thumbnails, educational projects and many other types of designs.
+            Finding a suitable typeface and checking how a name or sentence
+            looks can take time. HindiFontGen brings useful font-preview and
+            text-styling options together in one online place.
+          </p>
+
+          <h2>Why I Created HindiFontGen</h2>
+
+          <p>
+            The purpose of HindiFontGen is to provide a convenient way to
+            experiment with Devanagari text. Visitors can enter their own
+            words, explore available font styles and preview the result before
+            deciding how to use it.
+          </p>
+
+          <p>
+            The website is designed around practical use rather than a
+            complicated editing process. Its available features help users
+            work with text and, where supported by the tool, copy their result
+            or download a text image for a design.
+          </p>
+
+          <h2>What You Can Do on HindiFontGen</h2>
+
+          <p>
+            HindiFontGen focuses on features that help users work with Hindi
+            typography. Depending on the tool and options available, visitors
+            can:
+          </p>
+
+          <ul class="mb-5 list-disc space-y-2 pl-6 text-[1.0625rem] leading-8 text-brand-soft marker:text-brand-green">
+            <li>Explore different Hindi and Devanagari font styles.</li>
+            <li>Preview words, names and sentences in available fonts.</li>
+            <li>Adjust text appearance using supported customization options.</li>
+            <li>Copy text or download a text image when the relevant feature is available.</li>
+            <li>Use the results as a starting point for personal or creative projects.</li>
+          </ul>
+
+          <p>
+            The goal is to keep these features understandable for beginners
+            and useful for people who regularly create Hindi-language content.
+          </p>
+
+          <h2>My Approach to the Website</h2>
+
+          <p>
+            I want HindiFontGen to be clear and useful, whether someone visits
+            for a quick font preview or returns to create text for another
+            project. That means keeping the tools accessible, explaining their
+            purpose and making important website information easy to find.
+          </p>
+
+          <p>
+            Feedback is valuable because it can point out confusing
+            instructions, unexpected results or technical problems that need
+            attention. If you notice something that does not work as expected,
+            you are welcome to get in touch.
+          </p>
+
+          <h2>Who Can Use HindiFontGen?</h2>
+
+          <p>
+            HindiFontGen is intended for anyone who wants to style or preview
+            Hindi text. This may include students, content creators, people
+            preparing invitations, social media users and anyone working on
+            a personal design. You do not need to be a professional designer
+            to explore the available tools.
+          </p>
+
+          <p>
+            The final appearance of a design can depend on the font, browser,
+            device and application in which it is used. For important work,
+            check the downloaded image or final design before sharing or
+            printing it.
+          </p>
+
+          <h2>Contact and Website Information</h2>
+
+          <p>
+            If you have a question about the website, want to report a
+            technical issue or have a suggestion, you can contact me at
+            <a href="mailto:contact@hindifontgen.in">contact@hindifontgen.in</a>.
+          </p>
+
+          <p>
+            You can also read the
+            <a href="/privacy-policy.html">Privacy Policy</a>
+            to learn about privacy-related information, and the
+            <a href="/terms.html">Terms and Conditions</a>
+            for the website's terms of use.
+          </p>
+
+          <p>
+            Thank you for visiting HindiFontGen. I hope it makes working with
+            Hindi fonts and text a little easier.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Closing section -->
+    <section class="border-t border-brand-line bg-brand-mint py-10 sm:py-12">
+      <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6">
+        <div class="max-w-3xl">
+          <p class="text-sm font-semibold uppercase tracking-wider text-brand-green">
+            HindiFontGen
+          </p>
+
+          <h2 class="mt-3 font-display text-2xl font-bold leading-snug text-brand-ink sm:text-3xl">
+            Explore Hindi fonts in one place
+          </h2>
+
+          <p class="mt-4 max-w-2xl text-[1.0625rem] leading-8 text-brand-soft">
+            Visit the generator to try the available Hindi font styles and
+            preview your own text.
+          </p>
+
+          <a href="/"
+             class="mt-6 inline-flex rounded-md bg-brand px-5 py-3 font-semibold text-white hover:bg-brand-deep">
+            Visit HindiFontGen
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {% include footer.html %}
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const navToggle = document.getElementById("navToggle");
+      const mainNav = document.getElementById("mainNav");
+
+      if (navToggle && mainNav) {
+        navToggle.addEventListener("click", function () {
+          const isExpanded =
+            navToggle.getAttribute("aria-expanded") === "true";
+
+          navToggle.setAttribute("aria-expanded", String(!isExpanded));
+          mainNav.classList.toggle("hidden", isExpanded);
+        });
+      }
+    });
+  </script>
+
+</body>
+</html>
