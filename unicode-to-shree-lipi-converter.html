@@ -161,7 +161,8 @@ table.tb{min-width:34rem}
     <ul class="bc mt-3 text-brand-soft">
       <li>Converts Marathi and Hindi Unicode to Shree-Dev-0708 text as you type</li>
       <li>Moves the short <span lang="hi">ि</span> sign and the reph into the order the font expects</li>
-      <li>Uses single glyphs for <span lang="hi">क्ष, ज्ञ, त्र</span> and <span lang="hi">श्र</span></li>
+      <li>Uses single glyphs for <span lang="hi">क्ष, ज्ञ, त्र</span> and <span lang="hi">श्र</span>, and builds half letters and the <span lang="hi">्र</span> sign</li>
+      <li>Handles nukta letters (<span lang="hi">क़, ज़, ड़</span>), chandrabindu (<span lang="hi">ँ</span>) and <span lang="hi">ऑ, ॉ</span></li>
       <li>Converts Devanagari digits and the danda (<span lang="hi">।</span>)</li>
       <li>Copies the result in one click, with no signup</li>
     </ul>
@@ -200,7 +201,7 @@ table.tb{min-width:34rem}
     <div>
 <div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
 <p>These are real conversions from this page. The middle column is exactly what you get when you copy the result, and the last column says what the converter did.</p>
-</div><div class="mt-6 max-w-3xl overflow-x-auto"><table class="tb"><thead><tr><th>Unicode</th><th>Shree Lipi text</th><th>What happened</th></tr></thead><tbody><tr><td><span lang="mr">मराठी</span></td><td><code class="sym" translate="no">_amR&gt;r</code></td><td>Every letter and vowel sign becomes its own character code.</td></tr><tr><td><span lang="mr">किती</span></td><td><code class="sym" translate="no">{H$Vr</code></td><td>The short <span lang="hi">ि</span> sign is written before the consonant it belongs to, so the code <code class="sym" translate="no">{</code> comes first.</td></tr><tr><td><span lang="hi">धर्म</span></td><td><code class="sym" translate="no">Y_©</code></td><td>The reph, the small hook of <span lang="hi">र्</span>, is written after <span lang="hi">म</span> as the final code <code class="sym" translate="no">©</code>.</td></tr><tr><td><span lang="hi">क्षमा</span></td><td><code class="sym" translate="no">j_m</code></td><td><span lang="hi">क्ष</span> is one ready-made glyph, <code class="sym" translate="no">j</code>, so no half letter is needed.</td></tr><tr><td><span lang="mr">ज्ञान</span></td><td><code class="sym" translate="no">kmZ</code></td><td><span lang="hi">ज्ञ</span> is also a single glyph, <code class="sym" translate="no">k</code>.</td></tr><tr><td><span lang="mr">श्रीमंत</span></td><td><code class="sym" translate="no">lr_§V</code></td><td><span lang="hi">श्र</span> is a single glyph, and the anusvara <code class="sym" translate="no">§</code> follows <span lang="hi">म</span>.</td></tr><tr><td><span lang="mr">आम्ही</span></td><td><code class="sym" translate="no">Amåhr</code></td><td>The half <span lang="hi">म</span> has its own code, <code class="sym" translate="no">å</code>, instead of <span lang="hi">म</span> plus a halant sign.</td></tr></tbody></table></div><p class="mt-3 max-w-3xl text-sm text-brand-soft">Without the Shree Lipi font installed, you will see these codes exactly as they are written in the middle column.</p>
+</div><div class="mt-6 max-w-3xl overflow-x-auto"><table class="tb"><thead><tr><th>Unicode</th><th>Shree Lipi text</th><th>What happened</th></tr></thead><tbody><tr><td><span lang="mr">मराठी</span></td><td><code class="sym" translate="no">_amR&gt;r</code></td><td>Every letter and vowel sign becomes its own character code.</td></tr><tr><td><span lang="mr">किती</span></td><td><code class="sym" translate="no">{H$Vr</code></td><td>The short <span lang="hi">ि</span> sign is written before the consonant it belongs to, so the code <code class="sym" translate="no">{</code> comes first.</td></tr><tr><td><span lang="hi">धर्म</span></td><td><code class="sym" translate="no">Y_©</code></td><td>The reph, the small hook of <span lang="hi">र्</span>, is written after <span lang="hi">म</span> as the final code <code class="sym" translate="no">©</code>.</td></tr><tr><td><span lang="hi">क्षमा</span></td><td><code class="sym" translate="no">j_m</code></td><td><span lang="hi">क्ष</span> is one ready-made glyph, <code class="sym" translate="no">j</code>, so no half letter is needed.</td></tr><tr><td><span lang="mr">ज्ञान</span></td><td><code class="sym" translate="no">kmZ</code></td><td><span lang="hi">ज्ञ</span> is also a single glyph, <code class="sym" translate="no">k</code>.</td></tr><tr><td><span lang="mr">श्रीमंत</span></td><td><code class="sym" translate="no">lr_§V</code></td><td><span lang="hi">श्र</span> is a single glyph, and the anusvara <code class="sym" translate="no">§</code> follows <span lang="hi">म</span>.</td></tr><tr><td><span lang="mr">आम्ही</span></td><td><code class="sym" translate="no">Amåhr</code></td><td>The half <span lang="hi">म</span> has its own code, <code class="sym" translate="no">å</code>, instead of <span lang="hi">म</span> plus a halant sign.</td></tr><tr><td><span lang="hi">प्रेम</span></td><td><code class="sym" translate="no">ào_</code></td><td><span lang="hi">प्र</span> is a single glyph, <code class="sym" translate="no">à</code>, and the <span lang="hi">े</span> sign <code class="sym" translate="no">o</code> follows it.</td></tr><tr><td><span lang="hi">कर्मी</span></td><td><code class="sym" translate="no">H$_u</code></td><td>The reph and the <span lang="hi">ी</span> sign merge into one code, <code class="sym" translate="no">u</code>.</td></tr><tr><td><span lang="hi">डॉक्टर</span></td><td><code class="sym" translate="no">S&gt;m°ŠQ&gt;a</code></td><td>The <span lang="hi">ॉ</span> sign is <code class="sym" translate="no">m°</code>, and half <span lang="hi">क</span> has its own code, <code class="sym" translate="no">Š</code>.</td></tr></tbody></table></div><p class="mt-3 max-w-3xl text-sm text-brand-soft">Without the Shree Lipi font installed, you will see these codes exactly as they are written in the middle column.</p>
 </div>
   </div>
 </section>
@@ -342,37 +343,60 @@ table.tb{min-width:34rem}
     "श": "e", "ष": "f", "स": "g", "ह": "h", "ळ": "i"
   };
 
-  /* Half (halant) forms that have been confirmed against real output */
-  var HALF = { "म": "\u00E5", "स": "\u00F1", "ष": "\u00EF", "ह": "\u00F4" };
+  /* Half (halant) forms, used when a consonant is joined to the next one */
+  var HALF = {
+    "क": "\u0160", "ख": "\u00BB", "ग": "\u00BD", "घ": "\u00BF", "च": "\u00C0", "ज": "\u00C1", "झ": "\u00C2", "ञ": "\u00C4",
+    "ण": "\u00CA", "त": "\u00CB", "थ": "\u00CF", "ध": "\u00DC", "न": "\u00DD", "प": "\u00DF", "फ": "\u00E2", "ब": "\u00E3",
+    "भ": "\u00E4", "म": "\u00E5", "य": "\u00E6", "ल": "\u00EB", "व": "\u00EC", "श": "\u00ED", "ष": "\u00EE", "स": "\u00F1",
+    "ह": "\u00F4", "ळ": "\u00F9",
+    "द": "X\u00B2", "ट": "Q\u00B2>", "ठ": "R\u00B2>", "ड": "S\u00B2>", "ढ": "T\u00B2>", "छ": "N\u00B2>"
+  };
 
   /* Ready-made conjunct glyphs (key = consonants in order, halants left out) */
   var SPECIAL = {
-    "कष": "j", "जञ": "k", "तर": "\u00CC", "शर": "l",
-    "दध": "\u00D5", "दय": "\u00DA", "दव": "\u00DB", "तय": "\u00CB",
-    "टट": "\u00C5>", "डड": "\u00C8>", "तत": "\u00CEm", "लल": "\u201E",
-    "हम": "\u00F7", "पर": "\u00E0", "षटर": "\u00EF\u00B4>"
+    "कष": "j", "जञ": "k", "तर": "\u00CC", "शर": "l", "दध": "\u00D5", "दय": "\u00DA", "दव": "\u00DB",
+    "टट": "\u00C5>", "डड": "\u00C8>", "तत": "\u00CEm", "लल": "\u201E", "हम": "\u00F7", "पर": "\u00E0",
+    "कत": "\u00BA$", "गन": "\u00BE", "दग": "\u00D2", "दद": "\u00D4", "दम": "\u00D9", "नन": "\u00DE", "पत": "\u00E1",
+    "हन": "\u2013", "हय": "\u00F8", "ङग": "\u201D", "ङख": "\u2019$", "शच": "\u00FC", "शव": "\u0153",
+    "षठ": "\u00F0", "षट": "\u00EF>",
+    "खर": "\u00BC", "झर": "\u00C3", "दर": "\u00D0", "सर": "\u00F2", "हर": "\u00F5"
   };
+
+  /* Letters without a stem take a separate sign for a following य */
+  var YA = { "ट": 1, "ठ": 1, "ड": 1, "ढ": 1 };
+  var YA_SIGN = "\u00E7";
 
   /* Independent vowels */
   var IND = {
     "अ": "A", "आ": "Am", "इ": "B", "ई": "B\u00A9", "उ": "C", "ऊ": "D$",
-    "ऋ": "F$", "ए": "E", "ऐ": "Eo", "ओ": "Amo", "औ": "Am\u00A1"
+    "ऋ": "F$", "ए": "E", "ऐ": "Eo", "ओ": "Amo", "औ": "Am\u00A1", "ऑ": "Am\u00B0"
   };
 
   /* Vowel signs. INNER signs sit before the closing $ or > of a letter, OUTER signs follow it. */
-  var PRE_I = "{";
   var INNER = { "ु": "w", "ू": "y", "ृ": "\u00A5", "े": "o", "ै": "\u00A1" };
-  var OUTER = { "ा": "m", "ी": "r", "ो": "mo", "ौ": "m\u00A1", "ः": "\u2026" };
-  var ANUS = "\u00A7", REPH = "\u00A9";
+  var OUTER = { "ा": "m", "ो": "mo", "ौ": "m\u00A1", "ॉ": "m\u00B0", "ः": "\u2026" };
+  var PRE_I = "{", II = "r", II_ANUS = "t", REPH = "\u00A9", REPH_E = "}", REPH_II = "u";
+  var ANUS = "\u00A7", CBIN = "\u00B1";
+  var RU = "\u00E9", RUU = "\u00EA$", HRI = "\u00F6";
+  var NUKTA_A = "\u00B5", NUKTA_B = "\u2039";
 
   var DIG = { "०": "0", "१": "1", "२": "2", "३": "3", "४": "4", "५": "5", "६": "6", "७": "7", "८": "8", "९": "9" };
-  var OTHER_SIGN = /[\u0900\u0901\u0944-\u094A\u094E\u094F\u0951-\u0957\u0962\u0963]/;
+  var OTHER_SIGN = /[\u0900\u0944-\u0948\u094A\u094E\u094F\u0951-\u0957\u0962\u0963]/;
+  var SIGNS = { "\u093F": 1, "\u0902": 1, "\u0901": 1, "\u0940": 1 };
+
+  function rakar(g) {
+    var lc = g.charAt(g.length - 1);
+    if (lc === ">") { return g.slice(0, -1) + "\u00B4>"; }
+    if (lc === "$") { return g.slice(0, -1) + "\u00AB$"; }
+    return g + "\u00AB";
+  }
 
   function convert(input) {
     var s = String(input == null ? "" : input).normalize("NFD").replace(/[\u200C\u200D]/g, "");
     var n = s.length, i = 0, out = [], bad = [], seen = {};
 
     function flag(t) { if (!seen[t]) { seen[t] = 1; bad.push(t); } }
+    function isSign(m) { return has(SIGNS, m) || has(INNER, m) || has(OUTER, m); }
 
     function cluster() {
       var cons = [], k = i, c, nk;
@@ -389,26 +413,26 @@ table.tb{min-width:34rem}
 
       var ctext = cons.map(function (o) { return o.c + (o.nk ? NUKTA : ""); }).join(HAL) + (trail ? HAL : "");
 
-      var pre = "", inner = "", outer = "", extra = "", anus = false, right = false;
+      var signs = [], extra = "";
       while (k < n) {
         var m = s.charAt(k);
-        if (m === "\u093F") { pre = PRE_I; }
-        else if (m === "\u0902") { anus = true; }
-        else if (has(INNER, m)) { inner += INNER[m]; }
-        else if (has(OUTER, m)) { outer += OUTER[m]; if (m !== "\u0903") { right = true; } }
+        if (isSign(m)) { signs.push(m); }
         else if (OTHER_SIGN.test(m)) { flag(m); extra += m; }
         else { break; }
         k++;
       }
       i = k;
+      function hasS(m) { return signs.indexOf(m) > -1; }
 
+      function nuktaWrap(g) {
+        return (g.charAt(g.length - 1) === ">" ? NUKTA_B : NUKTA_A) + g;
+      }
       function fullG(it) {
         var g = CONS[it.c];
-        if (it.nk) { flag(it.c + NUKTA); g += NUKTA; }
-        return g;
+        return it.nk ? nuktaWrap(g) : g;
       }
       function halfG(it) {
-        if (!it.nk && has(HALF, it.c)) { return HALF[it.c]; }
+        if (has(HALF, it.c)) { return it.nk ? nuktaWrap(HALF[it.c]) : HALF[it.c]; }
         flag(ctext);
         return fullG(it) + HAL;
       }
@@ -418,24 +442,57 @@ table.tb{min-width:34rem}
 
       var g = [], j = 0, L = list.length;
       while (j < L) {
-        var done = false;
-        for (var len = Math.min(3, L - j); len >= 2 && !done; len--) {
+        var it = list[j], glyph = null, plain = true, used = 1;
+        for (var len = Math.min(3, L - j); len >= 2 && glyph === null; len--) {
           var key = "", anyNk = false;
           for (var q = 0; q < len; q++) { key += list[j + q].c; anyNk = anyNk || list[j + q].nk; }
-          if (!anyNk && has(SPECIAL, key)) { g.push(SPECIAL[key]); j += len; done = true; }
+          if (!anyNk && has(SPECIAL, key)) { glyph = SPECIAL[key]; used = len; plain = false; }
         }
-        if (done) { continue; }
-        var isLast = (j === L - 1) && !trail;
-        g.push(isLast ? fullG(list[j]) : halfG(list[j]));
-        j++;
+        if (glyph === null && j + 1 < L && has(YA, it.c) && !it.nk && list[j + 1].c === "य" && !list[j + 1].nk) {
+          glyph = CONS[it.c] + YA_SIGN; used = 2; plain = false;
+        }
+        j += used;
+        if (j < L && list[j].c === "र" && !list[j].nk && !(plain && it.c === "र")) {
+          glyph = rakar(plain ? fullG(it) : glyph); plain = false; j++;
+        }
+        var last = (j >= L) && !trail;
+        if (last) { g.push(plain ? fullG(it) : glyph); }
+        else if (plain) { g.push(halfG(it)); }
+        else { flag(ctext); g.push(glyph + HAL); }
       }
 
-      var F = g.pop(), lc = F.charAt(F.length - 1), stem = F, tail = "";
+      /* single letters that fuse with a vowel sign into one glyph */
+      var skip = {}, fused = null;
+      if (cons.length === 1 && !cons[0].nk) {
+        if (cons[0].c === "र" && hasS("\u0941")) { fused = RU; skip["\u0941"] = 1; }
+        else if (cons[0].c === "र" && hasS("\u0942")) { fused = RUU; skip["\u0942"] = 1; }
+        else if (cons[0].c === "ह" && hasS("\u0943")) { fused = HRI; skip["\u0943"] = 1; }
+      }
+
+      var pre = hasS("\u093F") ? PRE_I : "";
+      var anusMark = hasS("\u0902") ? ANUS : (hasS("\u0901") ? CBIN : "");
+      var anusUsed = false, rephSlot = reph ? REPH : "", inner = "", outer = "";
+      signs.forEach(function (m) {
+        if (skip[m]) { return; }
+        if (has(INNER, m)) {
+          if (m === "\u0947" && reph) { rephSlot = REPH_E; } else { inner += INNER[m]; }
+        } else if (m === "\u0940") {
+          if (reph) { rephSlot = REPH_II; }
+          else if (anusMark === ANUS) { outer += II_ANUS; anusUsed = true; }
+          else { outer += II; }
+        } else if (has(OUTER, m)) { outer += OUTER[m]; }
+      });
+      var right = hasS("\u093E") || hasS("\u0940") || hasS("\u094B") || hasS("\u094C") || hasS("\u0949");
+      var showAnus = anusMark && !anusUsed;
+
+      var F = g.pop();
+      if (fused) { F = fused; }
+      var lc = F.charAt(F.length - 1), stem = F, tail = "";
       if (lc === "$" || lc === ">") { stem = F.slice(0, -1); tail = lc; }
 
       out.push(
-        pre + g.join("") + stem + inner + (anus && !right ? ANUS : "") + tail +
-        outer + (anus && right ? ANUS : "") + (reph ? REPH : "") + extra
+        pre + g.join("") + stem + inner + (showAnus && !right ? anusMark : "") + tail +
+        outer + (showAnus && right ? anusMark : "") + rephSlot + extra
       );
     }
 
@@ -444,14 +501,16 @@ table.tb{min-width:34rem}
       if (has(CONS, ch)) { cluster(); continue; }
       if (has(IND, ch)) {
         out.push(IND[ch]); i++;
-        while (i < n && (s.charAt(i) === "\u0902" || s.charAt(i) === "\u0903")) {
-          out.push(s.charAt(i) === "\u0902" ? ANUS : OUTER["ः"]); i++;
+        while (i < n && (s.charAt(i) === "\u0902" || s.charAt(i) === "\u0903" || s.charAt(i) === "\u0901")) {
+          var mm = s.charAt(i);
+          out.push(mm === "\u0902" ? ANUS : (mm === "\u0901" ? CBIN : OUTER["ः"])); i++;
         }
         continue;
       }
       if (has(DIG, ch)) { out.push(DIG[ch]); i++; continue; }
       if (ch === "\u0964") { out.push("&"); i++; continue; }
       if (ch === "\u0902") { out.push(ANUS); i++; continue; }
+      if (ch === "\u0901") { out.push(CBIN); i++; continue; }
       if (ch === "\u0903") { out.push(OUTER["ः"]); i++; continue; }
       if (ch >= "\u0900" && ch <= "\u097F") { flag(ch); out.push(ch); i++; continue; }
       out.push(ch); i++;
