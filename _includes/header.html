@@ -1,6 +1,4 @@
-<!-- Shared header: logo + share button + 3-line menu that opens a left sidebar drawer (desktop and mobile).
-     Self-contained: its CSS and JS live in this file, so every page that includes it works the same.
-     Edit the links in the <nav> below to match your real pages. -->
+
 <style>
 header.sbh{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.97);border-bottom:1px solid var(--rule,#D9E4E0);padding:0;backdrop-filter:none}
 .sbh-in{position:relative;max-width:1228px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 24px}
@@ -85,6 +83,7 @@ body.sbd-lock{overflow:hidden}
     <a href="/"{% if page.url == '/' or page.url == '/index.html' %} aria-current="page"{% endif %}><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 3 2 12h3v8h5v-5h4v5h5v-8h3z"/></svg>Home</a>
     <a href="/character-map.html"{% if page.url == '/character-map.html' %} aria-current="page"{% endif %}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="3"/><path d="M6 9h.01M10 9h.01M14 9h.01M18 9h.01M8 15h8"/></svg>Character Map</a>
     <a href="/unicode-to-krutidev-converter.html"{% if page.url == '/unicode-to-krutidev-converter.html' %} aria-current="page"{% endif %}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h12l-3-3M17 17H5l3 3"/></svg>Unicode ⇄ KrutiDev</a>
+    <a href="/kruti-dev-keyboard-layout.html"{% if page.url == '/kruti-dev-keyboard-layout.html' %} aria-current="page"{% endif %}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2.5" y="5" width="19" height="14" rx="2.5"/><path d="M6 9h.01M9 9h.01M12 9h.01M15 9h.01M18 9h.01M6 12h.01M9 12h.01M12 12h.01M15 12h.01M18 12h.01M8 15h8"/></svg>Kruti Dev Keyboard Layout</a>
      <a href="/unicode-to-shree-lipi-converter.html"{% if page.url == '/unicode-to-shree-lipi-converter.html' %} aria-current="page"{% endif %}><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 7h12l-3-3M17 17H5l3 3"/></svg>Unicode ⇄ Shree Lipi</a>
 
      <h2>Explore</h2>
