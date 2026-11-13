@@ -1,0 +1,205 @@
+# Har font ek entry. page = kis page (index.html, fonts2.html...) pe dikhega.
+# look / use = apni khud ki 1-line notes (khaali chhodna ho to line hata do, "" mat likho).
+- name: "Kalam"
+  cat: "s"
+  page: 1
+- name: "Playpen Sans Devanagari"
+  cat: "s"
+  page: 1
+- name: "Amita"
+  cat: "s"
+  page: 1
+- name: "Tillana"
+  cat: "s"
+  page: 1
+- name: "Modak"
+  cat: "s"
+  page: 1
+- name: "Jaini"
+  cat: "s"
+  page: 1
+- name: "Jaini Purva"
+  cat: "s"
+  page: 1
+- name: "Gajraj One"
+  cat: "s"
+  page: 1
+- name: "Yatra One"
+  cat: "s"
+  page: 1
+- name: "Rozha One"
+  cat: "s"
+  page: 1
+- name: "Sahitya"
+  cat: "s"
+  page: 1
+- name: "Sarala"
+  cat: "s"
+  page: 2
+- name: "Halant"
+  cat: "s"
+  page: 2
+- name: "Kurale"
+  cat: "s"
+  page: 2
+- name: "Sanskrit Text"
+  cat: "s"
+  page: 2
+- name: "Tiro Devanagari Hindi"
+  cat: "s"
+  page: 2
+- name: "Tiro Devanagari Marathi"
+  cat: "s"
+  page: 2
+- name: "Tiro Devanagari Sanskrit"
+  cat: "s"
+  page: 2
+- name: "Shobhika"
+  cat: "s"
+  page: 2
+- name: "Amiko"
+  cat: "s"
+  page: 2
+- name: "Sura"
+  cat: "s"
+  page: 2
+- name: "Bakbak One"
+  cat: "s"
+  page: 3
+- name: "Sansita"
+  cat: "s"
+  page: 3
+- name: "Arya"
+  cat: "s"
+  page: 3
+- name: "Karma"
+  cat: "s"
+  page: 3
+- name: "Khand"
+  cat: "b"
+  page: 3
+  look: "Condensed, strong sans"
+  use: "Thumbnails, long titles"
+- name: "Teko"
+  cat: "b"
+  page: 3
+  look: "Tall and condensed"
+  use: "Sports and gaming titles"
+- name: "Rajdhani"
+  cat: "b"
+  page: 3
+  look: "Squared, technical feel"
+  use: "Tech and news headlines"
+- name: "Sarpanch"
+  cat: "b"
+  page: 3
+  look: "Heavy and sturdy"
+  use: "Banners, shop boards"
+- name: "Biryani"
+  cat: "b"
+  page: 3
+  look: "Heavy, rounded sans"
+  use: "Posters"
+- name: "Jaldi"
+  cat: "b"
+  page: 3
+  look: "Compact bold sans"
+  use: "Headlines that must fit one line"
+- name: "Baloo 2"
+  cat: "b"
+  page: 4
+  look: "Rounded, friendly bold"
+  use: "Shop banners, kids' content"
+- name: "Pragati Narrow"
+  cat: "b"
+  page: 4
+  look: "Narrow, space-saving"
+  use: "Long titles in small spaces"
+- name: "Khula"
+  cat: "b"
+  page: 4
+  look: "Clean, heavy sans"
+  use: "Posters, notices"
+- name: "Kadwa"
+  cat: "b"
+  page: 4
+  look: "Sturdy bold serif"
+  use: "Headlines with a traditional feel"
+- name: "Eczar"
+  cat: "c"
+  page: 4
+- name: "Noto Serif Devanagari"
+  cat: "c"
+  page: 4
+- name: "Inknut Antiqua"
+  cat: "c"
+  page: 4
+- name: "Vesper Libre"
+  cat: "c"
+  page: 4
+- name: "Rhodium Libre"
+  cat: "c"
+  page: 4
+- name: "Glegoo"
+  cat: "c"
+  page: 4
+- name: "Asar"
+  cat: "c"
+  page: 5
+- name: "Martel"
+  cat: "c"
+  page: 5
+- name: "Annapurna SIL"
+  cat: "c"
+  page: 5
+- name: "Hind"
+  cat: "n"
+  page: 5
+- name: "Mukta"
+  cat: "n"
+  page: 5
+- name: "Noto Sans Devanagari"
+  cat: "n"
+  page: 5
+- name: "Anek Devanagari"
+  cat: "n"
+  page: 5
+- name: "Palanquin"
+  cat: "n"
+  page: 5
+- name: "Palanquin Dark"
+  cat: "n"
+  page: 5
+- name: "Martel Sans"
+  cat: "n"
+  page: 5
+- name: "Yantramanav"
+  cat: "n"
+  page: 6
+- name: "Laila"
+  cat: "n"
+  page: 6
+- name: "Ranga"
+  cat: "n"
+  page: 6
+- name: "Dekko"
+  cat: "n"
+  page: 6
+- name: "Gotu"
+  cat: "n"
+  page: 6
+- name: "Sumana"
+  cat: "n"
+  page: 6
+- name: "Cambay"
+  cat: "n"
+  page: 6
+- name: "Akshar"
+  cat: "n"
+  page: 6
+- name: "Poppins"
+  cat: "n"
+  page: 6
+- name: "Noto Sans"
+  cat: "n"
+  page: 6
