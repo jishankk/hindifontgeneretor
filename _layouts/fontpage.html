@@ -646,6 +646,14 @@ table.tb{min-width:34rem}
   </div>
 </section>
 
+{% else %}
+<section id="page-guide" class="bg-white border-t border-brand-line py-14 sm:py-16">
+  <div class="mx-auto max-w-[1228px] px-4 min-[561px]:px-6">
+    <div class="bc text-[1.0625rem] leading-[1.7] text-brand-soft">
+{{ content }}
+    </div>
+  </div>
+</section>
 {% endif %}
 </main>
 
