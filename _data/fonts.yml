@@ -1,205 +1,307 @@
 # Har font ek entry. page = kis page (index.html, fonts2.html...) pe dikhega.
-# look / use = apni khud ki 1-line notes (khaali chhodna ho to line hata do, "" mat likho).
+# look / use = har font ka short note (page par dikhta hai).
 - name: "Kalam"
   cat: "s"
   page: 1
+  look: "Natural brush-pen handwriting with a casual, personal feel"
+  use: "Quotes, captions, Instagram bios, notes"
 - name: "Playpen Sans Devanagari"
   cat: "s"
   page: 1
+  look: "Playful, rounded handwriting that looks relaxed and friendly"
+  use: "Kids' content, greeting cards, casual posts"
 - name: "Amita"
   cat: "s"
   page: 1
+  look: "Flowing calligraphy with soft, pen-drawn curves"
+  use: "Invitations, names, festival greetings"
 - name: "Tillana"
   cat: "s"
   page: 1
+  look: "Rounded, warm lettering with a hand-drawn feel"
+  use: "Festive wishes, social media posts, simple posters"
 - name: "Modak"
   cat: "s"
   page: 1
+  look: "Very fat, bubbly letters that stand out at a glance"
+  use: "Kids' titles, memes, fun headlines"
 - name: "Jaini"
   cat: "s"
   page: 1
+  look: "Bold decorative letters with sharp, traditional-looking strokes"
+  use: "Festival banners, event titles, headings"
 - name: "Jaini Purva"
   cat: "s"
   page: 1
+  look: "A more ornamental cousin of Jaini with an old-style character"
+  use: "Cultural posters, devotional posts, titles"
 - name: "Gajraj One"
   cat: "s"
   page: 1
+  look: "Heavy display lettering with a strong, brush-like weight"
+  use: "Banners, shop boards, big headlines"
 - name: "Yatra One"
   cat: "s"
   page: 1
+  look: "Thick poster-style letters with a hand-cut look"
+  use: "Event posters, festival titles, thumbnails"
 - name: "Rozha One"
   cat: "s"
   page: 1
+  look: "Elegant, high-contrast bold serif with a magazine feel"
+  use: "Wedding cards, magazine-style headings, titles"
 - name: "Sahitya"
   cat: "s"
   page: 1
+  look: "Calm, book-style serif that reads smoothly"
+  use: "Poetry, shayari, literary quotes"
 - name: "Sarala"
   cat: "s"
   page: 2
+  look: "Simple, smooth letters with a light handwritten touch"
+  use: "Quotes, short captions, friendly headings"
 - name: "Halant"
   cat: "s"
   page: 2
+  look: "Sharp serif with calligraphic details and a refined look"
+  use: "Headings, editorial text, quotes"
 - name: "Kurale"
   cat: "s"
   page: 2
+  look: "Bookish serif with soft, gentle curves"
+  use: "Poems, long captions, story text"
 - name: "Sanskrit Text"
   cat: "s"
   page: 2
+  look: "Traditional manuscript-style lettering suited to Sanskrit"
+  use: "Shlokas, mantras, devotional posts"
 - name: "Tiro Devanagari Hindi"
   cat: "s"
   page: 2
+  look: "Classic book serif tuned for Hindi letter forms"
+  use: "Articles, essays, formal text"
 - name: "Tiro Devanagari Marathi"
   cat: "s"
   page: 2
+  look: "The same classic serif family, tuned for Marathi letter forms"
+  use: "Marathi text, formal invitations"
 - name: "Tiro Devanagari Sanskrit"
   cat: "s"
   page: 2
+  look: "The same classic serif family, tuned for Sanskrit text"
+  use: "Sanskrit verses, religious texts"
 - name: "Shobhika"
   cat: "s"
   page: 2
+  look: "Elegant, formal serif designed with printed books in mind"
+  use: "Invitations, certificates, formal headings"
 - name: "Amiko"
   cat: "s"
   page: 2
+  look: "Friendly, semi-bold letters with a slightly calligraphic touch"
+  use: "Headings, short captions, labels"
 - name: "Sura"
   cat: "s"
   page: 2
+  look: "Bold serif with a calligraphic character"
+  use: "Titles, quotes, banners"
 - name: "Bakbak One"
   cat: "s"
   page: 3
+  look: "Chunky, rounded display letters with strong presence"
+  use: "Posters, YouTube titles, shop banners"
 - name: "Sansita"
   cat: "s"
   page: 3
+  look: "Flowing, slanted letters with an ornate, lively feel"
+  use: "Greetings, headings, invitations"
 - name: "Arya"
   cat: "s"
   page: 3
+  look: "Bold, high-contrast display letters with a decorative edge"
+  use: "Posters, headings, titles"
 - name: "Karma"
   cat: "s"
   page: 3
+  look: "Sturdy, traditional letters with a confident weight"
+  use: "Headlines, banners, notices"
 - name: "Khand"
   cat: "b"
   page: 3
-  look: "Condensed, strong sans"
+  look: "Condensed, strong sans that fits a lot of text in a small width"
   use: "Thumbnails, long titles"
 - name: "Teko"
   cat: "b"
   page: 3
-  look: "Tall and condensed"
+  look: "Tall and condensed letters with a modern, sporty feel"
   use: "Sports and gaming titles"
 - name: "Rajdhani"
   cat: "b"
   page: 3
-  look: "Squared, technical feel"
+  look: "Squared, technical letters with a clean, digital feel"
   use: "Tech and news headlines"
 - name: "Sarpanch"
   cat: "b"
   page: 3
-  look: "Heavy and sturdy"
+  look: "Heavy and sturdy letters that are easy to read from far away"
   use: "Banners, shop boards"
 - name: "Biryani"
   cat: "b"
   page: 3
-  look: "Heavy, rounded sans"
-  use: "Posters"
+  look: "Heavy, rounded sans with a friendly but strong look"
+  use: "Posters, bold headings"
 - name: "Jaldi"
   cat: "b"
   page: 3
-  look: "Compact bold sans"
+  look: "Compact bold sans that saves space"
   use: "Headlines that must fit one line"
 - name: "Baloo 2"
   cat: "b"
   page: 4
-  look: "Rounded, friendly bold"
+  look: "Rounded, friendly bold letters with a soft, cheerful look"
   use: "Shop banners, kids' content"
 - name: "Pragati Narrow"
   cat: "b"
   page: 4
-  look: "Narrow, space-saving"
+  look: "Narrow, space-saving letters that still stay clear"
   use: "Long titles in small spaces"
 - name: "Khula"
   cat: "b"
   page: 4
-  look: "Clean, heavy sans"
+  look: "Clean, heavy sans with plain, open shapes"
   use: "Posters, notices"
 - name: "Kadwa"
   cat: "b"
   page: 4
-  look: "Sturdy bold serif"
-  use: "Headlines with a traditional feel"
+  look: "Sturdy bold serif with a traditional feel"
+  use: "Headlines with a traditional look"
 - name: "Eczar"
   cat: "c"
   page: 4
+  look: "Bold, sharp-edged serif with strong contrast"
+  use: "Headlines, newspaper-style titles"
 - name: "Noto Serif Devanagari"
   cat: "c"
   page: 4
+  look: "Neat, balanced serif that stays comfortable in long text"
+  use: "Blog posts, documents, long reading"
 - name: "Inknut Antiqua"
   cat: "c"
   page: 4
+  look: "Heavy, old-style serif with a decorative, antique feel"
+  use: "Titles with a heritage or history theme"
 - name: "Vesper Libre"
   cat: "c"
   page: 4
+  look: "Readable book serif with a warm, classic look"
+  use: "Paragraphs, quotes"
 - name: "Rhodium Libre"
   cat: "c"
   page: 4
+  look: "Sharp, high-contrast serif with a formal tone"
+  use: "Formal headings, certificates"
 - name: "Glegoo"
   cat: "c"
   page: 4
+  look: "Slab-style serif with sturdy, even strokes"
+  use: "Notices, headings, short paragraphs"
 - name: "Asar"
   cat: "c"
   page: 5
+  look: "Soft, bookish serif based on traditional printing"
+  use: "Articles, stories"
 - name: "Martel"
   cat: "c"
   page: 5
+  look: "Newspaper-style serif that stays clear at small sizes"
+  use: "News text, long articles"
 - name: "Annapurna SIL"
   cat: "c"
   page: 5
+  look: "Plain, accurate book serif made for clear reading"
+  use: "Documents, Hindi and Sanskrit study text"
 - name: "Hind"
   cat: "n"
   page: 5
+  look: "Clean, balanced sans-serif that is easy to read"
+  use: "Website text, app screens, notes"
 - name: "Mukta"
   cat: "n"
   page: 5
+  look: "Modern, neutral sans-serif with open shapes"
+  use: "Body text, menus, forms"
 - name: "Noto Sans Devanagari"
   cat: "n"
   page: 5
+  look: "Neutral, widely supported sans-serif"
+  use: "Documents, apps, plain everyday text"
 - name: "Anek Devanagari"
   cat: "n"
   page: 5
+  look: "Modern sans-serif that comes in many widths and weights"
+  use: "Headings, app text, posters"
 - name: "Palanquin"
   cat: "n"
   page: 5
+  look: "Smooth, friendly sans-serif"
+  use: "Blog text, captions"
 - name: "Palanquin Dark"
   cat: "n"
   page: 5
+  look: "A heavier, darker cut of Palanquin"
+  use: "Bold captions, buttons"
 - name: "Martel Sans"
   cat: "n"
   page: 5
+  look: "Clear sans-serif cut from the Martel family"
+  use: "Notices, labels, small text"
 - name: "Yantramanav"
   cat: "n"
   page: 6
+  look: "Neat, compact sans-serif that pairs well with Latin text"
+  use: "Mixed Hindi-English text, app screens"
 - name: "Laila"
   cat: "n"
   page: 6
+  look: "Light, graceful letters with a soft, slightly calligraphic touch"
+  use: "Quotes, headings, wedding text"
 - name: "Ranga"
   cat: "n"
   page: 6
+  look: "Simple, rounded letters with an easy-going look"
+  use: "Captions, short text"
 - name: "Dekko"
   cat: "n"
   page: 6
+  look: "Casual, handwritten-style letters"
+  use: "Notes, informal posts"
 - name: "Gotu"
   cat: "n"
   page: 6
+  look: "Simple, light letters with open shapes"
+  use: "Short text, labels"
 - name: "Sumana"
   cat: "n"
   page: 6
+  look: "Light, delicate letters with a refined look"
+  use: "Quotes, wedding text, headings"
 - name: "Cambay"
   cat: "n"
   page: 6
+  look: "Clean, compact sans-serif"
+  use: "App screens, menus"
 - name: "Akshar"
   cat: "n"
   page: 6
+  look: "Simple, geometric-style sans-serif"
+  use: "Headings, modern designs"
 - name: "Poppins"
   cat: "n"
   page: 6
+  look: "Round, geometric sans-serif popular in modern design"
+  use: "Mixed Hindi-English posts, app screens"
 - name: "Noto Sans"
   cat: "n"
   page: 6
+  look: "Plain, neutral sans-serif"
+  use: "Mixed-language text"
