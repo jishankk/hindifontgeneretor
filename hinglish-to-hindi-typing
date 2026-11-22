@@ -1,0 +1,542 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>English to Hindi Typing: Type in Roman Letters, Get Hindi Text</title>
+<meta name="description" content="Type Hindi words in English letters and get real Devanagari text instantly. Copy it, preview it in 12 Hindi fonts, or save it as a PNG. Free, runs in your browser.">
+<link rel="canonical" href="https://hindifontgen.in/english-to-hindi-typing.html">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HindiFontGen">
+<meta property="og:title" content="English to Hindi Typing: Type in Roman Letters, Get Hindi Text">
+<meta property="og:description" content="Type Hindi words in English letters and get real Devanagari text. Copy it or save it as an image.">
+<meta property="og:url" content="https://hindifontgen.in/english-to-hindi-typing.html">
+<meta name="theme-color" content="#0A6E5A">
+
+<!-- Keep this if your other pages load Tailwind the same way; remove if header.html already loads it -->
+<script src="https://cdn.tailwindcss.com"></script>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@400;600&family=Mukta:wght@400;600;700&family=Noto+Sans+Devanagari:wght@400;600&family=Kalam:wght@400;700&family=Sarala:wght@400;700&family=Eczar:wght@400;700&family=Tiro+Devanagari+Hindi&family=Yatra+One&family=Khand:wght@400;600&family=Baloo+2:wght@400;700&family=Sahitya:wght@400;700&family=Rozha+One&display=swap" rel="stylesheet">
+
+{% raw %}
+<style>
+  .et{--g900:#064B3E;--g700:#0A6E5A;--g100:#D8EBE5;--g50:#F0F7F4;--ink:#14201C;--muted:#4B5F58;--line:#C5DAD2;--gold:#FFE9A8;
+    font-family:"Mukta","Hind","Noto Sans Devanagari",system-ui,sans-serif;color:var(--ink);line-height:1.65;font-size:17px;
+    max-width:1120px;margin:0 auto;padding:32px 20px 64px}
+  .et *{box-sizing:border-box}
+  .et h1{font-size:clamp(2rem,4.6vw,3rem);line-height:1.12;font-weight:700;letter-spacing:-.01em;margin:0 0 12px;color:var(--g900)}
+  .et h2{font-size:1.55rem;line-height:1.25;font-weight:700;margin:0 0 10px;color:var(--g900)}
+  .et h3{font-size:1.1rem;font-weight:700;margin:0 0 4px;color:var(--ink)}
+  .et p{margin:0 0 12px}
+  .et a{color:var(--g700);text-decoration:underline;text-underline-offset:3px}
+  .et a:hover{color:var(--g900)}
+  .et-lead{max-width:62ch;color:var(--muted);font-size:1.12rem;margin-bottom:28px}
+  .et-grid{display:grid;gap:18px;grid-template-columns:1fr}
+  @media (min-width:880px){.et-grid{grid-template-columns:1fr 1fr}}
+  .et-pane{border:2px solid var(--line);border-radius:14px;padding:16px;background:#fff;display:flex;flex-direction:column;min-width:0}
+  .et-label{font-weight:700;font-size:1rem;color:var(--g900)}
+  .et-head{display:flex;justify-content:space-between;align-items:baseline;gap:12px;margin-bottom:8px}
+  .et-meta{font-size:.9rem;color:var(--muted)}
+  #src{width:100%;min-height:210px;resize:vertical;border:2px solid var(--line);border-radius:10px;padding:12px 14px;font:inherit;font-size:1.1rem;color:var(--ink);background:var(--g50)}
+  #src:focus{outline:3px solid var(--g700);outline-offset:1px;background:#fff}
+  .et-chips{display:flex;flex-wrap:wrap;gap:8px;margin:12px 0 4px}
+  .et-chip{border:1.5px solid var(--g700);color:var(--g900);background:#fff;border-radius:999px;padding:3px 12px;font:inherit;font-size:.95rem;cursor:pointer}
+  .et-chip:hover{background:var(--g100)}
+  .et-opts{display:grid;gap:6px;margin-top:10px;font-size:.95rem}
+  .et-opts label{display:flex;gap:8px;align-items:flex-start;cursor:pointer}
+  .et-opts input{margin-top:6px;accent-color:var(--g700);width:16px;height:16px;flex:none}
+  .et-outpane{background:var(--out-bg,#064B3E);border-color:var(--out-bg,#064B3E);color:var(--out-fg,#FFE9A8)}
+  .et-outpane .et-label,.et-outpane .et-meta{color:var(--out-fg,#FFE9A8)}
+  .et-outpane .et-meta{opacity:.8}
+  .et-out{flex:1;min-height:210px;white-space:pre-wrap;overflow-wrap:anywhere;font-size:36px;line-height:1.6;font-family:"Hind",sans-serif;color:var(--out-fg,#FFE9A8)}
+  .et-out:empty::before{content:"Your Hindi text appears here as you type.";font-family:"Mukta",sans-serif;font-size:1.05rem;opacity:.7}
+  .et-controls{display:grid;gap:14px;margin-top:18px;padding:16px;border:2px solid var(--line);border-radius:14px;background:#fff}
+  @media (min-width:720px){.et-controls{grid-template-columns:1.4fr 1.4fr auto auto}}
+  .et-field{display:grid;gap:4px;font-size:.95rem;min-width:0}
+  .et-field select{font:inherit;padding:7px 10px;border:2px solid var(--line);border-radius:8px;background:#fff;color:var(--ink);width:100%}
+  .et-field input[type=range]{accent-color:var(--g700);width:100%}
+  .et-field input[type=color]{width:56px;height:40px;border:2px solid var(--line);border-radius:8px;padding:2px;background:#fff;cursor:pointer}
+  .et-actions{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px;align-items:center}
+  .et-btn{font:inherit;font-weight:600;border-radius:10px;padding:10px 18px;border:2px solid var(--g700);cursor:pointer;background:#fff;color:var(--g900)}
+  .et-btn:hover{background:var(--g100)}
+  .et-btn.primary{background:var(--g700);color:#fff}
+  .et-btn.primary:hover{background:var(--g900);border-color:var(--g900)}
+  .et-btn:focus-visible,.et-chip:focus-visible,.et-field select:focus-visible,.et-field input:focus-visible,.et-opts input:focus-visible{outline:3px solid #E9A400;outline-offset:2px}
+  #status{min-height:1.6em;font-size:.95rem;color:var(--g700);font-weight:600}
+  .et section{margin-top:56px}
+  .et-twocol{display:grid;gap:28px;grid-template-columns:1fr}
+  @media (min-width:880px){.et-twocol{grid-template-columns:1fr 1fr}}
+  .et-table-wrap{overflow-x:auto;border:2px solid var(--line);border-radius:12px;background:#fff}
+  .et table{border-collapse:collapse;width:100%;min-width:480px;font-size:1rem}
+  .et th,.et td{text-align:left;padding:8px 14px;border-bottom:1px solid var(--line);vertical-align:middle}
+  .et thead th{background:var(--g50);color:var(--g900);font-weight:700}
+  .et tbody tr:last-child td{border-bottom:0}
+  .et td.hi{font-family:"Hind","Noto Sans Devanagari",sans-serif;font-size:1.2rem}
+  .et td code{font-family:ui-monospace,Menlo,Consolas,monospace;background:var(--g50);padding:1px 7px;border-radius:6px;font-size:.95rem}
+  .et-note{background:var(--g50);border-left:5px solid var(--g700);padding:12px 16px;border-radius:0 10px 10px 0;margin:16px 0}
+  .et-faq details{border-bottom:1px solid var(--line);padding:12px 0}
+  .et-faq summary{font-weight:700;cursor:pointer;color:var(--g900);font-size:1.08rem}
+  .et-faq summary:focus-visible{outline:3px solid #E9A400;outline-offset:3px}
+  .et-faq details p{margin:8px 0 0;max-width:68ch}
+  .et-links{display:flex;flex-wrap:wrap;gap:10px 22px;margin-top:8px}
+  @media (prefers-reduced-motion:reduce){.et *{transition:none!important;scroll-behavior:auto!important}}
+</style>
+{% endraw %}
+</head>
+<body>
+{% include header.html %}
+
+<main id="main" class="et">
+
+  <h1>English to Hindi typing</h1>
+  <p class="et-lead">Type Hindi words in English letters and get real Hindi (Devanagari) text. Copy it into WhatsApp, Word or Instagram, preview it in 12 fonts, or save it as an image.</p>
+
+  <div class="et-grid" id="tool">
+    <div class="et-pane">
+      <div class="et-head">
+        <label class="et-label" for="src">Type in English letters</label>
+        <span class="et-meta" id="inCount">0 / 1000</span>
+      </div>
+      <textarea id="src" maxlength="1000" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" placeholder="mera naam Ali hai"></textarea>
+
+      <div class="et-chips" role="group" aria-label="Sample phrases">
+        <button type="button" class="et-chip" data-fill="namaste, aap kaise hain?">namaste, aap kaise hain?</button>
+        <button type="button" class="et-chip" data-fill="mujhe hindi bahut pasand hai">mujhe hindi bahut pasand hai</button>
+        <button type="button" class="et-chip" data-fill="mera bhaarat mahaan">mera bhaarat mahaan</button>
+        <button type="button" class="et-chip" data-fill="dil se dil tak">dil se dil tak</button>
+      </div>
+
+      <div class="et-opts">
+        <label><input type="checkbox" id="optAuto" checked><span>Word endings: a becomes ा and i becomes ी (<code>mera</code> gives मेरा)</span></label>
+        <label><input type="checkbox" id="optCaps"><span>Capital letters: T D N S R give ट ड ण ष ड़</span></label>
+      </div>
+    </div>
+
+    <div class="et-pane et-outpane" id="outPane">
+      <div class="et-head">
+        <span class="et-label" id="outLabel">Hindi text</span>
+        <span class="et-meta" id="outCount">0 characters</span>
+      </div>
+      <div class="et-out" id="out" lang="hi" role="region" aria-labelledby="outLabel"></div>
+    </div>
+  </div>
+
+  <div class="et-controls">
+    <div class="et-field">
+      <label for="font">Font</label>
+      <select id="font">
+        <option value="Hind">Hind (clean)</option>
+        <option value="Mukta">Mukta (clean)</option>
+        <option value="Noto Sans Devanagari">Noto Sans Devanagari (clean)</option>
+        <option value="Kalam">Kalam (handwriting)</option>
+        <option value="Sarala">Sarala (friendly)</option>
+        <option value="Sahitya">Sahitya (book serif)</option>
+        <option value="Eczar">Eczar (classic serif)</option>
+        <option value="Tiro Devanagari Hindi">Tiro Devanagari Hindi (formal)</option>
+        <option value="Rozha One">Rozha One (bold serif)</option>
+        <option value="Yatra One">Yatra One (poster)</option>
+        <option value="Khand">Khand (condensed bold)</option>
+        <option value="Baloo 2">Baloo 2 (rounded bold)</option>
+      </select>
+    </div>
+    <div class="et-field">
+      <label for="size">Size: <span id="sizeVal">36</span>px</label>
+      <input type="range" id="size" min="20" max="96" value="36">
+    </div>
+    <div class="et-field">
+      <label for="tc">Text</label>
+      <input type="color" id="tc" value="#FFE9A8">
+    </div>
+    <div class="et-field">
+      <label for="bc">Background</label>
+      <input type="color" id="bc" value="#064B3E">
+    </div>
+  </div>
+
+  <div class="et-actions">
+    <button type="button" class="et-btn primary" id="btnCopy">Copy Hindi text</button>
+    <button type="button" class="et-btn" id="btnPng">Download PNG</button>
+    <button type="button" class="et-btn" id="btnPngT">Transparent PNG</button>
+    <button type="button" class="et-btn" id="btnClear">Clear</button>
+    <span id="status" role="status"></span>
+  </div>
+  <p class="et-meta" style="margin-top:10px">Copy gives plain Unicode text that works in any app. The PNG keeps the font and colours you picked. Nothing you type is sent to our server.</p>
+
+  <section aria-labelledby="h-rules">
+    <h2 id="h-rules">How the typing rules work</h2>
+    <p style="max-width:68ch">This tool follows how a word sounds, and you decide the vowel length. A short <code>a</code> stays silent inside a word (<code>kal</code> becomes कल), and a long vowel needs two letters (<code>kaal</code> becomes काल). That one habit fixes most spelling surprises.</p>
+
+    <div class="et-twocol" style="margin-top:20px">
+      <div>
+        <h3>Vowels</h3>
+        <div class="et-table-wrap">
+          <table>
+            <thead><tr><th>Type</th><th>Gives</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr data-r="kal" data-h="कल"><td><code>a</code></td><td class="hi">अ (no mark)</td><td><code>kal</code> → <span class="hi">कल</span></td></tr>
+              <tr data-r="kaal" data-h="काल"><td><code>aa</code></td><td class="hi">आ ा</td><td><code>kaal</code> → <span class="hi">काल</span></td></tr>
+              <tr data-r="din" data-h="दिन"><td><code>i</code></td><td class="hi">इ ि</td><td><code>din</code> → <span class="hi">दिन</span></td></tr>
+              <tr data-r="teen" data-h="तीन"><td><code>ee</code> or <code>ii</code></td><td class="hi">ई ी</td><td><code>teen</code> → <span class="hi">तीन</span></td></tr>
+              <tr data-r="kuch" data-h="कुछ"><td><code>u</code></td><td class="hi">उ ु</td><td><code>kuch</code> → <span class="hi">कुछ</span></td></tr>
+              <tr data-r="doodh" data-h="दूध"><td><code>oo</code> or <code>uu</code></td><td class="hi">ऊ ू</td><td><code>doodh</code> → <span class="hi">दूध</span></td></tr>
+              <tr data-r="ek" data-h="एक"><td><code>e</code></td><td class="hi">ए े</td><td><code>ek</code> → <span class="hi">एक</span></td></tr>
+              <tr data-r="kaise" data-h="कैसे"><td><code>ai</code></td><td class="hi">ऐ ै</td><td><code>kaise</code> → <span class="hi">कैसे</span></td></tr>
+              <tr data-r="do" data-h="दो"><td><code>o</code></td><td class="hi">ओ ो</td><td><code>do</code> → <span class="hi">दो</span></td></tr>
+              <tr data-r="kaun" data-h="कौन"><td><code>au</code></td><td class="hi">औ ौ</td><td><code>kaun</code> → <span class="hi">कौन</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div>
+        <h3>Consonants and marks</h3>
+        <div class="et-table-wrap">
+          <table>
+            <thead><tr><th>Type</th><th>Gives</th><th>Example</th></tr></thead>
+            <tbody>
+              <tr data-r="khush" data-h="खुश"><td><code>kh gh jh</code></td><td class="hi">ख घ झ</td><td><code>khush</code> → <span class="hi">खुश</span></td></tr>
+              <tr data-r="chhat" data-h="छत"><td><code>ch</code> / <code>chh</code></td><td class="hi">च / छ</td><td><code>chhat</code> → <span class="hi">छत</span></td></tr>
+              <tr data-r="shubh" data-h="शुभ"><td><code>sh</code>, <code>bh</code></td><td class="hi">श, भ</td><td><code>shubh</code> → <span class="hi">शुभ</span></td></tr>
+              <tr data-r="shikshaa" data-h="शिक्षा"><td><code>ksh</code>, <code>gy</code></td><td class="hi">क्ष, ज्ञ</td><td><code>shikshaa</code> → <span class="hi">शिक्षा</span></td></tr>
+              <tr data-r="zindagi" data-h="ज़िंदगी"><td><code>z</code>, <code>f</code>, <code>q</code></td><td class="hi">ज़, फ़, क़</td><td><code>zindagi</code> → <span class="hi">ज़िंदगी</span></td></tr>
+              <tr data-r="kahaa~" data-h="कहाँ"><td><code>~</code></td><td class="hi">ँ</td><td><code>kahaa~</code> → <span class="hi">कहाँ</span></td></tr>
+              <tr data-r="ha^s" data-h="हंस"><td><code>^</code></td><td class="hi">ं</td><td><code>ha^s</code> → <span class="hi">हंस</span></td></tr>
+              <tr data-r="dhar+m" data-h="धर्म"><td><code>+</code></td><td>half letter</td><td><code>dhar+m</code> → <span class="hi">धर्म</span></td></tr>
+              <tr data-r="paas |" data-h="पास ।"><td><code>|</code></td><td class="hi">।</td><td><code>paas |</code> → <span class="hi">पास ।</span></td></tr>
+              <tr data-r="{Hello} duniya" data-h="Hello दुनिया"><td><code>{ }</code></td><td>stays English</td><td><code>{Hello} duniya</code> → <span class="hi">Hello दुनिया</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <div class="et-note">
+      <p style="margin:0"><strong>Half letters.</strong> Two consonants typed together usually join only where Hindi really joins them, as in <code>dost</code> (दोस्त), <code>kya</code> (क्या) and <code>bachche</code> (बच्चे). In other places the tool keeps the short a, so <code>karna</code> gives करना and <code>sakte</code> gives सकते. If it guesses wrong, type an <code>a</code> to split two letters or a <code>+</code> to join them.</p>
+    </div>
+    <p style="max-width:68ch">The letter n before k, g, ch, j, t, d, p, b or s turns into the dot ं, so <code>hindi</code> becomes हिंदी and <code>sundar</code> becomes सुंदर. A short list of very common words (है, हैं, मैं, नहीं, और, कुछ and similar) is built in, because their spelling does not follow the sound.</p>
+  </section>
+
+  <section aria-labelledby="h-examples">
+    <h2 id="h-examples">Examples to copy</h2>
+    <p style="max-width:68ch">Press Try to load a line into the tool, then change it to see how each letter affects the result.</p>
+    <div class="et-table-wrap">
+      <table>
+        <thead><tr><th>Type this</th><th>You get</th><th></th></tr></thead>
+        <tbody>
+          <tr data-r="mera naam Ali hai" data-h="मेरा नाम अली है"><td><code>mera naam Ali hai</code></td><td class="hi">मेरा नाम अली है</td><td><button type="button" class="et-chip" data-fill="mera naam Ali hai">Try</button></td></tr>
+          <tr data-r="mujhe hindi bahut pasand hai" data-h="मुझे हिंदी बहुत पसंद है"><td><code>mujhe hindi bahut pasand hai</code></td><td class="hi">मुझे हिंदी बहुत पसंद है</td><td><button type="button" class="et-chip" data-fill="mujhe hindi bahut pasand hai">Try</button></td></tr>
+          <tr data-r="aap kahaa~ rahte hain?" data-h="आप कहाँ रहते हैं?"><td><code>aap kahaa~ rahte hain?</code></td><td class="hi">आप कहाँ रहते हैं?</td><td><button type="button" class="et-chip" data-fill="aap kahaa~ rahte hain?">Try</button></td></tr>
+          <tr data-r="zindagi khoobsoorat hai" data-h="ज़िंदगी खूबसूरत है"><td><code>zindagi khoobsoorat hai</code></td><td class="hi">ज़िंदगी खूबसूरत है</td><td><button type="button" class="et-chip" data-fill="zindagi khoobsoorat hai">Try</button></td></tr>
+          <tr data-r="dhanyavaad dost" data-h="धन्यवाद दोस्त"><td><code>dhanyavaad dost</code></td><td class="hi">धन्यवाद दोस्त</td><td><button type="button" class="et-chip" data-fill="dhanyavaad dost">Try</button></td></tr>
+          <tr data-r="suprabhaat, aapka din shubh ho" data-h="सुप्रभात, आपका दिन शुभ हो"><td><code>suprabhaat, aapka din shubh ho</code></td><td class="hi">सुप्रभात, आपका दिन शुभ हो</td><td><button type="button" class="et-chip" data-fill="suprabhaat, aapka din shubh ho">Try</button></td></tr>
+          <tr data-r="kya aap mujhe time bata sakte hain?" data-h="क्या आप मुझे टाइम बता सकते हैं?"><td><code>kya aap mujhe time bata sakte hain?</code></td><td class="hi">क्या आप मुझे टाइम बता सकते हैं?</td><td><button type="button" class="et-chip" data-fill="kya aap mujhe time bata sakte hain?">Try</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="et-faq" aria-labelledby="h-faq">
+    <h2 id="h-faq">Questions people ask</h2>
+
+    <details>
+      <summary>Is this a translator?</summary>
+      <p>No. It does not translate meaning. It writes the sound of your Roman letters in Devanagari, so <code>pyaar</code> becomes प्यार, while the English word <code>love</code> becomes लव and not प्यार. For English words, type them the way Hindi speakers say them, such as <code>time</code> for टाइम.</p>
+    </details>
+
+    <details>
+      <summary>Why is my word spelled slightly wrong?</summary>
+      <p>Hindi vowel length cannot be guessed from Roman spelling alone, because <code>kitab</code> could be a few different words. Type <code>kitaab</code> for किताब and <code>bhaarat</code> for भारत. Use <code>a</code> to keep two consonants apart and <code>+</code> to join them.</p>
+    </details>
+
+    <details>
+      <summary>Will the font stay when I paste the text into another app?</summary>
+      <p>No. Copy gives plain Unicode text, and the app you paste into shows it in its own font. To keep a style, download the PNG, or install the font from its Google Fonts page. The <a href="/">Hindi font generator</a> lists all 61 fonts it supports.</p>
+    </details>
+
+    <details>
+      <summary>Is my text stored or sent anywhere?</summary>
+      <p>The conversion and the PNG are made inside your browser, and the text is not saved on a server. Your browser does load the fonts from Google Fonts. The <a href="/privacy-policy.html">Privacy Policy</a> explains this in full.</p>
+    </details>
+
+    <details>
+      <summary>Does it work for Marathi, Nepali or Sanskrit?</summary>
+      <p>The rules are tuned for Hindi. Many Marathi, Nepali and Sanskrit words come out correctly because they use the same script, but letters such as ळ are not included.</p>
+    </details>
+
+    <details>
+      <summary>I need Kruti Dev or Shree Lipi text. What do I do?</summary>
+      <p>This tool produces Unicode. Paste the result into the <a href="/unicode-to-krutidev-converter.html">Unicode to Kruti Dev converter</a> or the <a href="/unicode-to-shree-lipi-converter.html">Unicode to Shree Lipi converter</a> to change it to the older font-based format.</p>
+    </details>
+
+    <div class="et-links">
+      <a href="/">Hindi font generator</a>
+      <a href="/character-map.html">Hindi character map</a>
+      <a href="/kruti-dev-keyboard-layout.html">Kruti Dev keyboard layout</a>
+      <a href="/how-to-use.html">How to use the font generator</a>
+    </div>
+  </section>
+
+</main>
+
+{% include footer.html %}
+
+{% raw %}
+<script>
+/* ENGINE START */
+const NUK = '\u093C';
+const CONS = [
+  ['ksh','क्ष'],['chh','छ'],['gy','ज्ञ'],
+  ['sh','श'],['kh','ख'],['gh','घ'],['ch','च'],['jh','झ'],['th','थ'],['dh','ध'],['ph','फ'],['bh','भ'],
+  ['k','क'],['g','ग'],['c','क'],['j','ज'],['t','त'],['d','द'],['n','न'],['p','प'],['b','ब'],['m','म'],
+  ['y','य'],['r','र'],['l','ल'],['v','व'],['w','व'],['s','स'],['h','ह'],
+  ['f','फ'+NUK],['z','ज'+NUK],['q','क'+NUK],['x','क्स']
+];
+const CAPS = [['Th','ठ'],['Dh','ढ'],['Rh','ढ'+NUK],['T','ट'],['D','ड'],['N','ण'],['S','ष'],['R','ड'+NUK]];
+const VOW = [
+  ['aa','आ','ा'],['ai','ऐ','ै'],['au','औ','ौ'],['ee','ई','ी'],['ii','ई','ी'],['oo','ऊ','ू'],['uu','ऊ','ू'],
+  ['a','अ',''],['i','इ','ि'],['u','उ','ु'],['e','ए','े'],['o','ओ','ो']
+];
+const NASAL = new Set(['k','kh','g','gh','ch','chh','j','jh','t','th','d','dh','p','ph','b','bh','s','sh','c','T','Th','D','Dh']);
+const LIPS = new Set(['p','ph','b','bh']);
+const CONJ = new Set([
+  's|t','s|th','s|k','s|p','s|m','s|n','s|w','s|v','sh|k','sh|t','sh|n','sh|m','sh|ch','sh|w','sh|v',
+  'h|m','h|n','m|h','n|h','t|m','d|m','d|bh','d|g','d|w','d|v','t|v','t|w','p|t','g|n','ch|chh',
+  'r|m','r|th','r|sh','r|j'
+]);
+const DICT = {
+  main:'मैं',mein:'में',hain:'हैं',hai:'है',hu:'हूँ',hun:'हूँ',hoon:'हूँ',nahi:'नहीं',nahin:'नहीं',nhi:'नहीं',
+  aur:'और',kuch:'कुछ',achha:'अच्छा',accha:'अच्छा',acha:'अच्छा',theek:'ठीक',thik:'ठीक',bhai:'भाई',bhaiya:'भैया',
+  mummy:'मम्मी',mumma:'मम्मा',papa:'पापा',maa:'माँ',ma:'माँ',log:'लोग',woh:'वह',yeh:'यह',
+  kahan:'कहाँ',yahan:'यहाँ',wahan:'वहाँ',jahan:'जहाँ',kyun:'क्यों',kyon:'क्यों',kyunki:'क्योंकि',kyonki:'क्योंकि',
+  isliye:'इसलिए',zyada:'ज़्यादा',jyada:'ज़्यादा',thoda:'थोड़ा',pyar:'प्यार',
+  sunta:'सुनता',sunte:'सुनते',sunti:'सुनती',sunna:'सुनना',banta:'बनता',bante:'बनते',banti:'बनती',banna:'बनना',
+  janta:'जनता',rehta:'रहता',rehte:'रहते',rehti:'रहती',rehna:'रहना',kehta:'कहता',kehte:'कहते',kehti:'कहती',kehna:'कहना',
+  tumhe:'तुम्हें',unhe:'उन्हें',inhe:'इन्हें',hame:'हमें',humein:'हमें',tumhara:'तुम्हारा',tumhari:'तुम्हारी',tumhare:'तुम्हारे',
+  hamara:'हमारा',hamari:'हमारी',hamare:'हमारे',
+  waqt:'वक़्त',vakt:'वक़्त',dharm:'धर्म',karm:'कर्म',arth:'अर्थ',
+  ratri:'रात्रि',raatri:'रात्रि',suprabhat:'सुप्रभात',ganesh:'गणेश',ganeshay:'गणेशाय',namah:'नमः',krishna:'कृष्ण',
+  diwali:'दिवाली',holi:'होली',
+  time:'टाइम',phone:'फोन',school:'स्कूल',doctor:'डॉक्टर',mobile:'मोबाइल',computer:'कंप्यूटर',internet:'इंटरनेट',
+  please:'प्लीज़',thanks:'थैंक्स',sorry:'सॉरी',good:'गुड',morning:'मॉर्निंग',night:'नाइट',happy:'हैप्पी',
+  birthday:'बर्थडे',love:'लव',friend:'फ्रेंड',family:'फैमिली',video:'वीडियो',photo:'फोटो',online:'ऑनलाइन',
+  bye:'बाय',hello:'हैलो',ok:'ओके',okay:'ओके',yes:'यस',no:'नो',welcome:'वेलकम',party:'पार्टी',english:'इंग्लिश',
+  instagram:'इंस्टाग्राम',youtube:'यूट्यूब',whatsapp:'व्हाट्सऐप',facebook:'फेसबुक',google:'गूगल',
+  mom:'मॉम',dad:'डैड',sir:'सर',madam:'मैडम',boss:'बॉस',bike:'बाइक',car:'कार',office:'ऑफिस',class:'क्लास',
+  exam:'एग्ज़ाम',result:'रिज़ल्ट'
+};
+
+function tokenize(w, caps) {
+  const toks = [];
+  let i = 0;
+  while (i < w.length) {
+    const rest = w.slice(i);
+    const low = rest.toLowerCase();
+    let m = null;
+    if (rest[0] === '~') m = {t:'X', ch:'ँ', len:1};
+    else if (rest[0] === '^') m = {t:'X', ch:'ं', len:1};
+    else if (rest[0] === '+') m = {t:'H', len:1};
+    if (!m && caps) {
+      for (const [r, d] of CAPS) {
+        if (r === 'S' && (rest[1] === 'h' || rest[1] === 'H')) continue;
+        if (rest.startsWith(r)) { m = {t:'C', d, r, len:r.length}; break; }
+      }
+    }
+    if (!m) {
+      for (const [r, d] of CONS) {
+        if (low.startsWith(r)) { m = {t:'C', d, r, len:r.length}; break; }
+      }
+    }
+    if (!m) {
+      for (const [r, ind, mat] of VOW) {
+        if (low.startsWith(r)) { m = {t:'V', ind, mat, r, len:r.length}; break; }
+      }
+    }
+    if (!m) { m = {t:'X', ch:rest[0], len:1}; }
+    toks.push(m);
+    i += m.len;
+  }
+  return toks;
+}
+
+function joins(toks, i) {
+  const a = toks[i], b = toks[i + 1];
+  if (i === 0) return true;
+  if (i + 1 === toks.length - 1) return true;
+  if (a.r === b.r) return true;
+  if (b.r === 'r' || b.r === 'y') return true;
+  return CONJ.has(a.r + '|' + b.r);
+}
+
+function convertWord(w, opt) {
+  const key = w.toLowerCase();
+  if (Object.prototype.hasOwnProperty.call(DICT, key)) return DICT[key];
+  const toks = tokenize(opt.caps ? w : key, opt.caps);
+  for (let k = 1; k < toks.length - 1; k++) {
+    const t = toks[k], p = toks[k - 1], n = toks[k + 1];
+    if (t.t === 'C' && p.t === 'V' && n.t === 'C') {
+      if (t.r === 'n' && NASAL.has(n.r)) toks[k] = {t:'M'};
+      else if (t.r === 'm' && LIPS.has(n.r)) toks[k] = {t:'M'};
+    }
+  }
+  let out = '', prev = 'X';
+  for (let k = 0; k < toks.length; k++) {
+    const t = toks[k];
+    const last = k === toks.length - 1;
+    if (t.t === 'C') {
+      if (prev === 'C' && joins(toks, k - 1)) out += '्';
+      out += t.d; prev = 'C';
+    } else if (t.t === 'V') {
+      if (prev === 'C') {
+        let mat = t.mat;
+        if (opt.auto && last && toks.length > 1) {
+          if (t.r === 'a') mat = 'ा';
+          else if (t.r === 'i') mat = 'ी';
+        }
+        out += mat;
+      } else out += t.ind;
+      prev = 'V';
+    } else if (t.t === 'M') {
+      out += 'ं'; prev = 'X';
+    } else if (t.t === 'H') {
+      if (prev === 'C') out += '्';
+      prev = 'X';
+    } else {
+      out += t.ch; prev = 'X';
+    }
+  }
+  return out;
+}
+
+function convertText(text, opt) {
+  return text.replace(/\{([^}]*)\}|[A-Za-z][A-Za-z~^+]*|\|/g, (m, eng) => {
+    if (eng !== undefined) return eng;
+    if (m === '|') return '।';
+    return convertWord(m, opt);
+  });
+}
+/* ENGINE END */
+
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const src = $('src'), out = $('out'), pane = $('outPane'), status = $('status');
+  const optAuto = $('optAuto'), optCaps = $('optCaps');
+  const fontSel = $('font'), sizeEl = $('size'), tc = $('tc'), bc = $('bc');
+  let hindi = '';
+  let statusTimer = null;
+
+  function say(msg) {
+    status.textContent = msg;
+    clearTimeout(statusTimer);
+    statusTimer = setTimeout(() => { status.textContent = ''; }, 3500);
+  }
+
+  function update() {
+    hindi = convertText(src.value, { auto: optAuto.checked, caps: optCaps.checked });
+    out.textContent = hindi;
+    $('inCount').textContent = src.value.length + ' / 1000';
+    const n = Array.from(hindi).length;
+    $('outCount').textContent = n + (n === 1 ? ' character' : ' characters');
+  }
+
+  function style() {
+    out.style.fontFamily = '"' + fontSel.value + '", "Noto Sans Devanagari", sans-serif';
+    out.style.fontSize = sizeEl.value + 'px';
+    $('sizeVal').textContent = sizeEl.value;
+    pane.style.setProperty('--out-fg', tc.value);
+    pane.style.setProperty('--out-bg', bc.value);
+  }
+
+  src.addEventListener('input', update);
+  optAuto.addEventListener('change', update);
+  optCaps.addEventListener('change', update);
+  [fontSel, sizeEl, tc, bc].forEach((el) => el.addEventListener('input', style));
+
+  document.querySelectorAll('[data-fill]').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      src.value = btn.getAttribute('data-fill');
+      update();
+      src.focus();
+      window.scrollTo({ top: $('tool').offsetTop - 20, behavior: 'smooth' });
+    });
+  });
+
+  $('btnClear').addEventListener('click', () => { src.value = ''; update(); src.focus(); });
+
+  $('btnCopy').addEventListener('click', async () => {
+    if (!hindi.trim()) { say('Type something first.'); return; }
+    try {
+      await navigator.clipboard.writeText(hindi);
+      say('Copied the Hindi text.');
+    } catch (e) {
+      const ta = document.createElement('textarea');
+      ta.value = hindi; document.body.appendChild(ta); ta.select();
+      try { document.execCommand('copy'); say('Copied the Hindi text.'); }
+      catch (err) { say('Copy was blocked. Select the text and copy it by hand.'); }
+      document.body.removeChild(ta);
+    }
+  });
+
+  function layout(ctx, lines, size, scale, maxW) {
+    ctx.font = (size * scale) + 'px "' + fontSel.value + '", "Noto Sans Devanagari", sans-serif';
+    const wrapped = [];
+    lines.forEach((par) => {
+      if (!par.trim()) { wrapped.push(''); return; }
+      let line = '';
+      par.split(' ').forEach((word) => {
+        const test = line ? line + ' ' + word : word;
+        if (line && ctx.measureText(test).width > maxW * scale) { wrapped.push(line); line = word; }
+        else line = test;
+      });
+      wrapped.push(line);
+    });
+    const widest = Math.max.apply(null, wrapped.map((l) => ctx.measureText(l).width));
+    const pad = size * scale * 0.7;
+    const lh = size * scale * 1.6;
+    return { wrapped, pad, lh, w: Math.ceil(widest + pad * 2), h: Math.ceil(wrapped.length * lh + pad * 2) };
+  }
+
+  async function savePng(transparent) {
+    if (!hindi.trim()) { say('Type something first.'); return; }
+    const size = parseInt(sizeEl.value, 10);
+    try { await document.fonts.load(size + 'px "' + fontSel.value + '"', hindi); } catch (e) {}
+    const c = document.createElement('canvas');
+    const ctx = c.getContext('2d');
+    let scale = 3;
+    let L = layout(ctx, hindi.split('\n'), size, scale, 900);
+    for (let tries = 0; tries < 3 && L.w * L.h > 16000000; tries++) {
+      scale *= Math.sqrt(16000000 / (L.w * L.h)) * 0.98;
+      L = layout(ctx, hindi.split('\n'), size, scale, 900);
+    }
+    c.width = L.w; c.height = L.h;
+    ctx.font = (size * scale) + 'px "' + fontSel.value + '", "Noto Sans Devanagari", sans-serif';
+    if (!transparent) { ctx.fillStyle = bc.value; ctx.fillRect(0, 0, c.width, c.height); }
+    ctx.fillStyle = tc.value;
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    L.wrapped.forEach((line, i) => { ctx.fillText(line, c.width / 2, L.pad + L.lh * (i + 0.5)); });
+    c.toBlob((blob) => {
+      if (!blob) { say('Could not make the image. Try a smaller size.'); return; }
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = transparent ? 'hindi-text-transparent.png' : 'hindi-text.png';
+      document.body.appendChild(a); a.click(); document.body.removeChild(a);
+      setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+      say('Image saved.');
+    }, 'image/png');
+  }
+  $('btnPng').addEventListener('click', () => savePng(false));
+  $('btnPngT').addEventListener('click', () => savePng(true));
+
+  style();
+  src.value = 'namaste, aap kaise hain?';
+  update();
+})();
+</script>
+{% endraw %}
+</body>
+</html>
